@@ -1,0 +1,31 @@
+* U:\ECE492\ThrottlePlausibility\ThrottlePlausibility.cir
+
+* EESchema Netlist Version 1.1 (Spice format) creation date: 2/9/2017 8:24:17 AM
+
+* To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
+* To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0
+
+* Sheet Name: /
+R5  VCC Net-_R5-Pad2_ 1000		
+R7  Net-_R6-Pad2_ GND 1000		
+R6  Net-_R5-Pad2_ Net-_R6-Pad2_ 8000		
+XU3  Net-_U2-Pad2_ Net-_U2-Pad1_ /W_OUT Net-_U2-Pad13_ Net-_U2-Pad14_ /W_OUT GND Net-_U3-Pad11_ /W_OUT /W_OUT VCC 74LS08		
+R8  VCC Net-_R8-Pad2_ 1000		
+R10  Net-_R10-Pad1_ GND 1000		
+R9  Net-_R8-Pad2_ Net-_R10-Pad1_ 8000		
+XU1  /D_OUT Net-_R2-Pad1_ Net-_R1-Pad1_ VCC GND MCP6004		
+R1  Net-_R1-Pad1_ ? 1000		
+R2  Net-_R2-Pad1_ ? 1000		
+R4  /D_OUT Net-_R1-Pad1_ 1000		
+R3  GND Net-_R2-Pad1_ 1000		
+Q1  Net-_Q1-Pad1_ Net-_Q1-Pad2_ GND Q_NMOS_DGS		
+R15  Net-_Q1-Pad1_ VCC 1000		
+R14  Net-_R14-Pad1_ Net-_Q1-Pad2_ 1000		
+XU4  Net-_U4-Pad1_ Net-_U3-Pad11_ Net-_R14-Pad1_ GND VCC 74LS08		
+R11  Net-_R11-Pad1_ VCC 9000		
+R12  GND Net-_R11-Pad1_ 1000		
+XU5  Net-_U4-Pad1_ VCC /D_OUT Net-_R11-Pad1_ GND LM339		
+XU2  Net-_U2-Pad1_ Net-_U2-Pad2_ VCC APPS1 Net-_R5-Pad2_ Net-_R6-Pad2_ APPS1 Net-_R10-Pad1_ APPS1 APPS1 Net-_R8-Pad2_ GND Net-_U2-Pad13_ Net-_U2-Pad14_ LM339		
+XU6  ? ? ? ? TLP222A		
+
+.end
