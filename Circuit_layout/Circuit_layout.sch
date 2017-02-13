@@ -45,10 +45,10 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L CONN_8 J?
+L CONN_8 J1
 U 1 1 589C943E
 P 15200 2150
-F 0 "J?" H 15200 2600 50  0000 C CNN
+F 0 "J1" H 15200 2600 50  0000 C CNN
 F 1 "CONN_8" V 15300 2150 50  0000 C CNN
 F 2 "" H 15200 2150 50  0000 C CNN
 F 3 "" H 15200 2600 50  0000 C CNN
@@ -95,6 +95,7 @@ F 0 "J2" H 15200 3900 50  0000 C CNN
 F 1 "CONN_01X06" V 15300 3550 50  0000 C CNN
 F 2 "" H 15200 3550 50  0000 C CNN
 F 3 "" H 15200 3550 50  0000 C CNN
+F 4 "W23" H 15200 3550 60  0001 C CNN "Wire Number"
 	1    15200 3550
 	1    0    0    -1  
 $EndComp
@@ -115,12 +116,12 @@ LV_GND
 Text Label 14400 3400 0    60   ~ 0
 Brake_Light
 Text Label 14400 3500 0    60   ~ 0
-TSVPL
+HVPL_1
 $Comp
-L CONN_8 J?
+L CONN_8 J3
 U 1 1 589C9FEF
 P 15200 4800
-F 0 "J?" H 15200 5250 50  0000 C CNN
+F 0 "J3" H 15200 5250 50  0000 C CNN
 F 1 "CONN_8" V 15300 4800 50  0000 C CNN
 F 2 "" H 15200 4800 50  0000 C CNN
 F 3 "" H 15200 5250 50  0000 C CNN
@@ -153,4 +154,370 @@ Text Label 14250 4850 0    60   ~ 0
 Pre-Charge_LED
 Text Label 14250 4950 0    60   ~ 0
 Drive_LED
+Text Label 14250 5050 0    60   ~ 0
+HV_Present_LED
+Text Label 14400 3600 0    60   ~ 0
+HVPL_1_RTN
+Text Label 14400 3700 0    60   ~ 0
+HVPL_2
+Text Label 14400 3800 0    60   ~ 0
+HVPL_2_RTN
+$Comp
+L CONN_01X08 J11
+U 1 1 58A0E687
+P 15200 6450
+F 0 "J11" H 15200 6900 50  0000 C CNN
+F 1 "CONN_01X08" V 15300 6450 50  0000 C CNN
+F 2 "" H 15200 6450 50  0000 C CNN
+F 3 "" H 15200 6450 50  0000 C CNN
+F 4 "W-21" H 15200 6450 60  0001 C CNN "Wire Number"
+	1    15200 6450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	15000 6100 14250 6100
+Wire Wire Line
+	15000 6200 14250 6200
+Wire Wire Line
+	15000 6300 14250 6300
+Wire Wire Line
+	15000 6400 14250 6400
+Wire Wire Line
+	15000 6500 14250 6500
+Wire Wire Line
+	15000 6600 14250 6600
+Wire Wire Line
+	15000 6700 14250 6700
+Wire Wire Line
+	15000 6800 14250 6800
+Text Notes 15450 6450 0    60   ~ 0
+To Motor Controller
+Text Label 14250 6100 0    60   ~ 0
+GND
+Text Label 14250 6200 0    60   ~ 0
+0-5VDC_Signal
+Text Label 14250 6300 0    60   ~ 0
+12VDC
+Text Label 14250 6600 0    60   ~ 0
+Drive_Signal
+Text Label 14250 6700 0    60   ~ 0
+GIGAVAC_Coil
+Text Label 14250 6800 0    60   ~ 0
+Coil_Return
+Text Label 14250 6400 0    60   ~ 0
+FWD_Signal
+Text Label 14250 4650 0    60   ~ 0
+Drive_BTN
+Text Label 14250 4750 0    60   ~ 0
+Drive_BTN_RTN
+Text Label 14250 6500 0    60   ~ 0
+REV_Signal
+$Comp
+L CONN_01X02 J10
+U 1 1 58A0ED31
+P 15200 7400
+F 0 "J10" H 15200 7550 50  0000 C CNN
+F 1 "CONN_01X02" V 15300 7400 50  0000 C CNN
+F 2 "" H 15200 7400 50  0000 C CNN
+F 3 "" H 15200 7400 50  0000 C CNN
+F 4 "W-16" H 15200 7400 60  0001 C CNN "Wire Number"
+	1    15200 7400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	15000 7350 14250 7350
+Wire Wire Line
+	15000 7450 14250 7450
+Text Label 14250 7350 0    60   ~ 0
+HVDC+
+Text Label 14250 7450 0    60   ~ 0
+HVDC_RTN
+Text Notes 15450 7400 0    60   ~ 0
+TSMP
+$Comp
+L CONN_01X04 J9
+U 1 1 58A0F25A
+P 2200 2150
+F 0 "J9" H 2200 2400 50  0000 C CNN
+F 1 "CONN_01X04" V 2300 2150 50  0000 C CNN
+F 2 "" H 2200 2150 50  0000 C CNN
+F 3 "" H 2200 2150 50  0000 C CNN
+F 4 "W6" H 2200 2150 60  0001 C CNN "Wire Number"
+	1    2200 2150
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_01X04 J6
+U 1 1 58A0F323
+P 2200 2800
+F 0 "J6" H 2200 3050 50  0000 C CNN
+F 1 "CONN_01X04" V 2300 2800 50  0000 C CNN
+F 2 "" H 2200 2800 50  0000 C CNN
+F 3 "" H 2200 2800 50  0000 C CNN
+F 4 "W-6" H 2200 2800 60  0001 C CNN "Wire Number"
+	1    2200 2800
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2400 2000 2950 2000
+Wire Wire Line
+	2400 2100 2950 2100
+Wire Wire Line
+	2400 2200 2950 2200
+Wire Wire Line
+	2400 2300 2950 2300
+Wire Wire Line
+	2400 2650 2950 2650
+Wire Wire Line
+	2400 2750 2950 2750
+Wire Wire Line
+	2400 2850 2950 2850
+Wire Wire Line
+	2400 2950 2950 2950
+Text Label 2950 2000 2    60   ~ 0
+SL1_in
+Text Label 2950 2100 2    60   ~ 0
+SL2_in
+Text Label 2950 2200 2    60   ~ 0
+AIRs+_in
+Text Label 2950 2300 2    60   ~ 0
+AIRs-_in
+Text Label 2950 2650 2    60   ~ 0
+SL1_out
+Text Label 2950 2750 2    60   ~ 0
+SL2_out
+Text Label 2950 2850 2    60   ~ 0
+AIRs+_out
+Text Label 2950 2950 2    60   ~ 0
+AIRs-_out
+$Comp
+L RJ12 J?
+U 1 1 58A103E2
+P 11600 2100
+F 0 "J?" H 11800 2600 50  0000 C CNN
+F 1 "RJ12" H 11450 2600 50  0000 C CNN
+F 2 "" H 11600 2100 50  0000 C CNN
+F 3 "" H 11600 2100 50  0000 C CNN
+F 4 "WM3789CT-ND" H 11600 2100 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-search/en?keywords=WM3789CT-ND" H 11600 2100 60  0001 C CNN "URL"
+	1    11600 2100
+	1    0    0    -1  
+$EndComp
+NoConn ~ 12100 1700
+NoConn ~ 12100 1800
+NoConn ~ 11900 2550
+NoConn ~ 11400 2550
+Wire Wire Line
+	11500 2550 11500 2900
+Wire Wire Line
+	11600 2550 11600 2900
+Wire Wire Line
+	11700 2550 11700 2900
+Wire Wire Line
+	11800 2550 11800 2900
+Text Label 11500 2900 1    60   ~ 0
+A2_LV
+Text Label 11600 2900 1    60   ~ 0
+A1_Lv
+Text Label 11700 2900 1    60   ~ 0
+GND
+Text Label 11800 2900 1    60   ~ 0
++5LV
+$Comp
+L CONN_01X02 P?
+U 1 1 58A137CA
+P 2200 6600
+F 0 "P?" H 2200 6750 50  0000 C CNN
+F 1 "CONN_01X02" V 2300 6600 50  0000 C CNN
+F 2 "" H 2200 6600 50  0000 C CNN
+F 3 "" H 2200 6600 50  0000 C CNN
+	1    2200 6600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2400 6550 2800 6550
+Wire Wire Line
+	2400 6650 2800 6650
+Text Label 2800 6550 2    60   ~ 0
+HV+
+Text Label 2800 6650 2    60   ~ 0
+HV-
+Text Notes 15900 2100 2    60   ~ 0
+To Pedals
+Text Notes 15850 3550 2    60   ~ 0
+To Lights
+$Comp
+L CONN_01X02 J4
+U 1 1 58A14C86
+P 15200 8050
+F 0 "J4" H 15200 8200 50  0000 C CNN
+F 1 "CONN_01X02" V 15300 8050 50  0000 C CNN
+F 2 "" H 15200 8050 50  0000 C CNN
+F 3 "" H 15200 8050 50  0000 C CNN
+F 4 "W1" H 15200 8050 60  0001 C CNN "Wire Number"
+	1    15200 8050
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X02 J12
+U 1 1 58A14FD1
+P 15200 8650
+F 0 "J12" H 15200 8800 50  0000 C CNN
+F 1 "CONN_01X02" V 15300 8650 50  0000 C CNN
+F 2 "" H 15200 8650 50  0000 C CNN
+F 3 "" H 15200 8650 50  0000 C CNN
+F 4 "W17" H 15200 8650 60  0001 C CNN "Wire Number"
+	1    15200 8650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	14600 8000 15000 8000
+Wire Wire Line
+	15000 8100 14600 8100
+Wire Wire Line
+	15000 8600 14600 8600
+Wire Wire Line
+	15000 8700 14600 8700
+Text Label 14600 8000 0    60   ~ 0
+24_GLV
+Text Label 14600 8100 0    60   ~ 0
+GND
+Text Label 14600 8600 0    60   ~ 0
+MC_CAN_H
+Text Label 14600 8700 0    60   ~ 0
+MC_CAN_L
+$Comp
+L CONN_01X03 J8
+U 1 1 58A16D49
+P 2250 3950
+F 0 "J8" H 2250 4150 50  0000 C CNN
+F 1 "CONN_01X03" V 2350 3950 50  0000 C CNN
+F 2 "" H 2250 3950 50  0000 C CNN
+F 3 "" H 2250 3950 50  0000 C CNN
+F 4 "W9" H 2250 3950 60  0001 C CNN "Wire Number"
+	1    2250 3950
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2450 3850 2850 3850
+Wire Wire Line
+	2450 3950 2850 3950
+Wire Wire Line
+	2450 4050 2850 4050
+Text Label 2850 3850 2    60   ~ 0
+CAN_H
+Text Label 2850 3950 2    60   ~ 0
+CAN_L
+Text Label 2850 4050 2    60   ~ 0
+Shield
+$Comp
+L CONN_01X03 J7
+U 1 1 58A17CBA
+P 2250 4800
+F 0 "J7" H 2250 5000 50  0000 C CNN
+F 1 "CONN_01X03" V 2350 4800 50  0000 C CNN
+F 2 "" H 2250 4800 50  0000 C CNN
+F 3 "" H 2250 4800 50  0000 C CNN
+F 4 "W9" H 2250 4800 60  0001 C CNN "Wire Number"
+	1    2250 4800
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2450 4700 2850 4700
+Wire Wire Line
+	2450 4800 2850 4800
+Wire Wire Line
+	2450 4900 2850 4900
+Text Label 2850 4700 2    60   ~ 0
+CAN_H
+Text Label 2850 4800 2    60   ~ 0
+CAN_L
+Text Label 2850 4900 2    60   ~ 0
+Shield
+Text Notes 1800 2450 2    60   ~ 0
+Saftey Loop
+Text Notes 1800 4400 2    60   ~ 0
+CAN Bus
+$Comp
+L CONN_01X02 P?
+U 1 1 58A1A752
+P 2200 7250
+F 0 "P?" H 2200 7400 50  0000 C CNN
+F 1 "CONN_01X02" V 2300 7250 50  0000 C CNN
+F 2 "" H 2200 7250 50  0000 C CNN
+F 3 "" H 2200 7250 50  0000 C CNN
+	1    2200 7250
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_01X02 P?
+U 1 1 58A1A7E1
+P 2200 7950
+F 0 "P?" H 2200 8100 50  0000 C CNN
+F 1 "CONN_01X02" V 2300 7950 50  0000 C CNN
+F 2 "" H 2200 7950 50  0000 C CNN
+F 3 "" H 2200 7950 50  0000 C CNN
+	1    2200 7950
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2400 7200 2800 7200
+Wire Wire Line
+	2400 7300 2800 7300
+Wire Wire Line
+	2400 7900 2800 7900
+Wire Wire Line
+	2400 8000 2800 8000
+Text Label 2800 7200 2    60   ~ 0
+FWD_Key
+Text Label 2800 7300 2    60   ~ 0
+REV_Key
+Text Label 2800 7900 2    60   ~ 0
+RTDS
+Text Label 2800 8000 2    60   ~ 0
+RTDS_RTN
+$Comp
+L MCP2515 U?
+U 1 1 58A1F302
+P 6600 6750
+F 0 "U?" H 6600 7500 50  0000 C CNN
+F 1 "MCP2515" H 6600 7400 50  0000 C CNN
+F 2 "" H 6600 6750 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/21801d.pdf" H 6600 6650 50  0001 C CNN
+F 4 "MCP2515T-I/SOCT-ND" H 6600 6750 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/microchip-technology/MCP2515T-I-SO/MCP2515T-I-SOCT-ND/4307902" H 6600 6750 60  0001 C CNN "URL"
+	1    6600 6750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 6350 5850 6350
+Wire Wire Line
+	5850 6450 5300 6450
+Wire Wire Line
+	5850 7150 5300 7150
+Wire Wire Line
+	7350 6650 7950 6650
+Wire Wire Line
+	7350 6750 7950 6750
+Wire Wire Line
+	7350 6850 7950 6850
+Wire Wire Line
+	7350 7150 7950 7150
+Text Label 5300 6350 0    60   ~ 0
+CAN_H
+Text Label 5300 6450 0    60   ~ 0
+CAN_L
+$Comp
+L MCP2551-I/SN U?
+U 1 1 58A214A4
+P 4250 6800
+F 0 "U?" H 3850 7150 50  0000 L CNN
+F 1 "MCP2551-I/SN" H 4350 7150 50  0000 L CNN
+F 2 "SO-8" H 4250 6800 50  0000 C CIN
+F 3 "" H 4250 6800 50  0000 C CNN
+F 4 "MCP2551-I/SN-ND" H 4250 6800 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/microchip-technology/MCP2551-I-SN/MCP2551-I-SN-ND/509452" H 4250 6800 60  0001 C CNN "URL"
+	1    4250 6800
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
