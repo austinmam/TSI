@@ -1,0 +1,8 @@
+UA78M05 - http://www.ti.com/product/ua78m05/description
+-> http://www.ti.com/lit/ds/symlink/ua78m05.pdf
+
+UA78M10 - http://www.ti.com/product/UA78M10/description
+-> http://www.ti.com/lit/ds/symlink/ua78m10.pdf
+
+CD4073B - http://www.ti.com/product/cd4073b
+-> http://www.ti.com/lit/ds/symlink/cd4073b.pdf
