@@ -6,3 +6,9 @@ UA78M10 - http://www.ti.com/product/UA78M10/description
 
 CD4073B - http://www.ti.com/product/cd4073b
 -> http://www.ti.com/lit/ds/symlink/cd4073b.pdf
+
+For Throttle:
+
+Double check resistor values, review design then export to upper level.
+
+Take note of mmBF170 xistor

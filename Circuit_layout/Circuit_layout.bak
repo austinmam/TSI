@@ -1,5 +1,4 @@
 EESchema Schematic File Version 2
-LIBS:TSI_KiCad_Lib
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -34,7 +33,7 @@ EELAYER 25 0
 EELAYER END
 $Descr B 17000 11000
 encoding utf-8
-Sheet 1 1
+Sheet 1 2
 Title ""
 Date ""
 Rev ""
@@ -627,4 +626,10 @@ Wire Wire Line
 	15000 1900 14400 1900
 Wire Wire Line
 	15000 1800 14400 1800
+$Sheet
+S 10750 9850 900  200 
+U 58A289D2
+F0 "ThrottlePlausibility" 60
+F1 "ThrottlePlausibility.sch" 60
+$EndSheet
 $EndSCHEMATC

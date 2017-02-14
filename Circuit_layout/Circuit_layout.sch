@@ -627,7 +627,7 @@ Wire Wire Line
 Wire Wire Line
 	15000 1800 14400 1800
 $Sheet
-S 4900 2100 4400 2700
+S 10750 9850 900  200 
 U 58A289D2
 F0 "ThrottlePlausibility" 60
 F1 "ThrottlePlausibility.sch" 60
