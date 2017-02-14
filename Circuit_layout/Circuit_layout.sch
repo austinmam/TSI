@@ -358,10 +358,6 @@ F 5 "http://www.digikey.com/product-detail/en/microchip-technology/MCP2515T-I-SO
 	1    6600 6750
 	1    0    0    -1  
 $EndComp
-Text Label 5300 6350 0    60   ~ 0
-CAN_H
-Text Label 5300 6450 0    60   ~ 0
-CAN_L
 $Comp
 L MCP2551-I/SN U?
 U 1 1 58A214A4
@@ -386,142 +382,6 @@ F 3 "" H 2200 8250 50  0000 C CNN
 	1    2200 8250
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	15000 1800 14400 1800
-Wire Wire Line
-	15000 1900 14400 1900
-Wire Wire Line
-	15000 2000 14400 2000
-Wire Wire Line
-	15000 2100 14400 2100
-Wire Wire Line
-	15000 2200 14400 2200
-Wire Wire Line
-	15000 2300 14400 2300
-Wire Wire Line
-	15000 2400 14400 2400
-Wire Wire Line
-	15000 2500 14400 2500
-Wire Wire Line
-	15000 3300 14400 3300
-Wire Wire Line
-	15000 3400 14400 3400
-Wire Wire Line
-	15000 3500 14400 3500
-Wire Wire Line
-	15000 3600 14400 3600
-Wire Wire Line
-	15000 3700 14400 3700
-Wire Wire Line
-	15000 3800 14400 3800
-Wire Wire Line
-	15000 4450 14250 4450
-Wire Wire Line
-	15000 4550 14250 4550
-Wire Wire Line
-	15000 4650 14250 4650
-Wire Wire Line
-	14250 4750 15000 4750
-Wire Wire Line
-	14250 4850 15000 4850
-Wire Wire Line
-	15000 4950 14250 4950
-Wire Wire Line
-	15000 5050 14250 5050
-Wire Wire Line
-	15000 5150 14250 5150
-Wire Wire Line
-	15000 6100 14250 6100
-Wire Wire Line
-	15000 6200 14250 6200
-Wire Wire Line
-	15000 6300 14250 6300
-Wire Wire Line
-	15000 6400 14250 6400
-Wire Wire Line
-	15000 6500 14250 6500
-Wire Wire Line
-	15000 6600 14250 6600
-Wire Wire Line
-	15000 6700 14250 6700
-Wire Wire Line
-	15000 6800 14250 6800
-Wire Wire Line
-	15000 7350 14250 7350
-Wire Wire Line
-	15000 7450 14250 7450
-Wire Wire Line
-	2400 2000 2950 2000
-Wire Wire Line
-	2400 2100 2950 2100
-Wire Wire Line
-	2400 2200 2950 2200
-Wire Wire Line
-	2400 2300 2950 2300
-Wire Wire Line
-	2400 2650 2950 2650
-Wire Wire Line
-	2400 2750 2950 2750
-Wire Wire Line
-	2400 2850 2950 2850
-Wire Wire Line
-	2400 2950 2950 2950
-Wire Wire Line
-	11500 2550 11500 2900
-Wire Wire Line
-	11600 2550 11600 2900
-Wire Wire Line
-	11700 2550 11700 2900
-Wire Wire Line
-	11800 2550 11800 2900
-Wire Wire Line
-	2400 6550 2800 6550
-Wire Wire Line
-	2400 6650 2800 6650
-Wire Wire Line
-	14600 8000 15000 8000
-Wire Wire Line
-	15000 8100 14600 8100
-Wire Wire Line
-	15000 8600 14600 8600
-Wire Wire Line
-	15000 8700 14600 8700
-Wire Wire Line
-	2450 3850 2850 3850
-Wire Wire Line
-	2450 3950 2850 3950
-Wire Wire Line
-	2450 4050 2850 4050
-Wire Wire Line
-	2450 4700 2850 4700
-Wire Wire Line
-	2450 4800 2850 4800
-Wire Wire Line
-	2450 4900 2850 4900
-Wire Wire Line
-	15900 3800 15500 3800
-Wire Wire Line
-	15900 3700 15500 3700
-Wire Wire Line
-	5300 6350 5850 6350
-Wire Wire Line
-	5850 6450 5300 6450
-Wire Wire Line
-	5850 7150 5300 7150
-Wire Wire Line
-	7350 6650 7950 6650
-Wire Wire Line
-	7350 6750 7950 6750
-Wire Wire Line
-	7350 6850 7950 6850
-Wire Wire Line
-	7350 7150 7950 7150
-Wire Wire Line
-	2400 8150 2850 8150
-Wire Wire Line
-	2400 8250 2850 8250
-Wire Wire Line
-	2400 8350 2850 8350
 Text Label 2850 8350 2    60   ~ 0
 +5LV
 $Comp
@@ -537,14 +397,6 @@ F 5 "http://www.digikey.com/product-detail/en/lite-on-inc/LTV-827S-TA1/160-2040-
 	1    4900 8300
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4550 8000 4600 8000
-Wire Wire Line
-	4600 8200 4300 8200
-Wire Wire Line
-	4600 8300 4550 8300
-Wire Wire Line
-	4600 8500 4300 8500
 Text Label 4300 8200 0    60   ~ 0
 GND
 Text Label 4300 8500 0    60   ~ 0
@@ -560,8 +412,6 @@ F 3 "" H 4400 8000 50  0000 C CNN
 	1    4400 8000
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	4250 8000 3800 8000
 $Comp
 L R R?
 U 1 1 58A2A5DB
@@ -573,48 +423,208 @@ F 3 "" H 4400 8300 50  0000 C CNN
 	1    4400 8300
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	4250 8300 3800 8300
 Text Label 3800 8000 0    60   ~ 0
 FWD_Key
 Text Label 3800 8300 0    60   ~ 0
 REV_Key
+Text Label 5400 8000 2    60   ~ 0
++5HV
+Text Label 5400 8300 2    60   ~ 0
++5HV
+Text Label 6150 8200 2    60   ~ 0
+FWD_Signal
+Text Label 6150 8500 2    60   ~ 0
+REV_Signal
+Text Label 5300 6450 0    60   ~ 0
+CAN_L
+Text Label 5300 6350 0    60   ~ 0
+CAN_H
 $Comp
 L R R?
 U 1 1 58A2AB93
-P 5350 8000
-F 0 "R?" V 5430 8000 50  0000 C CNN
-F 1 "100" V 5350 8000 50  0000 C CNN
-F 2 "" V 5280 8000 50  0000 C CNN
-F 3 "" H 5350 8000 50  0000 C CNN
-	1    5350 8000
-	0    1    1    0   
+P 5550 7950
+F 0 "R?" V 5630 7950 50  0000 C CNN
+F 1 "100" V 5550 7950 50  0000 C CNN
+F 2 "" V 5480 7950 50  0000 C CNN
+F 3 "" H 5550 7950 50  0000 C CNN
+	1    5550 7950
+	-1   0    0    1   
 $EndComp
 $Comp
 L R R?
 U 1 1 58A2AC0A
-P 5350 8300
-F 0 "R?" V 5430 8300 50  0000 C CNN
-F 1 "100" V 5350 8300 50  0000 C CNN
-F 2 "" V 5280 8300 50  0000 C CNN
-F 3 "" H 5350 8300 50  0000 C CNN
-	1    5350 8300
-	0    1    1    0   
+P 5550 8800
+F 0 "R?" V 5630 8800 50  0000 C CNN
+F 1 "100" V 5550 8800 50  0000 C CNN
+F 2 "" V 5480 8800 50  0000 C CNN
+F 3 "" H 5550 8800 50  0000 C CNN
+	1    5550 8800
+	-1   0    0    1   
 $EndComp
+Connection ~ 5550 8500
 Wire Wire Line
-	5500 8000 5850 8000
+	5550 8650 5550 8500
 Wire Wire Line
-	5500 8300 5850 8300
-Text Label 5850 8000 2    60   ~ 0
-+5HV
-Text Label 5850 8300 2    60   ~ 0
-+5HV
-Text Label 5850 8200 2    60   ~ 0
-FWD_Signal
+	5550 8950 5550 9100
 Wire Wire Line
-	5200 8200 5850 8200
+	5550 7800 5550 7650
 Wire Wire Line
-	5200 8500 5850 8500
-Text Label 5850 8500 2    60   ~ 0
-REV_Signal
+	5550 8100 5550 8200
+Connection ~ 5550 8200
+Wire Wire Line
+	5200 8500 6150 8500
+Wire Wire Line
+	5200 8200 6150 8200
+Wire Wire Line
+	5200 8300 5400 8300
+Wire Wire Line
+	5200 8000 5400 8000
+Wire Wire Line
+	4250 8300 3800 8300
+Wire Wire Line
+	4250 8000 3800 8000
+Wire Wire Line
+	4600 8500 4300 8500
+Wire Wire Line
+	4600 8300 4550 8300
+Wire Wire Line
+	4600 8200 4300 8200
+Wire Wire Line
+	4550 8000 4600 8000
+Wire Wire Line
+	2400 8350 2850 8350
+Wire Wire Line
+	2400 8250 2850 8250
+Wire Wire Line
+	2400 8150 2850 8150
+Wire Wire Line
+	7350 7150 7950 7150
+Wire Wire Line
+	7350 6850 7950 6850
+Wire Wire Line
+	7350 6750 7950 6750
+Wire Wire Line
+	7350 6650 7950 6650
+Wire Wire Line
+	5850 7150 5300 7150
+Wire Wire Line
+	5850 6450 5300 6450
+Wire Wire Line
+	5300 6350 5850 6350
+Wire Wire Line
+	15900 3700 15500 3700
+Wire Wire Line
+	15900 3800 15500 3800
+Wire Wire Line
+	2450 4900 2850 4900
+Wire Wire Line
+	2450 4800 2850 4800
+Wire Wire Line
+	2450 4700 2850 4700
+Wire Wire Line
+	2450 4050 2850 4050
+Wire Wire Line
+	2450 3950 2850 3950
+Wire Wire Line
+	2450 3850 2850 3850
+Wire Wire Line
+	15000 8700 14600 8700
+Wire Wire Line
+	15000 8600 14600 8600
+Wire Wire Line
+	15000 8100 14600 8100
+Wire Wire Line
+	14600 8000 15000 8000
+Wire Wire Line
+	2400 6650 2800 6650
+Wire Wire Line
+	2400 6550 2800 6550
+Wire Wire Line
+	11800 2550 11800 2900
+Wire Wire Line
+	11700 2550 11700 2900
+Wire Wire Line
+	11600 2550 11600 2900
+Wire Wire Line
+	11500 2550 11500 2900
+Wire Wire Line
+	2400 2950 2950 2950
+Wire Wire Line
+	2400 2850 2950 2850
+Wire Wire Line
+	2400 2750 2950 2750
+Wire Wire Line
+	2400 2650 2950 2650
+Wire Wire Line
+	2400 2300 2950 2300
+Wire Wire Line
+	2400 2200 2950 2200
+Wire Wire Line
+	2400 2100 2950 2100
+Wire Wire Line
+	2400 2000 2950 2000
+Wire Wire Line
+	15000 7450 14250 7450
+Wire Wire Line
+	15000 7350 14250 7350
+Wire Wire Line
+	15000 6800 14250 6800
+Wire Wire Line
+	15000 6700 14250 6700
+Wire Wire Line
+	15000 6600 14250 6600
+Wire Wire Line
+	15000 6500 14250 6500
+Wire Wire Line
+	15000 6400 14250 6400
+Wire Wire Line
+	15000 6300 14250 6300
+Wire Wire Line
+	15000 6200 14250 6200
+Wire Wire Line
+	15000 6100 14250 6100
+Wire Wire Line
+	15000 5150 14250 5150
+Wire Wire Line
+	15000 5050 14250 5050
+Wire Wire Line
+	15000 4950 14250 4950
+Wire Wire Line
+	14250 4850 15000 4850
+Wire Wire Line
+	14250 4750 15000 4750
+Wire Wire Line
+	15000 4650 14250 4650
+Wire Wire Line
+	15000 4550 14250 4550
+Wire Wire Line
+	15000 4450 14250 4450
+Wire Wire Line
+	15000 3800 14400 3800
+Wire Wire Line
+	15000 3700 14400 3700
+Wire Wire Line
+	15000 3600 14400 3600
+Wire Wire Line
+	15000 3500 14400 3500
+Wire Wire Line
+	15000 3400 14400 3400
+Wire Wire Line
+	15000 3300 14400 3300
+Wire Wire Line
+	15000 2500 14400 2500
+Wire Wire Line
+	15000 2400 14400 2400
+Wire Wire Line
+	15000 2300 14400 2300
+Wire Wire Line
+	15000 2200 14400 2200
+Wire Wire Line
+	15000 2100 14400 2100
+Wire Wire Line
+	15000 2000 14400 2000
+Wire Wire Line
+	15000 1900 14400 1900
+Wire Wire Line
+	15000 1800 14400 1800
 $EndSCHEMATC

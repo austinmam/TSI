@@ -1,0 +1,1040 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>U:\Senior Design 2\TSI_HV_Isolater\TSI_HV_Isolater.sch</source>
+    <date>2/9/2017 9:43:38 AM</date>
+    <tool>Eeschema 4.0.2-stable</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>TSI_HV_Isolater.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="R1">
+      <value>10k</value>
+      <footprint>Resistors_SMD:R_1206_HandSoldering</footprint>
+      <fields>
+        <field name="DigiKey P/N">311-10KERCT-ND</field>
+        <field name="URL">http://www.digikey.com/product-detail/en/yageo/RC1206JR-0710KL/311-10KERCT-ND/732156</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>570FCCB2</tstamp>
+    </comp>
+    <comp ref="R11">
+      <value>120</value>
+      <footprint>Resistors_SMD:R_1206_HandSoldering</footprint>
+      <fields>
+        <field name="DigiKey P/N">311-120ERCT-ND</field>
+        <field name="URL">http://www.digikey.com/product-detail/en/yageo/RC1206JR-07120RL/311-120ERCT-ND/732162</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>570FD13C</tstamp>
+    </comp>
+    <comp ref="R5">
+      <value>10k</value>
+      <footprint>Resistors_SMD:R_1206_HandSoldering</footprint>
+      <fields>
+        <field name="DigiKey P/N">311-10KERCT-ND</field>
+        <field name="URL">http://www.digikey.com/product-detail/en/yageo/RC1206JR-0710KL/311-10KERCT-ND/732156</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>57101FE6</tstamp>
+    </comp>
+    <comp ref="R7">
+      <value>10k</value>
+      <footprint>Resistors_SMD:R_1206_HandSoldering</footprint>
+      <fields>
+        <field name="DigiKey P/N">311-10KERCT-ND</field>
+        <field name="URL">http://www.digikey.com/product-detail/en/yageo/RC1206JR-0710KL/311-10KERCT-ND/732156</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5710201E</tstamp>
+    </comp>
+    <comp ref="R9">
+      <value>10k</value>
+      <footprint>Resistors_SMD:R_1206_HandSoldering</footprint>
+      <fields>
+        <field name="DigiKey P/N">311-10KERCT-ND</field>
+        <field name="URL">http://www.digikey.com/product-detail/en/yageo/RC1206JR-0710KL/311-10KERCT-ND/732156</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>57102063</tstamp>
+    </comp>
+    <comp ref="R2">
+      <value>10k</value>
+      <footprint>Resistors_SMD:R_1206_HandSoldering</footprint>
+      <fields>
+        <field name="DigiKey P/N">311-10KERCT-ND</field>
+        <field name="URL">http://www.digikey.com/product-detail/en/yageo/RC1206JR-0710KL/311-10KERCT-ND/732156</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>57102132</tstamp>
+    </comp>
+    <comp ref="R6">
+      <value>10k</value>
+      <footprint>Resistors_SMD:R_1206_HandSoldering</footprint>
+      <fields>
+        <field name="DigiKey P/N">311-10KERCT-ND</field>
+        <field name="URL">http://www.digikey.com/product-detail/en/yageo/RC1206JR-0710KL/311-10KERCT-ND/732156</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>57102191</tstamp>
+    </comp>
+    <comp ref="R8">
+      <value>10k</value>
+      <footprint>Resistors_SMD:R_1206_HandSoldering</footprint>
+      <fields>
+        <field name="DigiKey P/N">311-10KERCT-ND</field>
+        <field name="URL">http://www.digikey.com/product-detail/en/yageo/RC1206JR-0710KL/311-10KERCT-ND/732156</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>571021D1</tstamp>
+    </comp>
+    <comp ref="R10">
+      <value>10k</value>
+      <footprint>Resistors_SMD:R_1206_HandSoldering</footprint>
+      <fields>
+        <field name="DigiKey P/N">311-10KERCT-ND</field>
+        <field name="URL">http://www.digikey.com/product-detail/en/yageo/RC1206JR-0710KL/311-10KERCT-ND/732156</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5710221E</tstamp>
+    </comp>
+    <comp ref="U5">
+      <value>AMC1100DWVR</value>
+      <footprint>custom:amc1100_SOIC</footprint>
+      <datasheet>http://www.ti.com/lit/ds/symlink/amc1100.pdf</datasheet>
+      <fields>
+        <field name="DigiKey P/N">296-38822-5-ND</field>
+        <field name="URL">http://www.digikey.com/product-detail/en/texas-instruments/AMC1100DWV/296-38822-5-ND/5052622</field>
+      </fields>
+      <libsource lib="TSI_HV_Isolater-cache" part="AMC1100DUBR"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>571031E6</tstamp>
+    </comp>
+    <comp ref="C8">
+      <value>330p</value>
+      <footprint>Capacitors_SMD:C_0603_HandSoldering</footprint>
+      <fields>
+        <field name="DigiKey P/N">311-1186-1-ND</field>
+        <field name="URL">http://www.digikey.com/product-detail/en/yageo/CC0603KRX7R9BB331/311-1186-1-ND/372899</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>57106D2D</tstamp>
+    </comp>
+    <comp ref="U6">
+      <value>ACPL-C870</value>
+      <footprint>custom:amc1100_SOIC</footprint>
+      <fields>
+        <field name="DigiKey P/N">	516-2578-5-ND</field>
+        <field name="URL">http://www.digikey.com/product-detail/en/broadcom-limited/ACPL-C870-000E/516-2578-5-ND/3523705</field>
+      </fields>
+      <libsource lib="TSI_HV_Isolater-cache" part="ACPL-C870"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>57125262</tstamp>
+    </comp>
+    <comp ref="U2">
+      <value>AZ1117CH-5.0TRG1</value>
+      <footprint>custom:SOT-223_cus</footprint>
+      <fields>
+        <field name="DigiKey P/N">AZ1117CH-5.0TRG1</field>
+        <field name="URL">http://www.digikey.com/product-detail/en/diodes-incorporated/AZ1117CH-5.0TRG1/AZ1117CH-5.0TRG1DICT-ND/4505207</field>
+      </fields>
+      <libsource lib="TSI_HV_Isolater-cache" part="AZ1117CH-5.0TRG1"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>57152397</tstamp>
+    </comp>
+    <comp ref="C2">
+      <value>10u</value>
+      <footprint>Capacitors_SMD:C_0603_HandSoldering</footprint>
+      <fields>
+        <field name="DigiKey P/N">490-3298-1-ND</field>
+        <field name="URL">http://www.digikey.com/product-detail/en/murata-electronics-north-america/GRM188R60G106ME47D/490-3298-1-ND/702839</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5715239D</tstamp>
+    </comp>
+    <comp ref="C3">
+      <value>22u</value>
+      <footprint>Capacitors_SMD:C_0603_HandSoldering</footprint>
+      <fields>
+        <field name="DigiKey P/N">490-7611-1-ND</field>
+        <field name="URL">http://www.digikey.com/product-detail/en/murata-electronics-north-america/GRM188R60J226MEA0D/490-7611-1-ND/4280544</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>571523A3</tstamp>
+    </comp>
+    <comp ref="R13">
+      <value>3k</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <fields>
+        <field name="DigiKey P/N">311-3.0KGRCT-ND</field>
+        <field name="URL">http://www.digikey.com/product-detail/en/yageo/RC0603JR-073KL/311-3.0KGRCT-ND/729701</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>57154A59</tstamp>
+    </comp>
+    <comp ref="J2">
+      <value>RJ12</value>
+      <footprint>custom:MOLEX_RJ11</footprint>
+      <fields>
+        <field name="DigiKey P/N">WM3789CT-ND</field>
+        <field name="URL">http://www.digikey.com/product-search/en?keywords=WM3789CT-ND</field>
+      </fields>
+      <libsource lib="conn" part="RJ12"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>57166B4D</tstamp>
+    </comp>
+    <comp ref="U10">
+      <value>place_holder</value>
+      <footprint>custom:logo_lafayette_ece_24mmx9mm</footprint>
+      <libsource lib="TSI_HV_Isolater-cache" part="place_holder"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>571A31B7</tstamp>
+    </comp>
+    <comp ref="U11">
+      <value>place_holder</value>
+      <footprint>custom:lafLogo</footprint>
+      <libsource lib="TSI_HV_Isolater-cache" part="place_holder"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>571A3C1D</tstamp>
+    </comp>
+    <comp ref="U12">
+      <value>place_holder</value>
+      <footprint>custom:rohs_symbol</footprint>
+      <libsource lib="TSI_HV_Isolater-cache" part="place_holder"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>571A3C56</tstamp>
+    </comp>
+    <comp ref="U13">
+      <value>place_holder</value>
+      <footprint>custom_footprints:Symbol_HighVoltage_Type2_FSilk_VerySmall</footprint>
+      <libsource lib="TSI_HV_Isolater-cache" part="place_holder"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>571A3C8F</tstamp>
+    </comp>
+    <comp ref="U17">
+      <value>place_holder</value>
+      <footprint>Mounting_Holes:MountingHole_3.2mm_M3_Pad</footprint>
+      <libsource lib="TSI_HV_Isolater-cache" part="place_holder"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>571A44ED</tstamp>
+    </comp>
+    <comp ref="U16">
+      <value>place_holder</value>
+      <footprint>Mounting_Holes:MountingHole_3.2mm_M3_Pad</footprint>
+      <libsource lib="TSI_HV_Isolater-cache" part="place_holder"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>571A4526</tstamp>
+    </comp>
+    <comp ref="U18">
+      <value>place_holder</value>
+      <footprint>Mounting_Holes:MountingHole_3.2mm_M3_Pad</footprint>
+      <libsource lib="TSI_HV_Isolater-cache" part="place_holder"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>571A455F</tstamp>
+    </comp>
+    <comp ref="J1">
+      <value>CONN_01X02</value>
+      <footprint>custom:TerminalBlock_Pheonix_MPT-5.08mm_2pol</footprint>
+      <libsource lib="conn" part="CONN_01X02"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>571B84AF</tstamp>
+    </comp>
+    <comp ref="R15">
+      <value>20k</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <fields>
+        <field name="DigiKey P/N">311-20.0KHRCT-ND</field>
+        <field name="URL">http://www.digikey.com/product-detail/en/yageo/RC0603FR-0720KL/311-20.0KHRCT-ND/729987</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>571167FD</tstamp>
+    </comp>
+    <comp ref="C5">
+      <value>0.1u</value>
+      <footprint>Capacitors_SMD:C_0603_HandSoldering</footprint>
+      <fields>
+        <field name="DigiKey P/N">311-1343-1-ND</field>
+        <field name="URL">http://www.digikey.com/product-detail/en/yageo/CC0603ZRY5V9BB104/311-1343-1-ND/2103127</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5711DB12</tstamp>
+    </comp>
+    <comp ref="J3">
+      <value>CONN_01X10</value>
+      <footprint>custom:TerminalBlock_Pheonix_MPT-5.08mm_10pol</footprint>
+      <libsource lib="conn" part="CONN_01X10"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5726E425</tstamp>
+    </comp>
+    <comp ref="U3">
+      <value>MCP6001</value>
+      <footprint>custom:MCP6001_SOT_23-5</footprint>
+      <fields>
+        <field name="DigiKey P/N">MCP6001T-I/OTCT-ND</field>
+        <field name="URL">http://www.digikey.com/product-detail/en/microchip-technology/MCP6001T-I%2FOT/MCP6001T-I%2FOTCT-ND/697158</field>
+      </fields>
+      <libsource lib="TSI_HV_Isolater-rescue" part="MCP6001-RESCUE-TSI_HV_Isolater"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>57108C8C</tstamp>
+    </comp>
+    <comp ref="U8">
+      <value>MCP6001</value>
+      <footprint>custom_footprints:MCP6001_SOT_23-5</footprint>
+      <fields>
+        <field name="DigiKey P/N">MCP6001T-I/OTCT-ND</field>
+        <field name="URL">http://www.digikey.com/product-detail/en/microchip-technology/MCP6001T-I%2FOT/MCP6001T-I%2FOTCT-ND/697158</field>
+      </fields>
+      <libsource lib="TSI_HV_Isolater-rescue" part="MCP6001-RESCUE-TSI_HV_Isolater"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5715E430</tstamp>
+    </comp>
+    <comp ref="R26">
+      <value>4.99k</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <fields>
+        <field name="DigiKey P/N">311-4.99KHRCT-ND</field>
+        <field name="URL">http://www.digikey.com/product-detail/en/yageo/RC0603FR-074K99L/311-4.99KHRCT-ND/730166</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5715E436</tstamp>
+    </comp>
+    <comp ref="C6">
+      <value>1u</value>
+      <footprint>Capacitors_SMD:C_2220_HandSoldering</footprint>
+      <fields>
+        <field name="Digi-Key P/N">445-2304-1-ND</field>
+        <field name="URL">http://www.digikey.com/product-detail/en/tdk-corporation/C5750X7R2E105K230KA/445-2304-1-ND/789813</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>571B4D23</tstamp>
+    </comp>
+    <comp ref="U4">
+      <value>TLP2361</value>
+      <footprint>custom:FODM8701</footprint>
+      <fields>
+        <field name="DigiKey P/N">TLP2361(TPLECT-ND</field>
+        <field name="URL">http://www.digikey.com/product-detail/en/toshiba-semiconductor-and-storage/TLP2361(TPL,E/TLP2361(TPLECT-ND/5189799</field>
+      </fields>
+      <libsource lib="TSI_HV_Isolater-cache" part="TLP2361"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5721E417</tstamp>
+    </comp>
+    <comp ref="C4">
+      <value>1u</value>
+      <footprint>Capacitors_SMD:C_2220_HandSoldering</footprint>
+      <fields>
+        <field name="Digi-Key P/N">445-2304-1-ND</field>
+        <field name="URL">http://www.digikey.com/product-detail/en/tdk-corporation/C5750X7R2E105K230KA/445-2304-1-ND/789813</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>57225D16</tstamp>
+    </comp>
+    <comp ref="C7">
+      <value>1u</value>
+      <footprint>Capacitors_SMD:C_2220_HandSoldering</footprint>
+      <fields>
+        <field name="Digi-Key P/N">445-2304-1-ND</field>
+        <field name="URL">http://www.digikey.com/product-detail/en/tdk-corporation/C5750X7R2E105K230KA/445-2304-1-ND/789813</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5722828E</tstamp>
+    </comp>
+    <comp ref="U1">
+      <value>RDD08110S12</value>
+      <footprint>custom:RDD08110S12</footprint>
+      <datasheet>http://www.xppower.com/Portals/0/pdfs/SF_RDD08.pdf</datasheet>
+      <fields>
+        <field name="DigiKey P/N">1470-3083-5-ND</field>
+        <field name="URL">http://www.digikey.com/product-search/en?keywords=RDD08110S12</field>
+      </fields>
+      <libsource lib="TSI_HV_Isolater-cache" part="RDD08110S12"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>57230A0F</tstamp>
+    </comp>
+    <comp ref="R22">
+      <value>2k</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <fields>
+        <field name="DigiKey P/N">311-2.0KGRCT-ND</field>
+        <field name="URL">http://www.digikey.com/product-detail/en/yageo/RC0603JR-072KL/311-2.0KGRCT-ND/729673</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>57176F7B</tstamp>
+    </comp>
+    <comp ref="R23">
+      <value>2k</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <fields>
+        <field name="DigiKey P/N">311-2.0KGRCT-ND</field>
+        <field name="URL">http://www.digikey.com/product-detail/en/yageo/RC0603JR-072KL/311-2.0KGRCT-ND/729673</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>57178665</tstamp>
+    </comp>
+    <comp ref="R14">
+      <value>4.99k</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <fields>
+        <field name="DigiKey P/N">311-4.99KHRCT-ND</field>
+        <field name="URL">http://www.digikey.com/product-detail/en/yageo/RC0603FR-074K99L/311-4.99KHRCT-ND/730166</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>571804D0</tstamp>
+    </comp>
+    <comp ref="R16">
+      <value>2k</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <fields>
+        <field name="DigiKey P/N">311-2.0KGRCT-ND</field>
+        <field name="URL">http://www.digikey.com/product-detail/en/yageo/RC0603JR-072KL/311-2.0KGRCT-ND/729673</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>57181255</tstamp>
+    </comp>
+    <comp ref="R17">
+      <value>2k</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <fields>
+        <field name="DigiKey P/N">311-2.0KGRCT-ND</field>
+        <field name="URL">http://www.digikey.com/product-detail/en/yageo/RC0603JR-072KL/311-2.0KGRCT-ND/729673</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5718215E</tstamp>
+    </comp>
+    <comp ref="R19">
+      <value>4.99k</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <fields>
+        <field name="DigiKey P/N">311-4.99KHRCT-ND</field>
+        <field name="URL">http://www.digikey.com/product-detail/en/yageo/RC0603FR-074K99L/311-4.99KHRCT-ND/730166</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5718859B</tstamp>
+    </comp>
+    <comp ref="R25">
+      <value>4.99k</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <fields>
+        <field name="DigiKey P/N">311-4.99KHRCT-ND</field>
+        <field name="URL">http://www.digikey.com/product-detail/en/yageo/RC0603FR-074K99L/311-4.99KHRCT-ND/730166</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5718C055</tstamp>
+    </comp>
+    <comp ref="C9">
+      <value>0.1u</value>
+      <footprint>Capacitors_SMD:C_0603_HandSoldering</footprint>
+      <fields>
+        <field name="DigiKey P/N">311-1343-1-ND</field>
+        <field name="URL">http://www.digikey.com/product-detail/en/yageo/CC0603ZRY5V9BB104/311-1343-1-ND/2103127</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>57190D83</tstamp>
+    </comp>
+    <comp ref="C11">
+      <value>0.1u</value>
+      <footprint>Capacitors_SMD:C_0603_HandSoldering</footprint>
+      <fields>
+        <field name="DigiKey P/N">311-1343-1-ND</field>
+        <field name="URL">http://www.digikey.com/product-detail/en/yageo/CC0603ZRY5V9BB104/311-1343-1-ND/2103127</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>57192005</tstamp>
+    </comp>
+    <comp ref="C14">
+      <value>0.1u</value>
+      <footprint>Capacitors_SMD:C_0603_HandSoldering</footprint>
+      <fields>
+        <field name="DigiKey P/N">311-1343-1-ND</field>
+        <field name="URL">http://www.digikey.com/product-detail/en/yageo/CC0603ZRY5V9BB104/311-1343-1-ND/2103127</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5719322B</tstamp>
+    </comp>
+    <comp ref="C13">
+      <value>0.1u</value>
+      <footprint>Capacitors_SMD:C_0603_HandSoldering</footprint>
+      <fields>
+        <field name="DigiKey P/N">311-1343-1-ND</field>
+        <field name="URL">http://www.digikey.com/product-detail/en/yageo/CC0603ZRY5V9BB104/311-1343-1-ND/2103127</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>57195430</tstamp>
+    </comp>
+    <comp ref="C12">
+      <value>0.1u</value>
+      <footprint>Capacitors_SMD:C_0603_HandSoldering</footprint>
+      <fields>
+        <field name="DigiKey P/N">311-1343-1-ND</field>
+        <field name="URL">http://www.digikey.com/product-detail/en/yageo/CC0603ZRY5V9BB104/311-1343-1-ND/2103127</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>571980E2</tstamp>
+    </comp>
+    <comp ref="C1">
+      <value>0.1u</value>
+      <footprint>Capacitors_SMD:C_0603_HandSoldering</footprint>
+      <fields>
+        <field name="DigiKey P/N">311-1343-1-ND</field>
+        <field name="URL">http://www.digikey.com/product-detail/en/yageo/CC0603ZRY5V9BB104/311-1343-1-ND/2103127</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5719CB24</tstamp>
+    </comp>
+    <comp ref="R12">
+      <value>2k</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <fields>
+        <field name="DigiKey P/N">311-2.0KGRCT-ND</field>
+        <field name="URL">http://www.digikey.com/product-detail/en/yageo/RC0603JR-072KL/311-2.0KGRCT-ND/729673</field>
+      </fields>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>571A1DA1</tstamp>
+    </comp>
+    <comp ref="U9">
+      <value>AZ1117CH-5.0TRG1</value>
+      <footprint>custom:SOT-223_cus</footprint>
+      <fields>
+        <field name="DigiKey P/N">AZ1117CH-5.0TRG1</field>
+        <field name="URL">http://www.digikey.com/product-detail/en/diodes-incorporated/AZ1117CH-5.0TRG1/AZ1117CH-5.0TRG1DICT-ND/4505207</field>
+      </fields>
+      <libsource lib="TSI_HV_Isolater-cache" part="AZ1117CH-5.0TRG1"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>571AD1F9</tstamp>
+    </comp>
+    <comp ref="C18">
+      <value>10u</value>
+      <footprint>Capacitors_SMD:C_0603_HandSoldering</footprint>
+      <fields>
+        <field name="DigiKey P/N">490-3298-1-ND</field>
+        <field name="URL">http://www.digikey.com/product-detail/en/murata-electronics-north-america/GRM188R60G106ME47D/490-3298-1-ND/702839</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>571B1A79</tstamp>
+    </comp>
+    <comp ref="C19">
+      <value>22u</value>
+      <footprint>Capacitors_SMD:C_0603_HandSoldering</footprint>
+      <fields>
+        <field name="DigiKey P/N">490-7611-1-ND</field>
+        <field name="URL">http://www.digikey.com/product-detail/en/murata-electronics-north-america/GRM188R60J226MEA0D/490-7611-1-ND/4280544</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>571B1B5A</tstamp>
+    </comp>
+    <comp ref="C10">
+      <value>0.1u</value>
+      <footprint>Capacitors_SMD:C_0603_HandSoldering</footprint>
+      <fields>
+        <field name="DigiKey P/N">311-1343-1-ND</field>
+        <field name="URL">http://www.digikey.com/product-detail/en/yageo/CC0603ZRY5V9BB104/311-1343-1-ND/2103127</field>
+      </fields>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>571BBFDC</tstamp>
+    </comp>
+    <comp ref="J4">
+      <value>CONN_01X05</value>
+      <footprint>Terminal_Blocks:TerminalBlock_Pheonix_MPT-2.54mm_5pol</footprint>
+      <libsource lib="conn" part="CONN_01X05"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5733B6E3</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="TSI_HV_Isolater-cache" part="ACPL-C870">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">ACPL-C870</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VDD1" type="input"/>
+        <pin num="2" name="VIN" type="input"/>
+        <pin num="3" name="SHDN" type="input"/>
+        <pin num="4" name="GND1" type="input"/>
+        <pin num="5" name="GND2" type="input"/>
+        <pin num="6" name="VOUT-" type="input"/>
+        <pin num="7" name="VOUT+" type="input"/>
+        <pin num="8" name="VDD2" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="TSI_HV_Isolater-cache" part="AMC1100DUBR">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">AMC1100DUBR</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VDD1" type="input"/>
+        <pin num="2" name="VINP" type="input"/>
+        <pin num="3" name="VINN" type="input"/>
+        <pin num="4" name="GND1" type="input"/>
+        <pin num="5" name="GND2" type="input"/>
+        <pin num="6" name="VOUTN" type="input"/>
+        <pin num="7" name="VOUTP" type="input"/>
+        <pin num="8" name="VDD2" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="TSI_HV_Isolater-cache" part="AZ1117CH-5.0TRG1">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">AZ1117CH-5.0TRG1</field>
+      </fields>
+      <pins>
+        <pin num="1" name="ADJ/GND" type="input"/>
+        <pin num="2" name="OUTPUT" type="input"/>
+        <pin num="3" name="INPUT" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="C">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C?</fp>
+        <fp>C_????_*</fp>
+        <fp>C_????</fp>
+        <fp>SMD*_c</fp>
+        <fp>Capacitor*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="conn" part="CONN_01X02">
+      <description>Connector 01x02</description>
+      <footprints>
+        <fp>Pin_Header_Straight_1X02</fp>
+        <fp>Pin_Header_Angled_1X02</fp>
+        <fp>Socket_Strip_Straight_1X02</fp>
+        <fp>Socket_Strip_Angled_1X02</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">CONN_01X02</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="conn" part="CONN_01X05">
+      <description>Connector 01x05</description>
+      <footprints>
+        <fp>Pin_Header_Straight_1X05</fp>
+        <fp>Pin_Header_Angled_1X05</fp>
+        <fp>Socket_Strip_Straight_1X05</fp>
+        <fp>Socket_Strip_Angled_1X05</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">CONN_01X05</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
+        <pin num="4" name="P4" type="passive"/>
+        <pin num="5" name="P5" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="conn" part="CONN_01X10">
+      <description>Connector 01x10</description>
+      <footprints>
+        <fp>Pin_Header_Straight_1X10</fp>
+        <fp>Pin_Header_Angled_1X10</fp>
+        <fp>Socket_Strip_Straight_1X10</fp>
+        <fp>Socket_Strip_Angled_1X10</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">CONN_01X10</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
+        <pin num="4" name="P4" type="passive"/>
+        <pin num="5" name="P5" type="passive"/>
+        <pin num="6" name="P6" type="passive"/>
+        <pin num="7" name="P7" type="passive"/>
+        <pin num="8" name="P8" type="passive"/>
+        <pin num="9" name="P9" type="passive"/>
+        <pin num="10" name="P10" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="TSI_HV_Isolater-rescue" part="MCP6001-RESCUE-TSI_HV_Isolater">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">MCP6001-RESCUE-TSI_HV_Isolater</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="output"/>
+        <pin num="2" name="V-" type="passive"/>
+        <pin num="3" name="+" type="input"/>
+        <pin num="4" name="-" type="input"/>
+        <pin num="5" name="V+" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="R">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+        <fp>Resistor_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="TSI_HV_Isolater-cache" part="RDD08110S12">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">RDD08110S12</field>
+      </fields>
+      <pins>
+        <pin num="1" name="ON/OFF" type="input"/>
+        <pin num="2" name="VIN-" type="input"/>
+        <pin num="3" name="VIN-" type="input"/>
+        <pin num="9" name="No_Pin" type="input"/>
+        <pin num="11" name="N.C." type="input"/>
+        <pin num="14" name="Vout+" type="input"/>
+        <pin num="16" name="Vout-" type="input"/>
+        <pin num="22" name="VIN+" type="input"/>
+        <pin num="23" name="VIN+" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="conn" part="RJ12">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">RJ12</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+        <pin num="3" name="~" type="passive"/>
+        <pin num="4" name="~" type="passive"/>
+        <pin num="5" name="~" type="passive"/>
+        <pin num="6" name="~" type="passive"/>
+        <pin num="7" name="SHIELD_1" type="passive"/>
+        <pin num="8" name="SHIELD_2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="TSI_HV_Isolater-cache" part="TLP2361">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TLP2361</field>
+      </fields>
+      <pins>
+        <pin num="1" name="ANODE" type="input"/>
+        <pin num="3" name="CATHODE" type="input"/>
+        <pin num="4" name="GND" type="input"/>
+        <pin num="5" name="Vo" type="input"/>
+        <pin num="6" name="Vcc" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="TSI_HV_Isolater-cache" part="place_holder">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">place_holder</field>
+      </fields>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="conn">
+      <uri>C:\Program Files\KiCad\share\kicad\library\conn.lib</uri>
+    </library>
+    <library logical="device">
+      <uri>C:\Program Files\KiCad\share\kicad\library\device.lib</uri>
+    </library>
+    <library logical="TSI_HV_Isolater-rescue">
+      <uri>U:\Senior Design 2\TSI_HV_Isolater\TSI_HV_Isolater-rescue.lib</uri>
+    </library>
+    <library logical="TSI_HV_Isolater-cache">
+      <uri>U:\Senior Design 2\TSI_HV_Isolater\TSI_HV_Isolater-cache.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="Net-(R14-Pad1)">
+      <node ref="R16" pin="2"/>
+      <node ref="U3" pin="4"/>
+      <node ref="R14" pin="1"/>
+    </net>
+    <net code="2" name="Net-(R17-Pad1)">
+      <node ref="R17" pin="1"/>
+      <node ref="U6" pin="7"/>
+    </net>
+    <net code="3" name="Net-(R15-Pad2)">
+      <node ref="U4" pin="1"/>
+      <node ref="R15" pin="2"/>
+    </net>
+    <net code="4" name="/MainContactor">
+      <node ref="R15" pin="1"/>
+      <node ref="J4" pin="2"/>
+    </net>
+    <net code="5" name="Net-(R22-Pad1)">
+      <node ref="R22" pin="1"/>
+      <node ref="R26" pin="2"/>
+      <node ref="U8" pin="4"/>
+    </net>
+    <net code="6" name="Net-(R16-Pad1)">
+      <node ref="U6" pin="6"/>
+      <node ref="R16" pin="1"/>
+    </net>
+    <net code="7" name="/+12LV">
+      <node ref="J3" pin="4"/>
+      <node ref="J3" pin="5"/>
+      <node ref="C18" pin="1"/>
+      <node ref="U9" pin="3"/>
+    </net>
+    <net code="8" name="/RTN">
+      <node ref="C10" pin="2"/>
+      <node ref="C1" pin="2"/>
+      <node ref="J4" pin="5"/>
+      <node ref="U3" pin="2"/>
+      <node ref="R19" pin="2"/>
+      <node ref="C9" pin="2"/>
+      <node ref="U6" pin="5"/>
+      <node ref="U2" pin="1"/>
+      <node ref="C2" pin="2"/>
+      <node ref="C3" pin="2"/>
+      <node ref="U5" pin="4"/>
+    </net>
+    <net code="9" name="/+12HV">
+      <node ref="C2" pin="1"/>
+      <node ref="J4" pin="4"/>
+      <node ref="U2" pin="3"/>
+    </net>
+    <net code="10" name="/Throttle_IN">
+      <node ref="J3" pin="1"/>
+      <node ref="R13" pin="2"/>
+    </net>
+    <net code="11" name="/HV+">
+      <node ref="R1" pin="1"/>
+      <node ref="J1" pin="1"/>
+      <node ref="U1" pin="23"/>
+      <node ref="U1" pin="22"/>
+      <node ref="C4" pin="2"/>
+      <node ref="C6" pin="2"/>
+      <node ref="C7" pin="2"/>
+    </net>
+    <net code="12" name="/Throttle_OUT">
+      <node ref="U3" pin="1"/>
+      <node ref="J4" pin="1"/>
+      <node ref="R14" pin="2"/>
+    </net>
+    <net code="13" name="/A1_LV">
+      <node ref="J2" pin="3"/>
+      <node ref="J3" pin="7"/>
+    </net>
+    <net code="14" name="/A2_LV">
+      <node ref="J3" pin="6"/>
+      <node ref="J2" pin="2"/>
+    </net>
+    <net code="15" name="/HV_MES">
+      <node ref="U8" pin="1"/>
+      <node ref="J3" pin="3"/>
+      <node ref="R26" pin="1"/>
+    </net>
+    <net code="16" name="/24MC_RDYLV">
+      <node ref="J3" pin="2"/>
+      <node ref="U4" pin="5"/>
+    </net>
+    <net code="17" name="/GND">
+      <node ref="C5" pin="1"/>
+      <node ref="U4" pin="4"/>
+      <node ref="J2" pin="4"/>
+      <node ref="J3" pin="8"/>
+      <node ref="U6" pin="4"/>
+      <node ref="U6" pin="3"/>
+      <node ref="U5" pin="5"/>
+      <node ref="U8" pin="2"/>
+      <node ref="R12" pin="2"/>
+      <node ref="U9" pin="1"/>
+      <node ref="C18" pin="2"/>
+      <node ref="C19" pin="2"/>
+      <node ref="C12" pin="2"/>
+      <node ref="C13" pin="2"/>
+      <node ref="C14" pin="2"/>
+      <node ref="C11" pin="2"/>
+      <node ref="R25" pin="2"/>
+    </net>
+    <net code="18" name="/+5HV">
+      <node ref="C9" pin="1"/>
+      <node ref="U5" pin="1"/>
+      <node ref="U6" pin="8"/>
+      <node ref="C10" pin="1"/>
+      <node ref="C1" pin="1"/>
+      <node ref="U3" pin="5"/>
+      <node ref="C3" pin="1"/>
+      <node ref="U2" pin="2"/>
+    </net>
+    <net code="19" name="Net-(R17-Pad2)">
+      <node ref="R17" pin="2"/>
+      <node ref="R19" pin="1"/>
+      <node ref="U3" pin="3"/>
+    </net>
+    <net code="20" name="Net-(C13-Pad1)">
+      <node ref="R12" pin="1"/>
+      <node ref="R13" pin="1"/>
+      <node ref="C13" pin="1"/>
+      <node ref="U6" pin="2"/>
+    </net>
+    <net code="21" name="/+5LV">
+      <node ref="U6" pin="1"/>
+      <node ref="C5" pin="2"/>
+      <node ref="C11" pin="1"/>
+      <node ref="U4" pin="6"/>
+      <node ref="U9" pin="2"/>
+      <node ref="C14" pin="1"/>
+      <node ref="J2" pin="5"/>
+      <node ref="C19" pin="1"/>
+      <node ref="U5" pin="8"/>
+      <node ref="C12" pin="1"/>
+      <node ref="U8" pin="5"/>
+    </net>
+    <net code="22" name="Net-(R23-Pad1)">
+      <node ref="R23" pin="1"/>
+      <node ref="R25" pin="1"/>
+      <node ref="U8" pin="3"/>
+    </net>
+    <net code="23" name="/CoilReturn">
+      <node ref="J4" pin="3"/>
+      <node ref="U4" pin="3"/>
+    </net>
+    <net code="24" name="/HV_LED-">
+      <node ref="U1" pin="16"/>
+      <node ref="J3" pin="10"/>
+    </net>
+    <net code="25" name="/HV_LED+">
+      <node ref="J3" pin="9"/>
+      <node ref="U1" pin="14"/>
+    </net>
+    <net code="26" name="Net-(R22-Pad2)">
+      <node ref="R22" pin="2"/>
+      <node ref="U5" pin="6"/>
+    </net>
+    <net code="27" name="Net-(R23-Pad2)">
+      <node ref="R23" pin="2"/>
+      <node ref="U5" pin="7"/>
+    </net>
+    <net code="28" name="Net-(U1-Pad9)">
+      <node ref="U1" pin="9"/>
+    </net>
+    <net code="29" name="Net-(U1-Pad11)">
+      <node ref="U1" pin="11"/>
+    </net>
+    <net code="30" name="Net-(U1-Pad1)">
+      <node ref="U1" pin="1"/>
+    </net>
+    <net code="31" name="Net-(J2-Pad1)">
+      <node ref="J2" pin="1"/>
+    </net>
+    <net code="32" name="Net-(J2-Pad8)">
+      <node ref="J2" pin="8"/>
+    </net>
+    <net code="33" name="Net-(J2-Pad7)">
+      <node ref="J2" pin="7"/>
+    </net>
+    <net code="34" name="Net-(J2-Pad6)">
+      <node ref="J2" pin="6"/>
+    </net>
+    <net code="35" name="Net-(R10-Pad1)">
+      <node ref="R10" pin="1"/>
+      <node ref="R8" pin="2"/>
+    </net>
+    <net code="36" name="Net-(R6-Pad2)">
+      <node ref="R6" pin="2"/>
+      <node ref="R8" pin="1"/>
+    </net>
+    <net code="37" name="Net-(R2-Pad2)">
+      <node ref="R2" pin="2"/>
+      <node ref="R6" pin="1"/>
+    </net>
+    <net code="38" name="Net-(R7-Pad2)">
+      <node ref="R7" pin="2"/>
+      <node ref="R9" pin="1"/>
+    </net>
+    <net code="39" name="Net-(R5-Pad2)">
+      <node ref="R7" pin="1"/>
+      <node ref="R5" pin="2"/>
+    </net>
+    <net code="40" name="/HV-">
+      <node ref="U1" pin="3"/>
+      <node ref="C7" pin="1"/>
+      <node ref="C4" pin="1"/>
+      <node ref="C6" pin="1"/>
+      <node ref="J1" pin="2"/>
+      <node ref="U1" pin="2"/>
+      <node ref="R2" pin="1"/>
+    </net>
+    <net code="41" name="Net-(C8-Pad1)">
+      <node ref="U5" pin="2"/>
+      <node ref="R9" pin="2"/>
+      <node ref="R11" pin="2"/>
+      <node ref="C8" pin="1"/>
+    </net>
+    <net code="42" name="Net-(C8-Pad2)">
+      <node ref="R11" pin="1"/>
+      <node ref="U5" pin="3"/>
+      <node ref="C8" pin="2"/>
+      <node ref="R10" pin="2"/>
+    </net>
+    <net code="43" name="Net-(R1-Pad2)">
+      <node ref="R1" pin="2"/>
+      <node ref="R5" pin="1"/>
+    </net>
+  </nets>
+</export>
