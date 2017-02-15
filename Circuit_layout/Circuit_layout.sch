@@ -28,6 +28,7 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:TSI_HV_Isolater-cache
 LIBS:Circuit_layout-cache
 EELAYER 25 0
 EELAYER END
@@ -635,84 +636,84 @@ $EndSheet
 $Comp
 L R R26
 U 1 1 58A3FC1B
-P -6100 2200
-F 0 "R26" V -6020 2200 50  0000 C CNN
-F 1 "1000" V -6100 2200 50  0000 C CNN
-F 2 "" V -6170 2200 50  0000 C CNN
-F 3 "" H -6100 2200 50  0000 C CNN
-	1    -6100 2200
+P -6100 2100
+F 0 "R26" V -6020 2100 50  0000 C CNN
+F 1 "1000" V -6100 2100 50  0000 C CNN
+F 2 "" V -6170 2100 50  0000 C CNN
+F 3 "" H -6100 2100 50  0000 C CNN
+	1    -6100 2100
 	1    0    0    -1  
 $EndComp
 $Comp
 L R R28
 U 1 1 58A3FC22
-P -6100 4000
-F 0 "R28" V -6020 4000 50  0000 C CNN
-F 1 "1000" V -6100 4000 50  0000 C CNN
-F 2 "" V -6170 4000 50  0000 C CNN
-F 3 "" H -6100 4000 50  0000 C CNN
-	1    -6100 4000
+P -6100 3900
+F 0 "R28" V -6020 3900 50  0000 C CNN
+F 1 "1000" V -6100 3900 50  0000 C CNN
+F 2 "" V -6170 3900 50  0000 C CNN
+F 3 "" H -6100 3900 50  0000 C CNN
+	1    -6100 3900
 	1    0    0    -1  
 $EndComp
 $Comp
 L R R27
 U 1 1 58A3FC29
-P -6100 3100
-F 0 "R27" V -6020 3100 50  0000 C CNN
-F 1 "8000" V -6100 3100 50  0000 C CNN
-F 2 "" V -6170 3100 50  0000 C CNN
-F 3 "" H -6100 3100 50  0000 C CNN
-	1    -6100 3100
+P -6100 3000
+F 0 "R27" V -6020 3000 50  0000 C CNN
+F 1 "8000" V -6100 3000 50  0000 C CNN
+F 2 "" V -6170 3000 50  0000 C CNN
+F 3 "" H -6100 3000 50  0000 C CNN
+	1    -6100 3000
 	1    0    0    -1  
 $EndComp
-Text Label -5800 2050 0    60   ~ 0
-+10V
-Text Label -5800 4150 0    60   ~ 0
-RTN(+5V)
-Text Label -5800 2850 0    60   ~ 0
-RTN(+5V)
-Text Label -5800 3350 0    60   ~ 0
-+10V
+Text Label -5800 1950 0    60   ~ 0
++5V
+Text Label -5800 4050 0    60   ~ 0
+GND
+Text Label -5800 2750 0    60   ~ 0
+GND
+Text Label -5800 3250 0    60   ~ 0
++5V
 $Comp
 L R R29
 U 1 1 58A3FC34
-P -6100 4500
-F 0 "R29" V -6020 4500 50  0000 C CNN
-F 1 "1000" V -6100 4500 50  0000 C CNN
-F 2 "" V -6170 4500 50  0000 C CNN
-F 3 "" H -6100 4500 50  0000 C CNN
-	1    -6100 4500
+P -6100 4400
+F 0 "R29" V -6020 4400 50  0000 C CNN
+F 1 "1000" V -6100 4400 50  0000 C CNN
+F 2 "" V -6170 4400 50  0000 C CNN
+F 3 "" H -6100 4400 50  0000 C CNN
+	1    -6100 4400
 	1    0    0    -1  
 $EndComp
 $Comp
 L R R31
 U 1 1 58A3FC3B
-P -6100 6300
-F 0 "R31" V -6020 6300 50  0000 C CNN
-F 1 "1000" V -6100 6300 50  0000 C CNN
-F 2 "" V -6170 6300 50  0000 C CNN
-F 3 "" H -6100 6300 50  0000 C CNN
-	1    -6100 6300
+P -6100 6200
+F 0 "R31" V -6020 6200 50  0000 C CNN
+F 1 "1000" V -6100 6200 50  0000 C CNN
+F 2 "" V -6170 6200 50  0000 C CNN
+F 3 "" H -6100 6200 50  0000 C CNN
+	1    -6100 6200
 	1    0    0    -1  
 $EndComp
 $Comp
 L R R30
 U 1 1 58A3FC42
-P -6100 5400
-F 0 "R30" V -6020 5400 50  0000 C CNN
-F 1 "8000" V -6100 5400 50  0000 C CNN
-F 2 "" V -6170 5400 50  0000 C CNN
-F 3 "" H -6100 5400 50  0000 C CNN
-	1    -6100 5400
+P -6100 5300
+F 0 "R30" V -6020 5300 50  0000 C CNN
+F 1 "8000" V -6100 5300 50  0000 C CNN
+F 2 "" V -6170 5300 50  0000 C CNN
+F 3 "" H -6100 5300 50  0000 C CNN
+	1    -6100 5300
 	1    0    0    -1  
 $EndComp
-Text Label -5800 4350 0    60   ~ 0
+Text Label -5800 4250 0    60   ~ 0
 +5V
-Text Label -5800 6450 0    60   ~ 0
+Text Label -5800 6350 0    60   ~ 0
 GND
-Text Label -5800 5150 0    60   ~ 0
+Text Label -5800 5050 0    60   ~ 0
 GND
-Text Label -5800 5650 0    60   ~ 0
+Text Label -5800 5550 0    60   ~ 0
 +5V
 $Comp
 L MCP6004 U15
@@ -770,14 +771,14 @@ F 3 "" H -7300 1150 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 Text Label -6950 400  0    60   ~ 0
-+5V
++10V
 Text Label -6950 1000 0    60   ~ 0
 GND
 Text Label -7300 1450 0    60   ~ 0
 GND
-Text Label -7250 3100 0    60   ~ 0
-APPS1
-Text Label -7250 5400 0    60   ~ 0
+Text Label -7250 3000 0    60   ~ 0
+APPS1_ISO
+Text Label -7250 5300 0    60   ~ 0
 APPS2
 Text GLabel -9600 -450 0    60   Input ~ 0
 APPS1
@@ -785,64 +786,64 @@ Text GLabel -9600 100  0    60   Input ~ 0
 APPS2
 Text GLabel -9700 750  0    60   Input ~ 0
 GND
-Connection ~ -6350 3100
+Connection ~ -6350 3000
 Wire Wire Line
-	-6100 2350 -6100 2950
+	-6100 2250 -6100 2850
 Wire Wire Line
-	-6100 3250 -6100 3850
+	-6100 3150 -6100 3750
 Wire Wire Line
-	-6000 3750 -6100 3750
-Connection ~ -6100 3750
+	-6000 3650 -6100 3650
+Connection ~ -6100 3650
 Wire Wire Line
-	-6000 2450 -6100 2450
-Connection ~ -6100 2450
+	-6000 2350 -6100 2350
+Connection ~ -6100 2350
 Wire Wire Line
-	-6100 2050 -5800 2050
+	-6100 1950 -5800 1950
 Wire Wire Line
-	-5800 2050 -5800 2250
+	-5800 1950 -5800 2150
 Wire Wire Line
-	-6100 4150 -5800 4150
+	-6100 4050 -5800 4050
 Wire Wire Line
-	-5800 4150 -5800 3950
+	-5800 4050 -5800 3850
 Wire Wire Line
-	-6350 2650 -6350 3550
+	-6350 2550 -6350 3450
 Wire Wire Line
-	-6350 3550 -6000 3550
+	-6350 3450 -6000 3450
 Wire Wire Line
-	-6350 2650 -6000 2650
+	-6350 2550 -6000 2550
 Wire Wire Line
-	-7250 3100 -6350 3100
-Connection ~ -5800 4150
-Connection ~ -5800 2050
-Connection ~ -6350 5400
+	-7250 3000 -6350 3000
+Connection ~ -5800 4050
+Connection ~ -5800 1950
+Connection ~ -6350 5300
 Wire Wire Line
-	-6100 4650 -6100 5250
+	-6100 4550 -6100 5150
 Wire Wire Line
-	-6100 5550 -6100 6150
+	-6100 5450 -6100 6050
 Wire Wire Line
-	-6000 6050 -6100 6050
-Connection ~ -6100 6050
+	-6000 5950 -6100 5950
+Connection ~ -6100 5950
 Wire Wire Line
-	-6000 4750 -6100 4750
-Connection ~ -6100 4750
+	-6000 4650 -6100 4650
+Connection ~ -6100 4650
 Wire Wire Line
-	-6100 4350 -5800 4350
+	-6100 4250 -5800 4250
 Wire Wire Line
-	-5800 4350 -5800 4550
+	-5800 4250 -5800 4450
 Wire Wire Line
-	-6100 6450 -5800 6450
+	-6100 6350 -5800 6350
 Wire Wire Line
-	-5800 6450 -5800 6250
+	-5800 6350 -5800 6150
 Wire Wire Line
-	-6350 4950 -6350 5850
+	-6350 4850 -6350 5750
 Wire Wire Line
-	-6350 5850 -6000 5850
+	-6350 5750 -6000 5750
 Wire Wire Line
-	-6350 4950 -6000 4950
+	-6350 4850 -6000 4850
 Wire Wire Line
-	-7250 5400 -6350 5400
-Connection ~ -5800 6450
-Connection ~ -5800 4350
+	-7250 5300 -6350 5300
+Connection ~ -5800 6350
+Connection ~ -5800 4250
 Wire Wire Line
 	-7500 600  -7150 600 
 Wire Wire Line
@@ -874,34 +875,34 @@ THROTTLE_OUT
 $Comp
 L MCP6004 U16
 U 1 1 58A3FCA9
-P -5700 3650
-F 0 "U16" H -5650 3850 50  0000 C CNN
-F 1 "MCP6004" H -5550 3450 50  0000 C CNN
-F 2 "" H -5750 3750 50  0000 C CNN
-F 3 "" H -5650 3850 50  0000 C CNN
-	1    -5700 3650
+P -5700 3550
+F 0 "U16" H -5650 3750 50  0000 C CNN
+F 1 "MCP6004" H -5550 3350 50  0000 C CNN
+F 2 "" H -5750 3650 50  0000 C CNN
+F 3 "" H -5650 3750 50  0000 C CNN
+	1    -5700 3550
 	1    0    0    -1  
 $EndComp
 $Comp
 L MCP6004 U16
 U 2 1 58A3FCB0
-P -5700 4850
-F 0 "U16" H -5650 5050 50  0000 C CNN
-F 1 "MCP6004" H -5550 4650 50  0000 C CNN
-F 2 "" H -5750 4950 50  0000 C CNN
-F 3 "" H -5650 5050 50  0000 C CNN
-	2    -5700 4850
+P -5700 4750
+F 0 "U16" H -5650 4950 50  0000 C CNN
+F 1 "MCP6004" H -5550 4550 50  0000 C CNN
+F 2 "" H -5750 4850 50  0000 C CNN
+F 3 "" H -5650 4950 50  0000 C CNN
+	2    -5700 4750
 	1    0    0    -1  
 $EndComp
 $Comp
 L MCP6004 U16
 U 3 1 58A3FCB7
-P -5700 5950
-F 0 "U16" H -5650 6150 50  0000 C CNN
-F 1 "MCP6004" H -5550 5750 50  0000 C CNN
-F 2 "" H -5750 6050 50  0000 C CNN
-F 3 "" H -5650 6150 50  0000 C CNN
-	3    -5700 5950
+P -5700 5850
+F 0 "U16" H -5650 6050 50  0000 C CNN
+F 1 "MCP6004" H -5550 5650 50  0000 C CNN
+F 2 "" H -5750 5950 50  0000 C CNN
+F 3 "" H -5650 6050 50  0000 C CNN
+	3    -5700 5850
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -938,13 +939,13 @@ F 3 "" H -6100 700 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label -5800 -350 0    60   ~ 0
-+5V
++10V
 Text Label -5800 1750 0    60   ~ 0
 GND
 Text Label -5800 450  0    60   ~ 0
 GND
 Text Label -5800 950  0    60   ~ 0
-+5V
++10V
 Connection ~ -6350 700 
 Wire Wire Line
 	-6100 -50  -6100 550 
@@ -997,12 +998,12 @@ $EndComp
 $Comp
 L MCP6004 U15
 U 4 1 58A3FCF5
-P -5700 2550
-F 0 "U15" H -5650 2750 50  0000 C CNN
-F 1 "MCP6004" H -5550 2350 50  0000 C CNN
-F 2 "" H -5750 2650 50  0000 C CNN
-F 3 "" H -5650 2750 50  0000 C CNN
-	4    -5700 2550
+P -5700 2450
+F 0 "U15" H -5650 2650 50  0000 C CNN
+F 1 "MCP6004" H -5550 2250 50  0000 C CNN
+F 2 "" H -5750 2550 50  0000 C CNN
+F 3 "" H -5650 2650 50  0000 C CNN
+	4    -5700 2450
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1019,12 +1020,12 @@ $EndComp
 $Comp
 L 4073 U17
 U 2 1 58A3FD03
-P -4450 4850
-F 0 "U17" H -4450 4900 50  0000 C CNN
-F 1 "4073" H -4450 4800 50  0000 C CNN
-F 2 "" H -4450 4850 60  0000 C CNN
-F 3 "" H -4450 4850 60  0000 C CNN
-	2    -4450 4850
+P -4400 4750
+F 0 "U17" H -4400 4800 50  0000 C CNN
+F 1 "4073" H -4400 4700 50  0000 C CNN
+F 2 "" H -4400 4750 60  0000 C CNN
+F 3 "" H -4400 4750 60  0000 C CNN
+	2    -4400 4750
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1044,20 +1045,6 @@ Wire Wire Line
 	-5400 1100 -5100 1100
 Wire Wire Line
 	-5400 1250 -5100 1250
-Wire Wire Line
-	-5400 2550 -5100 2550
-Wire Wire Line
-	-5100 2550 -5100 1400
-Wire Wire Line
-	-5400 3650 -5400 4700
-Wire Wire Line
-	-5400 4700 -5050 4700
-Wire Wire Line
-	-5400 4850 -5050 4850
-Wire Wire Line
-	-5400 5950 -5400 5000
-Wire Wire Line
-	-5400 5000 -5050 5000
 $Comp
 L LM78M05CT U14
 U 1 1 58A3FD1B
@@ -1231,7 +1218,7 @@ GND
 Wire Wire Line
 	-3450 2000 -3050 2000
 Text Label -3450 2000 0    60   ~ 0
-APPS1
+APPS1_ISO
 Wire Wire Line
 	-2750 2000 -1650 2000
 Wire Wire Line
@@ -1243,13 +1230,62 @@ Wire Wire Line
 Wire Wire Line
 	-3900 3100 -3800 3100
 Wire Wire Line
-	-3850 4850 -3850 3250
-Wire Wire Line
-	-3850 3250 -3800 3250
-Wire Wire Line
 	-6550 700  -6350 700 
 Wire Wire Line
 	-2600 3100 -2600 2250
 Wire Wire Line
 	-2600 2250 -2500 2250
+$Comp
+L ACPL-C870 U?
+U 1 1 58A49D04
+P -10100 3200
+F 0 "U?" H -10100 3400 60  0000 C CNN
+F 1 "ACPL-C870" H -10100 3300 60  0000 C CNN
+F 2 "" H -10100 3400 60  0000 C CNN
+F 3 "" H -10100 3400 60  0000 C CNN
+	1    -10100 3200
+	1    0    0    -1  
+$EndComp
+Text Notes -7900 -800 0    60   ~ 0
+Need to address the fact that not all opamps are on similar pwr rails. Need to be common 5/10 for each chip. Also, now figure out way to do the AND gates such that they can handle the voltages necessary for switching when using val's higher. - thought: isolate the voltage out of the 10V comparators
+Wire Wire Line
+	-10600 3400 -10800 3400
+Wire Wire Line
+	-10600 3550 -10800 3550
+Wire Wire Line
+	-9600 3400 -9400 3400
+Wire Wire Line
+	-9600 3550 -9400 3550
+Text Label -10800 3400 0    60   ~ 0
+APPS1
+Text Label -9400 3400 0    60   ~ 0
+APPS1_ISO
+Text Label -10800 3550 0    60   ~ 0
+RTN(+5V)
+Text Label -9400 3550 0    60   ~ 0
+GND
+Text Label -9600 3700 0    60   ~ 0
+GND
+Text Label -9600 3250 0    60   ~ 0
++5V
+Text Label -10600 3250 0    60   ~ 0
++10V
+Text Label -10600 3700 0    60   ~ 0
+RTN(+5V)
+Wire Wire Line
+	-5400 4750 -5000 4750
+Wire Wire Line
+	-5400 5850 -5000 5850
+Wire Wire Line
+	-5000 5850 -5000 4900
+Wire Wire Line
+	-5400 3550 -5400 4600
+Wire Wire Line
+	-5400 4600 -5000 4600
+Wire Wire Line
+	-5400 2450 -5400 1400
+Wire Wire Line
+	-5400 1400 -5100 1400
+Wire Wire Line
+	-3800 4750 -3800 3250
 $EndSCHEMATC

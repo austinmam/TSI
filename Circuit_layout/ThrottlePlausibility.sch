@@ -28,6 +28,7 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:TSI_HV_Isolater-cache
 LIBS:Circuit_layout-cache
 EELAYER 25 0
 EELAYER END
