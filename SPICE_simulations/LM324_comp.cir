@@ -1,0 +1,26 @@
+* Simulation of LM324 Comparator
+.include C:\Users\nessa\Desktop\TSI\SPICE_subcircuits\LM324.sub
+
+* LM324 OPERATIONAL AMPLIFIER "MACROMODEL" SUBCIRCUIT
+* CREATED USING PARTS RELEASE 4.01 ON 09/08/89 AT 10:54
+* (REV N/A)      SUPPLY VOLTAGE: 5V
+* CONNECTIONS:    NON-INVERTING INPUT
+*                 | INVERTING INPUT
+*                 | | POSITIVE POWER SUPPLY
+*                 | | | NEGATIVE POWER SUPPLY
+*                 | | | | OUTPUT
+*                 | | | | |
+*.SUBCKT LM324    1 2 3 4 5
+*
+
+Vcc Vcc 0 DC 5
+
+Vpos Vpos 0 DC 5
+Vneg Vneg 0 DC 2.5
+
+X1 Vpos Vneg Vcc 0 Vout LM324
+
+.DC Vpos 0 5.0 0.01
+
+.probe
+.end

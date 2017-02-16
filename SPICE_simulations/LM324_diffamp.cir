@@ -1,0 +1,34 @@
+* Simulation of LM324 Diff Amp
+.include C:\Users\nessa\Desktop\TSI\SPICE_subcircuits\LM324.sub
+
+* LM324 OPERATIONAL AMPLIFIER "MACROMODEL" SUBCIRCUIT
+* CREATED USING PARTS RELEASE 4.01 ON 09/08/89 AT 10:54
+* (REV N/A)      SUPPLY VOLTAGE: 5V
+* CONNECTIONS:    NON-INVERTING INPUT
+*                 | INVERTING INPUT
+*                 | | POSITIVE POWER SUPPLY
+*                 | | | NEGATIVE POWER SUPPLY
+*                 | | | | OUTPUT
+*                 | | | | |
+*.SUBCKT LM324    1 2 3 4 5
+*
+
+Vcc Vcc 0 DC 10
+
+Vapps1 Vapps1 0 DC 2.5
+Vapps2 Vapps2 0 DC 2.5
+
+R1 Vapps1 Vneg 1k
+R2 Vneg   Vout 1k
+
+R3 Vapps2 Vpos 1k
+R4 Vpos   0    1k
+
+R5 Vout 0 1k
+
+X1 Vpos Vneg Vcc 0 Vout LM324
+
+.DC Vapps2 2.5 5.0 0.01
+
+.probe
+.end
