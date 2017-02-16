@@ -1,0 +1,29 @@
+* Simulation of LM339
+.include C:\Users\nessa\Desktop\TSI\SPICE_subcircuits\LM339.sub
+
+* LM339 VOLTAGE COMPARATOR "MACROMODEL" SUBCIRCUIT
+* CREATED USING PARTS VERSION 4.03 ON 03/07/90 AT 14:17
+* REV (N/A)
+* CONNECTIONS:   NON-INVERTING INPUT
+*                | INVERTING INPUT
+*                | | POSITIVE POWER SUPPLY
+*                | | | NEGATIVE POWER SUPPLY
+*                | | | | OPEN COLLECTOR OUTPUT
+*                | | | | |
+*.SUBCKT LM339    1 2 3 4 5
+
+Vcc Vcc 0 DC 10
+Vlogic Vlogic 0 DC 5
+
+Vpos Vpos 0 DC 6
+Vneg Vneg 0 DC 1
+
+R Vlogic Vout 1k
+C Vout 0 15p
+
+X1 Vpos Vneg Vcc 0 Vout LM339
+
+.DC Vpos 0 10 0.01
+
+.probe
+.end
