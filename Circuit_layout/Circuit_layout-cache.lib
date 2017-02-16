@@ -1,11 +1,11 @@
 EESchema-LIBRARY Version 2.3
 #encoding utf-8
 #
-# 4073
+# 4073-RESCUE-Circuit_layout
 #
-DEF 4073 U 0 30 Y Y 3 F N
+DEF 4073-RESCUE-Circuit_layout U 0 30 Y Y 3 F N
 F0 "U" 0 50 50 H V C CNN
-F1 "4073" 0 -50 50 H V C CNN
+F1 "4073-RESCUE-Circuit_layout" 0 -50 50 H V C CNN
 F2 "" 0 0 60 H V C CNN
 F3 "" 0 0 60 H V C CNN
 DRAW
