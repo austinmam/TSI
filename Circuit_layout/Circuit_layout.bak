@@ -1247,7 +1247,7 @@ F 3 "" H -10100 3400 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Text Notes -7900 -800 0    60   ~ 0
-Change diff amp/window for plaus. to 10V/0V\nAdd isolator to APPS1 input when going to window comparator + actual throttle when fed to the buffer sending out to MC
+Need to address the fact that not all opamps are on similar pwr rails. Need to be common 5/10 for each chip. Also, now figure out way to do the AND gates such that they can handle the voltages necessary for switching when using val's higher. - thought: isolate the voltage out of the 10V comparators
 Wire Wire Line
 	-10600 3400 -10800 3400
 Wire Wire Line
