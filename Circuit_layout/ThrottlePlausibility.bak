@@ -1,34 +1,84 @@
 EESchema Schematic File Version 2
-LIBS:power
-LIBS:device
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
+LIBS:Circuit_layout-rescue
 LIBS:TSI_HV_Isolater-cache
+LIBS:74xgxx
+LIBS:74xx
+LIBS:ac-dc
+LIBS:actel
+LIBS:adc-dac
+LIBS:Altera
+LIBS:analog_devices
+LIBS:analog_switches
+LIBS:atmel
+LIBS:audio
+LIBS:brooktre
+LIBS:cmos_ieee
+LIBS:cmos4000
+LIBS:conn
+LIBS:contrib
+LIBS:cypress
+LIBS:dc-dc
+LIBS:device
+LIBS:digital-audio
+LIBS:diode
+LIBS:display
+LIBS:dsp
+LIBS:elec-unifil
+LIBS:ESD_Protection
+LIBS:ftdi
+LIBS:gennum
+LIBS:graphic
+LIBS:hc11
+LIBS:intel
+LIBS:interface
+LIBS:ir
+LIBS:Lattice
+LIBS:linear
+LIBS:logo
+LIBS:maxim
+LIBS:memory
+LIBS:microchip
+LIBS:microchip_dspic33dsc
+LIBS:microchip_pic10mcu
+LIBS:microchip_pic12mcu
+LIBS:microchip_pic16mcu
+LIBS:microchip_pic18mcu
+LIBS:microchip_pic32mcu
+LIBS:microcontrollers
+LIBS:motor_drivers
+LIBS:motorola
+LIBS:msp430
+LIBS:nordicsemi
+LIBS:nxp_armmcu
+LIBS:onsemi
+LIBS:opto
+LIBS:Oscillators
+LIBS:philips
+LIBS:power
+LIBS:Power_Management
+LIBS:powerint
+LIBS:pspice
+LIBS:references
+LIBS:regul
+LIBS:relays
+LIBS:rfcom
+LIBS:sensors
+LIBS:silabs
+LIBS:siliconi
+LIBS:stm8
+LIBS:stm32
+LIBS:supertex
+LIBS:switches
+LIBS:texas
+LIBS:transf
+LIBS:transistors
+LIBS:ttl_ieee
+LIBS:valves
+LIBS:video
+LIBS:Xicor
+LIBS:xilinx
+LIBS:Zilog
+LIBS:TSI_KiCad_Lib
 LIBS:Circuit_layout-cache
 EELAYER 25 0
 EELAYER END
@@ -418,7 +468,7 @@ F 3 "" H 4900 4000 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 4073 U10
+L 4073-RESCUE-Circuit_layout U10
 U 1 1 58A29E7C
 P 6050 2500
 F 0 "U10" H 6050 2550 50  0000 C CNN
@@ -429,7 +479,7 @@ F 3 "" H 6050 2500 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 4073 U10
+L 4073-RESCUE-Circuit_layout U10
 U 2 1 58A29FED
 P 6100 6100
 F 0 "U10" H 6100 6150 50  0000 C CNN
@@ -440,7 +490,7 @@ F 3 "" H 6100 6100 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 4073 U10
+L 4073-RESCUE-Circuit_layout U10
 U 3 1 58A2A0CF
 P 7350 4350
 F 0 "U10" H 7350 4400 50  0000 C CNN
@@ -931,7 +981,7 @@ F 3 "" H -7000 4000 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 4073 U?
+L 4073-RESCUE-Circuit_layout U?
 U 1 1 58A600B3
 P -5850 2600
 F 0 "U?" H -5850 2650 50  0000 C CNN
@@ -942,7 +992,7 @@ F 3 "" H -5850 2600 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 4073 U?
+L 4073-RESCUE-Circuit_layout U?
 U 1 1 58A600BA
 P -5750 6100
 F 0 "U?" H -5750 6150 50  0000 C CNN
@@ -953,7 +1003,7 @@ F 3 "" H -5750 6100 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 4073 U?
+L 4073-RESCUE-Circuit_layout U?
 U 1 1 58A600C1
 P -4550 4450
 F 0 "U?" H -4550 4500 50  0000 C CNN
