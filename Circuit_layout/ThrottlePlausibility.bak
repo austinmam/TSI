@@ -85,14 +85,14 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 3
-Title "ECE492 TSI Throttle Plausibility Circuit"
+Title "Tractive System Interface"
 Date "2017-02-13"
-Rev ""
+Rev "0.0"
 Comp "Lafayette College"
-Comment1 ""
+Comment1 "Spring 2017"
 Comment2 ""
 Comment3 ""
-Comment4 ""
+Comment4 "DEVELOPMENT ONLY"
 $EndDescr
 $Comp
 L R R8

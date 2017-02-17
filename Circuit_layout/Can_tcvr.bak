@@ -85,14 +85,14 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 3 3
-Title ""
+Title "Tractive System Interface"
 Date ""
-Rev ""
-Comp ""
-Comment1 ""
+Rev "0.0"
+Comp "Lafayette College"
+Comment1 "Spring 2017"
 Comment2 ""
 Comment3 ""
-Comment4 ""
+Comment4 "DEVELOPMENT ONLY"
 $EndDescr
 $Comp
 L MCP2551-I/SN U?
@@ -228,4 +228,16 @@ $EndComp
 NoConn ~ 4900 4050
 Text Notes 4550 3150 0    99   ~ 0
 CAN Tranceiver
+Text HLabel 2400 1700 0    60   Output ~ 0
+CANTX
+Text HLabel 2400 1950 0    60   Output ~ 0
+CANRX
+Wire Wire Line
+	2400 1700 3000 1700
+Wire Wire Line
+	2400 1950 3000 1950
+Text Label 3000 1700 2    60   ~ 0
+CANTX
+Text Label 3000 1950 2    60   ~ 0
+CANRX
 $EndSCHEMATC

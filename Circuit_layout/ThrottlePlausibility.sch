@@ -84,13 +84,13 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 3
+Sheet 2 4
 Title "Tractive System Interface"
 Date "2017-02-13"
 Rev "0.0"
 Comp "Lafayette College"
 Comment1 "Spring 2017"
-Comment2 ""
+Comment2 "Jack Plumb"
 Comment3 ""
 Comment4 "DEVELOPMENT ONLY"
 $EndDescr

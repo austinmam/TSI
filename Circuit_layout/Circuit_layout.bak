@@ -85,14 +85,14 @@ EELAYER END
 $Descr A 11000 8500
 encoding utf-8
 Sheet 1 3
-Title ""
+Title "Tractive System Interface"
 Date ""
-Rev ""
-Comp ""
-Comment1 ""
-Comment2 ""
+Rev "0.0"
+Comp "Lafayette College"
+Comment1 "Spring 2017"
+Comment2 "Jack Plumb"
 Comment3 ""
-Comment4 ""
+Comment4 "DEVELOPMENT ONLY"
 $EndDescr
 $Comp
 L CONN_8 J1
@@ -396,19 +396,6 @@ RTDS
 Text Label 9550 2050 0    60   ~ 0
 RTDS_RTN
 $Comp
-L MCP2551-I/SN U2
-U 1 1 58A214A4
-P 5550 6000
-F 0 "U2" H 5150 6350 50  0000 L CNN
-F 1 "MCP2551-I/SN" H 5650 6350 50  0000 L CNN
-F 2 "SO-8" H 5550 6000 50  0000 C CIN
-F 3 "" H 5550 6000 50  0000 C CNN
-F 4 "MCP2551-I/SN-ND" H 5550 6000 60  0001 C CNN "DigiKey P/N"
-F 5 "http://www.digikey.com/product-detail/en/microchip-technology/MCP2551-I-SN/MCP2551-I-SN-ND/509452" H 5550 6000 60  0001 C CNN "URL"
-	1    5550 6000
-	1    0    0    -1  
-$EndComp
-$Comp
 L CONN_01X03 P2
 U 1 1 58A25A88
 P 1100 7300
@@ -550,9 +537,40 @@ Wire Wire Line
 Wire Wire Line
 	9500 700  8900 700 
 $Sheet
-S 2850 6500 1500 900 
+S 2850 6650 1500 900 
 U 58A62F55
 F0 "CAN Transceiver" 60
 F1 "Can_tcvr.sch" 60
+F2 "CANTX" I R 4350 6950 60 
+F3 "CANRX" I R 4350 7250 60 
 $EndSheet
+$Comp
+L AT90CAN128-A U?
+U 1 1 58A74D86
+P 5250 3700
+F 0 "U?" H 4100 5600 50  0000 L BNN
+F 1 "AT90CAN128-A" H 6400 1750 50  0000 R BNN
+F 2 "TQFP64" H 5300 3700 50  0000 C CNN
+F 3 "" H 5250 3700 50  0000 C CNN
+F 4 "AT90CAN128-15AT1CT-ND" H 5250 3700 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/microchip-technology/AT90CAN128-15AT1/AT90CAN128-15AT1CT-ND/2477049" H 5250 3700 60  0001 C CNN "URL"
+	1    5250 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4350 6950 4850 6950
+Wire Wire Line
+	4350 7250 4850 7250
+Text Label 4850 6950 2    60   ~ 0
+CANTX
+Text Label 4850 7250 2    60   ~ 0
+CANRX
+Wire Wire Line
+	6550 5200 7150 5200
+Wire Wire Line
+	6550 5300 7150 5300
+Text Label 7150 5200 2    60   ~ 0
+CANTX
+Text Label 7150 5300 2    60   ~ 0
+CANRX
 $EndSCHEMATC
