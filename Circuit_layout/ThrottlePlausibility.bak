@@ -451,7 +451,7 @@ F 3 "" H -11450 4750 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Text Notes -9250 550  0    60   ~ 0
-Need to address the fact that not all opamps are on similar pwr rails. \nNeed to be common 5/10 for each chip. \nAlso, now figure out way to do the AND gates such that they can handle the voltages necessary for switching when using val's higher. \n- thought: isolate the voltage out of the 10V comparators
+Need to address the fact that not all opamps are on similar pwr rails. \nNeed to be common 5/10 for each chip. \nAlso, now figure out way to do the AND gates such that they can handle the voltages necessary for switching when using val's higher. \n- thought: isolate the voltage out of the 10V comparators\n\nEdit: Cannot use lm324 as opamp for diffamp - cannot go rail/rail
 Text Label -12500 4750 0    60   ~ 0
 APPS1
 Text Label -10750 4750 0    60   ~ 0
@@ -655,28 +655,6 @@ F 3 "" H -7000 1700 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LM324 U?
-U 1 1 58A64F6B
-P -8200 2050
-F 0 "U?" H -8150 2250 50  0000 C CNN
-F 1 "LM324" H -8050 1850 50  0000 C CNN
-F 2 "" H -8250 2150 50  0000 C CNN
-F 3 "" H -8150 2250 50  0000 C CNN
-	1    -8200 2050
-	1    0    0    1   
-$EndComp
-$Comp
-L LM324 U?
-U 1 1 58A6115F
-P -1150 3350
-F 0 "U?" H -1100 3550 50  0000 C CNN
-F 1 "LM324" H -1000 3150 50  0000 C CNN
-F 2 "" H -1200 3450 50  0000 C CNN
-F 3 "" H -1100 3550 50  0000 C CNN
-	1    -1150 3350
-	1    0    0    -1  
-$EndComp
-$Comp
 L LM339 U?
 U 1 1 58A620F9
 P -7050 2600
@@ -736,7 +714,7 @@ L R R?
 U 1 1 58A62946
 P -6650 1250
 F 0 "R?" V -6570 1250 50  0000 C CNN
-F 1 "R" V -6650 1250 50  0000 C CNN
+F 1 "10k" V -6650 1250 50  0000 C CNN
 F 2 "" V -6720 1250 50  0000 C CNN
 F 3 "" H -6650 1250 50  0000 C CNN
 	1    -6650 1250
@@ -747,7 +725,7 @@ L R R?
 U 1 1 58A642FF
 P -6650 2350
 F 0 "R?" V -6570 2350 50  0000 C CNN
-F 1 "R" V -6650 2350 50  0000 C CNN
+F 1 "10k" V -6650 2350 50  0000 C CNN
 F 2 "" V -6720 2350 50  0000 C CNN
 F 3 "" H -6650 2350 50  0000 C CNN
 	1    -6650 2350
@@ -821,4 +799,38 @@ Wire Wire Line
 	-6750 1500 -6650 1500
 Wire Wire Line
 	-6650 1500 -6650 1400
+$Comp
+L LM7332 U?
+U 1 1 58A6175F
+P -8200 2050
+F 0 "U?" H -8200 2200 50  0000 L CNN
+F 1 "LM7332" H -8200 1900 50  0000 L CNN
+F 2 "" H -8300 2100 50  0000 C CNN
+F 3 "" H -8200 2200 50  0000 C CNN
+	1    -8200 2050
+	1    0    0    -1  
+$EndComp
+Text Notes -8500 2650 0    60   ~ 0
+Used for 10V \nrail-to-rail ability
+$Comp
+L MCP6001 U?
+U 1 1 58A62A6E
+P -1150 3350
+F 0 "U?" H -1100 3550 50  0000 C CNN
+F 1 "MCP6001" H -950 3150 50  0000 C CNN
+F 2 "" H -1200 3450 50  0000 C CNN
+F 3 "" H -1100 3550 50  0000 C CNN
+	1    -1150 3350
+	1    0    0    -1  
+$EndComp
+Text Notes -1400 4100 0    60   ~ 0
+Used for rail-to-rail\non 5V
+Wire Wire Line
+	-6650 2200 -6650 2100
+Wire Wire Line
+	-6650 1100 -6650 1000
+Text Label -6650 1000 0    60   ~ 0
++5V
+Text Label -6650 2100 0    60   ~ 0
++5V
 $EndSCHEMATC
