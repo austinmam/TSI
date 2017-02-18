@@ -1,4 +1,4 @@
-* Simulation of LM339
+* Simulation of LM339 Window Comparator Circuit
 .include C:\Users\nessa\Desktop\TSI\SPICE_subcircuits\LM339.sub
 
 * LM339 VOLTAGE COMPARATOR "MACROMODEL" SUBCIRCUIT
@@ -12,18 +12,24 @@
 *                | | | | |
 *.SUBCKT LM339    1 2 3 4 5
 
-Vcc Vcc 0 DC 10
+Vcc Vcc 0 DC 5
 Vlogic Vlogic 0 DC 5
 
-Vpos Vpos 0 DC 6
-Vneg Vneg 0 DC 1
+Vapps1 Vapps1 0 DC 2.5
 
-R Vlogic Vout 1k
-C Vout 0 15p
+R1 Vcc Vp1 1k
+R2 Vp1 Vn2 8k
+R3 Vn2 0   1k
 
-X1 Vpos Vneg Vcc 0 Vout LM339
+R4 Vlogic Vo1 5k
+R5 Vlogic Vo2 5k
+C1 Vo1 0 15p
+C2 Vo2 0 15p
 
-.DC Vpos 0 10 0.01
+X1 Vp1 Vapps1 Vcc 0 Vo1 LM339
+X2 Vapps1 Vn2 Vcc 0 Vo2 LM339
+
+.DC Vapps1 0 5 0.01
 
 .probe
 .end

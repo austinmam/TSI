@@ -1,5 +1,5 @@
 *MCP600X Comparator Test
-.include C:\Users\nessa\Desktop\TSI\SPICE_subcircuits\MCP6001.sub
+.include C:\Users\nessa\Desktop\TSI_repo\SPICE_subcircuits\MCP6001.sub
 *.SUBCKT MCP6001 1 2 3 4 5
 *                | | | | |
 *                | | | | Output
