@@ -78,7 +78,6 @@ LIBS:video
 LIBS:Xicor
 LIBS:xilinx
 LIBS:Zilog
-LIBS:TSI_KiCad_Lib
 LIBS:Circuit_layout-cache
 EELAYER 25 0
 EELAYER END
