@@ -78,6 +78,7 @@ LIBS:video
 LIBS:Xicor
 LIBS:xilinx
 LIBS:Zilog
+LIBS:TSI_KiCad_Lib
 LIBS:Circuit_layout-cache
 EELAYER 25 0
 EELAYER END
@@ -229,9 +230,9 @@ Text Label 3000 4200 0    60   ~ 0
 APPS1_ISO
 Text Label 3000 6500 0    60   ~ 0
 APPS2
-Text Label 1900 1800 0    60   ~ 0
+Text Label 1800 1800 0    60   ~ 0
 APPS1
-Text Label 1900 2000 0    60   ~ 0
+Text Label 2150 2000 0    60   ~ 0
 APPS2
 $Comp
 L R R5
@@ -275,44 +276,23 @@ GND
 Text Label 4450 2150 0    60   ~ 0
 +10V
 $Comp
-L LM78M05CT U4
-U 1 1 58A600C8
-P 1700 6800
-F 0 "U4" H 1500 7000 50  0000 C CNN
-F 1 "LM78M05CT" H 1700 7000 50  0000 L CNN
-F 2 "TO-220" H 1700 6900 50  0000 C CIN
-F 3 "http://www.mouser.com/ds/2/149/LM78M05-889495.pdf" H 1700 6800 50  0001 C CNN
-	1    1700 6800
-	1    0    0    -1  
-$EndComp
-$Comp
 L LM78M05CT U3
 U 1 1 58A600CF
-P 1700 6100
-F 0 "U3" H 1500 6300 50  0000 C CNN
-F 1 "LM78M05CT" H 1700 6300 50  0000 L CNN
-F 2 "TO-220" H 1700 6200 50  0000 C CIN
-F 3 "http://www.mouser.com/ds/2/149/LM78M05-889495.pdf" H 1700 6100 50  0001 C CNN
-	1    1700 6100
+P 1650 5950
+F 0 "U3" H 1450 6150 50  0000 C CNN
+F 1 "LM78M05CT" H 1650 6150 50  0000 L CNN
+F 2 "TO-220" H 1650 6050 50  0000 C CIN
+F 3 "http://www.mouser.com/ds/2/149/LM78M05-889495.pdf" H 1650 5950 50  0001 C CNN
+	1    1650 5950
 	1    0    0    -1  
 $EndComp
-Text Label 1150 5300 0    60   ~ 0
-+24V
-Text Label 1200 6050 0    60   ~ 0
-+24V
-Text Label 1200 6750 0    60   ~ 0
-+24V
-Text Label 1700 6450 0    60   ~ 0
+Text Label 1650 6300 0    60   ~ 0
 GND
-Text Label 1700 7150 0    60   ~ 0
-GND
-Text Label 2200 5300 0    60   ~ 0
-APPS1_H
-Text Label 2200 6050 0    60   ~ 0
-APPS1_RTN
-Text Label 2200 6750 0    60   ~ 0
-+5V
-Text Label 1700 5700 0    60   ~ 0
+Text Label 2150 5050 0    60   ~ 0
+APPS_10
+Text Label 2150 5900 0    60   ~ 0
+APPS_5
+Text Label 1650 5450 0    60   ~ 0
 GND
 $Comp
 L MMBF170 Q1
@@ -328,17 +308,15 @@ $EndComp
 $Comp
 L LM7810CT U2
 U 1 1 58A600F2
-P 1700 5350
-F 0 "U2" H 1500 5550 50  0000 C CNN
-F 1 "LM7810CT" H 1700 5550 50  0000 L CNN
-F 2 "TO-220" H 1700 5450 50  0000 C CIN
-F 3 "http://www.mouser.com/ds/2/149/LM7810-1011066.pdf" H 1700 5350 50  0001 C CNN
-	1    1700 5350
+P 1650 5100
+F 0 "U2" H 1450 5300 50  0000 C CNN
+F 1 "LM7810CT" H 1650 5300 50  0000 L CNN
+F 2 "TO-220" H 1650 5200 50  0000 C CIN
+F 3 "http://www.mouser.com/ds/2/149/LM7810-1011066.pdf" H 1650 5100 50  0001 C CNN
+	1    1650 5100
 	1    0    0    -1  
 $EndComp
-Text Label 1150 5300 0    60   ~ 0
-+24V
-Text Label 1700 5700 0    60   ~ 0
+Text Label 1650 5450 0    60   ~ 0
 GND
 Text Label 8150 2500 0    60   ~ 0
 +5V
@@ -370,33 +348,33 @@ F 3 "" H 6300 3000 50  0000 C CNN
 	1    6300 3000
 	1    0    0    -1  
 $EndComp
-Text Label 6300 3200 0    60   ~ 0
+Text Label 6300 3400 0    60   ~ 0
 GND
 Text Label 6150 2750 0    60   ~ 0
-APPS1_ISO
+APPS2_ISO
 $Comp
 L ACPL-C870 U1
 U 1 1 58A60117
-P 1700 4000
-F 0 "U1" H 1700 4200 60  0000 C CNN
-F 1 "ACPL-C870" H 1700 4100 60  0000 C CNN
-F 2 "" H 1700 4200 60  0000 C CNN
-F 3 "" H 1700 4200 60  0000 C CNN
-	1    1700 4000
+P 1650 4050
+F 0 "U1" H 1650 4250 60  0000 C CNN
+F 1 "ACPL-C870" H 1650 4150 60  0000 C CNN
+F 2 "" H 1650 4250 60  0000 C CNN
+F 3 "" H 1650 4250 60  0000 C CNN
+	1    1650 4050
 	1    0    0    -1  
 $EndComp
-Text Label 650  4200 0    60   ~ 0
+Text Label 600  4250 0    60   ~ 0
 APPS1
-Text Label 2400 4200 0    60   ~ 0
+Text Label 2350 4250 0    60   ~ 0
 APPS1_ISO
-Text Label 650  4350 0    60   ~ 0
-APPS1_RTN
-Text Label 2400 4350 0    60   ~ 0
+Text Label 600  4400 0    60   ~ 0
+APPS_5
+Text Label 2350 4400 0    60   ~ 0
 GND
-Text Label 2400 4050 0    60   ~ 0
+Text Label 2350 4100 0    60   ~ 0
 +5V
-Text Label 650  4050 0    60   ~ 0
-APPS1_H
+Text Label 600  4100 0    60   ~ 0
+APPS_10
 Connection ~ 3900 4200
 Wire Wire Line
 	4150 3450 4150 4050
@@ -473,10 +451,6 @@ Wire Wire Line
 	3700 1400 3700 1900
 Wire Wire Line
 	2950 2500 2950 2650
-Wire Wire Line
-	2450 1800 1900 1800
-Wire Wire Line
-	2450 2000 1900 2000
 Connection ~ 3900 1900
 Wire Wire Line
 	4150 1150 4150 1750
@@ -505,23 +479,17 @@ Wire Wire Line
 Connection ~ 4450 2950
 Connection ~ 4450 850 
 Wire Wire Line
-	1700 7150 1700 7050
+	2050 5050 2150 5050
 Wire Wire Line
-	2100 6750 2200 6750
+	1650 5350 1650 5450
 Wire Wire Line
-	2100 5300 2200 5300
+	1100 5050 1250 5050
 Wire Wire Line
-	1700 5600 1700 5700
+	1150 5900 1250 5900
 Wire Wire Line
-	1150 5300 1300 5300
+	1650 6300 1650 6200
 Wire Wire Line
-	1200 6050 1300 6050
-Wire Wire Line
-	1700 6450 1700 6350
-Wire Wire Line
-	2200 6050 2100 6050
-Wire Wire Line
-	1200 6750 1300 6750
+	2150 5900 2050 5900
 Wire Wire Line
 	7950 2950 7950 3350
 Wire Wire Line
@@ -539,29 +507,27 @@ Wire Wire Line
 	6300 2850 6300 2750
 Connection ~ 6300 2750
 Wire Wire Line
-	6300 3150 6300 3200
-Wire Wire Line
 	6150 2750 6550 2750
 Wire Wire Line
 	6850 2750 7950 2750
 Wire Wire Line
 	3700 1900 3900 1900
 Wire Wire Line
-	650  4050 1200 4050
+	600  4100 1150 4100
 Wire Wire Line
-	650  4200 1200 4200
+	600  4250 1150 4250
 Wire Wire Line
-	650  4350 1200 4350
+	600  4400 1150 4400
 Wire Wire Line
-	1200 4350 1200 4500
+	1150 4400 1150 4550
 Wire Wire Line
-	2200 4050 2400 4050
+	2150 4100 2350 4100
 Wire Wire Line
-	2200 4200 2400 4200
+	2150 4250 2350 4250
 Wire Wire Line
-	2200 4350 2400 4350
+	2150 4400 2350 4400
 Wire Wire Line
-	2200 4500 2200 4350
+	2150 4550 2150 4400
 $Comp
 L LM339 U6
 U 3 1 58A62195
@@ -600,7 +566,7 @@ L R R16
 U 1 1 58A64BC1
 P 4950 3400
 F 0 "R16" V 5030 3400 50  0000 C CNN
-F 1 "R" V 4950 3400 50  0000 C CNN
+F 1 "5k" V 4950 3400 50  0000 C CNN
 F 2 "" V 4880 3400 50  0000 C CNN
 F 3 "" H 4950 3400 50  0000 C CNN
 	1    4950 3400
@@ -611,7 +577,7 @@ L R R17
 U 1 1 58A65511
 P 4950 4500
 F 0 "R17" V 5030 4500 50  0000 C CNN
-F 1 "R" V 4950 4500 50  0000 C CNN
+F 1 "5k" V 4950 4500 50  0000 C CNN
 F 2 "" V 4880 4500 50  0000 C CNN
 F 3 "" H 4950 4500 50  0000 C CNN
 	1    4950 4500
@@ -622,7 +588,7 @@ L R R18
 U 1 1 58A655BB
 P 4950 5700
 F 0 "R18" V 5030 5700 50  0000 C CNN
-F 1 "R" V 4950 5700 50  0000 C CNN
+F 1 "5k" V 4950 5700 50  0000 C CNN
 F 2 "" V 4880 5700 50  0000 C CNN
 F 3 "" H 4950 5700 50  0000 C CNN
 	1    4950 5700
@@ -633,7 +599,7 @@ L R R19
 U 1 1 58A65D14
 P 4950 6800
 F 0 "R19" V 5030 6800 50  0000 C CNN
-F 1 "R" V 4950 6800 50  0000 C CNN
+F 1 "5k" V 4950 6800 50  0000 C CNN
 F 2 "" V 4880 6800 50  0000 C CNN
 F 3 "" H 4950 6800 50  0000 C CNN
 	1    4950 6800
@@ -718,19 +684,17 @@ F 3 "" H 7100 3600 50  0000 C CNN
 	1    7100 3600
 	-1   0    0    1   
 $EndComp
-Text HLabel 1150 650  0    60   Input ~ 0
-APPS1_H
-Text HLabel 1150 800  0    60   Input ~ 0
-APPS1_RTN
-Text HLabel 1150 950  0    60   Input ~ 0
-APPS2_H
-Text HLabel 1150 1100 0    60   Input ~ 0
-APPS2_RTN
-Text HLabel 900  1500 0    60   Input ~ 0
+Text HLabel 1250 600  0    60   Output ~ 0
+APPS_10
+Text HLabel 1250 750  0    60   Output ~ 0
+APPS_5
+Text HLabel 1250 900  0    60   Output ~ 0
+RTN_GLV
+Text HLabel 1250 2350 0    60   Input ~ 0
 GND
-Text HLabel 900  1350 0    60   Input ~ 0
-+24V
-Text HLabel 1300 1800 0    60   Input ~ 0
+Text HLabel 1250 2200 0    60   Input ~ 0
++12V
+Text HLabel 1250 2700 0    60   Input ~ 0
 THROTTLE_SEL
 $Comp
 L 74ACT11030 U8
@@ -801,7 +765,7 @@ F 1 "TS5A3159-Q1" H 9350 4150 50  0000 C CNN
 F 2 "" H 9600 4300 50  0000 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/ts5a3159-q1.pdf" H 9600 4300 50  0001 C CNN
 	1    9600 4300
-	-1   0    0    -1  
+	-1   0    0    1   
 $EndComp
 Wire Wire Line
 	8550 2850 9300 2850
@@ -815,13 +779,11 @@ Text Label 10400 4300 0    60   ~ 0
 THROTTLE_OUT
 Text Label 9650 3600 0    60   ~ 0
 THROTTLE_SEL
-Text Label 8650 4400 0    60   ~ 0
-MC_THROTTLE
-Wire Wire Line
-	8650 4400 9300 4400
-Text HLabel 1300 1950 0    60   Input ~ 0
-MC_THROTTLE
-Text HLabel 1300 2100 0    60   Input ~ 0
+Text Label 8550 4400 0    60   ~ 0
+uC_THROTTLE
+Text HLabel 1250 2850 0    60   Input ~ 0
+uC_THROTTLE
+Text HLabel 1250 3000 0    60   Output ~ 0
 THROTTLE_OUT
 $Comp
 L LM339 U6
@@ -878,4 +840,122 @@ F 3 "http://www.ti.com/lit/ds/symlink/lm339.pdf" H 4600 7250 50  0001 C CNN
 	2    4550 7050
 	1    0    0    -1  
 $EndComp
+Text Label 1100 5050 0    60   ~ 0
++12V
+Text Label 1150 5900 0    60   ~ 0
++12V
+Text Label 9650 4900 0    60   ~ 0
+GND
+Text HLabel 1250 2050 0    60   Input ~ 0
++5V
+$Comp
+L C C?
+U 1 1 58ADC17E
+P 8800 4550
+F 0 "C?" H 8825 4650 50  0000 L CNN
+F 1 "0.1u" H 8825 4450 50  0000 L CNN
+F 2 "" H 8838 4400 50  0000 C CNN
+F 3 "" H 8800 4550 50  0000 C CNN
+	1    8800 4550
+	1    0    0    -1  
+$EndComp
+Text Label 8800 4900 0    60   ~ 0
+GND
+Wire Wire Line
+	8800 4700 8800 4900
+Wire Wire Line
+	8550 4400 9300 4400
+Connection ~ 8800 4400
+Wire Wire Line
+	9650 4650 9650 4900
+Wire Wire Line
+	6300 3150 6300 3400
+Wire Wire Line
+	2150 2000 2450 2000
+Wire Wire Line
+	2250 2000 2250 2050
+Connection ~ 2250 2000
+Wire Wire Line
+	1800 1800 2450 1800
+Wire Wire Line
+	1900 1800 1900 1850
+Connection ~ 1900 1800
+$Comp
+L C C?
+U 1 1 58ADD879
+P 1900 2000
+F 0 "C?" H 1925 2100 50  0000 L CNN
+F 1 "0.1u" H 1925 1900 50  0000 L CNN
+F 2 "" H 1938 1850 50  0000 C CNN
+F 3 "" H 1900 2000 50  0000 C CNN
+	1    1900 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 58ADD957
+P 2250 2200
+F 0 "C?" H 2275 2300 50  0000 L CNN
+F 1 "0.1u" H 2275 2100 50  0000 L CNN
+F 2 "" H 2288 2050 50  0000 C CNN
+F 3 "" H 2250 2200 50  0000 C CNN
+	1    2250 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 2150 1900 2450
+Wire Wire Line
+	2250 2350 2250 2450
+Text Label 1900 2450 0    60   ~ 0
+GND
+Text Label 2250 2450 0    60   ~ 0
+GND
+$Comp
+L R R?
+U 1 1 58ADF033
+P 7350 1400
+F 0 "R?" V 7430 1400 50  0000 C CNN
+F 1 "10k" V 7350 1400 50  0000 C CNN
+F 2 "" V 7280 1400 50  0000 C CNN
+F 3 "" H 7350 1400 50  0000 C CNN
+	1    7350 1400
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7350 1550 7350 1750
+Text Label 7350 1050 0    60   ~ 0
+BOT
+Wire Wire Line
+	7350 1250 7350 1050
+Text Label 7350 1750 0    60   ~ 0
+GND
+$Comp
+L R R?
+U 1 1 58AE1865
+P 7950 1400
+F 0 "R?" V 8030 1400 50  0000 C CNN
+F 1 "10k" V 7950 1400 50  0000 C CNN
+F 2 "" V 7880 1400 50  0000 C CNN
+F 3 "" H 7950 1400 50  0000 C CNN
+	1    7950 1400
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7950 1550 7950 1750
+Text Label 7950 1050 0    60   ~ 0
+BP
+Wire Wire Line
+	7950 1250 7950 1050
+Text Label 7950 1750 0    60   ~ 0
+GND
+Text HLabel 1250 1600 0    60   Input ~ 0
+BOT
+Text HLabel 1250 1750 0    60   Input ~ 0
+BP
+Text HLabel 1250 1050 0    60   Output ~ 0
+APPS1
+Text HLabel 1250 1200 0    60   Output ~ 0
+APPS2
+Text HLabel 1250 1450 0    60   Output ~ 0
+BRAKE_5
 $EndSCHEMATC
