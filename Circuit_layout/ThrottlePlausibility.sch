@@ -295,17 +295,6 @@ APPS_5
 Text Label 1650 5450 0    60   ~ 0
 GND
 $Comp
-L MMBF170 Q1
-U 1 1 58A600EB
-P 7300 2950
-F 0 "Q1" H 7500 3025 50  0000 L CNN
-F 1 "MMBF170" H 7500 2950 50  0000 L CNN
-F 2 "SOT-23" H 7500 2875 50  0000 L CIN
-F 3 "" H 7300 2950 50  0000 L CNN
-	1    7300 2950
-	1    0    0    -1  
-$EndComp
-$Comp
 L LM7810CT U2
 U 1 1 58A600F2
 P 1650 5100
@@ -694,7 +683,7 @@ Text HLabel 1250 2350 0    60   Input ~ 0
 GND
 Text HLabel 1250 2200 0    60   Input ~ 0
 +12V
-Text HLabel 1250 2700 0    60   Input ~ 0
+Text HLabel 1250 2950 0    60   Input ~ 0
 THROTTLE_SEL
 $Comp
 L 74ACT11030 U8
@@ -710,7 +699,7 @@ $EndComp
 Wire Wire Line
 	7100 4200 7100 3750
 Wire Wire Line
-	7100 3450 7100 3000
+	7100 2950 7100 3450
 Wire Wire Line
 	4850 5950 5600 5950
 Wire Wire Line
@@ -781,9 +770,9 @@ Text Label 9650 3600 0    60   ~ 0
 THROTTLE_SEL
 Text Label 8550 4400 0    60   ~ 0
 uC_THROTTLE
-Text HLabel 1250 2850 0    60   Input ~ 0
-uC_THROTTLE
-Text HLabel 1250 3000 0    60   Output ~ 0
+Text HLabel 1250 3100 0    60   Input ~ 0
+THROTTLE_uC
+Text HLabel 1250 3250 0    60   Output ~ 0
 THROTTLE_OUT
 $Comp
 L LM339 U6
@@ -922,32 +911,13 @@ F 3 "" H 7350 1400 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	7350 1550 7350 1750
-Text Label 7350 1050 0    60   ~ 0
+	7350 1750 7350 1550
+Text Label 6950 1050 0    60   ~ 0
 BOT
 Wire Wire Line
-	7350 1250 7350 1050
-Text Label 7350 1750 0    60   ~ 0
-GND
-$Comp
-L R R?
-U 1 1 58AE1865
-P 7950 1400
-F 0 "R?" V 8030 1400 50  0000 C CNN
-F 1 "10k" V 7950 1400 50  0000 C CNN
-F 2 "" V 7880 1400 50  0000 C CNN
-F 3 "" H 7950 1400 50  0000 C CNN
-	1    7950 1400
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	7950 1550 7950 1750
-Text Label 7950 1050 0    60   ~ 0
-BP
-Wire Wire Line
-	7950 1250 7950 1050
-Text Label 7950 1750 0    60   ~ 0
-GND
+	7350 1050 7350 1250
+Text Label 6950 1750 0    60   ~ 0
+RTN_GLV
 Text HLabel 1250 1600 0    60   Input ~ 0
 BOT
 Text HLabel 1250 1750 0    60   Input ~ 0
@@ -958,4 +928,144 @@ Text HLabel 1250 1200 0    60   Output ~ 0
 APPS2
 Text HLabel 1250 1450 0    60   Output ~ 0
 BRAKE_5
+Text HLabel 1250 2650 0    60   Input ~ 0
+BOT_uC
+Text HLabel 1250 2800 0    60   Input ~ 0
+BP_uC
+Wire Wire Line
+	6950 1050 7550 1050
+Wire Wire Line
+	6950 1750 7550 1750
+$Comp
+L R R?
+U 1 1 58AE07FB
+P 7700 1050
+F 0 "R?" V 7780 1050 50  0000 C CNN
+F 1 "0" V 7700 1050 50  0000 C CNN
+F 2 "" V 7630 1050 50  0000 C CNN
+F 3 "" H 7700 1050 50  0000 C CNN
+	1    7700 1050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R?
+U 1 1 58AE08A5
+P 7700 1750
+F 0 "R?" V 7780 1750 50  0000 C CNN
+F 1 "0" V 7700 1750 50  0000 C CNN
+F 2 "" V 7630 1750 50  0000 C CNN
+F 3 "" H 7700 1750 50  0000 C CNN
+	1    7700 1750
+	0    -1   -1   0   
+$EndComp
+Connection ~ 7350 1050
+Connection ~ 7350 1750
+Wire Wire Line
+	7850 1050 8250 1050
+Wire Wire Line
+	7850 1750 8250 1750
+$Comp
+L C C?
+U 1 1 58AE1C60
+P 8000 1400
+F 0 "C?" H 8025 1500 50  0000 L CNN
+F 1 "DNP" H 8025 1300 50  0000 L CNN
+F 2 "" H 8038 1250 50  0000 C CNN
+F 3 "" H 8000 1400 50  0000 C CNN
+	1    8000 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 1550 8000 1750
+Connection ~ 8000 1750
+Wire Wire Line
+	8000 1250 8000 1050
+Connection ~ 8000 1050
+Text Label 8250 1050 0    60   ~ 0
+BOT_uC
+Text Label 8250 1750 0    60   ~ 0
+RTN_GLV
+$Comp
+L R R?
+U 1 1 58AE29CB
+P 9550 1400
+F 0 "R?" V 9630 1400 50  0000 C CNN
+F 1 "10k" V 9550 1400 50  0000 C CNN
+F 2 "" V 9480 1400 50  0000 C CNN
+F 3 "" H 9550 1400 50  0000 C CNN
+	1    9550 1400
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9550 1750 9550 1550
+Text Label 9150 1050 0    60   ~ 0
+BP
+Wire Wire Line
+	9550 1050 9550 1250
+Text Label 9150 1750 0    60   ~ 0
+RTN_GLV
+Wire Wire Line
+	9150 1050 9750 1050
+Wire Wire Line
+	9150 1750 9750 1750
+$Comp
+L R R?
+U 1 1 58AE29D7
+P 9900 1050
+F 0 "R?" V 9980 1050 50  0000 C CNN
+F 1 "0" V 9900 1050 50  0000 C CNN
+F 2 "" V 9830 1050 50  0000 C CNN
+F 3 "" H 9900 1050 50  0000 C CNN
+	1    9900 1050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R?
+U 1 1 58AE29DD
+P 9900 1750
+F 0 "R?" V 9980 1750 50  0000 C CNN
+F 1 "0" V 9900 1750 50  0000 C CNN
+F 2 "" V 9830 1750 50  0000 C CNN
+F 3 "" H 9900 1750 50  0000 C CNN
+	1    9900 1750
+	0    -1   -1   0   
+$EndComp
+Connection ~ 9550 1050
+Connection ~ 9550 1750
+Wire Wire Line
+	10050 1050 10450 1050
+Wire Wire Line
+	10050 1750 10450 1750
+$Comp
+L C C?
+U 1 1 58AE29E7
+P 10200 1400
+F 0 "C?" H 10225 1500 50  0000 L CNN
+F 1 "DNP" H 10225 1300 50  0000 L CNN
+F 2 "" H 10238 1250 50  0000 C CNN
+F 3 "" H 10200 1400 50  0000 C CNN
+	1    10200 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10200 1550 10200 1750
+Connection ~ 10200 1750
+Wire Wire Line
+	10200 1250 10200 1050
+Connection ~ 10200 1050
+Text Label 10450 1050 0    60   ~ 0
+BP_uC
+Text Label 10450 1750 0    60   ~ 0
+RTN_GLV
+$Comp
+L PZT2222A Q?
+U 1 1 58AEA093
+P 7300 2950
+F 0 "Q?" H 7500 3025 50  0000 L CNN
+F 1 "PZT2222A" H 7500 2950 50  0000 L CNN
+F 2 "SOT-223" H 7500 2875 50  0000 L CIN
+F 3 "" H 7300 2950 50  0000 L CNN
+	1    7300 2950
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
