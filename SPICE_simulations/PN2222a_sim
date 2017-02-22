@@ -1,0 +1,23 @@
+*SPICE test for LM7332
+
+.include C:\Users\nessa\Desktop\TSI\SPICE_Model_Files\ece323_models_020416.inc
+.include C:\Users\nessa\Desktop\TSI\SPICE_subcircuits\LM7332.sub
+
+* PINOUT ORDER +IN -IN +V -V OUT
+* PINOUT ORDER  3   2   8  4  1
+*.SUBCKT LM7332 3   2   8  4  1
+
+Vcc Vcc 0 DC 10
+
+Vpos Vpos 0 DC 5
+Vneg Vneg 0 DC 2.5
+
+R1 Vcc Vout 1k
+
+*X1 Vpos Vneg Vcc 0 Vout LM7332
+X1 Vpos Vneg Vcc 0 Vout LM2901
+
+.DC Vpos 0 5.0 0.01
+
+.probe
+.end
