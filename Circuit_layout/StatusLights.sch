@@ -256,4 +256,12 @@ Wire Wire Line
 	6350 1850 6450 1850
 Wire Wire Line
 	6450 1850 6450 1700
+Wire Wire Line
+	4600 1850 4100 1850
+Wire Wire Line
+	4550 3000 4050 3000
+Text HLabel 4050 3000 0    60   Input ~ 0
+D_LED_CTRL
+Text HLabel 4100 1850 0    60   Input ~ 0
+RTDS_CTRL
 $EndSCHEMATC

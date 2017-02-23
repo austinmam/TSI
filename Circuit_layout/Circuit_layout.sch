@@ -297,6 +297,8 @@ S 8450 3400 1800 1050
 U 58ADE509
 F0 "Status Lights" 60
 F1 "StatusLights.sch" 60
+F2 "D_LED_CTRL" I L 8450 3650 60 
+F3 "RTDS_CTRL" I L 8450 3950 60 
 $EndSheet
 $Sheet
 S 8300 1550 1750 950 
@@ -310,4 +312,44 @@ U 58AF3ED4
 F0 "Isolators" 60
 F1 "isolators.sch" 60
 $EndSheet
+Wire Wire Line
+	6550 3500 7200 3500
+Text Label 7200 3500 2    60   ~ 0
+uC_THROTTLE
+Wire Wire Line
+	3950 3800 3300 3800
+Text Label 3300 3800 0    60   ~ 0
+APPS2
+Wire Wire Line
+	3950 3900 3300 3900
+Text Label 3300 3900 0    60   ~ 0
+IMD
+Text Label 3300 4000 0    60   ~ 0
+V_Measure
+Wire Wire Line
+	3950 4000 3300 4000
+Wire Wire Line
+	3300 4100 3950 4100
+Text Label 3300 4100 0    60   ~ 0
+I_Measure
+Wire Wire Line
+	6550 3400 7200 3400
+Text Label 7200 3400 2    60   ~ 0
+THROTTLE_SEL
+Wire Wire Line
+	6550 3300 7200 3300
+Text Label 7200 3300 2    60   ~ 0
+BP
+Wire Wire Line
+	6550 2300 7150 2300
+Text Label 7150 2300 2    60   ~ 0
+D_LED_CTRL
+Wire Wire Line
+	6550 2400 7150 2400
+Wire Wire Line
+	6550 2500 7150 2500
+Text Label 7150 2400 2    60   ~ 0
+RTDS_CTRL
+Text Label 7150 2500 2    60   ~ 0
+Drive_BTN
 $EndSCHEMATC

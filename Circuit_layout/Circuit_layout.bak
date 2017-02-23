@@ -84,7 +84,7 @@ EELAYER 25 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 1 6
+Sheet 1 7
 Title "Tractive System Interface"
 Date ""
 Rev "0.0"
@@ -303,5 +303,11 @@ S 8300 1550 1750 950
 U 58ADE5BC
 F0 "Power System" 60
 F1 "PowerSystem.sch" 60
+$EndSheet
+$Sheet
+S 850  4750 1600 1000
+U 58AF3ED4
+F0 "Isolators" 60
+F1 "isolators.sch" 60
 $EndSheet
 $EndSCHEMATC

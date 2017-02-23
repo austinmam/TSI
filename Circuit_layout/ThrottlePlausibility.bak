@@ -1,5 +1,6 @@
 EESchema Schematic File Version 2
 LIBS:Circuit_layout-rescue
+LIBS:TSI_KiCad_Lib
 LIBS:TSI_HV_Isolater-cache
 LIBS:74xgxx
 LIBS:74xx
@@ -83,7 +84,7 @@ EELAYER 25 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
-Sheet 2 6
+Sheet 2 7
 Title "Tractive System Interface"
 Date "2017-02-13"
 Rev "0.0"
