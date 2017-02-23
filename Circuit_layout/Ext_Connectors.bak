@@ -1,5 +1,6 @@
 EESchema Schematic File Version 2
 LIBS:Circuit_layout-rescue
+LIBS:TSI_KiCad_Lib
 LIBS:TSI_HV_Isolater-cache
 LIBS:74xgxx
 LIBS:74xx
@@ -141,8 +142,6 @@ Text Label 9100 3100 0    60   ~ 0
 IMD_Fault_LED
 Text Label 9100 3400 0    60   ~ 0
 Pre-Charge_LED
-Text Label 9100 3500 0    60   ~ 0
-Drive_LED
 Text Label 9100 3600 0    60   ~ 0
 HV_Present_LED
 Text Label 9250 2000 0    60   ~ 0
@@ -174,15 +173,15 @@ To Pedals
 Text Notes 10650 1950 2    60   ~ 0
 To Lights
 $Comp
-L CONN_01X02 J?
+L CONN_01X03 J?
 U 1 1 58A769F6
-P 9950 6100
-F 0 "J?" H 9950 6250 50  0000 C CNN
-F 1 "CONN_01X02" V 10050 6100 50  0000 C CNN
-F 2 "" H 9950 6100 50  0000 C CNN
-F 3 "" H 9950 6100 50  0000 C CNN
-F 4 "W1" H 9950 6100 60  0001 C CNN "Wire Number"
-	1    9950 6100
+P 9950 6150
+F 0 "J?" H 9950 6300 50  0000 C CNN
+F 1 "CONN_01X02" V 10050 6150 50  0000 C CNN
+F 2 "" H 9950 6150 50  0000 C CNN
+F 3 "" H 9950 6150 50  0000 C CNN
+F 4 "W1" H 9950 6150 60  0001 C CNN "Wire Number"
+	1    9950 6150
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -197,16 +196,12 @@ F 4 "W17" H 1000 4500 60  0001 C CNN "Wire Number"
 	1    1000 4500
 	-1   0    0    1   
 $EndComp
-Text Label 9350 6050 0    60   ~ 0
-24_GLV
-Text Label 9350 6150 0    60   ~ 0
+Text Label 9350 6250 0    60   ~ 0
 GND
 Text Label 1600 4550 2    60   ~ 0
 MC_CAN_H
 Text Label 1600 4450 2    60   ~ 0
 MC_CAN_L
-Text Label 9250 2300 0    60   ~ 0
-RTDS
 Text Label 9250 2400 0    60   ~ 0
 RTDS_RTN
 Wire Wire Line
@@ -216,7 +211,7 @@ Wire Wire Line
 Wire Wire Line
 	9750 6150 9350 6150
 Wire Wire Line
-	9350 6050 9750 6050
+	9100 6050 9750 6050
 Wire Wire Line
 	1300 6200 2050 6200
 Wire Wire Line
@@ -531,4 +526,38 @@ Wire Wire Line
 	5050 5050 5050 5000
 Text Notes 3150 1050 0    60   ~ 0
 Jack - We will need two seperate returns for the APPS (due to the voltage offset.)\nI'll need to actually look into how the brake overtravel switch works to confirm those connections. - Adam (2/18)
+Wire Wire Line
+	9750 6250 9350 6250
+Text GLabel 9350 6150 0    60   Input ~ 0
+LVRTN
+$Comp
+L Earth #PWR?
+U 1 1 58AF0E42
+P 9350 6250
+F 0 "#PWR?" H 9350 6000 50  0001 C CNN
+F 1 "Earth" H 9350 6100 50  0001 C CNN
+F 2 "" H 9350 6250 50  0000 C CNN
+F 3 "" H 9350 6250 50  0000 C CNN
+	1    9350 6250
+	1    0    0    -1  
+$EndComp
+Text Label 9350 6050 0    60   ~ 0
+24_GLV
+Wire Wire Line
+	9100 6050 9100 5900
+$Comp
+L +24V #PWR?
+U 1 1 58AF1C5B
+P 9100 5900
+F 0 "#PWR?" H 9100 5750 50  0001 C CNN
+F 1 "+24V" H 9100 6040 50  0000 C CNN
+F 2 "" H 9100 5900 50  0000 C CNN
+F 3 "" H 9100 5900 50  0000 C CNN
+	1    9100 5900
+	1    0    0    -1  
+$EndComp
+Text GLabel 9250 2300 0    60   Input ~ 0
+RTDS
+Text GLabel 9100 3500 0    60   Input ~ 0
+Drive_LED
 $EndSCHEMATC
