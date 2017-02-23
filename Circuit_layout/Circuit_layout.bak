@@ -78,13 +78,12 @@ LIBS:video
 LIBS:Xicor
 LIBS:xilinx
 LIBS:Zilog
-LIBS:TSI_KiCad_Lib
 LIBS:Circuit_layout-cache
 EELAYER 25 0
 EELAYER END
 $Descr A 11000 8500
 encoding utf-8
-Sheet 1 4
+Sheet 1 6
 Title "Tractive System Interface"
 Date ""
 Rev "0.0"
@@ -292,4 +291,16 @@ F 5 "http://www.digikey.com/product-detail/en/kemet/C0805C100J5GACTU/399-1108-1-
 	1    3050 2900
 	1    0    0    -1  
 $EndComp
+$Sheet
+S 8450 3400 1800 1050
+U 58ADE509
+F0 "Status Lights" 60
+F1 "StatusLights.sch" 60
+$EndSheet
+$Sheet
+S 8300 1550 1750 950 
+U 58ADE5BC
+F0 "Power System" 60
+F1 "PowerSystem.sch" 60
+$EndSheet
 $EndSCHEMATC

@@ -78,13 +78,12 @@ LIBS:video
 LIBS:Xicor
 LIBS:xilinx
 LIBS:Zilog
-LIBS:TSI_KiCad_Lib
 LIBS:Circuit_layout-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 4
+Sheet 2 6
 Title "Tractive System Interface"
 Date "2017-02-13"
 Rev "0.0"
@@ -607,17 +606,6 @@ F 3 "http://www.ti.com/lit/ds/symlink/lm7332.pdf" H 3400 2050 50  0001 C CNN
 $EndComp
 Text Notes 3100 2500 0    60   ~ 0
 Used for 10V \nrail-to-rail ability
-$Comp
-L MCP6001 U9
-U 1 1 58A62A6E
-P 8250 2850
-F 0 "U9" H 8300 3050 50  0000 C CNN
-F 1 "MCP6001" H 8450 2650 50  0000 C CNN
-F 2 "" H 8200 2950 50  0000 C CNN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf" H 8300 3050 50  0001 C CNN
-	1    8250 2850
-	1    0    0    -1  
-$EndComp
 Text Notes 8000 3600 0    60   ~ 0
 Used for rail-to-rail\non 5V
 Wire Wire Line
@@ -674,9 +662,9 @@ F 3 "" H 7100 3600 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 Text HLabel 1250 600  0    60   Output ~ 0
-APPS_10
+APPS1_10
 Text HLabel 1250 750  0    60   Output ~ 0
-APPS_5
+APPS2_5
 Text HLabel 1250 900  0    60   Output ~ 0
 RTN_GLV
 Text HLabel 1250 2350 0    60   Input ~ 0
@@ -768,7 +756,7 @@ Text Label 10400 4300 0    60   ~ 0
 THROTTLE_OUT
 Text Label 9650 3600 0    60   ~ 0
 THROTTLE_SEL
-Text Label 8550 4400 0    60   ~ 0
+Text Label 6300 5000 0    60   ~ 0
 uC_THROTTLE
 Text HLabel 1250 3100 0    60   Input ~ 0
 THROTTLE_uC
@@ -837,24 +825,6 @@ Text Label 9650 4900 0    60   ~ 0
 GND
 Text HLabel 1250 2050 0    60   Input ~ 0
 +5V
-$Comp
-L C C?
-U 1 1 58ADC17E
-P 8800 4550
-F 0 "C?" H 8825 4650 50  0000 L CNN
-F 1 "0.1u" H 8825 4450 50  0000 L CNN
-F 2 "" H 8838 4400 50  0000 C CNN
-F 3 "" H 8800 4550 50  0000 C CNN
-	1    8800 4550
-	1    0    0    -1  
-$EndComp
-Text Label 8800 4900 0    60   ~ 0
-GND
-Wire Wire Line
-	8800 4700 8800 4900
-Wire Wire Line
-	8550 4400 9300 4400
-Connection ~ 8800 4400
 Wire Wire Line
 	9650 4650 9650 4900
 Wire Wire Line
@@ -1068,4 +1038,139 @@ F 3 "" H 7300 2950 50  0000 L CNN
 	1    7300 2950
 	1    0    0    -1  
 $EndComp
+$Comp
+L HEATSINK HS?
+U 1 1 58AE64AB
+P 800 6000
+F 0 "HS?" H 800 6200 50  0000 C CNN
+F 1 "HEATSINK" H 800 5950 50  0000 C CNN
+F 2 "" H 800 6000 50  0000 C CNN
+F 3 "" H 800 6000 50  0000 C CNN
+	1    800  6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L HEATSINK HS?
+U 1 1 58AE65D4
+P 800 5100
+F 0 "HS?" H 800 5300 50  0000 C CNN
+F 1 "HEATSINK" H 800 5050 50  0000 C CNN
+F 2 "" H 800 5100 50  0000 C CNN
+F 3 "" H 800 5100 50  0000 C CNN
+	1    800  5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L MCP6002 U?
+U 1 1 58AE82B2
+P 8250 5100
+F 0 "U?" H 8250 5250 50  0000 L CNN
+F 1 "MCP6002" H 8250 4950 50  0000 L CNN
+F 2 "" H 8150 5150 50  0000 C CNN
+F 3 "" H 8250 5250 50  0000 C CNN
+	1    8250 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L MCP6002 U?
+U 1 1 58AE83B8
+P 8250 2850
+F 0 "U?" H 8250 3000 50  0000 L CNN
+F 1 "MCP6002" H 8250 2700 50  0000 L CNN
+F 2 "" H 8150 2900 50  0000 C CNN
+F 3 "" H 8250 3000 50  0000 C CNN
+	1    8250 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 58AE90DD
+P 7350 5250
+F 0 "C?" H 7375 5350 50  0000 L CNN
+F 1 "0.01u" H 7375 5150 50  0000 L CNN
+F 2 "" H 7388 5100 50  0000 C CNN
+F 3 "" H 7350 5250 50  0000 C CNN
+	1    7350 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 58AE91C2
+P 8350 4650
+F 0 "C?" H 8375 4750 50  0000 L CNN
+F 1 "0.01u" H 8375 4550 50  0000 L CNN
+F 2 "" H 8388 4500 50  0000 C CNN
+F 3 "" H 8350 4650 50  0000 C CNN
+	1    8350 4650
+	0    1    1    0   
+$EndComp
+$Comp
+L R R?
+U 1 1 58AE92E9
+P 7050 5000
+F 0 "R?" V 7130 5000 50  0000 C CNN
+F 1 "2k" V 7050 5000 50  0000 C CNN
+F 2 "" V 6980 5000 50  0000 C CNN
+F 3 "" H 7050 5000 50  0000 C CNN
+	1    7050 5000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R?
+U 1 1 58AE93C4
+P 7650 5000
+F 0 "R?" V 7730 5000 50  0000 C CNN
+F 1 "2k" V 7650 5000 50  0000 C CNN
+F 2 "" V 7580 5000 50  0000 C CNN
+F 3 "" H 7650 5000 50  0000 C CNN
+	1    7650 5000
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8150 5400 8150 5650
+Wire Wire Line
+	7950 5200 7800 5200
+Wire Wire Line
+	7800 5200 7800 5450
+Wire Wire Line
+	7800 5450 8550 5450
+Text Label 8150 5650 0    60   ~ 0
+GND
+Text Label 8150 4450 0    60   ~ 0
++5V
+Wire Wire Line
+	7800 5000 7950 5000
+Wire Wire Line
+	8500 4650 8550 4650
+Wire Wire Line
+	8550 4650 8550 5450
+Connection ~ 8550 5100
+Wire Wire Line
+	8200 4650 7800 4650
+Wire Wire Line
+	7800 4650 7800 5000
+Wire Wire Line
+	8150 4450 8150 4800
+Wire Wire Line
+	8550 5100 9300 5100
+Wire Wire Line
+	7200 5000 7500 5000
+Wire Wire Line
+	7350 5000 7350 5100
+Connection ~ 7350 5000
+Wire Wire Line
+	6300 5000 6900 5000
+Wire Wire Line
+	7350 5400 7350 5550
+Wire Wire Line
+	7350 5550 8150 5550
+Connection ~ 8150 5550
+Wire Wire Line
+	9300 5100 9300 4400
+Text Notes 7400 6000 0    60   ~ 0
+Sallen-Key Filter\nIntended for 40kHz PWM\n8kHz fc
+Text Notes 1400 650  0    60   ~ 0
+APPS2_5 used as RTN for APPS1_10
+Text Notes 1800 3650 0    60   ~ 0
+Alternative: AMC1200
 $EndSCHEMATC

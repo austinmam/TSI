@@ -12,3 +12,7 @@ For Throttle:
 Double check resistor values, review design then export to upper level.
 
 Take note of mmBF170 xistor
+
+Sallen-Key Calculator:
+http://sim.okawa-denshi.jp/en/OPstool.php
+-> Found: 2kOhm x2 & 0.01uF x2

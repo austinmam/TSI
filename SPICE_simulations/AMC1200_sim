@@ -1,0 +1,22 @@
+*Diff Amp Simulation
+.include C:\Users\Desktop\TSI_repo\SPICE_subcircuits\AMC1200\Release_TI\TINA\AMC1200_TINA_AIO\AMC1200.lib
+
+* AMC1200 SUBCIRCUIT
+* Precision isolation amplifier 
+** source AMC1200
+*.SUBCKT AMC1200  VINP VINN VOUTP VOUTN VDD1 GND1 GND2 VDD2
+
+Vp1 Vp1 0 DC 10
+Vn1 Vn1 0 DC 5
+
+Vp2 Vp2 0 DC 5
+
+
+Vin Vin 0 DC 7
+
+X1 Vin Vn1 Vout 0 Vp1 Vn1 0 Vp2
+
+.DC Vin 5 10 0.01
+
+.probe
+.end

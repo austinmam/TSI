@@ -1,6 +1,5 @@
 EESchema Schematic File Version 2
 LIBS:Circuit_layout-rescue
-LIBS:TSI_KiCad_Lib
 LIBS:TSI_HV_Isolater-cache
 LIBS:74xgxx
 LIBS:74xx
