@@ -1,5 +1,6 @@
 EESchema Schematic File Version 2
 LIBS:Circuit_layout-rescue
+LIBS:TSI_KiCad_Lib
 LIBS:TSI_HV_Isolater-cache
 LIBS:74xgxx
 LIBS:74xx
@@ -83,7 +84,7 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 5 7
+Sheet 4 7
 Title "Tractive System Interface"
 Date ""
 Rev "0.0"
@@ -263,4 +264,60 @@ Text HLabel 4050 3000 0    60   Input ~ 0
 D_LED_CTRL
 Text HLabel 4100 1850 0    60   Input ~ 0
 RTDS_CTRL
+$Comp
+L BCP51 Q?
+U 1 1 58B1C300
+P 4950 4450
+F 0 "Q?" H 5150 4525 50  0000 L CNN
+F 1 "BCP51" H 5150 4450 50  0000 L CNN
+F 2 "SOT-223" H 5150 4375 50  0000 L CIN
+F 3 "" H 4950 4450 50  0000 L CNN
+	1    4950 4450
+	1    0    0    -1  
+$EndComp
+Text Notes 5350 5250 0    60   ~ 0
+This transistor was added here for the nice footprint.\nWill need to verify it works as needed.
+Wire Wire Line
+	5050 4250 5050 4050
+$Comp
+L R R?
+U 1 1 58B1C4A9
+P 5050 4950
+F 0 "R?" V 5130 4950 50  0000 C CNN
+F 1 "1k" V 5050 4950 50  0000 C CNN
+F 2 "" V 4980 4950 50  0000 C CNN
+F 3 "" H 5050 4950 50  0000 C CNN
+	1    5050 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 58B1C51E
+P 4500 4450
+F 0 "R?" V 4580 4450 50  0000 C CNN
+F 1 "1k" V 4500 4450 50  0000 C CNN
+F 2 "" V 4430 4450 50  0000 C CNN
+F 3 "" H 4500 4450 50  0000 C CNN
+	1    4500 4450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4650 4450 4750 4450
+Wire Wire Line
+	5050 4800 5050 4650
+Wire Wire Line
+	5050 4700 5550 4700
+Connection ~ 5050 4700
+Text Label 5550 4700 0    60   ~ 0
+IMD_Fault
+Text Label 3800 4450 0    60   ~ 0
+IMD_Status
+Wire Wire Line
+	3800 4450 4350 4450
+Text Label 5050 4050 0    60   ~ 0
++12LV
+Wire Wire Line
+	5050 5100 5050 5250
+Text Label 5050 5250 0    60   ~ 0
+GND
 $EndSCHEMATC

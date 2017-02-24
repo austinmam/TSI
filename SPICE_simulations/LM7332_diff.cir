@@ -12,17 +12,17 @@ Vcc Vcc 0 DC 10
 Vapps1 Vapps1 0 DC 2.5
 Vapps2 Vapps2 0 DC 2.5
 
-R1 Vapps1 Vneg 1k
+R1 Vapps2 Vneg 1k
 R2 Vneg   Vout 1k
 
-R3 Vapps2 Vpos 1k
+R3 Vapps1 Vpos 1k
 R4 Vpos   0    1k
 
 R5 Vout 0 1k
 
 X1 Vpos Vneg Vcc 0 Vout LM7332
 
-.DC Vapps2 5.0 10.0 0.01
+.DC Vapps1 5.0 10.0 0.01
 
 .probe
 .end

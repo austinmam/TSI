@@ -1,5 +1,6 @@
 EESchema Schematic File Version 2
 LIBS:Circuit_layout-rescue
+LIBS:TSI_KiCad_Lib
 LIBS:TSI_HV_Isolater-cache
 LIBS:74xgxx
 LIBS:74xx
@@ -93,26 +94,6 @@ Comment2 "Jack Plumb"
 Comment3 ""
 Comment4 "DEVELOPMENT ONLY"
 $EndDescr
-$Sheet
-S 8600 5250 1700 1250
-U 58A289D2
-F0 "ThrottlePlausibility" 60
-F1 "ThrottlePlausibility.sch" 60
-F2 "GND" I L 8600 6400 60 
-F3 "THROTTLE_SEL" I R 10300 5350 60 
-F4 "THROTTLE_OUT" I R 10300 5500 60 
-F5 "APPS_10" O L 8600 5350 60 
-F6 "APPS_5" O L 8600 5500 60 
-F7 "RTN_GLV" O L 8600 5650 60 
-F8 "+12V" I L 8600 6250 60 
-F9 "uC_THROTTLE" I R 10300 5650 60 
-F10 "+5V" I L 8600 6100 60 
-F11 "BOT" I R 10300 6400 60 
-F12 "BP" I R 10300 6250 60 
-F13 "APPS1" O L 8600 5800 60 
-F14 "APPS2" O L 8600 5950 60 
-F15 "BRAKE_5" O R 10300 6100 60 
-$EndSheet
 $Sheet
 S 3750 6700 1500 900 
 U 58A62F55
@@ -310,6 +291,14 @@ S 850  4750 1600 1000
 U 58AF3ED4
 F0 "Isolators" 60
 F1 "isolators.sch" 60
+F2 "Throttle_LV" I L 850 4850 60 
+F3 "GND" I L 850 5600 60 
+F4 "+5LV" I L 850 5450 60 
+F5 "+5HV" I R 2450 5300 60 
+F6 "HV+" I R 2450 5450 60 
+F7 "HV-" I R 2450 5600 60 
+F8 "Throttle_HV" O R 2450 4850 60 
+F9 "V_Measure" I L 850 5000 60 
 $EndSheet
 Wire Wire Line
 	6550 3500 7200 3500
@@ -351,4 +340,159 @@ Text Label 7150 2400 2    60   ~ 0
 RTDS_CTRL
 Text Label 7150 2500 2    60   ~ 0
 Drive_BTN
+$Comp
+L R R?
+U 1 1 58B0B5C3
+P 1500 3750
+F 0 "R?" V 1580 3750 50  0000 C CNN
+F 1 "1000" V 1500 3750 50  0000 C CNN
+F 2 "" V 1430 3750 50  0000 C CNN
+F 3 "" H 1500 3750 50  0000 C CNN
+	1    1500 3750
+	0    1    1    0   
+$EndComp
+$Comp
+L R R?
+U 1 1 58B0B5CA
+P 1500 3550
+F 0 "R?" V 1580 3550 50  0000 C CNN
+F 1 "1000" V 1500 3550 50  0000 C CNN
+F 2 "" V 1430 3550 50  0000 C CNN
+F 3 "" H 1500 3550 50  0000 C CNN
+	1    1500 3550
+	0    1    1    0   
+$EndComp
+$Comp
+L R R?
+U 1 1 58B0B5D1
+P 2150 4100
+F 0 "R?" V 2230 4100 50  0000 C CNN
+F 1 "1000" V 2150 4100 50  0000 C CNN
+F 2 "" V 2080 4100 50  0000 C CNN
+F 3 "" H 2150 4100 50  0000 C CNN
+	1    2150 4100
+	0    1    1    0   
+$EndComp
+$Comp
+L R R?
+U 1 1 58B0B5D8
+P 1800 3250
+F 0 "R?" V 1880 3250 50  0000 C CNN
+F 1 "1000" V 1800 3250 50  0000 C CNN
+F 2 "" V 1730 3250 50  0000 C CNN
+F 3 "" H 1800 3250 50  0000 C CNN
+	1    1800 3250
+	-1   0    0    1   
+$EndComp
+Text Label 2100 3350 0    60   ~ 0
++10V
+Text Label 2100 3950 0    60   ~ 0
+GND
+Text Label 1150 2950 0    60   ~ 0
+GND
+Text Label 700  3750 0    60   ~ 0
+A2_LV
+Text Label 700  3550 0    60   ~ 0
+A1_LV
+Wire Wire Line
+	2000 4100 1800 4100
+Wire Wire Line
+	2300 4100 2550 4100
+Wire Wire Line
+	2500 3650 2700 3650
+Text Notes 1550 4500 0    60   ~ 0
+Look elsewhere on board \nfor other MCP600x we could \nuse to combine on quad chip
+Wire Wire Line
+	700  3550 1350 3550
+Wire Wire Line
+	700  3750 1350 3750
+$Comp
+L C C?
+U 1 1 58B0B5F1
+P 1150 4050
+F 0 "C?" H 1175 4150 50  0000 L CNN
+F 1 "0.1u" H 1175 3950 50  0000 L CNN
+F 2 "" H 1188 3900 50  0000 C CNN
+F 3 "" H 1150 4050 50  0000 C CNN
+	1    1150 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 58B0B5F8
+P 1150 3250
+F 0 "C?" H 1175 3350 50  0000 L CNN
+F 1 "0.1u" H 1175 3150 50  0000 L CNN
+F 2 "" H 1188 3100 50  0000 C CNN
+F 3 "" H 1150 3250 50  0000 C CNN
+	1    1150 3250
+	1    0    0    -1  
+$EndComp
+Text Label 1150 4350 0    60   ~ 0
+GND
+Wire Wire Line
+	1800 4100 1800 3750
+Wire Wire Line
+	1650 3750 1900 3750
+Wire Wire Line
+	2550 4100 2550 3650
+Connection ~ 2550 3650
+Connection ~ 1800 3750
+Wire Wire Line
+	1650 3550 1900 3550
+Wire Wire Line
+	1150 3550 1150 3400
+Connection ~ 1150 3550
+Wire Wire Line
+	1150 4350 1150 4200
+Wire Wire Line
+	1150 3900 1150 3750
+Connection ~ 1150 3750
+Wire Wire Line
+	1150 3100 1150 2950
+Wire Wire Line
+	1800 3550 1800 3400
+Connection ~ 1800 3550
+Wire Wire Line
+	1800 3100 1800 3000
+Wire Wire Line
+	1800 3000 1150 3000
+Connection ~ 1150 3000
+$Comp
+L MCP6001 U?
+U 1 1 58B0C864
+P 2200 3650
+F 0 "U?" H 2250 3850 50  0000 C CNN
+F 1 "MCP6001" H 2400 3450 50  0000 C CNN
+F 2 "" H 2150 3750 50  0000 C CNN
+F 3 "" H 2250 3850 50  0000 C CNN
+	1    2200 3650
+	1    0    0    -1  
+$EndComp
+Text Label 2700 3650 0    60   ~ 0
+I_Measure
+$Sheet
+S 8600 5300 1700 1250
+U 58A289D2
+F0 "ThrottlePlausibility" 60
+F1 "ThrottlePlausibility.sch" 60
+F2 "GND" I L 8600 6450 60 
+F3 "RTN_GLV" O L 8600 5700 60 
+F4 "APPS1" O L 8600 5850 60 
+F5 "APPS2" O L 8600 6000 60 
+F6 "APPS1_10" O L 8600 5400 60 
+F7 "APPS2_5" O L 8600 5550 60 
+F8 "+12LV" I L 8600 6300 60 
+F9 "Throttle_SEL" I R 10300 5700 60 
+F10 "Throttle_uC" I R 10300 5550 60 
+F11 "Throttle_LV" O R 10300 5400 60 
+F12 "+5LV" I L 8600 6150 60 
+F13 "BOT" I R 10300 5850 60 
+F14 "BP" I R 10300 6150 60 
+F15 "BRAKE_5" O R 10300 6450 60 
+F16 "BOT_uC" I R 10300 6000 60 
+F17 "BP_uC" I R 10300 6300 60 
+$EndSheet
+Text Notes 700  2800 0    60   ~ 0
+I_Measure Unity Diff. Amp
 $EndSCHEMATC

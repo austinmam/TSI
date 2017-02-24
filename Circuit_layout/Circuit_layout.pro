@@ -1,4 +1,4 @@
-update=2/21/2017 9:22:14 PM
+update=2/24/2017 3:46:42 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -110,3 +110,13 @@ LibName78=Xicor
 LibName79=xilinx
 LibName80=Zilog
 LibName81=C:/Users/nessa/Desktop/TSI/TSI_KiCad_Lib
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60

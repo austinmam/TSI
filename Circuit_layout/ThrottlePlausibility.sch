@@ -1,5 +1,6 @@
 EESchema Schematic File Version 2
 LIBS:Circuit_layout-rescue
+LIBS:TSI_KiCad_Lib
 LIBS:TSI_HV_Isolater-cache
 LIBS:74xgxx
 LIBS:74xx
@@ -83,7 +84,7 @@ EELAYER 25 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
-Sheet 2 7
+Sheet 7 7
 Title "Tractive System Interface"
 Date "2017-02-13"
 Rev "0.0"
@@ -230,9 +231,9 @@ APPS1_ISO
 Text Label 5750 6350 0    60   ~ 0
 APPS2
 Text Label 4650 1850 0    60   ~ 0
-APPS1
-Text Label 4650 1650 0    60   ~ 0
 APPS2
+Text Label 4650 1650 0    60   ~ 0
+APPS1
 $Comp
 L R R5
 U 1 1 58A60085
@@ -640,9 +641,9 @@ RTN_GLV
 Text HLabel 1250 2350 0    60   Input ~ 0
 GND
 Text HLabel 1250 2200 0    60   Input ~ 0
-+12V
++12LV
 Text HLabel 1250 2950 0    60   Input ~ 0
-THROTTLE_SEL
+Throttle_SEL
 $Comp
 L 74ACT11030 U8
 U 1 1 58AA6885
@@ -723,15 +724,15 @@ Wire Wire Line
 Wire Wire Line
 	12650 4150 13150 4150
 Text Label 13150 4150 0    60   ~ 0
-THROTTLE_OUT
+Throttle_LV
 Text Label 12400 3450 0    60   ~ 0
 THROTTLE_SEL
 Text Label 9050 4850 0    60   ~ 0
 uC_THROTTLE
 Text HLabel 1250 3100 0    60   Input ~ 0
-THROTTLE_uC
+Throttle_uC
 Text HLabel 1250 3250 0    60   Output ~ 0
-THROTTLE_OUT
+Throttle_LV
 $Comp
 L LM339 U6
 U 2 1 58AB27D7
@@ -794,7 +795,7 @@ Text Label 2750 6150 0    60   ~ 0
 Text Label 12400 4750 0    60   ~ 0
 GND
 Text HLabel 1250 2050 0    60   Input ~ 0
-+5V
++5LV
 Wire Wire Line
 	12400 4500 12400 4750
 Wire Wire Line
