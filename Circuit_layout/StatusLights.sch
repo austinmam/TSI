@@ -80,6 +80,7 @@ LIBS:Xicor
 LIBS:xilinx
 LIBS:Zilog
 LIBS:pacman-main-cache
+LIBS:bss84
 LIBS:Circuit_layout-cache
 EELAYER 25 0
 EELAYER END
@@ -265,19 +266,6 @@ Text HLabel 4050 3000 0    60   Input ~ 0
 D_LED_CTRL
 Text HLabel 4100 1850 0    60   Input ~ 0
 RTDS_CTRL
-$Comp
-L BCP51 Q?
-U 1 1 58B1C300
-P 5450 4350
-F 0 "Q?" H 5650 4425 50  0000 L CNN
-F 1 "BCP51" H 5650 4350 50  0000 L CNN
-F 2 "SOT-223" H 5650 4275 50  0000 L CIN
-F 3 "" H 5450 4350 50  0000 L CNN
-	1    5450 4350
-	1    0    0    -1  
-$EndComp
-Text Notes 5800 4900 0    60   ~ 0
-This transistor was added here for the nice footprint.\nWill need to verify it works as needed.
 Wire Wire Line
 	5550 4150 5550 3950
 $Comp
@@ -294,16 +282,16 @@ $EndComp
 $Comp
 L R R?
 U 1 1 58B1C51E
-P 5000 4350
-F 0 "R?" V 5080 4350 50  0000 C CNN
-F 1 "2k" V 5000 4350 50  0000 C CNN
-F 2 "" V 4930 4350 50  0000 C CNN
-F 3 "" H 5000 4350 50  0000 C CNN
-	1    5000 4350
+P 5000 4400
+F 0 "R?" V 5080 4400 50  0000 C CNN
+F 1 "2k" V 5000 4400 50  0000 C CNN
+F 2 "" V 4930 4400 50  0000 C CNN
+F 3 "" H 5000 4400 50  0000 C CNN
+	1    5000 4400
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	5150 4350 5250 4350
+	5150 4400 5250 4400
 Wire Wire Line
 	5550 4700 5550 4550
 Wire Wire Line
@@ -311,10 +299,10 @@ Wire Wire Line
 Connection ~ 5550 4600
 Text Label 6050 4600 0    60   ~ 0
 IMD_Fault
-Text Label 4300 4350 0    60   ~ 0
+Text Label 4300 4400 0    60   ~ 0
 IMD_Status
 Wire Wire Line
-	4300 4350 4850 4350
+	4300 4400 4850 4400
 Text Label 5550 3950 0    60   ~ 0
 +24LV
 Wire Wire Line
@@ -370,6 +358,17 @@ F 1 "MMBF170" H 5650 6600 50  0000 L CNN
 F 2 "SOT-23" H 5650 6525 50  0000 L CIN
 F 3 "" H 5450 6600 50  0000 L CNN
 	1    5450 6600
+	1    0    0    -1  
+$EndComp
+$Comp
+L BSS84 Q?
+U 1 1 58B20C85
+P 5450 4350
+F 0 "Q?" H 5700 4425 50  0000 L CNN
+F 1 "BSS84" H 5700 4350 50  0000 L CNN
+F 2 "SOT-23" H 5700 4275 50  0000 L CIN
+F 3 "" H 5450 4350 50  0000 L CNN
+	1    5450 4350
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

@@ -80,6 +80,7 @@ LIBS:Xicor
 LIBS:xilinx
 LIBS:Zilog
 LIBS:pacman-main-cache
+LIBS:bss84
 LIBS:Circuit_layout-cache
 EELAYER 25 0
 EELAYER END
@@ -827,28 +828,7 @@ F 3 "" H 5100 1350 50  0000 C CNN
 $EndComp
 Text Label 5100 2450 0    60   ~ 0
 GND
-$Comp
-L R R?
-U 1 1 58ADF033
-P 10100 1250
-F 0 "R?" V 10180 1250 50  0000 C CNN
-F 1 "10k" V 10100 1250 50  0000 C CNN
-F 2 "" V 10030 1250 50  0000 C CNN
-F 3 "" H 10100 1250 50  0000 C CNN
-	1    10100 1250
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	10100 1600 10100 1400
-Text Label 9700 900  0    60   ~ 0
-BOT
-Wire Wire Line
-	10100 900  10100 1100
-Text Label 9700 1600 0    60   ~ 0
-RTN_GLV
 Text HLabel 1250 1600 0    60   Input ~ 0
-BOT
-Text HLabel 1250 1750 0    60   Input ~ 0
 BP
 Text HLabel 1250 1050 0    60   Output ~ 0
 APPS1
@@ -856,63 +836,8 @@ Text HLabel 1250 1200 0    60   Output ~ 0
 APPS2
 Text HLabel 1250 1450 0    60   Output ~ 0
 BRAKE_5
-Text HLabel 1250 2650 0    60   Input ~ 0
-BOT_uC
 Text HLabel 1250 2800 0    60   Input ~ 0
 BP_uC
-Wire Wire Line
-	9700 900  10300 900 
-Wire Wire Line
-	9700 1600 10300 1600
-$Comp
-L R R?
-U 1 1 58AE07FB
-P 10450 900
-F 0 "R?" V 10530 900 50  0000 C CNN
-F 1 "0" V 10450 900 50  0000 C CNN
-F 2 "" V 10380 900 50  0000 C CNN
-F 3 "" H 10450 900 50  0000 C CNN
-	1    10450 900 
-	0    -1   -1   0   
-$EndComp
-$Comp
-L R R?
-U 1 1 58AE08A5
-P 10450 1600
-F 0 "R?" V 10530 1600 50  0000 C CNN
-F 1 "0" V 10450 1600 50  0000 C CNN
-F 2 "" V 10380 1600 50  0000 C CNN
-F 3 "" H 10450 1600 50  0000 C CNN
-	1    10450 1600
-	0    -1   -1   0   
-$EndComp
-Connection ~ 10100 900 
-Connection ~ 10100 1600
-Wire Wire Line
-	10600 900  11000 900 
-Wire Wire Line
-	10600 1600 11000 1600
-$Comp
-L C C?
-U 1 1 58AE1C60
-P 10750 1250
-F 0 "C?" H 10775 1350 50  0000 L CNN
-F 1 "DNP" H 10775 1150 50  0000 L CNN
-F 2 "" H 10788 1100 50  0000 C CNN
-F 3 "" H 10750 1250 50  0000 C CNN
-	1    10750 1250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	10750 1400 10750 1600
-Connection ~ 10750 1600
-Wire Wire Line
-	10750 1100 10750 900 
-Connection ~ 10750 900 
-Text Label 11000 900  0    60   ~ 0
-BOT_uC
-Text Label 11000 1600 0    60   ~ 0
-RTN_GLV
 $Comp
 L R R?
 U 1 1 58AE29CB

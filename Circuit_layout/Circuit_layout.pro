@@ -1,4 +1,4 @@
-update=2/25/2017 2:58:10 PM
+update=2/25/2017 4:31:42 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -121,3 +121,4 @@ LibName79=xilinx
 LibName80=Zilog
 LibName81=C:/Users/nessa/Desktop/TSI/TSI_KiCad_Lib
 LibName82=C:/Users/nessa/Desktop/TSI_repo/pacman_hardware_rev_0_8/project/pacman-main-cache
+LibName83=bss84

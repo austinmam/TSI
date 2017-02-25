@@ -80,6 +80,7 @@ LIBS:Xicor
 LIBS:xilinx
 LIBS:Zilog
 LIBS:pacman-main-cache
+LIBS:bss84
 LIBS:Circuit_layout-cache
 EELAYER 25 0
 EELAYER END
@@ -488,11 +489,9 @@ F9 "Throttle_SEL" I R 10300 5700 60
 F10 "Throttle_uC" I R 10300 5550 60 
 F11 "Throttle_LV" O R 10300 5400 60 
 F12 "+5LV" I L 8600 6150 60 
-F13 "BOT" I R 10300 5850 60 
-F14 "BP" I R 10300 6150 60 
-F15 "BRAKE_5" O R 10300 6450 60 
-F16 "BOT_uC" I R 10300 6000 60 
-F17 "BP_uC" I R 10300 6300 60 
+F13 "BP" I R 10300 6150 60 
+F14 "BRAKE_5" O R 10300 6450 60 
+F15 "BP_uC" I R 10300 6300 60 
 $EndSheet
 Text Notes 700  2800 0    60   ~ 0
 I_Measure Unity Diff. Amp

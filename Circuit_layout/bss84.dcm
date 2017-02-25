@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP BSS84
+D -50V Vds, -0.13A Id, P-Channel MOSFET, SOT-23
+K P-Channel Enchancement Mode Field-Effect Transistor
+F https://www.fairchildsemi.com/datasheets/BS/BSS84.pdf
+$ENDCMP
+#
+#End Doc Library
