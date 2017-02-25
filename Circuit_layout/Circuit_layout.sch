@@ -387,7 +387,7 @@ F 3 "" H 1800 3250 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 Text Label 2100 3350 0    60   ~ 0
-+10V
++5LV
 Text Label 2100 3950 0    60   ~ 0
 GND
 Text Label 1150 2950 0    60   ~ 0
@@ -460,17 +460,6 @@ Wire Wire Line
 Wire Wire Line
 	1800 3000 1150 3000
 Connection ~ 1150 3000
-$Comp
-L MCP6001 U?
-U 1 1 58B0C864
-P 2200 3650
-F 0 "U?" H 2250 3850 50  0000 C CNN
-F 1 "MCP6001" H 2400 3450 50  0000 C CNN
-F 2 "" H 2150 3750 50  0000 C CNN
-F 3 "" H 2250 3850 50  0000 C CNN
-	1    2200 3650
-	1    0    0    -1  
-$EndComp
 Text Label 2700 3650 0    60   ~ 0
 I_Measure
 $Sheet
@@ -495,4 +484,115 @@ F15 "BP_uC" I R 10300 6300 60
 $EndSheet
 Text Notes 700  2800 0    60   ~ 0
 I_Measure Unity Diff. Amp
+$Comp
+L C C?
+U 1 1 58B21260
+P 1700 1500
+F 0 "C?" H 1725 1600 50  0000 L CNN
+F 1 "0.47u" H 1725 1400 50  0000 L CNN
+F 2 "" H 1738 1350 50  0000 C CNN
+F 3 "" H 1700 1500 50  0000 C CNN
+	1    1700 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 58B21267
+P 2700 900
+F 0 "C?" H 2725 1000 50  0000 L CNN
+F 1 "0.47u" H 2725 800 50  0000 L CNN
+F 2 "" H 2738 750 50  0000 C CNN
+F 3 "" H 2700 900 50  0000 C CNN
+	1    2700 900 
+	0    1    1    0   
+$EndComp
+$Comp
+L R R?
+U 1 1 58B2126E
+P 1400 1250
+F 0 "R?" V 1480 1250 50  0000 C CNN
+F 1 "160k" V 1400 1250 50  0000 C CNN
+F 2 "" V 1330 1250 50  0000 C CNN
+F 3 "" H 1400 1250 50  0000 C CNN
+	1    1400 1250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R?
+U 1 1 58B21275
+P 2000 1250
+F 0 "R?" V 2080 1250 50  0000 C CNN
+F 1 "160k" V 2000 1250 50  0000 C CNN
+F 2 "" V 1930 1250 50  0000 C CNN
+F 3 "" H 2000 1250 50  0000 C CNN
+	1    2000 1250
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2500 1650 2500 1900
+Wire Wire Line
+	2300 1450 2150 1450
+Wire Wire Line
+	2150 1450 2150 1700
+Wire Wire Line
+	2150 1700 2900 1700
+Text Label 2500 1900 0    60   ~ 0
+GND
+Text Label 2500 700  0    60   ~ 0
++5LV
+Wire Wire Line
+	2150 1250 2300 1250
+Wire Wire Line
+	2850 900  2900 900 
+Wire Wire Line
+	2900 900  2900 1700
+Connection ~ 2900 1350
+Wire Wire Line
+	2550 900  2150 900 
+Wire Wire Line
+	2150 900  2150 1250
+Wire Wire Line
+	2500 700  2500 1050
+Wire Wire Line
+	1550 1250 1850 1250
+Wire Wire Line
+	1700 1250 1700 1350
+Connection ~ 1700 1250
+Wire Wire Line
+	650  1250 1250 1250
+Wire Wire Line
+	1700 1650 1700 1800
+Wire Wire Line
+	1700 1800 2500 1800
+Connection ~ 2500 1800
+Text Notes 1550 2150 0    60   ~ 0
+Sallen-Key Filter\nIntended for 10Hz PWM\n2Hz fc - breadboarded - still osc
+$Comp
+L MCP6004 U?
+U 1 1 58B21292
+P 2600 1350
+F 0 "U?" H 2650 1550 50  0000 C CNN
+F 1 "MCP6004" H 2750 1150 50  0000 C CNN
+F 2 "" H 2550 1450 50  0000 C CNN
+F 3 "" H 2650 1550 50  0000 C CNN
+	1    2600 1350
+	1    0    0    -1  
+$EndComp
+Text Label 650  1250 0    60   ~ 0
+IMD_PWM
+Wire Wire Line
+	2900 1350 3100 1350
+Text Label 3100 1350 0    60   ~ 0
+IMD
+$Comp
+L MCP6004 U?
+U 1 1 58B2253B
+P 2200 3650
+F 0 "U?" H 2250 3850 50  0000 C CNN
+F 1 "MCP6004" H 2350 3450 50  0000 C CNN
+F 2 "" H 2150 3750 50  0000 C CNN
+F 3 "" H 2250 3850 50  0000 C CNN
+	1    2200 3650
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
