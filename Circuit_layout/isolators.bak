@@ -79,6 +79,7 @@ LIBS:video
 LIBS:Xicor
 LIBS:xilinx
 LIBS:Zilog
+LIBS:pacman-main-cache
 LIBS:Circuit_layout-cache
 EELAYER 25 0
 EELAYER END

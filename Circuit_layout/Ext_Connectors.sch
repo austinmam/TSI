@@ -79,12 +79,13 @@ LIBS:video
 LIBS:Xicor
 LIBS:xilinx
 LIBS:Zilog
+LIBS:pacman-main-cache
 LIBS:Circuit_layout-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 7
+Sheet 3 7
 Title "Tractive System Interface"
 Date ""
 Rev "0.0"

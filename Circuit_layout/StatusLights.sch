@@ -79,6 +79,7 @@ LIBS:video
 LIBS:Xicor
 LIBS:xilinx
 LIBS:Zilog
+LIBS:pacman-main-cache
 LIBS:Circuit_layout-cache
 EELAYER 25 0
 EELAYER END
@@ -267,57 +268,108 @@ RTDS_CTRL
 $Comp
 L BCP51 Q?
 U 1 1 58B1C300
-P 4950 4450
-F 0 "Q?" H 5150 4525 50  0000 L CNN
-F 1 "BCP51" H 5150 4450 50  0000 L CNN
-F 2 "SOT-223" H 5150 4375 50  0000 L CIN
-F 3 "" H 4950 4450 50  0000 L CNN
-	1    4950 4450
+P 5450 4350
+F 0 "Q?" H 5650 4425 50  0000 L CNN
+F 1 "BCP51" H 5650 4350 50  0000 L CNN
+F 2 "SOT-223" H 5650 4275 50  0000 L CIN
+F 3 "" H 5450 4350 50  0000 L CNN
+	1    5450 4350
 	1    0    0    -1  
 $EndComp
-Text Notes 5350 5250 0    60   ~ 0
+Text Notes 5800 4900 0    60   ~ 0
 This transistor was added here for the nice footprint.\nWill need to verify it works as needed.
 Wire Wire Line
-	5050 4250 5050 4050
+	5550 4150 5550 3950
 $Comp
 L R R?
 U 1 1 58B1C4A9
-P 5050 4950
-F 0 "R?" V 5130 4950 50  0000 C CNN
-F 1 "1k" V 5050 4950 50  0000 C CNN
-F 2 "" V 4980 4950 50  0000 C CNN
-F 3 "" H 5050 4950 50  0000 C CNN
-	1    5050 4950
+P 5550 4850
+F 0 "R?" V 5630 4850 50  0000 C CNN
+F 1 "2k" V 5550 4850 50  0000 C CNN
+F 2 "" V 5480 4850 50  0000 C CNN
+F 3 "" H 5550 4850 50  0000 C CNN
+	1    5550 4850
 	1    0    0    -1  
 $EndComp
 $Comp
 L R R?
 U 1 1 58B1C51E
-P 4500 4450
-F 0 "R?" V 4580 4450 50  0000 C CNN
-F 1 "1k" V 4500 4450 50  0000 C CNN
-F 2 "" V 4430 4450 50  0000 C CNN
-F 3 "" H 4500 4450 50  0000 C CNN
-	1    4500 4450
+P 5000 4350
+F 0 "R?" V 5080 4350 50  0000 C CNN
+F 1 "2k" V 5000 4350 50  0000 C CNN
+F 2 "" V 4930 4350 50  0000 C CNN
+F 3 "" H 5000 4350 50  0000 C CNN
+	1    5000 4350
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	4650 4450 4750 4450
+	5150 4350 5250 4350
 Wire Wire Line
-	5050 4800 5050 4650
+	5550 4700 5550 4550
 Wire Wire Line
-	5050 4700 5550 4700
-Connection ~ 5050 4700
-Text Label 5550 4700 0    60   ~ 0
+	5550 4600 6050 4600
+Connection ~ 5550 4600
+Text Label 6050 4600 0    60   ~ 0
 IMD_Fault
-Text Label 3800 4450 0    60   ~ 0
+Text Label 4300 4350 0    60   ~ 0
 IMD_Status
 Wire Wire Line
-	3800 4450 4350 4450
-Text Label 5050 4050 0    60   ~ 0
-+12LV
+	4300 4350 4850 4350
+Text Label 5550 3950 0    60   ~ 0
++24LV
 Wire Wire Line
-	5050 5100 5050 5250
-Text Label 5050 5250 0    60   ~ 0
+	5550 5000 5550 5150
+Text Label 5550 5150 0    60   ~ 0
 GND
+$Comp
+L R R?
+U 1 1 58B1EE45
+P 4950 6650
+F 0 "R?" V 5030 6650 50  0000 C CNN
+F 1 "1k" V 4950 6650 50  0000 C CNN
+F 2 "" V 4880 6650 50  0000 C CNN
+F 3 "" H 4950 6650 50  0000 C CNN
+	1    4950 6650
+	0    1    1    0   
+$EndComp
+$Comp
+L R R?
+U 1 1 58B1EEB2
+P 5550 6000
+F 0 "R?" V 5630 6000 50  0000 C CNN
+F 1 "DNP" V 5550 6000 50  0000 C CNN
+F 2 "" V 5480 6000 50  0000 C CNN
+F 3 "" H 5550 6000 50  0000 C CNN
+	1    5550 6000
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5550 6400 5550 6150
+Wire Wire Line
+	5250 6650 5100 6650
+Wire Wire Line
+	4800 6650 4200 6650
+Wire Wire Line
+	5550 5850 5550 5600
+Wire Wire Line
+	5550 6800 5550 7000
+Text Label 5550 5600 0    60   ~ 0
++12LV
+Text Label 5550 7000 0    60   ~ 0
+GND
+Text Label 4200 6650 0    60   ~ 0
+BP_uC
+Text Notes 5700 6150 0    60   ~ 0
+Confirm sizing of R:\nDatasheet lists 10mA/220mA as current draw of light.\nDesign for max?
+$Comp
+L MMBF170 Q?
+U 1 1 58B25E37
+P 5450 6600
+F 0 "Q?" H 5650 6675 50  0000 L CNN
+F 1 "MMBF170" H 5650 6600 50  0000 L CNN
+F 2 "SOT-23" H 5650 6525 50  0000 L CIN
+F 3 "" H 5450 6600 50  0000 L CNN
+	1    5450 6600
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
