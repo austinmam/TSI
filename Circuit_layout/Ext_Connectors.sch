@@ -79,7 +79,6 @@ LIBS:video
 LIBS:Xicor
 LIBS:xilinx
 LIBS:Zilog
-LIBS:pacman-main-cache
 LIBS:bss84
 LIBS:Circuit_layout-cache
 EELAYER 25 0
@@ -263,41 +262,17 @@ Wire Wire Line
 Wire Wire Line
 	9950 700  9350 700 
 $Comp
-L CONN_01X04 J?
+L CONN_01X02 J?
 U 1 1 58A76FC0
-P 10050 5150
-F 0 "J?" H 10050 5400 50  0000 C CNN
-F 1 "CONN_01X04" V 10150 5150 50  0000 C CNN
-F 2 "" H 10050 5150 50  0000 C CNN
-F 3 "" H 10050 5150 50  0000 C CNN
-F 4 "W6" H 10050 5150 60  0001 C CNN "Wire Number"
-	1    10050 5150
+P 10050 5050
+F 0 "J?" H 10050 5200 50  0000 C CNN
+F 1 "CONN_01X02" V 10150 5050 50  0000 C CNN
+F 2 "" H 10050 5050 50  0000 C CNN
+F 3 "" H 10050 5050 50  0000 C CNN
+F 4 "W6" H 10050 5050 60  0001 C CNN "Wire Number"
+	1    10050 5050
 	1    0    0    -1  
 $EndComp
-$Comp
-L CONN_01X04 J?
-U 1 1 58A76FC8
-P 10050 4500
-F 0 "J?" H 10050 4750 50  0000 C CNN
-F 1 "CONN_01X04" V 10150 4500 50  0000 C CNN
-F 2 "" H 10050 4500 50  0000 C CNN
-F 3 "" H 10050 4500 50  0000 C CNN
-F 4 "W-6" H 10050 4500 60  0001 C CNN "Wire Number"
-	1    10050 4500
-	1    0    0    -1  
-$EndComp
-Text Label 9300 5300 0    60   ~ 0
-SL1_in
-Text Label 9300 5200 0    60   ~ 0
-SL2_in
-Text Label 9300 5100 0    60   ~ 0
-AIRs+_in
-Text Label 9300 5000 0    60   ~ 0
-AIRs-_in
-Text Label 9300 4650 0    60   ~ 0
-SL1_out
-Text Label 9300 4550 0    60   ~ 0
-SL2_out
 Text Label 9300 4450 0    60   ~ 0
 AIRs+_out
 Text Label 9300 4350 0    60   ~ 0
@@ -374,7 +349,7 @@ Text Label 1550 3850 2    60   ~ 0
 CAN_L
 Text Label 1550 3950 2    60   ~ 0
 Shield
-Text Notes 9950 4860 0    60   ~ 0
+Text Notes 10350 4800 0    60   ~ 0
 Saftey Loop
 Text Notes 1100 3500 2    60   ~ 0
 CAN Bus
@@ -407,17 +382,9 @@ Wire Wire Line
 Wire Wire Line
 	9850 4450 9300 4450
 Wire Wire Line
-	9850 4550 9300 4550
+	9850 5000 9700 5000
 Wire Wire Line
-	9850 4650 9300 4650
-Wire Wire Line
-	9850 5000 9300 5000
-Wire Wire Line
-	9850 5100 9300 5100
-Wire Wire Line
-	9850 5200 9300 5200
-Wire Wire Line
-	9850 5300 9300 5300
+	9850 5100 9700 5100
 Wire Wire Line
 	9850 2300 9250 2300
 Wire Wire Line
@@ -499,7 +466,9 @@ $EndComp
 Wire Wire Line
 	5750 5450 6100 5450
 Wire Wire Line
-	6100 5050 6100 5550
+	6100 5050 6100 5450
+Wire Wire Line
+	6100 5450 6100 5550
 Wire Wire Line
 	5750 5050 6100 5050
 Connection ~ 6100 5450
@@ -575,4 +544,20 @@ F 3 "" H 8450 3000 50  0000 C CNN
 $EndComp
 Text GLabel 9100 3300 0    60   Input ~ 0
 Drive_BTN
+Text GLabel 9700 5000 0    60   Input ~ 0
+AIRs-_in
+Text GLabel 9700 5100 0    60   Input ~ 0
+AIRs+_in
+$Comp
+L CONN_01X02 J?
+U 1 1 58B5F468
+P 10050 4400
+F 0 "J?" H 10050 4550 50  0000 C CNN
+F 1 "CONN_01X02" V 10150 4400 50  0000 C CNN
+F 2 "" H 10050 4400 50  0000 C CNN
+F 3 "" H 10050 4400 50  0000 C CNN
+F 4 "W6" H 10050 4400 60  0001 C CNN "Wire Number"
+	1    10050 4400
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

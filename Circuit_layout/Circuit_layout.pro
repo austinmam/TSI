@@ -1,4 +1,4 @@
-update=2/25/2017 4:31:42 PM
+update=2/25/2017 5:53:35 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -23,8 +23,6 @@ ModuleOutlineThickness=0.150000000000
 [cvpcb]
 version=1
 NetIExt=net
-[general]
-version=1
 [schematic_editor]
 version=1
 PageLayoutDescrFile=
@@ -122,3 +120,5 @@ LibName80=Zilog
 LibName81=C:/Users/nessa/Desktop/TSI/TSI_KiCad_Lib
 LibName82=C:/Users/nessa/Desktop/TSI_repo/pacman_hardware_rev_0_8/project/pacman-main-cache
 LibName83=bss84
+[general]
+version=1

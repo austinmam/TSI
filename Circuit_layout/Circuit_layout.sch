@@ -79,7 +79,6 @@ LIBS:video
 LIBS:Xicor
 LIBS:xilinx
 LIBS:Zilog
-LIBS:pacman-main-cache
 LIBS:bss84
 LIBS:Circuit_layout-cache
 EELAYER 25 0
@@ -166,7 +165,11 @@ Text GLabel 3550 2000 0    50   BiDi ~ 0
 Wire Wire Line
 	4950 5700 4950 5750
 Wire Wire Line
-	4950 5750 5450 5750
+	4950 5750 5050 5750
+Wire Wire Line
+	5050 5750 5200 5750
+Wire Wire Line
+	5200 5750 5450 5750
 Wire Wire Line
 	5050 5750 5050 5700
 Wire Wire Line
@@ -189,7 +192,11 @@ $EndComp
 Wire Wire Line
 	4950 1700 4950 1650
 Wire Wire Line
-	4950 1650 5450 1650
+	4950 1650 5050 1650
+Wire Wire Line
+	5050 1650 5200 1650
+Wire Wire Line
+	5200 1650 5450 1650
 Wire Wire Line
 	5050 1650 5050 1700
 Wire Wire Line
@@ -223,13 +230,17 @@ F 5 "http://www.digikey.com/product-search/en?pv7=2&k=7A-10.000MAAE-T&mnonly=0&n
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3050 2400 3050 2750
+	3050 2400 3050 2550
+Wire Wire Line
+	3050 2550 3050 2750
 Wire Wire Line
 	3050 2400 3950 2400
 Wire Wire Line
 	3950 2300 2750 2300
 Wire Wire Line
-	2750 2300 2750 2750
+	2750 2300 2750 2550
+Wire Wire Line
+	2750 2550 2750 2750
 Connection ~ 2750 2550
 Connection ~ 3050 2550
 $Comp
@@ -246,7 +257,9 @@ F 5 "http://www.digikey.com/product-detail/en/kemet/C0805C100J5GACTU/399-1108-1-
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2750 3050 3050 3050
+	2750 3050 2900 3050
+Wire Wire Line
+	2900 3050 3050 3050
 Wire Wire Line
 	2900 3050 2900 3150
 Connection ~ 2900 3050
@@ -275,12 +288,12 @@ F 5 "http://www.digikey.com/product-detail/en/kemet/C0805C100J5GACTU/399-1108-1-
 	1    0    0    -1  
 $EndComp
 $Sheet
-S 8450 3400 1800 1050
+S 8150 3600 1800 1050
 U 58ADE509
 F0 "Status Lights" 60
 F1 "StatusLights.sch" 60
-F2 "D_LED_CTRL" I L 8450 3650 60 
-F3 "RTDS_CTRL" I L 8450 3950 60 
+F2 "D_LED_CTRL" I L 8150 3850 60 
+F3 "RTDS_CTRL" I L 8150 4150 60 
 $EndSheet
 $Sheet
 S 8300 1550 1750 950 
@@ -401,13 +414,19 @@ Wire Wire Line
 Wire Wire Line
 	2300 4100 2550 4100
 Wire Wire Line
-	2500 3650 2700 3650
+	2500 3650 2550 3650
+Wire Wire Line
+	2550 3650 2700 3650
 Text Notes 1550 4500 0    60   ~ 0
 Look elsewhere on board \nfor other MCP600x we could \nuse to combine on quad chip
 Wire Wire Line
-	700  3550 1350 3550
+	700  3550 1150 3550
 Wire Wire Line
-	700  3750 1350 3750
+	1150 3550 1350 3550
+Wire Wire Line
+	700  3750 1150 3750
+Wire Wire Line
+	1150 3750 1350 3750
 $Comp
 L C C?
 U 1 1 58B0B5F1
@@ -435,13 +454,17 @@ GND
 Wire Wire Line
 	1800 4100 1800 3750
 Wire Wire Line
-	1650 3750 1900 3750
+	1650 3750 1800 3750
+Wire Wire Line
+	1800 3750 1900 3750
 Wire Wire Line
 	2550 4100 2550 3650
 Connection ~ 2550 3650
 Connection ~ 1800 3750
 Wire Wire Line
-	1650 3550 1900 3550
+	1650 3550 1800 3550
+Wire Wire Line
+	1800 3550 1900 3550
 Wire Wire Line
 	1150 3550 1150 3400
 Connection ~ 1150 3550
@@ -451,7 +474,9 @@ Wire Wire Line
 	1150 3900 1150 3750
 Connection ~ 1150 3750
 Wire Wire Line
-	1150 3100 1150 2950
+	1150 2950 1150 3000
+Wire Wire Line
+	1150 3000 1150 3100
 Wire Wire Line
 	1800 3550 1800 3400
 Connection ~ 1800 3550
@@ -529,13 +554,15 @@ F 3 "" H 2000 1250 50  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	2500 1650 2500 1900
+	2500 1650 2500 1800
+Wire Wire Line
+	2500 1800 2500 1900
 Wire Wire Line
 	2300 1450 2150 1450
 Wire Wire Line
 	2150 1450 2150 1700
 Wire Wire Line
-	2150 1700 2900 1700
+	2900 1700 2150 1700
 Text Label 2500 1900 0    60   ~ 0
 GND
 Text Label 2500 700  0    60   ~ 0
@@ -545,7 +572,9 @@ Wire Wire Line
 Wire Wire Line
 	2850 900  2900 900 
 Wire Wire Line
-	2900 900  2900 1700
+	2900 900  2900 1350
+Wire Wire Line
+	2900 1350 2900 1700
 Connection ~ 2900 1350
 Wire Wire Line
 	2550 900  2150 900 
@@ -554,7 +583,9 @@ Wire Wire Line
 Wire Wire Line
 	2500 700  2500 1050
 Wire Wire Line
-	1550 1250 1850 1250
+	1550 1250 1700 1250
+Wire Wire Line
+	1700 1250 1850 1250
 Wire Wire Line
 	1700 1250 1700 1350
 Connection ~ 1700 1250
@@ -595,4 +626,94 @@ F 3 "" H 2250 3850 50  0000 C CNN
 	1    2200 3650
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	6550 3900 7200 3900
+Wire Wire Line
+	6550 4000 7200 4000
+Wire Wire Line
+	6550 4100 7200 4100
+Text Label 7200 3900 2    60   ~ 0
+Heartbeat
+Text Label 7200 4000 2    60   ~ 0
+Spare_Red
+Text Label 7200 4100 2    60   ~ 0
+Spare_Blue
+$Comp
+L TLP291 U?
+U 1 1 58B3A5D9
+P 7050 1200
+F 0 "U?" H 6850 1400 50  0000 L CNN
+F 1 "TLP293" H 7050 1400 50  0000 L CNN
+F 2 "SOP-4" H 6850 1000 50  0000 L CIN
+F 3 "" H 7050 1200 50  0000 L CNN
+F 4 "TLP293(GB-TPLECT-ND" H 7050 1200 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/toshiba-semiconductor-and-storage/TLP293(GB-TPL,E/TLP293(GB-TPLECT-ND/4562965" H 7050 1200 60  0001 C CNN "Field5"
+F 6 "TLP293(GB-TPL,E" H 7050 1200 60  0001 C CNN "Man P/N"
+F 7 "http://www.digikey.com/product-detail/en/toshiba-semiconductor-and-storage/TLP291(GB-TP,SE/TLP291(GB-TPSECT-ND/4562949" H 7050 1200 60  0001 C CNN "TLP291"
+	1    7050 1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5950 1300 6750 1300
+Wire Wire Line
+	6750 1100 6650 1100
+Wire Wire Line
+	7350 1100 7400 1100
+Wire Wire Line
+	7350 1300 7850 1300
+Text Label 7850 1300 2    60   ~ 0
+Safety_Loop
+Wire Wire Line
+	7700 1100 7800 1100
+Wire Wire Line
+	7800 1100 7800 950 
+Wire Wire Line
+	6350 1100 5950 1100
+Text Label 5950 1100 0    60   ~ 0
+AIRs+_in
+Text Label 5950 1300 0    60   ~ 0
+AIRs-_in
+$Comp
+L R R?
+U 1 1 58B4C950
+P 6500 1100
+F 0 "R?" V 6580 1100 50  0000 C CNN
+F 1 "1k" V 6500 1100 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 6430 1100 50  0001 C CNN
+F 3 "" H 6500 1100 50  0000 C CNN
+F 4 "P1.00KCCT-ND" V 6500 1100 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF1001V/P1.00KCCT-ND/118957" V 6500 1100 60  0001 C CNN "URL"
+F 6 "ERJ-6ENF1001V" V 6500 1100 60  0001 C CNN "Man P/N"
+	1    6500 1100
+	0    1    1    0   
+$EndComp
+$Comp
+L +5V #PWR?
+U 1 1 58B52706
+P 7800 950
+F 0 "#PWR?" H 7800 800 50  0001 C CNN
+F 1 "+5V" H 7800 1090 50  0000 C CNN
+F 2 "" H 7800 950 50  0000 C CNN
+F 3 "" H 7800 950 50  0000 C CNN
+	1    7800 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 58B530A6
+P 7550 1100
+F 0 "R?" V 7630 1100 50  0000 C CNN
+F 1 "1k" V 7550 1100 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 7480 1100 50  0001 C CNN
+F 3 "" H 7550 1100 50  0000 C CNN
+F 4 "P1.00KCCT-ND" V 7550 1100 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF1001V/P1.00KCCT-ND/118957" V 7550 1100 60  0001 C CNN "URL"
+F 6 "ERJ-6ENF1001V" V 7550 1100 60  0001 C CNN "Man P/N"
+	1    7550 1100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6550 2000 7150 2000
+Text Label 7150 2000 2    60   ~ 0
+Safety_Loop
 $EndSCHEMATC
