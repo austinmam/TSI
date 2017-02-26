@@ -1,6 +1,5 @@
 EESchema Schematic File Version 2
 LIBS:Circuit_layout-rescue
-LIBS:TSI_KiCad_Lib
 LIBS:TSI_HV_Isolater-cache
 LIBS:74xgxx
 LIBS:74xx
@@ -441,30 +440,6 @@ Wire Wire Line
 	12950 6750 12950 7000
 Wire Wire Line
 	5200 3700 5850 3700
-Wire Wire Line
-	5200 3900 5850 3900
-$Comp
-L C C?
-U 1 1 58ADD879
-P 5650 4200
-F 0 "C?" H 5675 4300 50  0000 L CNN
-F 1 "0.1u" H 5675 4100 50  0000 L CNN
-F 2 "" H 5688 4050 50  0000 C CNN
-F 3 "" H 5650 4200 50  0000 C CNN
-	1    5650 4200
-	1    0    0    -1  
-$EndComp
-$Comp
-L C C?
-U 1 1 58ADD957
-P 5650 3400
-F 0 "C?" H 5675 3500 50  0000 L CNN
-F 1 "0.1u" H 5675 3300 50  0000 L CNN
-F 2 "" H 5688 3250 50  0000 C CNN
-F 3 "" H 5650 3400 50  0000 C CNN
-	1    5650 3400
-	1    0    0    -1  
-$EndComp
 Text HLabel 3200 1700 0    60   Input ~ 0
 BP
 Text HLabel 1500 2450 0    60   Output ~ 0
@@ -493,7 +468,7 @@ U 1 1 58AE29E7
 P 11950 3500
 F 0 "C?" H 11975 3600 50  0000 L CNN
 F 1 "DNP" H 11975 3400 50  0000 L CNN
-F 2 "" H 11988 3350 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 11988 3350 50  0001 C CNN
 F 3 "" H 11950 3500 50  0000 C CNN
 	1    11950 3500
 	1    0    0    -1  
@@ -581,21 +556,10 @@ Connection ~ 6300 3900
 Wire Wire Line
 	6150 3700 6400 3700
 Wire Wire Line
-	5650 3700 5650 3550
-Connection ~ 5650 3700
-Wire Wire Line
-	5650 4050 5650 3900
-Connection ~ 5650 3900
-Wire Wire Line
-	5650 3100 5650 3250
-Wire Wire Line
 	6300 3700 6300 3550
 Connection ~ 6300 3700
 Wire Wire Line
 	6300 3250 6300 3150
-Wire Wire Line
-	6300 3150 5650 3150
-Connection ~ 5650 3150
 $Comp
 L MCP6004 U?
 U 1 1 58AF5926
@@ -618,20 +582,12 @@ U 1 1 58AF636E
 P 3600 6750
 F 0 "C?" H 3625 6850 50  0000 L CNN
 F 1 "0.1u" H 3625 6650 50  0000 L CNN
-F 2 "" H 3638 6600 50  0000 C CNN
-F 3 "" H 3600 6750 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 3638 6600 50  0001 C CNN
+F 3 "http://www.kemet.com/Lists/ProductCatalog/Attachments/53/KEM_C1002_X7R_SMD.pdf" H 3600 6750 50  0001 C CNN
+F 4 "399-1168-1-ND" H 3600 6750 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/kemet/C0805C104K3RACTU/399-1168-1-ND/411443" H 3600 6750 60  0001 C CNN "URL"
+F 6 "C0805C104K3RACTU" H 3600 6750 60  0001 C CNN "Man P/N"
 	1    3600 6750
-	1    0    0    -1  
-$EndComp
-$Comp
-L C C?
-U 1 1 58AF6374
-P 3750 5950
-F 0 "C?" H 3775 6050 50  0000 L CNN
-F 1 "0.1u" H 3775 5850 50  0000 L CNN
-F 2 "" H 3788 5800 50  0000 C CNN
-F 3 "" H 3750 5950 50  0000 C CNN
-	1    3750 5950
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -1044,28 +1000,15 @@ F 3 "" H 6600 4100 50  0000 C CNN
 	1    6600 4100
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5650 4350 5650 4400
-$Comp
-L GND #PWR?
-U 1 1 58B314D0
-P 5650 4400
-F 0 "#PWR?" H 5650 4150 50  0001 C CNN
-F 1 "GND" H 5650 4250 50  0000 C CNN
-F 2 "" H 5650 4400 50  0000 C CNN
-F 3 "" H 5650 4400 50  0000 C CNN
-	1    5650 4400
-	1    0    0    -1  
-$EndComp
 $Comp
 L GND #PWR?
 U 1 1 58B31589
-P 5650 3100
-F 0 "#PWR?" H 5650 2850 50  0001 C CNN
-F 1 "GND" H 5650 2950 50  0000 C CNN
-F 2 "" H 5650 3100 50  0000 C CNN
-F 3 "" H 5650 3100 50  0000 C CNN
-	1    5650 3100
+P 6300 3150
+F 0 "#PWR?" H 6300 2900 50  0001 C CNN
+F 1 "GND" H 6300 3000 50  0000 C CNN
+F 2 "" H 6300 3150 50  0000 C CNN
+F 3 "" H 6300 3150 50  0000 C CNN
+	1    6300 3150
 	1    0    0    1   
 $EndComp
 $Comp
@@ -1187,17 +1130,6 @@ F 3 "" H 1650 2350 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C?
-U 1 1 58B3EF6F
-P 1650 2600
-F 0 "C?" H 1675 2700 50  0000 L CNN
-F 1 "0.1u" H 1675 2500 50  0000 L CNN
-F 2 "" H 1688 2450 50  0000 C CNN
-F 3 "" H 1650 2600 50  0000 C CNN
-	1    1650 2600
-	1    0    0    -1  
-$EndComp
-$Comp
 L GND #PWR?
 U 1 1 58B3F616
 P 1650 2750
@@ -1212,28 +1144,6 @@ Wire Wire Line
 	1550 850  1850 850 
 Wire Wire Line
 	1550 1600 1850 1600
-$Comp
-L C C?
-U 1 1 58B403F1
-P 1650 1000
-F 0 "C?" H 1675 1100 50  0000 L CNN
-F 1 "0.1u" H 1675 900 50  0000 L CNN
-F 2 "" H 1688 850 50  0000 C CNN
-F 3 "" H 1650 1000 50  0000 C CNN
-	1    1650 1000
-	1    0    0    -1  
-$EndComp
-$Comp
-L C C?
-U 1 1 58B404F5
-P 1650 1750
-F 0 "C?" H 1675 1850 50  0000 L CNN
-F 1 "0.1u" H 1675 1650 50  0000 L CNN
-F 2 "" H 1688 1600 50  0000 C CNN
-F 3 "" H 1650 1750 50  0000 C CNN
-	1    1650 1750
-	1    0    0    -1  
-$EndComp
 Connection ~ 1650 1600
 Connection ~ 1650 850 
 Text Label 1850 850  0    60   ~ 0
@@ -1268,17 +1178,6 @@ Text HLabel 1550 3150 0    60   Output ~ 0
 APPS1
 Wire Wire Line
 	1550 3150 1850 3150
-$Comp
-L C C?
-U 1 1 58B47FEA
-P 1650 3300
-F 0 "C?" H 1675 3400 50  0000 L CNN
-F 1 "0.1u" H 1675 3200 50  0000 L CNN
-F 2 "" H 1688 3150 50  0000 C CNN
-F 3 "" H 1650 3300 50  0000 C CNN
-	1    1650 3300
-	1    0    0    -1  
-$EndComp
 Connection ~ 1650 3150
 Text Label 1850 3150 0    60   ~ 0
 APPS2
@@ -1297,17 +1196,6 @@ Text HLabel 1550 3800 0    60   Output ~ 0
 APPS2
 Wire Wire Line
 	1550 3800 1850 3800
-$Comp
-L C C?
-U 1 1 58B4811B
-P 1650 3950
-F 0 "C?" H 1675 4050 50  0000 L CNN
-F 1 "0.1u" H 1675 3850 50  0000 L CNN
-F 2 "" H 1688 3800 50  0000 C CNN
-F 3 "" H 1650 3950 50  0000 C CNN
-	1    1650 3950
-	1    0    0    -1  
-$EndComp
 Connection ~ 1650 3800
 Text Label 1850 3800 0    60   ~ 0
 APPS2
@@ -1320,17 +1208,6 @@ F 1 "GND" H 1650 3950 50  0000 C CNN
 F 2 "" H 1650 4100 50  0000 C CNN
 F 3 "" H 1650 4100 50  0000 C CNN
 	1    1650 4100
-	1    0    0    -1  
-$EndComp
-$Comp
-L C C?
-U 1 1 58B49CCB
-P 3400 1000
-F 0 "C?" H 3425 1100 50  0000 L CNN
-F 1 "0.1u" H 3425 900 50  0000 L CNN
-F 2 "" H 3438 850 50  0000 C CNN
-F 3 "" H 3400 1000 50  0000 C CNN
-	1    3400 1000
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1937,4 +1814,104 @@ F 6 "MCP6004T-I/SL" H 11550 4950 60  0001 C CNN "Man P/N"
 	1    11550 4950
 	1    0    0    -1  
 $EndComp
+$Comp
+L C C?
+U 1 1 58B3CEBF
+P 3750 5950
+F 0 "C?" H 3775 6050 50  0000 L CNN
+F 1 "0.1u" H 3775 5850 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 3788 5800 50  0001 C CNN
+F 3 "http://www.kemet.com/Lists/ProductCatalog/Attachments/53/KEM_C1002_X7R_SMD.pdf" H 3750 5950 50  0001 C CNN
+F 4 "399-1168-1-ND" H 3750 5950 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/kemet/C0805C104K3RACTU/399-1168-1-ND/411443" H 3750 5950 60  0001 C CNN "URL"
+F 6 "C0805C104K3RACTU" H 3750 5950 60  0001 C CNN "Man P/N"
+	1    3750 5950
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 58B3FCB9
+P 1650 1000
+F 0 "C?" H 1675 1100 50  0000 L CNN
+F 1 "0.1u" H 1675 900 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 1688 850 50  0001 C CNN
+F 3 "http://www.kemet.com/Lists/ProductCatalog/Attachments/53/KEM_C1002_X7R_SMD.pdf" H 1650 1000 50  0001 C CNN
+F 4 "399-1168-1-ND" H 1650 1000 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/kemet/C0805C104K3RACTU/399-1168-1-ND/411443" H 1650 1000 60  0001 C CNN "URL"
+F 6 "C0805C104K3RACTU" H 1650 1000 60  0001 C CNN "Man P/N"
+	1    1650 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 58B3FDCB
+P 3400 1000
+F 0 "C?" H 3425 1100 50  0000 L CNN
+F 1 "0.1u" H 3425 900 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 3438 850 50  0001 C CNN
+F 3 "http://www.kemet.com/Lists/ProductCatalog/Attachments/53/KEM_C1002_X7R_SMD.pdf" H 3400 1000 50  0001 C CNN
+F 4 "399-1168-1-ND" H 3400 1000 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/kemet/C0805C104K3RACTU/399-1168-1-ND/411443" H 3400 1000 60  0001 C CNN "URL"
+F 6 "C0805C104K3RACTU" H 3400 1000 60  0001 C CNN "Man P/N"
+	1    3400 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 58B3FEBE
+P 1650 2600
+F 0 "C?" H 1675 2700 50  0000 L CNN
+F 1 "0.1u" H 1675 2500 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 1688 2450 50  0001 C CNN
+F 3 "http://www.kemet.com/Lists/ProductCatalog/Attachments/53/KEM_C1002_X7R_SMD.pdf" H 1650 2600 50  0001 C CNN
+F 4 "399-1168-1-ND" H 1650 2600 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/kemet/C0805C104K3RACTU/399-1168-1-ND/411443" H 1650 2600 60  0001 C CNN "URL"
+F 6 "C0805C104K3RACTU" H 1650 2600 60  0001 C CNN "Man P/N"
+	1    1650 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 58B3FFDC
+P 1650 1750
+F 0 "C?" H 1675 1850 50  0000 L CNN
+F 1 "0.1u" H 1675 1650 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 1688 1600 50  0001 C CNN
+F 3 "http://www.kemet.com/Lists/ProductCatalog/Attachments/53/KEM_C1002_X7R_SMD.pdf" H 1650 1750 50  0001 C CNN
+F 4 "399-1168-1-ND" H 1650 1750 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/kemet/C0805C104K3RACTU/399-1168-1-ND/411443" H 1650 1750 60  0001 C CNN "URL"
+F 6 "C0805C104K3RACTU" H 1650 1750 60  0001 C CNN "Man P/N"
+	1    1650 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 58B400E5
+P 1650 3300
+F 0 "C?" H 1675 3400 50  0000 L CNN
+F 1 "0.1u" H 1675 3200 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 1688 3150 50  0001 C CNN
+F 3 "http://www.kemet.com/Lists/ProductCatalog/Attachments/53/KEM_C1002_X7R_SMD.pdf" H 1650 3300 50  0001 C CNN
+F 4 "399-1168-1-ND" H 1650 3300 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/kemet/C0805C104K3RACTU/399-1168-1-ND/411443" H 1650 3300 60  0001 C CNN "URL"
+F 6 "C0805C104K3RACTU" H 1650 3300 60  0001 C CNN "Man P/N"
+	1    1650 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 58B40211
+P 1650 3950
+F 0 "C?" H 1675 4050 50  0000 L CNN
+F 1 "0.1u" H 1675 3850 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 1688 3800 50  0001 C CNN
+F 3 "http://www.kemet.com/Lists/ProductCatalog/Attachments/53/KEM_C1002_X7R_SMD.pdf" H 1650 3950 50  0001 C CNN
+F 4 "399-1168-1-ND" H 1650 3950 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/kemet/C0805C104K3RACTU/399-1168-1-ND/411443" H 1650 3950 60  0001 C CNN "URL"
+F 6 "C0805C104K3RACTU" H 1650 3950 60  0001 C CNN "Man P/N"
+	1    1650 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 3900 5850 3900
 $EndSCHEMATC

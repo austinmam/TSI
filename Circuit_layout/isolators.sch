@@ -1,6 +1,5 @@
 EESchema Schematic File Version 2
 LIBS:Circuit_layout-rescue
-LIBS:TSI_KiCad_Lib
 LIBS:TSI_HV_Isolater-cache
 LIBS:74xgxx
 LIBS:74xx
@@ -126,7 +125,7 @@ $EndComp
 Text Label 7200 1250 0    60   ~ 0
 +5HV
 Text Label 7200 1850 0    60   ~ 0
-HV-
+GND_HV
 Text Label 6250 850  0    60   ~ 0
 HV-
 Wire Wire Line
@@ -158,7 +157,7 @@ F 3 "" H 6250 1150 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 6100 2250 0    60   ~ 0
-HV-
+GND_HV
 Wire Wire Line
 	6900 2000 6900 1650
 Wire Wire Line
@@ -308,7 +307,7 @@ F 3 "" H 6400 3500 50  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 Text Label 6000 4100 0    60   ~ 0
-HV-
+GND_HV
 Wire Wire Line
 	5950 3600 6000 3600
 Wire Wire Line

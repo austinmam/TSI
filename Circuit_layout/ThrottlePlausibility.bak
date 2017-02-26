@@ -1,6 +1,5 @@
 EESchema Schematic File Version 2
 LIBS:Circuit_layout-rescue
-LIBS:TSI_KiCad_Lib
 LIBS:TSI_HV_Isolater-cache
 LIBS:74xgxx
 LIBS:74xx
@@ -121,9 +120,12 @@ L LM78M05CT U3
 U 1 1 58A600CF
 P 3800 8450
 F 0 "U3" H 3600 8650 50  0000 C CNN
-F 1 "LM78M05CT" H 3800 8650 50  0000 L CNN
-F 2 "TO-220" H 3800 8550 50  0000 C CIN
-F 3 "http://www.mouser.com/ds/2/149/LM78M05-889495.pdf" H 3800 8450 50  0001 C CNN
+F 1 "LM7805CT" H 3800 8650 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-220_Vertical" H 3800 8550 50  0001 C CIN
+F 3 "https://www.fairchildsemi.com/datasheets/LM/LM7805.pdf" H 3800 8450 50  0001 C CNN
+F 4 "LM7805CT-ND" H 3800 8450 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/fairchild-on-semiconductor/LM7805CT/LM7805CT-ND/458698" H 3800 8450 60  0001 C CNN "URL"
+F 6 "LM7805CT" H 3800 8450 60  0001 C CNN "Man P/N"
 	1    3800 8450
 	1    0    0    -1  
 $EndComp
@@ -137,8 +139,11 @@ U 1 1 58A600F2
 P 3800 7600
 F 0 "U2" H 3600 7800 50  0000 C CNN
 F 1 "LM7810CT" H 3800 7800 50  0000 L CNN
-F 2 "TO-220" H 3800 7700 50  0000 C CIN
-F 3 "http://www.mouser.com/ds/2/149/LM7810-1011066.pdf" H 3800 7600 50  0001 C CNN
+F 2 "TO_SOT_Packages_THT:TO-220_Vertical" H 3800 7700 50  0001 C CIN
+F 3 "https://www.fairchildsemi.com/datasheets/LM/LM7805.pdf" H 3800 7600 50  0001 C CNN
+F 4 "LM7810CT-ND" H 3800 7600 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/fairchild-on-semiconductor/LM7810CT/LM7810CT-ND/1954730" H 3800 7600 60  0001 C CNN "URL"
+F 6 "LM7810CT" H 3800 7600 60  0001 C CNN "Man P/N"
 	1    3800 7600
 	1    0    0    -1  
 $EndComp
@@ -153,7 +158,10 @@ P 2950 6050
 F 0 "U1" H 2950 6250 60  0000 C CNN
 F 1 "ACPL-C870" H 2950 6150 60  0000 C CNN
 F 2 "" H 2950 6250 60  0000 C CNN
-F 3 "" H 2950 6250 60  0000 C CNN
+F 3 "https://docs.broadcom.com/docs/AV02-3563EN" H 2950 6250 60  0001 C CNN
+F 4 "516-2578-5-ND" H 2950 6050 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/broadcom-limited/ACPL-C870-000E/516-2578-5-ND/3523705" H 2950 6050 60  0001 C CNN "URL"
+F 6 "ACPL-C870-000E" H 2950 6050 60  0001 C CNN "Man P/N"
 	1    2950 6050
 	1    0    0    -1  
 $EndComp
@@ -281,19 +289,8 @@ Wire Wire Line
 	1400 6100 2450 6100
 Wire Wire Line
 	2450 6700 2450 6400
-$Comp
-L LM339 U6
-U 3 1 58A62195
-P 7850 5750
-F 0 "U6" H 7900 5950 50  0000 C CNN
-F 1 "LM339" H 7950 5550 50  0000 C CNN
-F 2 "" H 7800 5850 50  0000 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm339.pdf" H 7900 5950 50  0001 C CNN
-	3    7850 5750
-	1    0    0    -1  
-$EndComp
 Text Notes 5900 4800 0    60   ~ 0
-Used for 10V \nrail-to-rail ability
+Used for 10V \nrail-to-rail ability\n\nCheck footprint
 Text Notes 11300 5700 0    60   ~ 0
 Used for rail-to-rail\non 5V
 Wire Wire Line
@@ -340,8 +337,11 @@ U 1 1 58AA6885
 P 9800 6300
 F 0 "U8" H 9800 6400 50  0000 C CNN
 F 1 "74ACT11030" H 9800 6200 50  0000 C CNN
-F 2 "" H 9800 6300 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 9800 6300 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/74act11030.pdf" H 9800 6300 50  0001 C CNN
+F 4 "296-4180-1-ND" H 9800 6300 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/texas-instruments/74ACT11030DR/296-4180-1-ND/375133" H 9800 6300 60  0001 C CNN "URL"
+F 6 "74ACT11030DR" H 9800 6300 60  0001 C CNN "Man P/N"
 	1    9800 6300
 	1    0    0    -1  
 $EndComp
@@ -396,8 +396,11 @@ U 1 1 58AAADCC
 P 12900 6400
 F 0 "SW1" H 12700 6550 50  0000 C CNN
 F 1 "TS5A3159-Q1" H 12650 6250 50  0000 C CNN
-F 2 "" H 12900 6400 50  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23-6_Handsoldering" H 12900 6400 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/ts5a3159-q1.pdf" H 12900 6400 50  0001 C CNN
+F 4 "296-39512-1-ND" H 12900 6400 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/texas-instruments/TS5A3159QDBVRQ1/296-39512-1-ND/5143458" H 12900 6400 60  0001 C CNN "URL"
+F 6 "TS5A3159QDBVRQ1" H 12900 6400 60  0001 C CNN "Man P/N"
 	1    12900 6400
 	-1   0    0    1   
 $EndComp
@@ -421,57 +424,16 @@ Text HLabel 3200 2700 0    60   Output ~ 0
 Throttle_LV
 $Comp
 L LM339 U6
-U 2 1 58AB27D7
-P 7850 4350
-F 0 "U6" H 7900 4550 50  0000 C CNN
-F 1 "LM339" H 7950 4150 50  0000 C CNN
-F 2 "" H 7800 4450 50  0000 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm339.pdf" H 7900 4550 50  0001 C CNN
-	2    7850 4350
-	1    0    0    -1  
-$EndComp
-$Comp
-L LM339 U6
 U 1 1 58AB2872
 P 7850 3250
 F 0 "U6" H 7900 3450 50  0000 C CNN
 F 1 "LM339" H 7950 3050 50  0000 C CNN
-F 2 "" H 7800 3350 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 7800 3350 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm339.pdf" H 7900 3450 50  0001 C CNN
+F 4 "LM339MX/NOPBCT-ND" H 7850 3250 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/texas-instruments/LM339MX-NOPB/LM339MX-NOPBCT-ND/1010535" H 7850 3250 60  0001 C CNN "URL"
+F 6 "LM339MX/NOPB" H 7850 3250 60  0001 C CNN "Man P/N"
 	1    7850 3250
-	1    0    0    -1  
-$EndComp
-$Comp
-L LM339 U6
-U 4 1 58AB3190
-P 7850 6850
-F 0 "U6" H 7900 7050 50  0000 C CNN
-F 1 "LM339" H 7950 6650 50  0000 C CNN
-F 2 "" H 7800 6950 50  0000 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm339.pdf" H 7900 7050 50  0001 C CNN
-	4    7850 6850
-	1    0    0    -1  
-$EndComp
-$Comp
-L LM339 U7
-U 1 1 58AB327B
-P 7850 8300
-F 0 "U7" H 7900 8500 50  0000 C CNN
-F 1 "LM339" H 7950 8100 50  0000 C CNN
-F 2 "" H 7800 8400 50  0000 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm339.pdf" H 7900 8500 50  0001 C CNN
-	1    7850 8300
-	1    0    0    -1  
-$EndComp
-$Comp
-L LM339 U7
-U 2 1 58AB3349
-P 7850 9400
-F 0 "U7" H 7900 9600 50  0000 C CNN
-F 1 "LM339" H 7950 9200 50  0000 C CNN
-F 2 "" H 7800 9500 50  0000 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm339.pdf" H 7900 9600 50  0001 C CNN
-	2    7850 9400
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -548,21 +510,13 @@ L HEATSINK HS?
 U 1 1 58AE64AB
 P 2950 8500
 F 0 "HS?" H 2950 8700 50  0000 C CNN
-F 1 "HEATSINK" H 2950 8450 50  0000 C CNN
+F 1 "513002B02500G" H 2950 8450 50  0000 C CNN
 F 2 "" H 2950 8500 50  0000 C CNN
-F 3 "" H 2950 8500 50  0000 C CNN
+F 3 "https://www.aavid.com/sites/default/files/products/boardlevel/aavid-standard-heatsinks.pdf" H 2950 8500 50  0001 C CNN
+F 4 "HS403-ND" H 2950 8500 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/aavid-thermalloy/513002B02500G/HS403-ND/1625590" H 2950 8500 60  0001 C CNN "URL"
+F 6 "513002B02500G" H 2950 8500 60  0001 C CNN "Man P/N"
 	1    2950 8500
-	1    0    0    -1  
-$EndComp
-$Comp
-L HEATSINK HS?
-U 1 1 58AE65D4
-P 2950 7600
-F 0 "HS?" H 2950 7800 50  0000 C CNN
-F 1 "HEATSINK" H 2950 7550 50  0000 C CNN
-F 2 "" H 2950 7600 50  0000 C CNN
-F 3 "" H 2950 7600 50  0000 C CNN
-	1    2950 7600
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -647,8 +601,11 @@ U 1 1 58AF5926
 P 4800 6350
 F 0 "U?" H 4850 6550 50  0000 C CNN
 F 1 "MCP6004" H 4950 6150 50  0000 C CNN
-F 2 "" H 4750 6450 50  0000 C CNN
-F 3 "" H 4850 6550 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 4750 6450 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf" H 4850 6550 50  0001 C CNN
+F 4 "MCP6004T-I/SLCT-ND" H 4800 6350 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/microchip-technology/MCP6004T-I-SL/MCP6004T-I-SLCT-ND/5013527" H 4800 6350 60  0001 C CNN "URL"
+F 6 "MCP6004T-I/SL" H 4800 6350 60  0001 C CNN "Man P/N"
 	1    4800 6350
 	1    0    0    -1  
 $EndComp
@@ -729,28 +686,6 @@ Wire Wire Line
 	3450 6550 3950 6550
 Text Label 5300 6350 0    60   ~ 0
 APPS1_ISO
-$Comp
-L MCP6004 U?
-U 1 1 58AFE513
-P 11550 4950
-F 0 "U?" H 11600 5150 50  0000 C CNN
-F 1 "MCP6004" H 11700 4750 50  0000 C CNN
-F 2 "" H 11500 5050 50  0000 C CNN
-F 3 "" H 11600 5150 50  0000 C CNN
-	1    11550 4950
-	1    0    0    -1  
-$EndComp
-$Comp
-L MCP6004 U?
-U 1 1 58AFE68E
-P 11550 7200
-F 0 "U?" H 11600 7400 50  0000 C CNN
-F 1 "MCP6004" H 11700 7000 50  0000 C CNN
-F 2 "" H 11500 7300 50  0000 C CNN
-F 3 "" H 11600 7400 50  0000 C CNN
-	1    11550 7200
-	1    0    0    -1  
-$EndComp
 $Comp
 L MMBF170 Q?
 U 1 1 58B24BD8
@@ -1089,8 +1024,11 @@ U 1 1 58A6175F
 P 6700 3800
 F 0 "U5" H 6700 3950 50  0000 L CNN
 F 1 "LM7332" H 6700 3650 50  0000 L CNN
-F 2 "" H 6600 3850 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm" H 6600 3850 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm7332.pdf" H 6700 3950 50  0001 C CNN
+F 4 "296-35310-1-ND" H 6700 3800 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/texas-instruments/LM7332MAX-NOPB/296-35310-1-ND/3739018" H 6700 3800 60  0001 C CNN "URL"
+F 6 "LM7332MAX/NOPB" H 6700 3800 60  0001 C CNN "Man P/N"
 	1    6700 3800
 	1    0    0    -1  
 $EndComp
@@ -1885,5 +1823,117 @@ F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ER
 F 6 "ERJ-6ENF4751V" V 7450 2900 60  0001 C CNN "Man P/N"
 	1    7450 2900
 	-1   0    0    1   
+$EndComp
+$Comp
+L HEATSINK HS?
+U 1 1 58B268F6
+P 2950 7600
+F 0 "HS?" H 2950 7800 50  0000 C CNN
+F 1 "513002B02500G" H 2950 7550 50  0000 C CNN
+F 2 "" H 2950 7600 50  0000 C CNN
+F 3 "https://www.aavid.com/sites/default/files/products/boardlevel/aavid-standard-heatsinks.pdf" H 2950 7600 50  0001 C CNN
+F 4 "HS403-ND" H 2950 7600 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/aavid-thermalloy/513002B02500G/HS403-ND/1625590" H 2950 7600 60  0001 C CNN "URL"
+F 6 "513002B02500G" H 2950 7600 60  0001 C CNN "Man P/N"
+	1    2950 7600
+	1    0    0    -1  
+$EndComp
+$Comp
+L LM339 U?
+U 1 1 58B2874B
+P 7850 4350
+F 0 "U?" H 7900 4550 50  0000 C CNN
+F 1 "LM339" H 7950 4150 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 7800 4450 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm339.pdf" H 7900 4550 50  0001 C CNN
+F 4 "LM339MX/NOPBCT-ND" H 7850 4350 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/texas-instruments/LM339MX-NOPB/LM339MX-NOPBCT-ND/1010535" H 7850 4350 60  0001 C CNN "URL"
+F 6 "LM339MX/NOPB" H 7850 4350 60  0001 C CNN "Man P/N"
+	1    7850 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L LM339 U?
+U 1 1 58B2883E
+P 7850 5750
+F 0 "U?" H 7900 5950 50  0000 C CNN
+F 1 "LM339" H 7950 5550 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 7800 5850 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm339.pdf" H 7900 5950 50  0001 C CNN
+F 4 "LM339MX/NOPBCT-ND" H 7850 5750 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/texas-instruments/LM339MX-NOPB/LM339MX-NOPBCT-ND/1010535" H 7850 5750 60  0001 C CNN "URL"
+F 6 "LM339MX/NOPB" H 7850 5750 60  0001 C CNN "Man P/N"
+	1    7850 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L LM339 U?
+U 1 1 58B28956
+P 7850 6850
+F 0 "U?" H 7900 7050 50  0000 C CNN
+F 1 "LM339" H 7950 6650 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 7800 6950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm339.pdf" H 7900 7050 50  0001 C CNN
+F 4 "LM339MX/NOPBCT-ND" H 7850 6850 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/texas-instruments/LM339MX-NOPB/LM339MX-NOPBCT-ND/1010535" H 7850 6850 60  0001 C CNN "URL"
+F 6 "LM339MX/NOPB" H 7850 6850 60  0001 C CNN "Man P/N"
+	1    7850 6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L LM339 U?
+U 1 1 58B28A6D
+P 7850 8300
+F 0 "U?" H 7900 8500 50  0000 C CNN
+F 1 "LM339" H 7950 8100 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 7800 8400 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm339.pdf" H 7900 8500 50  0001 C CNN
+F 4 "LM339MX/NOPBCT-ND" H 7850 8300 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/texas-instruments/LM339MX-NOPB/LM339MX-NOPBCT-ND/1010535" H 7850 8300 60  0001 C CNN "URL"
+F 6 "LM339MX/NOPB" H 7850 8300 60  0001 C CNN "Man P/N"
+	1    7850 8300
+	1    0    0    -1  
+$EndComp
+$Comp
+L LM339 U?
+U 1 1 58B28B79
+P 7850 9400
+F 0 "U?" H 7900 9600 50  0000 C CNN
+F 1 "LM339" H 7950 9200 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 7800 9500 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm339.pdf" H 7900 9600 50  0001 C CNN
+F 4 "LM339MX/NOPBCT-ND" H 7850 9400 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/texas-instruments/LM339MX-NOPB/LM339MX-NOPBCT-ND/1010535" H 7850 9400 60  0001 C CNN "URL"
+F 6 "LM339MX/NOPB" H 7850 9400 60  0001 C CNN "Man P/N"
+	1    7850 9400
+	1    0    0    -1  
+$EndComp
+$Comp
+L MCP6004 U?
+U 1 1 58B292DC
+P 11550 7200
+F 0 "U?" H 11600 7400 50  0000 C CNN
+F 1 "MCP6004" H 11700 7000 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 11500 7300 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf" H 11600 7400 50  0001 C CNN
+F 4 "MCP6004T-I/SLCT-ND" H 11550 7200 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/microchip-technology/MCP6004T-I-SL/MCP6004T-I-SLCT-ND/5013527" H 11550 7200 60  0001 C CNN "URL"
+F 6 "MCP6004T-I/SL" H 11550 7200 60  0001 C CNN "Man P/N"
+	1    11550 7200
+	1    0    0    -1  
+$EndComp
+$Comp
+L MCP6004 U?
+U 1 1 58B29428
+P 11550 4950
+F 0 "U?" H 11600 5150 50  0000 C CNN
+F 1 "MCP6004" H 11700 4750 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 11500 5050 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf" H 11600 5150 50  0001 C CNN
+F 4 "MCP6004T-I/SLCT-ND" H 11550 4950 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/microchip-technology/MCP6004T-I-SL/MCP6004T-I-SLCT-ND/5013527" H 11550 4950 60  0001 C CNN "URL"
+F 6 "MCP6004T-I/SL" H 11550 4950 60  0001 C CNN "Man P/N"
+	1    11550 4950
+	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
