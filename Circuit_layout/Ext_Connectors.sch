@@ -1,6 +1,5 @@
 EESchema Schematic File Version 2
 LIBS:Circuit_layout-rescue
-LIBS:TSI_KiCad_Lib
 LIBS:TSI_HV_Isolater-cache
 LIBS:74xgxx
 LIBS:74xx
@@ -98,14 +97,14 @@ Comment3 ""
 Comment4 "DEVELOPMENT ONLY"
 $EndDescr
 $Comp
-L CONN_8 J11
+L CONN_01X07 J11
 U 1 1 58A769AB
-P 10150 1050
-F 0 "J11" H 10150 1500 50  0000 C CNN
-F 1 "CONN_8" V 10250 1050 50  0000 C CNN
-F 2 "" H 10150 1050 50  0000 C CNN
-F 3 "" H 10150 1500 50  0000 C CNN
-	1    10150 1050
+P 10150 1100
+F 0 "J11" H 10150 1550 50  0000 C CNN
+F 1 "CONN_8" V 10250 1100 50  0000 C CNN
+F 2 "" H 10150 1100 50  0000 C CNN
+F 3 "" H 10150 1550 50  0000 C CNN
+	1    10150 1100
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -154,15 +153,15 @@ HVPL_2
 Text Label 9250 2200 0    60   ~ 0
 HVPL_2_RTN
 $Comp
-L CONN_01X03 J4
+L CONN_01X04 J4
 U 1 1 58A769D6
-P 1100 6300
+P 1100 6250
 F 0 "J4" H 1100 6500 50  0000 C CNN
-F 1 "CONN_01X08" V 1200 6300 50  0000 C CNN
-F 2 "" H 1100 6300 50  0000 C CNN
-F 3 "" H 1100 6300 50  0000 C CNN
-F 4 "W-21" H 1100 6300 60  0001 C CNN "Wire Number"
-	1    1100 6300
+F 1 "CONN_01X04" V 1200 6250 50  0000 C CNN
+F 2 "" H 1100 6250 50  0000 C CNN
+F 3 "" H 1100 6250 50  0000 C CNN
+F 4 "W-21" H 1100 6250 60  0001 C CNN "Wire Number"
+	1    1100 6250
 	-1   0    0    1   
 $EndComp
 Text Notes 800  5900 3    60   ~ 0
@@ -258,11 +257,7 @@ Wire Wire Line
 Wire Wire Line
 	9950 1000 9350 1000
 Wire Wire Line
-	9950 900  9350 900 
-Wire Wire Line
 	9950 800  9350 800 
-Wire Wire Line
-	9950 700  9350 700 
 $Comp
 L CONN_01X02 J10
 U 1 1 58A76FC0
@@ -352,7 +347,7 @@ CAN_L
 Text Label 1550 3950 2    60   ~ 0
 Shield
 Text Notes 10350 4800 0    60   ~ 0
-Saftey Loop
+Safety Loop
 Text Notes 1100 3500 2    60   ~ 0
 CAN Bus
 Wire Wire Line
@@ -394,25 +389,23 @@ Wire Wire Line
 Text GLabel 2050 6400 2    60   Input ~ 0
 Throttle_RTN
 Text GLabel 2050 6300 2    60   Input ~ 0
-Throttle
-Text GLabel 2050 6200 2    60   Input ~ 0
+Throttle_HV
+Text GLabel 2050 6100 2    60   Input ~ 0
 +5HV
-Text GLabel 9350 700  0    60   Input ~ 0
-Brake_H
 Text GLabel 9350 800  0    60   Input ~ 0
-Brake_Pressed
+Brake_5
 Text GLabel 9350 900  0    60   Input ~ 0
-Over_Travel
+BP
 Text GLabel 9350 1000 0    60   Input ~ 0
-APPS_1_H
+APPS1_10
 Text GLabel 9350 1100 0    60   Input ~ 0
-APPS_1_Sig
+APPS2_5
 Text GLabel 9350 1200 0    60   Input ~ 0
-APPS_2_H
+RTN_GLV
 Text GLabel 9350 1300 0    60   Input ~ 0
-APPS_2_Sig
+APPS1
 Text GLabel 9350 1400 0    60   Input ~ 0
-APPS_RTN
+APPS2
 Text GLabel 1750 7000 2    60   Input ~ 0
 HV+
 Text GLabel 1750 7100 2    60   Input ~ 0
@@ -493,8 +486,6 @@ F 3 "" H 6250 5050 50  0000 C CNN
 $EndComp
 Wire Wire Line
 	5050 5050 5050 5000
-Text Notes 3150 1050 0    60   ~ 0
-Jack - We will need two seperate returns for the APPS (due to the voltage offset.)\nI'll need to actually look into how the brake overtravel switch works to confirm those connections. - Adam (2/18)
 Wire Wire Line
 	9750 6250 9350 6250
 Text GLabel 9350 6150 0    60   Input ~ 0
@@ -560,4 +551,16 @@ F 4 "W6" H 10050 4400 60  0001 C CNN "Wire Number"
 	1    10050 4400
 	1    0    0    -1  
 $EndComp
+Text GLabel 2050 6200 2    60   Input ~ 0
+I/O_Ground
+Wire Wire Line
+	1300 6100 2050 6100
+Text Label 2400 6950 0    60   ~ 0
+I/O_Ground
+Wire Wire Line
+	2400 6950 2400 7200
+Text Label 2400 7200 0    60   ~ 0
+Throttle_RTN
+Wire Wire Line
+	9350 900  9950 900 
 $EndSCHEMATC

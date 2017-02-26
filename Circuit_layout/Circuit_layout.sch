@@ -1,6 +1,5 @@
 EESchema Schematic File Version 2
 LIBS:Circuit_layout-rescue
-LIBS:TSI_KiCad_Lib
 LIBS:TSI_HV_Isolater-cache
 LIBS:74xgxx
 LIBS:74xx
@@ -216,11 +215,11 @@ U 1 1 58A86763
 P 2900 2550
 F 0 "Y1" H 2900 2700 50  0000 C CNN
 F 1 "10MHz" H 2900 2400 50  0000 C CNN
-F 2 "" H 2900 2550 50  0000 C CNN
-F 3 "" H 2900 2550 50  0000 C CNN
-F 4 "887-1741-1-ND" H 2900 2550 60  0001 C CNN "DigiKey P/N"
-F 5 "http://www.digikey.com/product-search/en?pv7=2&k=7A-10.000MAAE-T&mnonly=0&newproducts=0&ColumnSort=0&page=1&quantity=0&ptm=0&fid=0&pageSize=25" H 2900 2550 60  0001 C CNN "URL"
-F 6 "7A-10.000MAAE-T" H 2900 2550 60  0001 C CNN "Man P/N"
+F 2 "Crystals:Crystal_SMD_HC49-SD_HandSoldering" H 2900 2550 50  0001 C CNN
+F 3 "http://www.abracon.com/Resonators/abls.pdf" H 2900 2550 50  0001 C CNN
+F 4 "535-9065-1-ND" H 2900 2550 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/abracon-llc/ABLS-10.000MHZ-B2-T/535-9065-1-ND/675582" H 2900 2550 60  0001 C CNN "URL"
+F 6 "ABLS-10.000MHZ-B2-T" H 2900 2550 60  0001 C CNN "Man P/N"
 	1    2900 2550
 	1    0    0    -1  
 $EndComp
@@ -234,19 +233,6 @@ Wire Wire Line
 	2750 2300 2750 2750
 Connection ~ 2750 2550
 Connection ~ 3050 2550
-$Comp
-L C C5
-U 1 1 58A868A1
-P 2750 2900
-F 0 "C5" H 2775 3000 50  0000 L CNN
-F 1 "10p" H 2775 2800 50  0000 L CNN
-F 2 "" H 2788 2750 50  0000 C CNN
-F 3 "" H 2750 2900 50  0000 C CNN
-F 4 "399-1108-1-ND" H 2750 2900 60  0001 C CNN "DigiKey P/N"
-F 5 "http://www.digikey.com/product-detail/en/kemet/C0805C100J5GACTU/399-1108-1-ND/411383" H 2750 2900 60  0001 C CNN "URL"
-	1    2750 2900
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2750 3050 3050 3050
 Wire Wire Line
@@ -269,10 +255,11 @@ U 1 1 58A86A84
 P 3050 2900
 F 0 "C6" H 3075 3000 50  0000 L CNN
 F 1 "10p" H 3075 2800 50  0000 L CNN
-F 2 "" H 3088 2750 50  0000 C CNN
-F 3 "" H 3050 2900 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 3088 2750 50  0001 C CNN
+F 3 "" H 3050 2900 50  0001 C CNN
 F 4 "399-1108-1-ND" H 3050 2900 60  0001 C CNN "DigiKey P/N"
 F 5 "http://www.digikey.com/product-detail/en/kemet/C0805C100J5GACTU/399-1108-1-ND/411383" H 3050 2900 60  0001 C CNN "URL"
+F 6 "C0805C100J5GACTU" H 3050 2900 60  0001 C CNN "Man P/N"
 	1    3050 2900
 	1    0    0    -1  
 $EndComp
@@ -283,6 +270,8 @@ F0 "Status Lights" 60
 F1 "StatusLights.sch" 60
 F2 "D_LED_CTRL" I L 8150 3850 60 
 F3 "RTDS_CTRL" I L 8150 4150 60 
+F4 "BP_uC" I R 9950 3800 60 
+F5 "Brake_Light" O R 9950 4000 60 
 $EndSheet
 $Sheet
 S 8200 2200 1750 950 
@@ -293,7 +282,7 @@ $EndSheet
 Wire Wire Line
 	6550 3500 7200 3500
 Text Label 7200 3500 2    60   ~ 0
-uC_THROTTLE
+Throttle_uC
 Wire Wire Line
 	3950 3800 3300 3800
 Text Label 3300 3800 0    60   ~ 0
@@ -313,11 +302,11 @@ I_Measure
 Wire Wire Line
 	6550 3400 7200 3400
 Text Label 7200 3400 2    60   ~ 0
-THROTTLE_SEL
+Throttle_PL
 Wire Wire Line
 	6550 3300 7200 3300
 Text Label 7200 3300 2    60   ~ 0
-BP
+BP_uC
 Wire Wire Line
 	6550 2300 7150 2300
 Text Label 7150 2300 2    60   ~ 0
@@ -340,17 +329,6 @@ Wire Wire Line
 	700  3550 1350 3550
 Wire Wire Line
 	700  3750 1350 3750
-$Comp
-L C C1
-U 1 1 58B0B5F8
-P 1150 3250
-F 0 "C1" H 1175 3350 50  0000 L CNN
-F 1 "0.1u" H 1175 3150 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805_HandSoldering" H 1188 3100 50  0001 C CNN
-F 3 "" H 1150 3250 50  0000 C CNN
-	1    1150 3250
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	1800 3750 1800 4250
 Wire Wire Line
@@ -384,20 +362,18 @@ S 8200 5250 1700 1250
 U 58A289D2
 F0 "ThrottlePlausibility" 60
 F1 "ThrottlePlausibility.sch" 60
-F2 "GND" I L 8200 6400 60 
-F3 "RTN_GLV" O L 8200 5650 60 
-F4 "APPS1" O L 8200 5800 60 
-F5 "APPS2" O L 8200 5950 60 
-F6 "APPS1_10" O L 8200 5350 60 
-F7 "APPS2_5" O L 8200 5500 60 
-F8 "+12LV" I L 8200 6250 60 
-F9 "Throttle_SEL" I R 9900 5650 60 
-F10 "Throttle_uC" I R 9900 5500 60 
-F11 "Throttle_LV" O R 9900 5350 60 
-F12 "+5LV" I L 8200 6100 60 
-F13 "BP" I R 9900 6100 60 
-F14 "BRAKE_5" O R 9900 6400 60 
-F15 "BP_uC" I R 9900 6250 60 
+F2 "RTN_GLV" O L 8200 5650 60 
+F3 "APPS1" O L 8200 5800 60 
+F4 "APPS2" O L 8200 5950 60 
+F5 "APPS1_10" O L 8200 5350 60 
+F6 "APPS2_5" O L 8200 5500 60 
+F7 "Throttle_SEL" I R 9900 5650 60 
+F8 "Throttle_uC" I R 9900 5500 60 
+F9 "Throttle_LV" O R 9900 5350 60 
+F10 "BP" I R 9900 6100 60 
+F11 "BRAKE_5" O R 9900 6400 60 
+F12 "BP_uC" I R 9900 6250 60 
+F13 "Throttle_PL" O R 9900 5800 60 
 $EndSheet
 Text Notes 1350 2900 0    99   ~ 0
 Current \nMeasurement
@@ -408,20 +384,12 @@ P 1700 1500
 F 0 "C3" H 1725 1600 50  0000 L CNN
 F 1 "0.47u" H 1725 1400 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805_HandSoldering" H 1738 1350 50  0001 C CNN
-F 3 "" H 1700 1500 50  0000 C CNN
+F 3 "http://www.kemet.com/Lists/ProductCatalog/Attachments/53/KEM_C1002_X7R_SMD.pdf" H 1700 1500 50  0001 C CNN
+F 4 "399-8100-1-ND" H 1700 1500 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/kemet/C0805C474K5RACTU/399-8100-1-ND/3471823" H 1700 1500 60  0001 C CNN "URL"
+F 6 "C0805C474K5RACTU" H 1700 1500 60  0001 C CNN "Man P/N"
 	1    1700 1500
 	1    0    0    -1  
-$EndComp
-$Comp
-L C C4
-U 1 1 58B21267
-P 2700 900
-F 0 "C4" H 2725 1000 50  0000 L CNN
-F 1 "0.47u" H 2725 800 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805_HandSoldering" H 2738 750 50  0001 C CNN
-F 3 "" H 2700 900 50  0000 C CNN
-	1    2700 900 
-	0    1    1    0   
 $EndComp
 Wire Wire Line
 	2500 1650 2500 1900
@@ -458,34 +426,12 @@ Wire Wire Line
 Connection ~ 2500 1800
 Text Notes 600  2050 0    60   ~ 0
 Sallen-Key Filter\nIntended for 10Hz PWM\n2Hz fc - breadboarded - still osc
-$Comp
-L MCP6004 U4
-U 2 1 58B21292
-P 2600 1350
-F 0 "U4" H 2650 1550 50  0000 C CNN
-F 1 "MCP6004" H 2750 1150 50  0000 C CNN
-F 2 "" H 2550 1450 50  0000 C CNN
-F 3 "" H 2650 1550 50  0000 C CNN
-	2    2600 1350
-	1    0    0    -1  
-$EndComp
 Text Label 650  1250 0    60   ~ 0
 IMD_PWM
 Wire Wire Line
 	2900 1350 3100 1350
 Text Label 3100 1350 0    60   ~ 0
 IMD
-$Comp
-L MCP6004 U4
-U 1 1 58B2253B
-P 2200 3650
-F 0 "U4" H 2250 3850 50  0000 C CNN
-F 1 "MCP6004" H 2350 3450 50  0000 C CNN
-F 2 "" H 2150 3750 50  0000 C CNN
-F 3 "" H 2250 3850 50  0000 C CNN
-	1    2200 3650
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	6550 3900 7200 3900
 Wire Wire Line
@@ -654,25 +600,15 @@ U 58AF3ED4
 F0 "Isolators" 60
 F1 "isolators.sch" 60
 F2 "Throttle_LV" I L 850 4850 60 
-F3 "+5HV" I R 2450 5300 60 
-F4 "HV+" I R 2450 5450 60 
-F5 "HV-" I R 2450 5600 60 
+F3 "+5HV" I R 2450 5150 60 
+F4 "HV+" I R 2450 5500 60 
+F5 "HV-" I R 2450 5650 60 
 F6 "Throttle_HV" O R 2450 4850 60 
 F7 "V_Measure" I L 850 5000 60 
+F8 "I/O_Ground" I R 2450 5300 60 
 $EndSheet
 Text Notes 950  1050 0    99   ~ 0
 IMD PWM LPF
-$Comp
-L C C2
-U 1 1 58B54F3B
-P 1150 4050
-F 0 "C2" H 1175 4150 50  0000 L CNN
-F 1 "0.1u" H 1175 3950 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805_HandSoldering" H 1188 3900 50  0001 C CNN
-F 3 "" H 1150 4050 50  0000 C CNN
-	1    1150 4050
-	1    0    0    -1  
-$EndComp
 $Comp
 L R R1
 U 1 1 58B56CDA
@@ -757,4 +693,92 @@ F 6 "ERJ-6ENF1001V" V 1800 3250 60  0001 C CNN "Man P/N"
 	1    1800 3250
 	-1   0    0    1   
 $EndComp
+$Comp
+L MCP6004 U?
+U 1 1 58B3FEE2
+P 2200 3650
+F 0 "U?" H 2250 3850 50  0000 C CNN
+F 1 "MCP6004" H 2350 3450 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 2150 3750 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf" H 2250 3850 50  0001 C CNN
+F 4 "MCP6004T-I/SLCT-ND" H 2200 3650 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/microchip-technology/MCP6004T-I-SL/MCP6004T-I-SLCT-ND/5013527" H 2200 3650 60  0001 C CNN "URL"
+F 6 "MCP6004T-I/SL" H 2200 3650 60  0001 C CNN "Man P/N"
+	1    2200 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 58B40314
+P 1150 4050
+F 0 "C?" H 1175 4150 50  0000 L CNN
+F 1 "0.1u" H 1175 3950 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 1188 3900 50  0001 C CNN
+F 3 "http://www.kemet.com/Lists/ProductCatalog/Attachments/53/KEM_C1002_X7R_SMD.pdf" H 1150 4050 50  0001 C CNN
+F 4 "399-1168-1-ND" H 1150 4050 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/kemet/C0805C104K3RACTU/399-1168-1-ND/411443" H 1150 4050 60  0001 C CNN "URL"
+F 6 "C0805C104K3RACTU" H 1150 4050 60  0001 C CNN "Man P/N"
+	1    1150 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 58B40445
+P 1150 3250
+F 0 "C?" H 1175 3350 50  0000 L CNN
+F 1 "0.1u" H 1175 3150 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 1188 3100 50  0001 C CNN
+F 3 "http://www.kemet.com/Lists/ProductCatalog/Attachments/53/KEM_C1002_X7R_SMD.pdf" H 1150 3250 50  0001 C CNN
+F 4 "399-1168-1-ND" H 1150 3250 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/kemet/C0805C104K3RACTU/399-1168-1-ND/411443" H 1150 3250 60  0001 C CNN "URL"
+F 6 "C0805C104K3RACTU" H 1150 3250 60  0001 C CNN "Man P/N"
+	1    1150 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L MCP6004 U?
+U 1 1 58B40627
+P 2600 1350
+F 0 "U?" H 2650 1550 50  0000 C CNN
+F 1 "MCP6004" H 2750 1150 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 2550 1450 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf" H 2650 1550 50  0001 C CNN
+F 4 "MCP6004T-I/SLCT-ND" H 2600 1350 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/microchip-technology/MCP6004T-I-SL/MCP6004T-I-SLCT-ND/5013527" H 2600 1350 60  0001 C CNN "URL"
+F 6 "MCP6004T-I/SL" H 2600 1350 60  0001 C CNN "Man P/N"
+	1    2600 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 58B40E21
+P 2700 900
+F 0 "C?" H 2725 1000 50  0000 L CNN
+F 1 "0.47u" H 2725 800 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 2738 750 50  0001 C CNN
+F 3 "http://www.kemet.com/Lists/ProductCatalog/Attachments/53/KEM_C1002_X7R_SMD.pdf" H 2700 900 50  0001 C CNN
+F 4 "399-8100-1-ND" H 2700 900 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/kemet/C0805C474K5RACTU/399-8100-1-ND/3471823" H 2700 900 60  0001 C CNN "URL"
+F 6 "C0805C474K5RACTU" H 2700 900 60  0001 C CNN "Man P/N"
+	1    2700 900 
+	0    1    1    0   
+$EndComp
+$Comp
+L C C?
+U 1 1 58B423A5
+P 2750 2900
+F 0 "C?" H 2775 3000 50  0000 L CNN
+F 1 "10p" H 2775 2800 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 2788 2750 50  0001 C CNN
+F 3 "" H 2750 2900 50  0001 C CNN
+F 4 "399-1108-1-ND" H 2750 2900 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/kemet/C0805C100J5GACTU/399-1108-1-ND/411383" H 2750 2900 60  0001 C CNN "URL"
+F 6 "C0805C100J5GACTU" H 2750 2900 60  0001 C CNN "Man P/N"
+	1    2750 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6550 3600 7200 3600
+Text Label 7200 3600 2    60   ~ 0
+Throttle_SEL
 $EndSCHEMATC

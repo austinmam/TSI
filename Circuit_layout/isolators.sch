@@ -1,6 +1,5 @@
 EESchema Schematic File Version 2
 LIBS:Circuit_layout-rescue
-LIBS:TSI_KiCad_Lib
 LIBS:TSI_HV_Isolater-cache
 LIBS:74xgxx
 LIBS:74xx
@@ -97,75 +96,29 @@ Comment2 "Jack Plumb and Adam Ness"
 Comment3 ""
 Comment4 "DEVELOPMENT ONLY"
 $EndDescr
-$Comp
-L ACPL-C870 U17
-U 1 1 58B06069
-P 5450 1250
-F 0 "U17" H 5450 1450 60  0000 C CNN
-F 1 "ACPL-C870" H 5450 1350 60  0000 C CNN
-F 2 "" H 5450 1450 60  0000 C CNN
-F 3 "" H 5450 1450 60  0000 C CNN
-	1    5450 1250
-	1    0    0    -1  
-$EndComp
 Text Label 5950 1050 0    60   ~ 0
 +5HV
 Wire Wire Line
-	4950 1900 4950 1600
-$Comp
-L MCP6004 U16
-U 3 1 58B06078
-P 7300 1550
-F 0 "U16" H 7350 1750 50  0000 C CNN
-F 1 "MCP6004" H 7450 1350 50  0000 C CNN
-F 2 "" H 7250 1650 50  0000 C CNN
-F 3 "" H 7350 1750 50  0000 C CNN
-	3    7300 1550
-	1    0    0    -1  
-$EndComp
+	4950 1600 4950 1900
 Text Label 7200 1250 0    60   ~ 0
 +5HV
 Text Label 7200 1850 0    60   ~ 0
-GND_HV
-Text Label 6250 850  0    60   ~ 0
-HV-
+I/O_Ground
 Wire Wire Line
 	7100 2000 6900 2000
 Wire Wire Line
-	7400 2000 7650 2000
+	7400 2000 7750 2000
 Wire Wire Line
-	7600 1550 7800 1550
-$Comp
-L C C26
-U 1 1 58B060A1
-P 6100 1950
-F 0 "C26" H 6125 2050 50  0000 L CNN
-F 1 "0.1u" H 6125 1850 50  0000 L CNN
-F 2 "" H 6138 1800 50  0000 C CNN
-F 3 "" H 6100 1950 50  0000 C CNN
-	1    6100 1950
-	1    0    0    -1  
-$EndComp
-$Comp
-L C C27
-U 1 1 58B060A8
-P 6250 1150
-F 0 "C27" H 6275 1250 50  0000 L CNN
-F 1 "0.1u" H 6275 1050 50  0000 L CNN
-F 2 "" H 6288 1000 50  0000 C CNN
-F 3 "" H 6250 1150 50  0000 C CNN
-	1    6250 1150
-	1    0    0    -1  
-$EndComp
+	7600 1550 7900 1550
 Text Label 6100 2250 0    60   ~ 0
-GND_HV
+I/O_Ground
 Wire Wire Line
 	6900 2000 6900 1650
 Wire Wire Line
 	6750 1650 7000 1650
 Wire Wire Line
-	7650 2000 7650 1550
-Connection ~ 7650 1550
+	7750 2000 7750 1550
+Connection ~ 7750 1550
 Connection ~ 6900 1650
 Wire Wire Line
 	6750 1450 7000 1450
@@ -175,7 +128,7 @@ Connection ~ 6250 1450
 Wire Wire Line
 	6100 2250 6100 2100
 Wire Wire Line
-	6250 1000 6250 850 
+	6250 850  6250 1000
 Wire Wire Line
 	6900 1450 6900 1300
 Connection ~ 6900 1450
@@ -210,69 +163,25 @@ Wire Wire Line
 	5950 1750 6450 1750
 Text Notes 5500 800  0    99   ~ 0
 Throttle
-$Comp
-L ACPL-C870 U18
-U 1 1 58B06729
-P 5450 3100
-F 0 "U18" H 5450 3300 60  0000 C CNN
-F 1 "ACPL-C870" H 5450 3200 60  0000 C CNN
-F 2 "" H 5450 3300 60  0000 C CNN
-F 3 "" H 5450 3300 60  0000 C CNN
-	1    5450 3100
-	-1   0    0    -1  
-$EndComp
-$Comp
-L MCP6004 U16
-U 2 1 58B06732
-P 3600 3400
-F 0 "U16" H 3650 3600 50  0000 C CNN
-F 1 "MCP6004" H 3750 3200 50  0000 C CNN
-F 2 "" H 3550 3500 50  0000 C CNN
-F 3 "" H 3650 3600 50  0000 C CNN
-	2    3600 3400
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
 	2600 3400 3300 3400
-$Comp
-L C C25
-U 1 1 58B06756
-P 4800 3800
-F 0 "C25" H 4825 3900 50  0000 L CNN
-F 1 "0.1u" H 4825 3700 50  0000 L CNN
-F 2 "" H 4838 3650 50  0000 C CNN
-F 3 "" H 4800 3800 50  0000 C CNN
-	1    4800 3800
-	-1   0    0    -1  
-$EndComp
-$Comp
-L C C24
-U 1 1 58B0675C
-P 4650 3000
-F 0 "C24" H 4675 3100 50  0000 L CNN
-F 1 "0.1u" H 4675 2900 50  0000 L CNN
-F 2 "" H 4688 2850 50  0000 C CNN
-F 3 "" H 4650 3000 50  0000 C CNN
-	1    4650 3000
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
 	4000 3500 4000 3950
 Wire Wire Line
-	4150 3500 3900 3500
+	3900 3500 4150 3500
 Wire Wire Line
 	3250 3400 3250 3950
 Connection ~ 3250 3400
 Connection ~ 4000 3500
 Wire Wire Line
-	4150 3300 3900 3300
+	3900 3300 4150 3300
 Wire Wire Line
 	4650 3300 4650 3150
 Connection ~ 4650 3300
 Wire Wire Line
 	4800 4100 4800 3950
 Wire Wire Line
-	4650 2850 4650 2700
+	4650 2700 4650 2850
 Wire Wire Line
 	4000 3300 4000 3150
 Connection ~ 4000 3300
@@ -282,7 +191,7 @@ Wire Wire Line
 	4000 2750 4650 2750
 Connection ~ 4650 2750
 Wire Wire Line
-	4950 3450 4950 3600
+	4950 3600 4950 3450
 Wire Wire Line
 	4800 3600 4800 3650
 Wire Wire Line
@@ -291,9 +200,9 @@ Connection ~ 4800 3600
 Wire Wire Line
 	4950 3150 4950 2900
 Wire Wire Line
-	4950 3300 4450 3300
+	4450 3300 4950 3300
 Wire Wire Line
-	4950 3600 4450 3600
+	4450 3600 4950 3600
 Text Notes 7100 2750 2    99   ~ 0
 Voltage Measurement
 $Comp
@@ -308,7 +217,7 @@ F 3 "" H 6400 3500 50  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 Text Label 6000 4100 0    60   ~ 0
-GND_HV
+I/O_Ground
 Wire Wire Line
 	5950 3600 6000 3600
 Wire Wire Line
@@ -336,7 +245,7 @@ Wire Wire Line
 Wire Wire Line
 	7450 3300 7250 3300
 Wire Wire Line
-	6950 3300 5950 3300
+	5950 3300 6950 3300
 Wire Wire Line
 	6400 3350 6400 3300
 Connection ~ 6400 3300
@@ -355,7 +264,7 @@ Wire Wire Line
 	6000 3150 6000 2900
 Text Label 6000 2900 0    60   ~ 0
 +5HV
-Text Notes 6400 4300 0    60   ~ 0
+Text Notes 6850 4300 0    60   ~ 0
 Based on 150V. Planning on putting voltages 0-2V.\nWhen scaled, will be roughly 0-5V for ADC read.\n\nCap. size needs to be calculated.
 Text Notes 5500 7700 0    157  ~ 0
 HIGH\nVOLTAGE
@@ -365,7 +274,7 @@ Text Label 8900 3700 0    60   ~ 0
 HV-
 Text Label 8900 3300 0    60   ~ 0
 HV+
-Text Label 7800 1550 0    60   ~ 0
+Text Label 7900 1550 0    60   ~ 0
 Throttle_HV
 Wire Notes Line
 	5450 450  5450 7800
@@ -379,9 +288,9 @@ Text HLabel 1100 650  0    60   Input ~ 0
 Throttle_LV
 Text HLabel 1100 1400 0    60   Input ~ 0
 +5HV
-Text HLabel 1100 2000 0    60   Input ~ 0
+Text HLabel 1100 2300 0    60   Input ~ 0
 HV+
-Text HLabel 1100 2200 0    60   Input ~ 0
+Text HLabel 1100 2500 0    60   Input ~ 0
 HV-
 Text HLabel 1100 1150 0    60   Output ~ 0
 Throttle_HV
@@ -447,7 +356,7 @@ F 3 "" H 4800 4100 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4650 1900 4950 1900
+	4950 1900 4650 1900
 $Comp
 L GND #PWR093
 U 1 1 58B25770
@@ -471,9 +380,9 @@ F 3 "" H 4950 1050 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1100 2200 1250 2200
+	1100 2500 1250 2500
 Wire Wire Line
-	1100 2000 1250 2000
+	1100 2300 1250 2300
 Wire Wire Line
 	1100 1150 1250 1150
 Wire Wire Line
@@ -488,28 +397,15 @@ Text Label 1250 1150 0    60   ~ 0
 Throttle_HV
 Text Label 1350 1400 0    60   ~ 0
 +5HV
-Text Label 1250 2000 0    60   ~ 0
+Text Label 1250 2300 0    60   ~ 0
 HV+
-Text Label 1250 2200 0    60   ~ 0
+Text Label 1250 2500 0    60   ~ 0
 HV-
-$Comp
-L C C23
-U 1 1 58B52862
-P 1200 1550
-F 0 "C23" H 1225 1650 50  0000 L CNN
-F 1 "0.1u" H 1225 1450 50  0000 L CNN
-F 2 "" H 1238 1400 50  0000 C CNN
-F 3 "" H 1200 1550 50  0000 C CNN
-	1    1200 1550
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	1100 1400 1350 1400
 Connection ~ 1200 1400
 Wire Wire Line
 	1200 1700 1200 1800
-Text Label 1200 1800 0    60   ~ 0
-HV-
 $Comp
 L R R64
 U 1 1 58B6DFCC
@@ -776,4 +672,141 @@ F 6 "MCU0805MD4991BP100" V 6900 1150 60  0001 C CNN "Man P/N"
 	1    6900 1150
 	-1   0    0    1   
 $EndComp
+$Comp
+L C C?
+U 1 1 58B44F65
+P 1200 1550
+F 0 "C?" H 1225 1650 50  0000 L CNN
+F 1 "0.1u" H 1225 1450 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 1238 1400 50  0001 C CNN
+F 3 "http://www.kemet.com/Lists/ProductCatalog/Attachments/53/KEM_C1002_X7R_SMD.pdf" H 1200 1550 50  0001 C CNN
+F 4 "399-1168-1-ND" H 1200 1550 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/kemet/C0805C104K3RACTU/399-1168-1-ND/411443" H 1200 1550 60  0001 C CNN "URL"
+F 6 "C0805C104K3RACTU" H 1200 1550 60  0001 C CNN "Man P/N"
+	1    1200 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L ACPL-C870 U?
+U 1 1 58B45431
+P 5450 1250
+F 0 "U?" H 5450 1450 60  0000 C CNN
+F 1 "ACPL-C870" H 5450 1350 60  0000 C CNN
+F 2 "" H 5450 1450 60  0000 C CNN
+F 3 "https://docs.broadcom.com/docs/AV02-3563EN" H 5450 1450 60  0001 C CNN
+F 4 "516-2578-5-ND" H 5450 1250 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/broadcom-limited/ACPL-C870-000E/516-2578-5-ND/3523705" H 5450 1250 60  0001 C CNN "URL"
+F 6 "ACPL-C870-000E" H 5450 1250 60  0001 C CNN "Man P/N"
+	1    5450 1250
+	1    0    0    -1  
+$EndComp
+Text Notes 3400 2450 0    60   ~ 0
+Note: Isolation Diff. Amps DO NOT have ass. footprints
+$Comp
+L ACPL-C870 U?
+U 1 1 58B35F2C
+P 5450 3100
+F 0 "U?" H 5450 3300 60  0000 C CNN
+F 1 "ACPL-C870" H 5450 3200 60  0000 C CNN
+F 2 "" H 5450 3300 60  0000 C CNN
+F 3 "https://docs.broadcom.com/docs/AV02-3563EN" H 5450 3300 60  0001 C CNN
+F 4 "516-2578-5-ND" H 5450 3100 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/broadcom-limited/ACPL-C870-000E/516-2578-5-ND/3523705" H 5450 3100 60  0001 C CNN "URL"
+F 6 "ACPL-C870-000E" H 5450 3100 60  0001 C CNN "Man P/N"
+	1    5450 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 58B362A1
+P 4650 3000
+F 0 "C?" H 4675 3100 50  0000 L CNN
+F 1 "0.1u" H 4675 2900 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 4688 2850 50  0001 C CNN
+F 3 "http://www.kemet.com/Lists/ProductCatalog/Attachments/53/KEM_C1002_X7R_SMD.pdf" H 4650 3000 50  0001 C CNN
+F 4 "399-1168-1-ND" H 4650 3000 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/kemet/C0805C104K3RACTU/399-1168-1-ND/411443" H 4650 3000 60  0001 C CNN "URL"
+F 6 "C0805C104K3RACTU" H 4650 3000 60  0001 C CNN "Man P/N"
+	1    4650 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 58B36392
+P 4800 3800
+F 0 "C?" H 4825 3900 50  0000 L CNN
+F 1 "0.1u" H 4825 3700 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 4838 3650 50  0001 C CNN
+F 3 "http://www.kemet.com/Lists/ProductCatalog/Attachments/53/KEM_C1002_X7R_SMD.pdf" H 4800 3800 50  0001 C CNN
+F 4 "399-1168-1-ND" H 4800 3800 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/kemet/C0805C104K3RACTU/399-1168-1-ND/411443" H 4800 3800 60  0001 C CNN "URL"
+F 6 "C0805C104K3RACTU" H 4800 3800 60  0001 C CNN "Man P/N"
+	1    4800 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 58B3649B
+P 6250 1150
+F 0 "C?" H 6275 1250 50  0000 L CNN
+F 1 "0.1u" H 6275 1050 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 6288 1000 50  0001 C CNN
+F 3 "http://www.kemet.com/Lists/ProductCatalog/Attachments/53/KEM_C1002_X7R_SMD.pdf" H 6250 1150 50  0001 C CNN
+F 4 "399-1168-1-ND" H 6250 1150 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/kemet/C0805C104K3RACTU/399-1168-1-ND/411443" H 6250 1150 60  0001 C CNN "URL"
+F 6 "C0805C104K3RACTU" H 6250 1150 60  0001 C CNN "Man P/N"
+	1    6250 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 58B36598
+P 6100 1950
+F 0 "C?" H 6125 2050 50  0000 L CNN
+F 1 "0.1u" H 6125 1850 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 6138 1800 50  0001 C CNN
+F 3 "http://www.kemet.com/Lists/ProductCatalog/Attachments/53/KEM_C1002_X7R_SMD.pdf" H 6100 1950 50  0001 C CNN
+F 4 "399-1168-1-ND" H 6100 1950 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/kemet/C0805C104K3RACTU/399-1168-1-ND/411443" H 6100 1950 60  0001 C CNN "URL"
+F 6 "C0805C104K3RACTU" H 6100 1950 60  0001 C CNN "Man P/N"
+	1    6100 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L MCP6004 U?
+U 1 1 58B3670F
+P 7300 1550
+F 0 "U?" H 7350 1750 50  0000 C CNN
+F 1 "MCP6004" H 7450 1350 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 7250 1650 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf" H 7350 1750 50  0001 C CNN
+F 4 "MCP6004T-I/SLCT-ND" H 7300 1550 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/microchip-technology/MCP6004T-I-SL/MCP6004T-I-SLCT-ND/5013527" H 7300 1550 60  0001 C CNN "URL"
+F 6 "MCP6004T-I/SL" H 7300 1550 60  0001 C CNN "Man P/N"
+	1    7300 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L MCP6004 U?
+U 1 1 58B367EC
+P 3600 3400
+F 0 "U?" H 3650 3600 50  0000 C CNN
+F 1 "MCP6004" H 3750 3200 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 3550 3500 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf" H 3650 3600 50  0001 C CNN
+F 4 "MCP6004T-I/SLCT-ND" H 3600 3400 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/microchip-technology/MCP6004T-I-SL/MCP6004T-I-SLCT-ND/5013527" H 3600 3400 60  0001 C CNN "URL"
+F 6 "MCP6004T-I/SL" H 3600 3400 60  0001 C CNN "Man P/N"
+	1    3600 3400
+	-1   0    0    -1  
+$EndComp
+Text Label 1350 1800 0    60   ~ 0
+I/O_Ground
+Text Label 6250 850  0    60   ~ 0
+I/O_Ground
+Connection ~ 1200 1800
+Wire Wire Line
+	1100 1800 1350 1800
+Text HLabel 1100 1800 0    60   Input ~ 0
+I/O_Ground
 $EndSCHEMATC

@@ -1,6 +1,5 @@
 EESchema Schematic File Version 2
 LIBS:Circuit_layout-rescue
-LIBS:TSI_KiCad_Lib
 LIBS:TSI_HV_Isolater-cache
 LIBS:74xgxx
 LIBS:74xx
@@ -116,20 +115,6 @@ Wire Wire Line
 	5050 2050 5150 2050
 Wire Wire Line
 	5150 1850 4900 1850
-$Comp
-L R R14
-U 1 1 58AF3371
-P 4750 1850
-F 0 "R14" V 4830 1850 50  0000 C CNN
-F 1 "150" V 4750 1850 50  0000 C CNN
-F 2 "" V 4680 1850 50  0000 C CNN
-F 3 "" H 4750 1850 50  0000 C CNN
-F 4 "311-150CRCT-ND" V 4750 1850 60  0001 C CNN "DigiKey P/N"
-F 5 "http://www.digikey.com/product-detail/en/yageo/RC0805FR-07150RL/311-150CRCT-ND/730560" V 4750 1850 60  0001 C CNN "URL"
-F 6 "RC0805FR-07150RL" V 4750 1850 60  0001 C CNN "Man P/N"
-	1    4750 1850
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	5050 2050 5050 2150
 $Comp
@@ -215,7 +200,7 @@ U 1 1 58AF4E42
 P 4700 3000
 F 0 "R12" V 4780 3000 50  0000 C CNN
 F 1 "150" V 4700 3000 50  0000 C CNN
-F 2 "" V 4630 3000 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 4630 3000 50  0001 C CNN
 F 3 "" H 4700 3000 50  0000 C CNN
 F 4 "311-150CRCT-ND" V 4700 3000 60  0001 C CNN "DigiKey P/N"
 F 5 "http://www.digikey.com/product-detail/en/yageo/RC0805FR-07150RL/311-150CRCT-ND/730560" V 4700 3000 60  0001 C CNN "URL"
@@ -229,7 +214,7 @@ U 1 1 58AF50A8
 P 6150 3000
 F 0 "R16" V 6230 3000 50  0000 C CNN
 F 1 "2k" V 6150 3000 50  0000 C CNN
-F 2 "" V 6080 3000 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 6080 3000 50  0001 C CNN
 F 3 "" H 6150 3000 50  0000 C CNN
 F 4 "P2.00KCCT-ND" V 6150 3000 60  0001 C CNN "DigiKey P/N"
 F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF2001V/P2.00KCCT-ND/119044" V 6150 3000 60  0001 C CNN "URL"
@@ -241,20 +226,6 @@ Wire Wire Line
 	6300 3000 6450 3000
 Wire Wire Line
 	6450 3000 6450 2850
-$Comp
-L R R17
-U 1 1 58AF51A7
-P 6200 1850
-F 0 "R17" V 6280 1850 50  0000 C CNN
-F 1 "2k" V 6200 1850 50  0000 C CNN
-F 2 "" V 6130 1850 50  0000 C CNN
-F 3 "" H 6200 1850 50  0000 C CNN
-F 4 "P2.00KCCT-ND" V 6200 1850 60  0001 C CNN "DigiKey P/N"
-F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF2001V/P2.00KCCT-ND/119044" V 6200 1850 60  0001 C CNN "URL"
-F 6 "ERJ-6ENF2001V" V 6200 1850 60  0001 C CNN "Man P/N"
-	1    6200 1850
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	6350 1850 6450 1850
 Wire Wire Line
@@ -267,17 +238,6 @@ Text HLabel 4050 3000 0    60   Input ~ 0
 D_LED_CTRL
 Text HLabel 4100 1850 0    60   Input ~ 0
 RTDS_CTRL
-$Comp
-L R R15
-U 1 1 58B1EEB2
-P 5300 4350
-F 0 "R15" V 5380 4350 50  0000 C CNN
-F 1 "DNP" V 5300 4350 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 5230 4350 50  0001 C CNN
-F 3 "" H 5300 4350 50  0000 C CNN
-	1    5300 4350
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	5300 4750 5300 4500
 Wire Wire Line
@@ -288,21 +248,8 @@ Wire Wire Line
 	5300 4200 5300 3950
 Wire Wire Line
 	5300 5150 5300 5350
-Text Label 3950 5000 0    60   ~ 0
-BP_uC
 Text Notes 5450 4500 0    60   ~ 0
-Confirm sizing of R:\nDatasheet lists 10mA/220mA as current draw of light.\nDesign for max?
-$Comp
-L MMBF170 Q1
-U 1 1 58B25E37
-P 5200 4950
-F 0 "Q1" H 5400 5025 50  0000 L CNN
-F 1 "MMBF170" H 5400 4950 50  0000 L CNN
-F 2 "SOT-23" H 5400 4875 50  0000 L CIN
-F 3 "" H 5200 4950 50  0000 L CNN
-	1    5200 4950
-	1    0    0    -1  
-$EndComp
+Confirm sizing of R:\nDatasheet lists 10mA/220mA as current draw of light.\nDesign for max? Currently roughly 80mA
 $Comp
 L R R18
 U 1 1 58B266DE
@@ -536,8 +483,6 @@ Brake Light
 Wire Wire Line
 	5300 4700 5850 4700
 Connection ~ 5300 4700
-Text Label 5850 4700 0    60   ~ 0
-Brake_Light
 $Comp
 L +12V #PWR031
 U 1 1 58B22590
@@ -563,4 +508,64 @@ F 6 "ERJ-6ENF1001V" V 4700 5000 60  0001 C CNN "Man P/N"
 	1    4700 5000
 	0    1    1    0   
 $EndComp
+$Comp
+L MMBF170 Q?
+U 1 1 58B375B3
+P 5200 4950
+F 0 "Q?" H 5400 5025 50  0000 L CNN
+F 1 "MMBF170" H 5400 4950 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 5400 4875 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/MM/MMBF170.pdf" H 5200 4950 50  0001 L CNN
+F 4 "MMBF170CT-ND" H 5200 4950 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/fairchild-on-semiconductor/MMBF170/MMBF170CT-ND/244295" H 5200 4950 60  0001 C CNN "URL"
+F 6 "MMBF170" H 5200 4950 60  0001 C CNN "Man P/N"
+	1    5200 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 58B384ED
+P 5300 4350
+F 0 "R?" V 5380 4350 50  0000 C CNN
+F 1 "150" V 5300 4350 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 5230 4350 50  0001 C CNN
+F 3 "" H 5300 4350 50  0000 C CNN
+F 4 "311-150CRCT-ND" V 5300 4350 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/yageo/RC0805FR-07150RL/311-150CRCT-ND/730560" V 5300 4350 60  0001 C CNN "URL"
+F 6 "RC0805FR-07150RL" V 5300 4350 60  0001 C CNN "Man P/N"
+	1    5300 4350
+	-1   0    0    1   
+$EndComp
+$Comp
+L R R?
+U 1 1 58B38BE5
+P 4750 1850
+F 0 "R?" V 4830 1850 50  0000 C CNN
+F 1 "150" V 4750 1850 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 4680 1850 50  0001 C CNN
+F 3 "" H 4750 1850 50  0000 C CNN
+F 4 "311-150CRCT-ND" V 4750 1850 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/yageo/RC0805FR-07150RL/311-150CRCT-ND/730560" V 4750 1850 60  0001 C CNN "URL"
+F 6 "RC0805FR-07150RL" V 4750 1850 60  0001 C CNN "Man P/N"
+	1    4750 1850
+	0    1    1    0   
+$EndComp
+$Comp
+L R R?
+U 1 1 58B38C61
+P 6200 1850
+F 0 "R?" V 6280 1850 50  0000 C CNN
+F 1 "2k" V 6200 1850 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 6130 1850 50  0001 C CNN
+F 3 "" H 6200 1850 50  0000 C CNN
+F 4 "P2.00KCCT-ND" V 6200 1850 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF2001V/P2.00KCCT-ND/119044" V 6200 1850 60  0001 C CNN "URL"
+F 6 "ERJ-6ENF2001V" V 6200 1850 60  0001 C CNN "Man P/N"
+	1    6200 1850
+	0    1    1    0   
+$EndComp
+Text HLabel 3950 5000 0    60   Input ~ 0
+BP_uC
+Text HLabel 5850 4700 2    60   Output ~ 0
+Brake_Light
 $EndSCHEMATC

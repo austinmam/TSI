@@ -1,6 +1,5 @@
 EESchema Schematic File Version 2
 LIBS:Circuit_layout-rescue
-LIBS:TSI_KiCad_Lib
 LIBS:TSI_HV_Isolater-cache
 LIBS:74xgxx
 LIBS:74xx
@@ -97,17 +96,6 @@ Comment2 "Jack Plumb and Adam Ness"
 Comment3 ""
 Comment4 "DEVELOPMENT ONLY"
 $EndDescr
-$Comp
-L R R8
-U 1 1 58A60010
-P 7450 5400
-F 0 "R8" V 7530 5400 50  0000 C CNN
-F 1 "DNP" V 7450 5400 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 7380 5400 50  0001 C CNN
-F 3 "" H 7450 5400 50  0000 C CNN
-	1    7450 5400
-	1    0    0    -1  
-$EndComp
 Text Label 6300 6300 0    60   ~ 0
 APPS1_ISO
 Text Label 6300 8850 0    60   ~ 0
@@ -444,7 +432,7 @@ Wire Wire Line
 Text HLabel 3200 1700 0    60   Input ~ 0
 BP
 Text HLabel 1500 2450 0    60   Output ~ 0
-BRAKE_5
+Brake_5
 Text HLabel 3200 1950 0    60   Input ~ 0
 BP_uC
 Wire Wire Line
@@ -503,7 +491,10 @@ P 10650 7350
 F 0 "C20" H 10675 7450 50  0000 L CNN
 F 1 "0.01u" H 10675 7250 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805_HandSoldering" H 10688 7200 50  0001 C CNN
-F 3 "" H 10650 7350 50  0000 C CNN
+F 3 "http://www.kemet.com/Lists/ProductCatalog/Attachments/53/KEM_C1002_X7R_SMD.pdf" H 10650 7350 50  0001 C CNN
+F 4 "399-1158-1-ND" H 10650 7350 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/kemet/C0805C103K5RACTU/399-1158-1-ND/411433" H 10650 7350 60  0001 C CNN "URL"
+F 6 "C0805C103K5RACTU" H 10650 7350 60  0001 C CNN "Man P/N"
 	1    10650 7350
 	1    0    0    -1  
 $EndComp
@@ -1116,7 +1107,7 @@ F 3 "" H 11450 5300 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1500 2450 1650 2450
+	1500 2450 1850 2450
 Wire Wire Line
 	1650 2450 1650 2350
 $Comp
@@ -1272,17 +1263,6 @@ F 2 "" H 12950 7000 50  0000 C CNN
 F 3 "" H 12950 7000 50  0000 C CNN
 	1    12950 7000
 	1    0    0    -1  
-$EndComp
-$Comp
-L C C21
-U 1 1 58B5CCC9
-P 11600 6750
-F 0 "C21" H 11625 6850 50  0000 L CNN
-F 1 "0.01u" H 11625 6650 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805_HandSoldering" H 11638 6600 50  0001 C CNN
-F 3 "" H 11600 6750 50  0000 C CNN
-	1    11600 6750
-	0    1    1    0   
 $EndComp
 $Comp
 L R R22
@@ -1481,58 +1461,17 @@ F 6 "MCU0805MD4991BP100" V 8250 5500 60  0001 C CNN "Man P/N"
 	-1   0    0    1   
 $EndComp
 $Comp
-L R R35
-U 1 1 58B77D1A
-P 7450 6300
-F 0 "R35" V 7530 6300 50  0000 C CNN
-F 1 "DNP" V 7450 6300 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 7380 6300 50  0001 C CNN
-F 3 "" H 7450 6300 50  0000 C CNN
-	1    7450 6300
-	1    0    0    -1  
-$EndComp
-$Comp
-L R R36
-U 1 1 58B77E07
-P 7450 7200
-F 0 "R36" V 7530 7200 50  0000 C CNN
-F 1 "DNP" V 7450 7200 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 7380 7200 50  0001 C CNN
-F 3 "" H 7450 7200 50  0000 C CNN
-	1    7450 7200
-	1    0    0    -1  
-$EndComp
-$Comp
-L R R37
-U 1 1 58B77FF9
-P 7450 7950
-F 0 "R37" V 7530 7950 50  0000 C CNN
-F 1 "DNP" V 7450 7950 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 7380 7950 50  0001 C CNN
-F 3 "" H 7450 7950 50  0000 C CNN
-	1    7450 7950
-	1    0    0    -1  
-$EndComp
-$Comp
 L R R38
 U 1 1 58B780F8
 P 7450 8850
 F 0 "R38" V 7530 8850 50  0000 C CNN
-F 1 "DNP" V 7450 8850 50  0000 C CNN
+F 1 "9.31k" V 7450 8850 50  0000 C CNN
 F 2 "Resistors_SMD:R_0805_HandSoldering" V 7380 8850 50  0001 C CNN
-F 3 "" H 7450 8850 50  0000 C CNN
+F 3 "https://industrial.panasonic.com/ww/products/resistors/chip-resistors/general-purpose-chip-resistors/precision-thick-film-chip-resistors/ERJ6ENF9311V" H 7450 8850 50  0001 C CNN
+F 4 "P9.31KCCT-ND" V 7450 8850 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF9311V/P9.31KCCT-ND/119238" V 7450 8850 60  0001 C CNN "URL"
+F 6 "ERJ-6ENF9311V" V 7450 8850 60  0001 C CNN "Man P/N"
 	1    7450 8850
-	1    0    0    -1  
-$EndComp
-$Comp
-L R R39
-U 1 1 58B78272
-P 7450 9750
-F 0 "R39" V 7530 9750 50  0000 C CNN
-F 1 "DNP" V 7450 9750 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 7380 9750 50  0001 C CNN
-F 3 "" H 7450 9750 50  0000 C CNN
-	1    7450 9750
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1915,4 +1854,105 @@ F 6 "C0805C104K3RACTU" H 1650 3950 60  0001 C CNN "Man P/N"
 $EndComp
 Wire Wire Line
 	5200 3900 5850 3900
+$Comp
+L C C?
+U 1 1 58B382BA
+P 11650 6750
+F 0 "C?" H 11675 6850 50  0000 L CNN
+F 1 "0.01u" H 11675 6650 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 11688 6600 50  0001 C CNN
+F 3 "http://www.kemet.com/Lists/ProductCatalog/Attachments/53/KEM_C1002_X7R_SMD.pdf" H 11650 6750 50  0001 C CNN
+F 4 "399-1158-1-ND" H 11650 6750 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/kemet/C0805C103K5RACTU/399-1158-1-ND/411433" H 11650 6750 60  0001 C CNN "URL"
+F 6 "C0805C103K5RACTU" H 11650 6750 60  0001 C CNN "Man P/N"
+	1    11650 6750
+	0    1    1    0   
+$EndComp
+Text Notes 5950 7650 0    60   ~ 0
+Resistors Set for maximum\nof 90% travel ( > will trigger fault)
+Text Notes 5750 5900 0    99   ~ 0
+Open/Short Window\n(90% travel)
+$Comp
+L R R?
+U 1 1 58B3D937
+P 7450 5400
+F 0 "R?" V 7530 5400 50  0000 C CNN
+F 1 "499" V 7450 5400 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 7380 5400 50  0001 C CNN
+F 3 "" H 7450 5400 50  0000 C CNN
+F 4 "P499DACT-ND" V 7450 5400 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERA-6AEB4990V/P499DACT-ND/3075160" V 7450 5400 60  0001 C CNN "URL"
+F 6 "ERA-6AEB4990V" V 7450 5400 60  0001 C CNN "Man P/N"
+	1    7450 5400
+	-1   0    0    1   
+$EndComp
+$Comp
+L R R?
+U 1 1 58B3DA61
+P 7450 7200
+F 0 "R?" V 7530 7200 50  0000 C CNN
+F 1 "499" V 7450 7200 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 7380 7200 50  0001 C CNN
+F 3 "" H 7450 7200 50  0000 C CNN
+F 4 "P499DACT-ND" V 7450 7200 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERA-6AEB4990V/P499DACT-ND/3075160" V 7450 7200 60  0001 C CNN "URL"
+F 6 "ERA-6AEB4990V" V 7450 7200 60  0001 C CNN "Man P/N"
+	1    7450 7200
+	-1   0    0    1   
+$EndComp
+$Comp
+L R R?
+U 1 1 58B3DB76
+P 7450 7950
+F 0 "R?" V 7530 7950 50  0000 C CNN
+F 1 "499" V 7450 7950 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 7380 7950 50  0001 C CNN
+F 3 "" H 7450 7950 50  0000 C CNN
+F 4 "P499DACT-ND" V 7450 7950 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERA-6AEB4990V/P499DACT-ND/3075160" V 7450 7950 60  0001 C CNN "URL"
+F 6 "ERA-6AEB4990V" V 7450 7950 60  0001 C CNN "Man P/N"
+	1    7450 7950
+	-1   0    0    1   
+$EndComp
+$Comp
+L R R?
+U 1 1 58B3DC82
+P 7450 9750
+F 0 "R?" V 7530 9750 50  0000 C CNN
+F 1 "499" V 7450 9750 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 7380 9750 50  0001 C CNN
+F 3 "" H 7450 9750 50  0000 C CNN
+F 4 "P499DACT-ND" V 7450 9750 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERA-6AEB4990V/P499DACT-ND/3075160" V 7450 9750 60  0001 C CNN "URL"
+F 6 "ERA-6AEB4990V" V 7450 9750 60  0001 C CNN "Man P/N"
+	1    7450 9750
+	-1   0    0    1   
+$EndComp
+$Comp
+L R R?
+U 1 1 58B3E84B
+P 7450 6300
+F 0 "R?" V 7530 6300 50  0000 C CNN
+F 1 "9.31k" V 7450 6300 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 7380 6300 50  0001 C CNN
+F 3 "https://industrial.panasonic.com/ww/products/resistors/chip-resistors/general-purpose-chip-resistors/precision-thick-film-chip-resistors/ERJ6ENF9311V" H 7450 6300 50  0001 C CNN
+F 4 "P9.31KCCT-ND" V 7450 6300 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF9311V/P9.31KCCT-ND/119238" V 7450 6300 60  0001 C CNN "URL"
+F 6 "ERJ-6ENF9311V" V 7450 6300 60  0001 C CNN "Man P/N"
+	1    7450 6300
+	1    0    0    -1  
+$EndComp
+Connection ~ 1650 2450
+Text Label 1850 2450 0    60   ~ 0
+APPS_5
+Text HLabel 3200 2900 0    60   Output ~ 0
+Throttle_PL
+Wire Wire Line
+	3200 2900 3400 2900
+Text Label 3400 2900 0    60   ~ 0
+Throttle_PL
+Wire Wire Line
+	10400 6300 10600 6300
+Text Label 10600 6300 0    60   ~ 0
+Throttle_PL
 $EndSCHEMATC
