@@ -1,4 +1,4 @@
-update=2/25/2017 5:53:35 PM
+update=2/25/2017 6:52:51 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -33,6 +33,8 @@ NetFmtName=
 SpiceForceRefPrefix=0
 SpiceUseNetNumbers=0
 LabSize=60
+[general]
+version=1
 [eeschema]
 version=1
 LibDir=
@@ -120,5 +122,4 @@ LibName80=Zilog
 LibName81=C:/Users/nessa/Desktop/TSI/TSI_KiCad_Lib
 LibName82=C:/Users/nessa/Desktop/TSI_repo/pacman_hardware_rev_0_8/project/pacman-main-cache
 LibName83=bss84
-[general]
-version=1
+LibName84=+10v

@@ -79,7 +79,9 @@ LIBS:video
 LIBS:Xicor
 LIBS:xilinx
 LIBS:Zilog
+LIBS:pacman-main-cache
 LIBS:bss84
+LIBS:+10v
 LIBS:Circuit_layout-cache
 EELAYER 25 0
 EELAYER END
@@ -466,9 +468,7 @@ $EndComp
 Wire Wire Line
 	5750 5450 6100 5450
 Wire Wire Line
-	6100 5050 6100 5450
-Wire Wire Line
-	6100 5450 6100 5550
+	6100 5050 6100 5550
 Wire Wire Line
 	5750 5050 6100 5050
 Connection ~ 6100 5450

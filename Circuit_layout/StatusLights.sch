@@ -79,7 +79,9 @@ LIBS:video
 LIBS:Xicor
 LIBS:xilinx
 LIBS:Zilog
+LIBS:pacman-main-cache
 LIBS:bss84
+LIBS:+10v
 LIBS:Circuit_layout-cache
 EELAYER 25 0
 EELAYER END
@@ -265,111 +267,40 @@ Text HLabel 4050 3000 0    60   Input ~ 0
 D_LED_CTRL
 Text HLabel 4100 1850 0    60   Input ~ 0
 RTDS_CTRL
-Wire Wire Line
-	5550 4150 5550 3950
-$Comp
-L R R?
-U 1 1 58B1C4A9
-P 5550 4850
-F 0 "R?" V 5630 4850 50  0000 C CNN
-F 1 "2k" V 5550 4850 50  0000 C CNN
-F 2 "" V 5480 4850 50  0000 C CNN
-F 3 "" H 5550 4850 50  0000 C CNN
-	1    5550 4850
-	1    0    0    -1  
-$EndComp
-$Comp
-L R R?
-U 1 1 58B1C51E
-P 5000 4400
-F 0 "R?" V 5080 4400 50  0000 C CNN
-F 1 "2k" V 5000 4400 50  0000 C CNN
-F 2 "" V 4930 4400 50  0000 C CNN
-F 3 "" H 5000 4400 50  0000 C CNN
-	1    5000 4400
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	5150 4400 5250 4400
-Wire Wire Line
-	5550 4550 5550 4600
-Wire Wire Line
-	5550 4600 5550 4700
-Wire Wire Line
-	5550 4600 6050 4600
-Connection ~ 5550 4600
-Text Label 6050 4600 0    60   ~ 0
-IMD_Fault
-Text Label 4300 4400 0    60   ~ 0
-IMD_Status
-Wire Wire Line
-	4300 4400 4850 4400
-Text Label 5550 3950 0    60   ~ 0
-+24LV
-Wire Wire Line
-	5550 5000 5550 5150
-Text Label 5550 5150 0    60   ~ 0
-GND
-$Comp
-L R R?
-U 1 1 58B1EE45
-P 4950 6650
-F 0 "R?" V 5030 6650 50  0000 C CNN
-F 1 "1k" V 4950 6650 50  0000 C CNN
-F 2 "" V 4880 6650 50  0000 C CNN
-F 3 "" H 4950 6650 50  0000 C CNN
-	1    4950 6650
-	0    1    1    0   
-$EndComp
 $Comp
 L R R?
 U 1 1 58B1EEB2
-P 5550 6000
-F 0 "R?" V 5630 6000 50  0000 C CNN
-F 1 "DNP" V 5550 6000 50  0000 C CNN
-F 2 "" V 5480 6000 50  0000 C CNN
-F 3 "" H 5550 6000 50  0000 C CNN
-	1    5550 6000
+P 5300 4350
+F 0 "R?" V 5380 4350 50  0000 C CNN
+F 1 "DNP" V 5300 4350 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 5230 4350 50  0001 C CNN
+F 3 "" H 5300 4350 50  0000 C CNN
+	1    5300 4350
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	5550 6400 5550 6150
+	5300 4750 5300 4500
 Wire Wire Line
-	5250 6650 5100 6650
+	5000 5000 4850 5000
 Wire Wire Line
-	4800 6650 4200 6650
+	4550 5000 3950 5000
 Wire Wire Line
-	5550 5850 5550 5600
+	5300 4200 5300 3950
 Wire Wire Line
-	5550 6800 5550 7000
-Text Label 5550 5600 0    60   ~ 0
-+12LV
-Text Label 5550 7000 0    60   ~ 0
-GND
-Text Label 4200 6650 0    60   ~ 0
+	5300 5150 5300 5350
+Text Label 3950 5000 0    60   ~ 0
 BP_uC
-Text Notes 5700 6150 0    60   ~ 0
+Text Notes 5450 4500 0    60   ~ 0
 Confirm sizing of R:\nDatasheet lists 10mA/220mA as current draw of light.\nDesign for max?
 $Comp
 L MMBF170 Q?
 U 1 1 58B25E37
-P 5450 6600
-F 0 "Q?" H 5650 6675 50  0000 L CNN
-F 1 "MMBF170" H 5650 6600 50  0000 L CNN
-F 2 "SOT-23" H 5650 6525 50  0000 L CIN
-F 3 "" H 5450 6600 50  0000 L CNN
-	1    5450 6600
-	1    0    0    -1  
-$EndComp
-$Comp
-L BSS84 Q?
-U 1 1 58B20C85
-P 5450 4350
-F 0 "Q?" H 5700 4425 50  0000 L CNN
-F 1 "BSS84" H 5700 4350 50  0000 L CNN
-F 2 "SOT-23" H 5700 4275 50  0000 L CIN
-F 3 "" H 5450 4350 50  0000 L CNN
-	1    5450 4350
+P 5200 4950
+F 0 "Q?" H 5400 5025 50  0000 L CNN
+F 1 "MMBF170" H 5400 4950 50  0000 L CNN
+F 2 "SOT-23" H 5400 4875 50  0000 L CIN
+F 3 "" H 5200 4950 50  0000 L CNN
+	1    5200 4950
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -589,4 +520,47 @@ Text Notes 8800 1500 0    99   ~ 0
 Status/Debug LEDs
 Text Notes 7250 3600 0    60   ~ 0
 Can these resistors be internal pull-down/pull-up resistors in the microcontroller?
+$Comp
+L GND #PWR?
+U 1 1 58B21DFD
+P 5300 5350
+F 0 "#PWR?" H 5300 5100 50  0001 C CNN
+F 1 "GND" H 5300 5200 50  0000 C CNN
+F 2 "" H 5300 5350 50  0000 C CNN
+F 3 "" H 5300 5350 50  0000 C CNN
+	1    5300 5350
+	1    0    0    -1  
+$EndComp
+Text Notes 4250 4600 0    99   ~ 0
+Brake Light
+Wire Wire Line
+	5300 4700 5850 4700
+Connection ~ 5300 4700
+Text Label 5850 4700 0    60   ~ 0
+Brake_Light
+$Comp
+L +12V #PWR?
+U 1 1 58B22590
+P 5300 3950
+F 0 "#PWR?" H 5300 3800 50  0001 C CNN
+F 1 "+12V" H 5300 4090 50  0000 C CNN
+F 2 "" H 5300 3950 50  0000 C CNN
+F 3 "" H 5300 3950 50  0000 C CNN
+	1    5300 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 58B5DC19
+P 4700 5000
+F 0 "R?" V 4780 5000 50  0000 C CNN
+F 1 "1k" V 4700 5000 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 4630 5000 50  0001 C CNN
+F 3 "" H 4700 5000 50  0000 C CNN
+F 4 "P1.00KCCT-ND" V 4700 5000 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF1001V/P1.00KCCT-ND/118957" V 4700 5000 60  0001 C CNN "URL"
+F 6 "ERJ-6ENF1001V" V 4700 5000 60  0001 C CNN "Man P/N"
+	1    4700 5000
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
