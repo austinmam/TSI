@@ -1,5 +1,6 @@
 EESchema Schematic File Version 2
 LIBS:Circuit_layout-rescue
+LIBS:TSI_KiCad_Lib
 LIBS:TSI_HV_Isolater-cache
 LIBS:74xgxx
 LIBS:74xx
@@ -264,14 +265,14 @@ F 6 "C0805C100J5GACTU" H 3050 2900 60  0001 C CNN "Man P/N"
 	1    0    0    -1  
 $EndComp
 $Sheet
-S 8150 3600 1800 1050
+S 8150 3600 1550 850 
 U 58ADE509
 F0 "Status Lights" 60
 F1 "StatusLights.sch" 60
 F2 "D_LED_CTRL" I L 8150 3850 60 
 F3 "RTDS_CTRL" I L 8150 4150 60 
-F4 "BP_uC" I R 9950 3800 60 
-F5 "Brake_Light" O R 9950 4000 60 
+F4 "BP_uC" I R 9700 3800 60 
+F5 "Brake_Light" O R 9700 4000 60 
 $EndSheet
 $Sheet
 S 8200 2200 1750 950 
@@ -781,4 +782,8 @@ Wire Wire Line
 	6550 3600 7200 3600
 Text Label 7200 3600 2    60   ~ 0
 Throttle_SEL
+Text GLabel 9850 4000 2    60   Input ~ 0
+Brake_Light
+Wire Wire Line
+	9850 4000 9700 4000
 $EndSCHEMATC

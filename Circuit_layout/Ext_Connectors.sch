@@ -1,5 +1,6 @@
 EESchema Schematic File Version 2
 LIBS:Circuit_layout-rescue
+LIBS:TSI_KiCad_Lib
 LIBS:TSI_HV_Isolater-cache
 LIBS:74xgxx
 LIBS:74xx
@@ -119,10 +120,6 @@ F 4 "W23" H 10050 2050 60  0001 C CNN "Wire Number"
 	1    10050 2050
 	1    0    0    -1  
 $EndComp
-Text Label 9250 1700 0    60   ~ 0
-LV_GND
-Text Label 9250 1800 0    60   ~ 0
-Brake_Light
 Text Label 9250 1900 0    60   ~ 0
 HVPL_1
 $Comp
@@ -235,17 +232,17 @@ Wire Wire Line
 Wire Wire Line
 	9850 3000 9100 3000
 Wire Wire Line
-	9850 2200 9250 2200
+	8850 2200 9850 2200
 Wire Wire Line
 	9850 2100 9250 2100
 Wire Wire Line
-	9850 2000 9250 2000
+	8850 2000 9850 2000
 Wire Wire Line
 	9850 1900 9250 1900
 Wire Wire Line
-	9850 1800 9250 1800
+	8550 1800 9850 1800
 Wire Wire Line
-	9850 1700 9250 1700
+	9850 1700 9150 1700
 Wire Wire Line
 	9950 1400 9350 1400
 Wire Wire Line
@@ -385,7 +382,7 @@ Wire Wire Line
 Wire Wire Line
 	9850 2300 9250 2300
 Wire Wire Line
-	9850 2400 9250 2400
+	9100 2400 9850 2400
 Text GLabel 2050 6400 2    60   Input ~ 0
 Throttle_RTN
 Text GLabel 2050 6300 2    60   Input ~ 0
@@ -461,7 +458,9 @@ $EndComp
 Wire Wire Line
 	5750 5450 6100 5450
 Wire Wire Line
-	6100 5050 6100 5550
+	6100 5050 6100 5450
+Wire Wire Line
+	6100 5450 6100 5550
 Wire Wire Line
 	5750 5050 6100 5050
 Connection ~ 6100 5450
@@ -563,4 +562,60 @@ Text Label 2400 7200 0    60   ~ 0
 Throttle_RTN
 Wire Wire Line
 	9350 900  9950 900 
+Text GLabel 9300 4350 0    60   Input ~ 0
+AIRs-_in
+Text GLabel 9300 4450 0    60   Input ~ 0
+AIRs+_in
+Wire Wire Line
+	9100 2400 9100 2450
+$Comp
+L GND #PWR?
+U 1 1 58B3D38F
+P 9100 2450
+F 0 "#PWR?" H 9100 2200 50  0001 C CNN
+F 1 "GND" H 9100 2300 50  0000 C CNN
+F 2 "" H 9100 2450 50  0000 C CNN
+F 3 "" H 9100 2450 50  0000 C CNN
+	1    9100 2450
+	1    0    0    -1  
+$EndComp
+Text GLabel 9150 1700 0    60   Input ~ 0
+Brake_Light
+Text Label 9150 1800 0    60   ~ 0
+Brake_Light_RTN
+$Comp
+L GND #PWR?
+U 1 1 58B41C25
+P 8550 1800
+F 0 "#PWR?" H 8550 1550 50  0001 C CNN
+F 1 "GND" H 8550 1650 50  0000 C CNN
+F 2 "" H 8550 1800 50  0000 C CNN
+F 3 "" H 8550 1800 50  0000 C CNN
+	1    8550 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8850 2200 8850 2200
+$Comp
+L GND #PWR?
+U 1 1 58B4A72F
+P 8850 2000
+F 0 "#PWR?" H 8850 1750 50  0001 C CNN
+F 1 "GND" H 8850 1850 50  0000 C CNN
+F 2 "" H 8850 2000 50  0000 C CNN
+F 3 "" H 8850 2000 50  0000 C CNN
+	1    8850 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 58B4A794
+P 8850 2200
+F 0 "#PWR?" H 8850 1950 50  0001 C CNN
+F 1 "GND" H 8850 2050 50  0000 C CNN
+F 2 "" H 8850 2200 50  0000 C CNN
+F 3 "" H 8850 2200 50  0000 C CNN
+	1    8850 2200
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
