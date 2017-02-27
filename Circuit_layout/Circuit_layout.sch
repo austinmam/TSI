@@ -475,10 +475,6 @@ Wire Wire Line
 	7800 1100 7800 950 
 Wire Wire Line
 	6350 1100 5950 1100
-Text Label 5950 1100 0    60   ~ 0
-AIRs+_in
-Text Label 5950 1300 0    60   ~ 0
-AIRs-_in
 $Comp
 L R R7
 U 1 1 58B4C950
@@ -694,10 +690,10 @@ F 6 "ERJ-6ENF1001V" V 1800 3250 60  0001 C CNN "Man P/N"
 	-1   0    0    1   
 $EndComp
 $Comp
-L MCP6004 U?
+L MCP6004 U17
 U 1 1 58B3FEE2
 P 2200 3650
-F 0 "U?" H 2250 3850 50  0000 C CNN
+F 0 "U17" H 2250 3850 50  0000 C CNN
 F 1 "MCP6004" H 2350 3450 50  0000 C CNN
 F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 2150 3750 50  0001 C CNN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf" H 2250 3850 50  0001 C CNN
@@ -708,10 +704,10 @@ F 6 "MCP6004T-I/SL" H 2200 3650 60  0001 C CNN "Man P/N"
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C?
+L C C2
 U 1 1 58B40314
 P 1150 4050
-F 0 "C?" H 1175 4150 50  0000 L CNN
+F 0 "C2" H 1175 4150 50  0000 L CNN
 F 1 "0.1u" H 1175 3950 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805_HandSoldering" H 1188 3900 50  0001 C CNN
 F 3 "http://www.kemet.com/Lists/ProductCatalog/Attachments/53/KEM_C1002_X7R_SMD.pdf" H 1150 4050 50  0001 C CNN
@@ -722,10 +718,10 @@ F 6 "C0805C104K3RACTU" H 1150 4050 60  0001 C CNN "Man P/N"
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C?
+L C C1
 U 1 1 58B40445
 P 1150 3250
-F 0 "C?" H 1175 3350 50  0000 L CNN
+F 0 "C1" H 1175 3350 50  0000 L CNN
 F 1 "0.1u" H 1175 3150 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805_HandSoldering" H 1188 3100 50  0001 C CNN
 F 3 "http://www.kemet.com/Lists/ProductCatalog/Attachments/53/KEM_C1002_X7R_SMD.pdf" H 1150 3250 50  0001 C CNN
@@ -736,24 +732,24 @@ F 6 "C0805C104K3RACTU" H 1150 3250 60  0001 C CNN "Man P/N"
 	1    0    0    -1  
 $EndComp
 $Comp
-L MCP6004 U?
-U 1 1 58B40627
+L MCP6004 U17
+U 2 1 58B40627
 P 2600 1350
-F 0 "U?" H 2650 1550 50  0000 C CNN
+F 0 "U17" H 2650 1550 50  0000 C CNN
 F 1 "MCP6004" H 2750 1150 50  0000 C CNN
 F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 2550 1450 50  0001 C CNN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf" H 2650 1550 50  0001 C CNN
 F 4 "MCP6004T-I/SLCT-ND" H 2600 1350 60  0001 C CNN "Digikey P/N"
 F 5 "http://www.digikey.com/product-detail/en/microchip-technology/MCP6004T-I-SL/MCP6004T-I-SLCT-ND/5013527" H 2600 1350 60  0001 C CNN "URL"
 F 6 "MCP6004T-I/SL" H 2600 1350 60  0001 C CNN "Man P/N"
-	1    2600 1350
+	2    2600 1350
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C?
+L C C4
 U 1 1 58B40E21
 P 2700 900
-F 0 "C?" H 2725 1000 50  0000 L CNN
+F 0 "C4" H 2725 1000 50  0000 L CNN
 F 1 "0.47u" H 2725 800 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805_HandSoldering" H 2738 750 50  0001 C CNN
 F 3 "http://www.kemet.com/Lists/ProductCatalog/Attachments/53/KEM_C1002_X7R_SMD.pdf" H 2700 900 50  0001 C CNN
@@ -764,10 +760,10 @@ F 6 "C0805C474K5RACTU" H 2700 900 60  0001 C CNN "Man P/N"
 	0    1    1    0   
 $EndComp
 $Comp
-L C C?
+L C C5
 U 1 1 58B423A5
 P 2750 2900
-F 0 "C?" H 2775 3000 50  0000 L CNN
+F 0 "C5" H 2775 3000 50  0000 L CNN
 F 1 "10p" H 2775 2800 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805_HandSoldering" H 2788 2750 50  0001 C CNN
 F 3 "" H 2750 2900 50  0001 C CNN
@@ -785,4 +781,44 @@ Text GLabel 9850 4000 2    60   Input ~ 0
 Brake_Light
 Wire Wire Line
 	9850 4000 9700 4000
+Text Notes 3100 5900 0    60   ~ 0
+Add Bypass Caps\n\nAdd Mounting Holes
+Text Notes 3000 700  0    60   ~ 0
+Add Bypass Caps
+NoConn ~ 6550 2100
+NoConn ~ 6550 2200
+NoConn ~ 6550 2600
+NoConn ~ 6550 2700
+NoConn ~ 6550 2900
+NoConn ~ 6550 3000
+NoConn ~ 6550 3100
+NoConn ~ 6550 3200
+NoConn ~ 6550 3800
+NoConn ~ 6550 4200
+NoConn ~ 6550 4300
+NoConn ~ 6550 4400
+NoConn ~ 6550 4500
+NoConn ~ 6550 4700
+NoConn ~ 6550 4800
+NoConn ~ 6550 4900
+NoConn ~ 6550 5000
+NoConn ~ 6550 5100
+NoConn ~ 3950 5400
+NoConn ~ 3950 5300
+NoConn ~ 3950 5200
+NoConn ~ 3950 5100
+NoConn ~ 3950 5000
+NoConn ~ 3950 4900
+NoConn ~ 3950 4800
+NoConn ~ 3950 4700
+NoConn ~ 3950 3200
+NoConn ~ 3950 3300
+NoConn ~ 3950 3400
+NoConn ~ 3950 3500
+NoConn ~ 3950 3600
+Text GLabel 5950 1100 0    60   Input ~ 0
+AIRs+_in
+Text GLabel 5950 1300 0    60   Input ~ 0
+AIRs-_in
+NoConn ~ 6550 5400
 $EndSCHEMATC
