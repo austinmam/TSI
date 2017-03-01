@@ -84,7 +84,7 @@ LIBS:+10v
 LIBS:Circuit_layout-cache
 EELAYER 25 0
 EELAYER END
-$Descr A 11000 8500
+$Descr USLegal 14000 8500
 encoding utf-8
 Sheet 1 7
 Title "Tractive System Interface"
@@ -117,18 +117,10 @@ F 5 "http://www.digikey.com/product-detail/en/microchip-technology/AT90CAN128-15
 	1    5250 3700
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5250 7000 5750 7000
-Wire Wire Line
-	5250 7300 5750 7300
 Text Label 5750 7000 2    60   ~ 0
 CANTX
 Text Label 5750 7300 2    60   ~ 0
 CANRX
-Wire Wire Line
-	6550 5200 7150 5200
-Wire Wire Line
-	6550 5300 7150 5300
 Text Label 7150 5200 2    60   ~ 0
 CANTX
 Text Label 7150 5300 2    60   ~ 0
@@ -143,14 +135,6 @@ Text Notes 900  6500 0    99   ~ 0
 CONNECTORS
 Text Notes 3800 6500 0    99   ~ 0
 CAN TRANSCEIVER
-Wire Wire Line
-	3950 4200 3500 4200
-Wire Wire Line
-	3950 4300 3500 4300
-Wire Wire Line
-	3950 4400 3500 4400
-Wire Wire Line
-	3950 4500 3500 4500
 Text GLabel 3500 4200 0    50   BiDi ~ 0
 TCK
 Text GLabel 3500 4300 0    50   BiDi ~ 0
@@ -159,22 +143,8 @@ Text GLabel 3500 4400 0    50   BiDi ~ 0
 TDO
 Text GLabel 3500 4500 0    50   BiDi ~ 0
 TDI
-Wire Wire Line
-	3950 2000 3550 2000
 Text GLabel 3550 2000 0    50   BiDi ~ 0
 ~RESET_AVR
-Wire Wire Line
-	4950 5700 4950 5750
-Wire Wire Line
-	4950 5750 5450 5750
-Wire Wire Line
-	5050 5750 5050 5700
-Wire Wire Line
-	5450 5750 5450 5700
-Connection ~ 5050 5750
-Wire Wire Line
-	5200 5800 5200 5750
-Connection ~ 5200 5750
 $Comp
 L GND #PWR01
 U 1 1 58A83B78
@@ -186,18 +156,6 @@ F 3 "" H 5200 5800 50  0000 C CNN
 	1    5200 5800
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4950 1700 4950 1650
-Wire Wire Line
-	4950 1650 5450 1650
-Wire Wire Line
-	5050 1650 5050 1700
-Wire Wire Line
-	5450 1650 5450 1700
-Connection ~ 5050 1650
-Wire Wire Line
-	5200 1650 5200 1600
-Connection ~ 5200 1650
 $Comp
 L +5V #PWR02
 U 1 1 58A840F4
@@ -223,21 +181,6 @@ F 6 "ABLS-10.000MHZ-B2-T" H 2900 2550 60  0001 C CNN "Man P/N"
 	1    2900 2550
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3050 2400 3050 2750
-Wire Wire Line
-	3050 2400 3950 2400
-Wire Wire Line
-	3950 2300 2750 2300
-Wire Wire Line
-	2750 2300 2750 2750
-Connection ~ 2750 2550
-Connection ~ 3050 2550
-Wire Wire Line
-	2750 3050 3050 3050
-Wire Wire Line
-	2900 3050 2900 3150
-Connection ~ 2900 3050
 $Comp
 L GND #PWR03
 U 1 1 58A8695E
@@ -264,116 +207,69 @@ F 6 "C0805C100J5GACTU" H 3050 2900 60  0001 C CNN "Man P/N"
 	1    0    0    -1  
 $EndComp
 $Sheet
-S 8150 3600 1550 850 
+S 10550 2500 1550 1500
 U 58ADE509
 F0 "Status Lights" 60
 F1 "StatusLights.sch" 60
-F2 "D_LED_CTRL" I L 8150 3850 60 
-F3 "RTDS_CTRL" I L 8150 4150 60 
-F4 "BP_uC" I R 9700 3800 60 
-F5 "Brake_Light" O R 9700 4000 60 
+F2 "D_LED_CTRL" I L 10550 2600 60 
+F3 "RTDS_CTRL" I L 10550 2800 60 
+F4 "BP_uC" I R 12100 2700 60 
+F5 "Brake_Light" O R 12100 2900 60 
+F6 "Heartbeat" I L 10550 2950 60 
+F7 "Spare_Red" I L 10550 3100 60 
+F8 "Spare_Blue" I L 10550 3250 60 
+F9 "RTDS" I R 12100 3100 60 
+F10 "Drive_LED" I R 12100 3250 60 
+F11 "IMD_Fault_LED" O R 12100 3450 60 
+F12 "IMD_Status" I R 12100 3650 60 
 $EndSheet
 $Sheet
-S 8200 2200 1750 950 
+S 10400 950  1750 950 
 U 58ADE5BC
 F0 "Power System" 60
 F1 "PowerSystem.sch" 60
+F2 "HV+" I R 12150 1100 60 
+F3 "HV-" I R 12150 1250 60 
+F4 "HVPL" I R 12150 1400 60 
+F5 "LV_RTN" I R 12150 1700 60 
 $EndSheet
-Wire Wire Line
-	6550 3500 7200 3500
-Text Label 7200 3500 2    60   ~ 0
-Throttle_uC
-Wire Wire Line
-	3950 3800 3300 3800
 Text Label 3300 3800 0    60   ~ 0
 APPS2
-Wire Wire Line
-	3950 3900 3300 3900
 Text Label 3300 3900 0    60   ~ 0
 IMD
 Text Label 3300 4000 0    60   ~ 0
 V_Measure
-Wire Wire Line
-	3950 4000 3300 4000
-Wire Wire Line
-	3300 4100 3950 4100
 Text Label 3300 4100 0    60   ~ 0
 I_Measure
-Wire Wire Line
-	6550 3400 7200 3400
 Text Label 7200 3400 2    60   ~ 0
 Throttle_PL
-Wire Wire Line
-	6550 3300 7200 3300
 Text Label 7200 3300 2    60   ~ 0
 BP_uC
-Wire Wire Line
-	6550 2300 7150 2300
 Text Label 7150 2300 2    60   ~ 0
 D_LED_CTRL
-Wire Wire Line
-	6550 2400 7150 2400
-Wire Wire Line
-	6550 2500 7150 2500
 Text Label 7150 2400 2    60   ~ 0
 RTDS_CTRL
 Text Label 7150 2500 2    60   ~ 0
 Drive_BTN
-Text Label 700  3750 0    60   ~ 0
-A2_LV
-Text Label 700  3550 0    60   ~ 0
-A1_LV
-Wire Wire Line
-	2500 3650 2700 3650
-Wire Wire Line
-	700  3550 1350 3550
-Wire Wire Line
-	700  3750 1350 3750
-Wire Wire Line
-	1800 3750 1800 4250
-Wire Wire Line
-	1650 3750 1900 3750
-Wire Wire Line
-	2550 3650 2550 4250
-Connection ~ 2550 3650
-Connection ~ 1800 3750
-Wire Wire Line
-	1650 3550 1900 3550
-Wire Wire Line
-	1150 3550 1150 3400
-Connection ~ 1150 3550
-Wire Wire Line
-	1150 3900 1150 3750
-Connection ~ 1150 3750
-Wire Wire Line
-	1150 2950 1150 3100
-Wire Wire Line
-	1800 3550 1800 3400
-Connection ~ 1800 3550
-Wire Wire Line
-	1800 3100 1800 3000
-Wire Wire Line
-	1800 3000 1150 3000
-Connection ~ 1150 3000
 Text Label 2700 3650 0    60   ~ 0
 I_Measure
 $Sheet
-S 8200 5250 1700 1250
+S 10150 5350 1700 1250
 U 58A289D2
 F0 "ThrottlePlausibility" 60
 F1 "ThrottlePlausibility.sch" 60
-F2 "RTN_GLV" O L 8200 5650 60 
-F3 "APPS1" O L 8200 5800 60 
-F4 "APPS2" O L 8200 5950 60 
-F5 "APPS1_10" O L 8200 5350 60 
-F6 "APPS2_5" O L 8200 5500 60 
-F7 "Throttle_SEL" I R 9900 5650 60 
-F8 "Throttle_uC" I R 9900 5500 60 
-F9 "Throttle_LV" O R 9900 5350 60 
-F10 "BP" I R 9900 6100 60 
-F11 "BRAKE_5" O R 9900 6400 60 
-F12 "BP_uC" I R 9900 6250 60 
-F13 "Throttle_PL" O R 9900 5800 60 
+F2 "RTN_GLV" O L 10150 5750 60 
+F3 "APPS1" O L 10150 5900 60 
+F4 "APPS2" O L 10150 6050 60 
+F5 "APPS1_10" O L 10150 5450 60 
+F6 "APPS2_5" O L 10150 5600 60 
+F7 "Throttle_SEL" I R 11850 5750 60 
+F8 "Throttle_uC" I R 11850 5600 60 
+F9 "Throttle_LV" O R 11850 5450 60 
+F10 "BP" I R 11850 6200 60 
+F11 "Brake_5" O R 11850 6500 60 
+F12 "BP_uC" I R 11850 6350 60 
+F13 "Throttle_PL" O R 11850 5900 60 
 $EndSheet
 Text Notes 1350 2900 0    99   ~ 0
 Current \nMeasurement
@@ -391,53 +287,10 @@ F 6 "C0805C474K5RACTU" H 1700 1500 60  0001 C CNN "Man P/N"
 	1    1700 1500
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2500 1650 2500 1900
-Wire Wire Line
-	2300 1450 2150 1450
-Wire Wire Line
-	2150 1450 2150 1700
-Wire Wire Line
-	2150 1700 2900 1700
-Wire Wire Line
-	2150 1250 2300 1250
-Wire Wire Line
-	2850 900  2900 900 
-Wire Wire Line
-	2900 900  2900 1700
-Connection ~ 2900 1350
-Wire Wire Line
-	2550 900  2150 900 
-Wire Wire Line
-	2150 900  2150 1250
-Wire Wire Line
-	2500 700  2500 1050
-Wire Wire Line
-	1550 1250 1850 1250
-Wire Wire Line
-	1700 1250 1700 1350
-Connection ~ 1700 1250
-Wire Wire Line
-	650  1250 1250 1250
-Wire Wire Line
-	1700 1650 1700 1800
-Wire Wire Line
-	1700 1800 2500 1800
-Connection ~ 2500 1800
 Text Notes 600  2050 0    60   ~ 0
 Sallen-Key Filter\nIntended for 10Hz PWM\n2Hz fc - breadboarded - still osc
-Text Label 650  1250 0    60   ~ 0
-IMD_PWM
-Wire Wire Line
-	2900 1350 3100 1350
 Text Label 3100 1350 0    60   ~ 0
 IMD
-Wire Wire Line
-	6550 3900 7200 3900
-Wire Wire Line
-	6550 4000 7200 4000
-Wire Wire Line
-	6550 4100 7200 4100
 Text Label 7200 3900 2    60   ~ 0
 Heartbeat
 Text Label 7200 4000 2    60   ~ 0
@@ -459,26 +312,8 @@ F 7 "http://www.digikey.com/product-detail/en/toshiba-semiconductor-and-storage/
 	1    7050 1200
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5950 1300 6750 1300
-Wire Wire Line
-	6750 1100 6650 1100
-Wire Wire Line
-	7350 1100 7400 1100
-Wire Wire Line
-	7350 1300 7850 1300
 Text Label 7850 1300 2    60   ~ 0
 Safety_Loop
-Wire Wire Line
-	7700 1100 7800 1100
-Wire Wire Line
-	7800 1100 7800 950 
-Wire Wire Line
-	6350 1100 5950 1100
-Text Label 5950 1100 0    60   ~ 0
-AIRs+_in
-Text Label 5950 1300 0    60   ~ 0
-AIRs-_in
 $Comp
 L R R7
 U 1 1 58B4C950
@@ -518,8 +353,6 @@ F 6 "ERJ-6ENF1001V" V 7550 1100 60  0001 C CNN "Man P/N"
 	1    7550 1100
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	6550 2000 7150 2000
 Text Label 7150 2000 2    60   ~ 0
 Safety_Loop
 $Comp
@@ -533,12 +366,6 @@ F 3 "" H 2100 3950 50  0000 C CNN
 	1    2100 3950
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1800 4250 2000 4250
-Wire Wire Line
-	2550 4250 2300 4250
-Wire Wire Line
-	1150 4200 1150 4250
 $Comp
 L GND #PWR06
 U 1 1 58B23714
@@ -606,6 +433,7 @@ F5 "HV-" I R 2450 5650 60
 F6 "Throttle_HV" O R 2450 4850 60 
 F7 "V_Measure" I L 850 5000 60 
 F8 "I/O_Ground" I R 2450 5300 60 
+F9 "Throttle_RTN" O R 2450 5000 60 
 $EndSheet
 Text Notes 950  1050 0    99   ~ 0
 IMD PWM LPF
@@ -694,10 +522,10 @@ F 6 "ERJ-6ENF1001V" V 1800 3250 60  0001 C CNN "Man P/N"
 	-1   0    0    1   
 $EndComp
 $Comp
-L MCP6004 U?
+L MCP6004 U17
 U 1 1 58B3FEE2
 P 2200 3650
-F 0 "U?" H 2250 3850 50  0000 C CNN
+F 0 "U17" H 2250 3850 50  0000 C CNN
 F 1 "MCP6004" H 2350 3450 50  0000 C CNN
 F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 2150 3750 50  0001 C CNN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf" H 2250 3850 50  0001 C CNN
@@ -708,10 +536,10 @@ F 6 "MCP6004T-I/SL" H 2200 3650 60  0001 C CNN "Man P/N"
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C?
+L C C2
 U 1 1 58B40314
 P 1150 4050
-F 0 "C?" H 1175 4150 50  0000 L CNN
+F 0 "C2" H 1175 4150 50  0000 L CNN
 F 1 "0.1u" H 1175 3950 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805_HandSoldering" H 1188 3900 50  0001 C CNN
 F 3 "http://www.kemet.com/Lists/ProductCatalog/Attachments/53/KEM_C1002_X7R_SMD.pdf" H 1150 4050 50  0001 C CNN
@@ -722,10 +550,10 @@ F 6 "C0805C104K3RACTU" H 1150 4050 60  0001 C CNN "Man P/N"
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C?
+L C C1
 U 1 1 58B40445
 P 1150 3250
-F 0 "C?" H 1175 3350 50  0000 L CNN
+F 0 "C1" H 1175 3350 50  0000 L CNN
 F 1 "0.1u" H 1175 3150 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805_HandSoldering" H 1188 3100 50  0001 C CNN
 F 3 "http://www.kemet.com/Lists/ProductCatalog/Attachments/53/KEM_C1002_X7R_SMD.pdf" H 1150 3250 50  0001 C CNN
@@ -736,24 +564,24 @@ F 6 "C0805C104K3RACTU" H 1150 3250 60  0001 C CNN "Man P/N"
 	1    0    0    -1  
 $EndComp
 $Comp
-L MCP6004 U?
-U 1 1 58B40627
+L MCP6004 U17
+U 2 1 58B40627
 P 2600 1350
-F 0 "U?" H 2650 1550 50  0000 C CNN
+F 0 "U17" H 2650 1550 50  0000 C CNN
 F 1 "MCP6004" H 2750 1150 50  0000 C CNN
 F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 2550 1450 50  0001 C CNN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/21733j.pdf" H 2650 1550 50  0001 C CNN
 F 4 "MCP6004T-I/SLCT-ND" H 2600 1350 60  0001 C CNN "Digikey P/N"
 F 5 "http://www.digikey.com/product-detail/en/microchip-technology/MCP6004T-I-SL/MCP6004T-I-SLCT-ND/5013527" H 2600 1350 60  0001 C CNN "URL"
 F 6 "MCP6004T-I/SL" H 2600 1350 60  0001 C CNN "Man P/N"
-	1    2600 1350
+	2    2600 1350
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C?
+L C C4
 U 1 1 58B40E21
 P 2700 900
-F 0 "C?" H 2725 1000 50  0000 L CNN
+F 0 "C4" H 2725 1000 50  0000 L CNN
 F 1 "0.47u" H 2725 800 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805_HandSoldering" H 2738 750 50  0001 C CNN
 F 3 "http://www.kemet.com/Lists/ProductCatalog/Attachments/53/KEM_C1002_X7R_SMD.pdf" H 2700 900 50  0001 C CNN
@@ -764,10 +592,10 @@ F 6 "C0805C474K5RACTU" H 2700 900 60  0001 C CNN "Man P/N"
 	0    1    1    0   
 $EndComp
 $Comp
-L C C?
+L C C5
 U 1 1 58B423A5
 P 2750 2900
-F 0 "C?" H 2775 3000 50  0000 L CNN
+F 0 "C5" H 2775 3000 50  0000 L CNN
 F 1 "10p" H 2775 2800 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805_HandSoldering" H 2788 2750 50  0001 C CNN
 F 3 "" H 2750 2900 50  0001 C CNN
@@ -777,12 +605,378 @@ F 6 "C0805C100J5GACTU" H 2750 2900 60  0001 C CNN "Man P/N"
 	1    2750 2900
 	1    0    0    -1  
 $EndComp
+Text GLabel 12250 2900 2    60   Input ~ 0
+Brake_Light
+Text Notes 3100 5900 0    60   ~ 0
+Add Bypass Caps\n\nAdd Mounting Holes
+Text Notes 3000 700  0    60   ~ 0
+Add Bypass Caps
+NoConn ~ 6550 2100
+NoConn ~ 6550 2200
+NoConn ~ 6550 2600
+NoConn ~ 6550 2700
+NoConn ~ 6550 2900
+NoConn ~ 6550 3000
+NoConn ~ 6550 3100
+NoConn ~ 6550 3200
+NoConn ~ 6550 3800
+NoConn ~ 6550 4200
+NoConn ~ 6550 4300
+NoConn ~ 6550 4400
+NoConn ~ 6550 4500
+NoConn ~ 6550 4700
+NoConn ~ 6550 4800
+NoConn ~ 6550 4900
+NoConn ~ 6550 5000
+NoConn ~ 6550 5100
+NoConn ~ 3950 5400
+NoConn ~ 3950 5300
+NoConn ~ 3950 5200
+NoConn ~ 3950 5100
+NoConn ~ 3950 5000
+NoConn ~ 3950 4900
+NoConn ~ 3950 4800
+NoConn ~ 3950 4700
+NoConn ~ 3950 3200
+NoConn ~ 3950 3300
+NoConn ~ 3950 3400
+NoConn ~ 3950 3500
+NoConn ~ 3950 3600
+Text GLabel 5950 1100 0    60   Input ~ 0
+AIRs+_in
+Text GLabel 5950 1300 0    60   Input ~ 0
+AIRs-_in
+NoConn ~ 6550 5400
+Text Label 9700 5450 0    60   ~ 0
+APPS1_10
+Text Label 9700 5600 0    60   ~ 0
+APPS2_5
+Text Label 9700 5750 0    60   ~ 0
+RTN_GLV
+Text Label 9700 5900 0    60   ~ 0
+APPS1
+Text Label 9700 6050 0    60   ~ 0
+APPS2
+Text Label 11950 5450 0    60   ~ 0
+Throttle_LV
+Text Label 11950 5600 0    60   ~ 0
+Throttle_uC
+Text Label 11950 5750 0    60   ~ 0
+Throttle_SEL
+Text Label 11950 5900 0    60   ~ 0
+Throttle_PL
+Text Label 11950 6350 0    60   ~ 0
+BP_uC
+Text Label 12200 2700 0    60   ~ 0
+BP_uC
+Text Label 9950 2600 0    60   ~ 0
+D_LED_CTRL
+Text Label 9950 2800 0    60   ~ 0
+RTDS_CTRL
+Text GLabel 11950 6500 2    60   Input ~ 0
+Brake_5
+Text GLabel 11950 6200 2    60   Input ~ 0
+BP
+Text GLabel 9700 5450 0    60   Input ~ 0
+APPS1_10
+Text GLabel 9700 5600 0    60   Input ~ 0
+APPS2_5
+Text GLabel 9700 5750 0    60   Input ~ 0
+RTN_GLV
+Text GLabel 9700 5900 0    60   Input ~ 0
+APPS1
+Text GLabel 9700 6050 0    60   Input ~ 0
+APPS2
+Text GLabel 2650 5500 2    60   Input ~ 0
+HV+
+Text GLabel 2650 5650 2    60   Input ~ 0
+HV-
+Text GLabel 2650 5300 2    60   Input ~ 0
+I/O_Ground
+Text GLabel 2650 5150 2    60   Input ~ 0
++5HV
+Text GLabel 2650 5000 2    60   Input ~ 0
+Throttle_RTN
+Text GLabel 2650 4850 2    60   Input ~ 0
+Throttle_HV
+Text Label 300  4850 0    60   ~ 0
+Throttle_LV
+Text Label 300  5000 0    60   ~ 0
+V_Measure
+Text GLabel 12300 1100 2    60   Input ~ 0
+HV+
+Text GLabel 12300 1250 2    60   Input ~ 0
+HV-
+Text GLabel 12300 1400 2    60   Input ~ 0
+HVPL
+Text GLabel 12300 1700 2    60   Input ~ 0
+LV_RTN
+Text GLabel 1100 1250 0    60   Input ~ 0
+IMD_PWM
+Text Label 9950 2950 0    60   ~ 0
+Heartbeat
+Text Label 9950 3100 0    60   ~ 0
+Spare_Red
+Text Label 9950 3250 0    60   ~ 0
+Spare_Blue
+Wire Wire Line
+	5250 7000 5750 7000
+Wire Wire Line
+	5250 7300 5750 7300
+Wire Wire Line
+	6550 5200 7150 5200
+Wire Wire Line
+	6550 5300 7150 5300
+Wire Wire Line
+	3950 4200 3500 4200
+Wire Wire Line
+	3950 4300 3500 4300
+Wire Wire Line
+	3950 4400 3500 4400
+Wire Wire Line
+	3950 4500 3500 4500
+Wire Wire Line
+	3950 2000 3550 2000
+Wire Wire Line
+	4950 5700 4950 5750
+Wire Wire Line
+	4950 5750 5450 5750
+Wire Wire Line
+	5050 5750 5050 5700
+Wire Wire Line
+	5450 5750 5450 5700
+Connection ~ 5050 5750
+Wire Wire Line
+	5200 5800 5200 5750
+Connection ~ 5200 5750
+Wire Wire Line
+	4950 1700 4950 1650
+Wire Wire Line
+	4950 1650 5450 1650
+Wire Wire Line
+	5050 1650 5050 1700
+Wire Wire Line
+	5450 1650 5450 1700
+Connection ~ 5050 1650
+Wire Wire Line
+	5200 1650 5200 1600
+Connection ~ 5200 1650
+Wire Wire Line
+	3050 2400 3050 2750
+Wire Wire Line
+	3050 2400 3950 2400
+Wire Wire Line
+	3950 2300 2750 2300
+Wire Wire Line
+	2750 2300 2750 2750
+Connection ~ 2750 2550
+Connection ~ 3050 2550
+Wire Wire Line
+	2750 3050 3050 3050
+Wire Wire Line
+	2900 3050 2900 3150
+Connection ~ 2900 3050
+Wire Wire Line
+	3950 3800 3300 3800
+Wire Wire Line
+	3950 3900 3300 3900
+Wire Wire Line
+	3950 4000 3300 4000
+Wire Wire Line
+	3300 4100 3950 4100
+Wire Wire Line
+	6550 3400 7200 3400
+Wire Wire Line
+	6550 3300 7200 3300
+Wire Wire Line
+	6550 2300 7150 2300
+Wire Wire Line
+	6550 2400 7150 2400
+Wire Wire Line
+	6550 2500 7150 2500
+Wire Wire Line
+	2500 3650 2700 3650
+Wire Wire Line
+	700  3550 1350 3550
+Wire Wire Line
+	700  3750 1350 3750
+Wire Wire Line
+	1800 3750 1800 4250
+Wire Wire Line
+	1650 3750 1900 3750
+Wire Wire Line
+	2550 3650 2550 4250
+Connection ~ 2550 3650
+Connection ~ 1800 3750
+Wire Wire Line
+	1650 3550 1900 3550
+Wire Wire Line
+	1150 3550 1150 3400
+Connection ~ 1150 3550
+Wire Wire Line
+	1150 3900 1150 3750
+Connection ~ 1150 3750
+Wire Wire Line
+	1150 2950 1150 3100
+Wire Wire Line
+	1800 3550 1800 3400
+Connection ~ 1800 3550
+Wire Wire Line
+	1800 3100 1800 3000
+Wire Wire Line
+	1800 3000 1150 3000
+Connection ~ 1150 3000
+Wire Wire Line
+	2500 1650 2500 1900
+Wire Wire Line
+	2300 1450 2150 1450
+Wire Wire Line
+	2150 1450 2150 1700
+Wire Wire Line
+	2150 1700 2900 1700
+Wire Wire Line
+	2150 1250 2300 1250
+Wire Wire Line
+	2850 900  2900 900 
+Wire Wire Line
+	2900 900  2900 1700
+Connection ~ 2900 1350
+Wire Wire Line
+	2550 900  2150 900 
+Wire Wire Line
+	2150 900  2150 1250
+Wire Wire Line
+	2500 700  2500 1050
+Wire Wire Line
+	1700 1250 1700 1350
+Connection ~ 1700 1250
+Wire Wire Line
+	1700 1650 1700 1800
+Wire Wire Line
+	1700 1800 2500 1800
+Connection ~ 2500 1800
+Wire Wire Line
+	2900 1350 3100 1350
+Wire Wire Line
+	6550 3900 7200 3900
+Wire Wire Line
+	6550 4000 7200 4000
+Wire Wire Line
+	6550 4100 7200 4100
+Wire Wire Line
+	5950 1300 6750 1300
+Wire Wire Line
+	6750 1100 6650 1100
+Wire Wire Line
+	7350 1100 7400 1100
+Wire Wire Line
+	7350 1300 7850 1300
+Wire Wire Line
+	7700 1100 7800 1100
+Wire Wire Line
+	7800 1100 7800 950 
+Wire Wire Line
+	6350 1100 5950 1100
+Wire Wire Line
+	6550 2000 7150 2000
+Wire Wire Line
+	1800 4250 2000 4250
+Wire Wire Line
+	2550 4250 2300 4250
+Wire Wire Line
+	1150 4200 1150 4250
+Wire Wire Line
+	12250 2900 12100 2900
+Wire Wire Line
+	9700 5450 10150 5450
+Wire Wire Line
+	9700 5600 10150 5600
+Wire Wire Line
+	9700 5750 10150 5750
+Wire Wire Line
+	9700 5900 10150 5900
+Wire Wire Line
+	9700 6050 10150 6050
+Wire Wire Line
+	11850 5450 11950 5450
+Wire Wire Line
+	11850 5600 11950 5600
+Wire Wire Line
+	11850 5750 11950 5750
+Wire Wire Line
+	11850 5900 11950 5900
+Wire Wire Line
+	11850 6200 11950 6200
+Wire Wire Line
+	11850 6350 11950 6350
+Wire Wire Line
+	11850 6500 11950 6500
+Wire Wire Line
+	12100 2700 12200 2700
+Wire Wire Line
+	1550 1250 1850 1250
+Wire Wire Line
+	2450 5650 2650 5650
+Wire Wire Line
+	2450 5500 2650 5500
+Wire Wire Line
+	2650 5300 2450 5300
+Wire Wire Line
+	2450 5150 2650 5150
+Wire Wire Line
+	2450 4850 2650 4850
+Wire Wire Line
+	2450 5000 2650 5000
+Wire Wire Line
+	850  4850 300  4850
+Wire Wire Line
+	300  5000 850  5000
+Wire Wire Line
+	6550 3500 7200 3500
 Wire Wire Line
 	6550 3600 7200 3600
-Text Label 7200 3600 2    60   ~ 0
-Throttle_SEL
-Text GLabel 9850 4000 2    60   Input ~ 0
-Brake_Light
 Wire Wire Line
-	9850 4000 9700 4000
+	12150 1700 12300 1700
+Wire Wire Line
+	12150 1400 12300 1400
+Wire Wire Line
+	12150 1250 12300 1250
+Wire Wire Line
+	12150 1100 12300 1100
+Wire Wire Line
+	1100 1250 1250 1250
+Wire Wire Line
+	9950 2600 10550 2600
+Wire Wire Line
+	9950 2800 10550 2800
+Wire Wire Line
+	9950 3250 10550 3250
+Wire Wire Line
+	9950 3100 10550 3100
+Wire Wire Line
+	9950 2950 10550 2950
+Text Label 7200 3500 2    60   ~ 0
+Throttle_SEL
+Text Label 7200 3600 2    60   ~ 0
+Throttle_uC
+Text GLabel 12250 3100 2    60   Input ~ 0
+RTDS
+Text GLabel 12250 3250 2    60   Input ~ 0
+Drive_LED
+Wire Wire Line
+	12100 3100 12250 3100
+Wire Wire Line
+	12100 3250 12250 3250
+Text GLabel 700  3750 0    60   Input ~ 0
+A2_LV
+Text GLabel 700  3550 0    60   Input ~ 0
+A1_LV
+Wire Wire Line
+	12100 3650 12250 3650
+Text GLabel 12250 3650 2    60   Input ~ 0
+IMD_Status
+Text GLabel 12250 3450 2    60   Input ~ 0
+IMD_Fault_LED
+Wire Wire Line
+	12100 3450 12250 3450
 $EndSCHEMATC

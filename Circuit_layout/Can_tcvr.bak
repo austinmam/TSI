@@ -242,4 +242,6 @@ Text Label 3000 1700 2    60   ~ 0
 CANTX
 Text Label 3000 1950 2    60   ~ 0
 CANRX
+Text Notes 4650 5050 0    60   ~ 0
+NOTE: DO NOT populate R11.\n\nR11 provides the ability to use this board \nas a terminating  CAN node in development only.
 $EndSCHEMATC

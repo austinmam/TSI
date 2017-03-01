@@ -143,8 +143,6 @@ F 3 "" H 6450 1700 50  0000 C CNN
 $EndComp
 Wire Wire Line
 	5750 2050 6000 2050
-Text Label 6000 2050 2    60   ~ 0
-RTDS
 $Comp
 L TLP291 U11
 U 1 1 58AF4260
@@ -192,8 +190,6 @@ F 3 "" H 6450 2850 50  0000 C CNN
 $EndComp
 Wire Wire Line
 	5700 3200 6200 3200
-Text Label 6200 3200 2    60   ~ 0
-Drive_LED
 $Comp
 L R R12
 U 1 1 58AF4E42
@@ -225,8 +221,6 @@ $EndComp
 Wire Wire Line
 	6300 3000 6450 3000
 Wire Wire Line
-	6450 3000 6450 2850
-Wire Wire Line
 	6350 1850 6450 1850
 Wire Wire Line
 	6450 1850 6450 1700
@@ -239,16 +233,16 @@ D_LED_CTRL
 Text HLabel 4100 1850 0    60   Input ~ 0
 RTDS_CTRL
 Wire Wire Line
-	5300 4750 5300 4500
+	2600 4850 2600 4600
 Wire Wire Line
-	5000 5000 4850 5000
+	2300 5100 2150 5100
 Wire Wire Line
-	4550 5000 3950 5000
+	1850 5100 1250 5100
 Wire Wire Line
-	5300 4200 5300 3950
+	2600 4300 2600 4050
 Wire Wire Line
-	5300 5150 5300 5350
-Text Notes 5450 4500 0    60   ~ 0
+	2600 5250 2600 5450
+Text Notes 2750 4600 0    60   ~ 0
 Confirm sizing of R:\nDatasheet lists 10mA/220mA as current draw of light.\nDesign for max? Currently roughly 80mA
 $Comp
 L R R18
@@ -457,12 +451,6 @@ F 3 "" H 10300 1800 50  0000 C CNN
 	1    10300 1800
 	1    0    0    -1  
 $EndComp
-Text GLabel 10300 2250 2    60   Input ~ 0
-Heartbeat
-Text GLabel 10300 2700 2    60   Input ~ 0
-Spare_Red
-Text GLabel 10300 3150 2    60   Input ~ 0
-Spare_Blue
 Text Notes 8800 1500 0    99   ~ 0
 Status/Debug LEDs
 Text Notes 9800 3550 0    60   ~ 0
@@ -470,70 +458,70 @@ Make 100ohm
 $Comp
 L GND #PWR034
 U 1 1 58B21DFD
-P 5300 5350
-F 0 "#PWR034" H 5300 5100 50  0001 C CNN
-F 1 "GND" H 5300 5200 50  0000 C CNN
-F 2 "" H 5300 5350 50  0000 C CNN
-F 3 "" H 5300 5350 50  0000 C CNN
-	1    5300 5350
+P 2600 5450
+F 0 "#PWR034" H 2600 5200 50  0001 C CNN
+F 1 "GND" H 2600 5300 50  0000 C CNN
+F 2 "" H 2600 5450 50  0000 C CNN
+F 3 "" H 2600 5450 50  0000 C CNN
+	1    2600 5450
 	1    0    0    -1  
 $EndComp
-Text Notes 4250 4600 0    99   ~ 0
+Text Notes 1550 4700 0    99   ~ 0
 Brake Light
 Wire Wire Line
-	5300 4700 5850 4700
-Connection ~ 5300 4700
+	2600 4800 3150 4800
+Connection ~ 2600 4800
 $Comp
 L +12V #PWR035
 U 1 1 58B22590
-P 5300 3950
-F 0 "#PWR035" H 5300 3800 50  0001 C CNN
-F 1 "+12V" H 5300 4090 50  0000 C CNN
-F 2 "" H 5300 3950 50  0000 C CNN
-F 3 "" H 5300 3950 50  0000 C CNN
-	1    5300 3950
+P 2600 4050
+F 0 "#PWR035" H 2600 3900 50  0001 C CNN
+F 1 "+12V" H 2600 4190 50  0000 C CNN
+F 2 "" H 2600 4050 50  0000 C CNN
+F 3 "" H 2600 4050 50  0000 C CNN
+	1    2600 4050
 	1    0    0    -1  
 $EndComp
 $Comp
 L R R13
 U 1 1 58B5DC19
-P 4700 5000
-F 0 "R13" V 4780 5000 50  0000 C CNN
-F 1 "1k" V 4700 5000 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 4630 5000 50  0001 C CNN
-F 3 "" H 4700 5000 50  0000 C CNN
-F 4 "P1.00KCCT-ND" V 4700 5000 60  0001 C CNN "DigiKey P/N"
-F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF1001V/P1.00KCCT-ND/118957" V 4700 5000 60  0001 C CNN "URL"
-F 6 "ERJ-6ENF1001V" V 4700 5000 60  0001 C CNN "Man P/N"
-	1    4700 5000
+P 2000 5100
+F 0 "R13" V 2080 5100 50  0000 C CNN
+F 1 "1k" V 2000 5100 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 1930 5100 50  0001 C CNN
+F 3 "" H 2000 5100 50  0000 C CNN
+F 4 "P1.00KCCT-ND" V 2000 5100 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF1001V/P1.00KCCT-ND/118957" V 2000 5100 60  0001 C CNN "URL"
+F 6 "ERJ-6ENF1001V" V 2000 5100 60  0001 C CNN "Man P/N"
+	1    2000 5100
 	0    1    1    0   
 $EndComp
 $Comp
 L MMBF170 Q1
 U 1 1 58B375B3
-P 5200 4950
-F 0 "Q1" H 5400 5025 50  0000 L CNN
-F 1 "MMBF170" H 5400 4950 50  0000 L CNN
-F 2 "TO_SOT_Packages_SMD:SOT-23" H 5400 4875 50  0001 L CIN
-F 3 "https://www.fairchildsemi.com/datasheets/MM/MMBF170.pdf" H 5200 4950 50  0001 L CNN
-F 4 "MMBF170CT-ND" H 5200 4950 60  0001 C CNN "Digikey P/N"
-F 5 "http://www.digikey.com/product-detail/en/fairchild-on-semiconductor/MMBF170/MMBF170CT-ND/244295" H 5200 4950 60  0001 C CNN "URL"
-F 6 "MMBF170" H 5200 4950 60  0001 C CNN "Man P/N"
-	1    5200 4950
+P 2500 5050
+F 0 "Q1" H 2700 5125 50  0000 L CNN
+F 1 "MMBF170" H 2700 5050 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 2700 4975 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/MM/MMBF170.pdf" H 2500 5050 50  0001 L CNN
+F 4 "MMBF170CT-ND" H 2500 5050 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/fairchild-on-semiconductor/MMBF170/MMBF170CT-ND/244295" H 2500 5050 60  0001 C CNN "URL"
+F 6 "MMBF170" H 2500 5050 60  0001 C CNN "Man P/N"
+	1    2500 5050
 	1    0    0    -1  
 $EndComp
 $Comp
 L R R17
 U 1 1 58B384ED
-P 5300 4350
-F 0 "R17" V 5380 4350 50  0000 C CNN
-F 1 "150" V 5300 4350 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 5230 4350 50  0001 C CNN
-F 3 "" H 5300 4350 50  0000 C CNN
-F 4 "311-150CRCT-ND" V 5300 4350 60  0001 C CNN "DigiKey P/N"
-F 5 "http://www.digikey.com/product-detail/en/yageo/RC0805FR-07150RL/311-150CRCT-ND/730560" V 5300 4350 60  0001 C CNN "URL"
-F 6 "RC0805FR-07150RL" V 5300 4350 60  0001 C CNN "Man P/N"
-	1    5300 4350
+P 2600 4450
+F 0 "R17" V 2680 4450 50  0000 C CNN
+F 1 "150" V 2600 4450 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 2530 4450 50  0001 C CNN
+F 3 "" H 2600 4450 50  0000 C CNN
+F 4 "311-150CRCT-ND" V 2600 4450 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/yageo/RC0805FR-07150RL/311-150CRCT-ND/730560" V 2600 4450 60  0001 C CNN "URL"
+F 6 "RC0805FR-07150RL" V 2600 4450 60  0001 C CNN "Man P/N"
+	1    2600 4450
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -564,8 +552,100 @@ F 6 "ERJ-6ENF2001V" V 6200 1850 60  0001 C CNN "Man P/N"
 	1    6200 1850
 	0    1    1    0   
 $EndComp
-Text HLabel 3950 5000 0    60   Input ~ 0
+Text HLabel 1250 5100 0    60   Input ~ 0
 BP_uC
-Text HLabel 5850 4700 2    60   Output ~ 0
+Text HLabel 3150 4800 2    60   Output ~ 0
 Brake_Light
+Wire Wire Line
+	6450 3000 6450 2850
+Text HLabel 10300 2250 2    60   Input ~ 0
+Heartbeat
+Text HLabel 10300 2700 2    60   Input ~ 0
+Spare_Red
+Text HLabel 10300 3150 2    60   Input ~ 0
+Spare_Blue
+Text HLabel 6000 2050 2    60   Input ~ 0
+RTDS
+Text HLabel 6200 3200 2    60   Input ~ 0
+Drive_LED
+$Comp
+L BSS84 Q3
+U 1 1 58BB9EF8
+P 8000 5050
+F 0 "Q3" H 8250 5125 50  0000 L CNN
+F 1 "BSS84" H 8250 5050 50  0000 L CNN
+F 2 "SOT-23" H 8250 4975 50  0000 L CIN
+F 3 "" H 8000 5050 50  0000 L CNN
+	1    8000 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R85
+U 1 1 58BBA4D2
+P 8100 5600
+F 0 "R85" V 8180 5600 50  0000 C CNN
+F 1 "2k" V 8100 5600 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 8030 5600 50  0001 C CNN
+F 3 "" H 8100 5600 50  0000 C CNN
+F 4 "P2.00KCCT-ND" V 8100 5600 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF2001V/P2.00KCCT-ND/119044" V 8100 5600 60  0001 C CNN "URL"
+F 6 "ERJ-6ENF2001V" V 8100 5600 60  0001 C CNN "Man P/N"
+	1    8100 5600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8100 5450 8100 5250
+Wire Wire Line
+	8100 4850 8100 4600
+$Comp
+L +12V #PWR036
+U 1 1 58BBA60E
+P 8100 4600
+F 0 "#PWR036" H 8100 4450 50  0001 C CNN
+F 1 "+12V" H 8100 4740 50  0000 C CNN
+F 2 "" H 8100 4600 50  0000 C CNN
+F 3 "" H 8100 4600 50  0000 C CNN
+	1    8100 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR037
+U 1 1 58BBA652
+P 8100 6000
+F 0 "#PWR037" H 8100 5750 50  0001 C CNN
+F 1 "GND" H 8100 5850 50  0000 C CNN
+F 2 "" H 8100 6000 50  0000 C CNN
+F 3 "" H 8100 6000 50  0000 C CNN
+	1    8100 6000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8100 6000 8100 5750
+Wire Wire Line
+	8100 5350 8600 5350
+Connection ~ 8100 5350
+Text HLabel 8600 5350 2    60   Output ~ 0
+IMD_Fault_LED
+Wire Wire Line
+	7250 5100 6650 5100
+$Comp
+L R R84
+U 1 1 58BBA9F7
+P 7400 5100
+F 0 "R84" V 7480 5100 50  0000 C CNN
+F 1 "1k" V 7400 5100 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 7330 5100 50  0001 C CNN
+F 3 "" H 7400 5100 50  0000 C CNN
+F 4 "P1.00KCCT-ND" V 7400 5100 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF1001V/P1.00KCCT-ND/118957" V 7400 5100 60  0001 C CNN "URL"
+F 6 "ERJ-6ENF1001V" V 7400 5100 60  0001 C CNN "Man P/N"
+	1    7400 5100
+	0    1    1    0   
+$EndComp
+Text HLabel 6650 5100 0    60   Input ~ 0
+IMD_Status
+Wire Wire Line
+	7550 5100 7800 5100
+Text Notes 6750 4800 0    99   ~ 0
+IMD Fault Light
 $EndSCHEMATC
