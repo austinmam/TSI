@@ -209,12 +209,12 @@ L R R18
 U 1 1 58B266DE
 P 9850 1800
 F 0 "R18" V 9930 1800 50  0000 C CNN
-F 1 "1k" V 9850 1800 50  0000 C CNN
+F 1 "100" V 9850 1800 50  0000 C CNN
 F 2 "Resistors_SMD:R_0805_HandSoldering" V 9780 1800 50  0001 C CNN
 F 3 "" H 9850 1800 50  0000 C CNN
-F 4 "P1.00KCCT-ND" V 9850 1800 60  0001 C CNN "DigiKey P/N"
-F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF1001V/P1.00KCCT-ND/118957" V 9850 1800 60  0001 C CNN "URL"
-F 6 "ERJ-6ENF1001V" V 9850 1800 60  0001 C CNN "Man P/N"
+F 4 "P100CCT-ND" V 9850 1800 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF1000V/P100CCT-ND/118668" V 9850 1800 60  0001 C CNN "URL"
+F 6 "ERJ-6ENF1000V" V 9850 1800 60  0001 C CNN "Man P/N"
 	1    9850 1800
 	0    1    1    0   
 $EndComp
@@ -708,4 +708,18 @@ Text Label 10300 2700 0    60   ~ 0
 Spare_Red
 Text Label 10300 3150 0    60   ~ 0
 Spare_Blue
+$Comp
+L R R86
+U 1 1 58C06BD6
+P 10750 1750
+F 0 "R86" V 10830 1750 50  0000 C CNN
+F 1 "100" V 10750 1750 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 10680 1750 50  0001 C CNN
+F 3 "" H 10750 1750 50  0000 C CNN
+F 4 "P100CCT-ND" V 10750 1750 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF1000V/P100CCT-ND/118668" V 10750 1750 60  0001 C CNN "URL"
+F 6 "ERJ-6ENF1000V" V 10750 1750 60  0001 C CNN "Man P/N"
+	1    10750 1750
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC

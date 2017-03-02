@@ -2205,4 +2205,10 @@ Wire Wire Line
 	13900 3000 13900 3100
 Wire Wire Line
 	13900 3400 13900 3500
+Text Notes 10150 5350 0    60   ~ 0
+Change to MCP6004 - no resistors
+Text Notes 11650 7650 0    60   ~ 0
+Replace w/ Integrator for 8kHz fc\n
+Text Notes 1750 5900 0    60   ~ 0
+Fix these everywhere they occur
 $EndSCHEMATC
