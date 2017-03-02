@@ -1,6 +1,5 @@
 EESchema Schematic File Version 2
 LIBS:Circuit_layout-rescue
-LIBS:TSI_KiCad_Lib
 LIBS:TSI_HV_Isolater-cache
 LIBS:74xgxx
 LIBS:74xx
@@ -101,7 +100,7 @@ Text Label 5950 1050 0    60   ~ 0
 +5HV
 Wire Wire Line
 	4950 1600 4950 1900
-Text Label 7200 1150 0    60   ~ 0
+Text Label 7200 1100 0    60   ~ 0
 +5HV
 Text Label 7200 1950 0    60   ~ 0
 I/O_Ground
@@ -281,27 +280,19 @@ Wire Wire Line
 	4950 1300 4950 1050
 Text Label 2600 3400 0    60   ~ 0
 V_Measure
-Text HLabel 1100 650  0    60   Input ~ 0
+Text HLabel 1150 1650 0    60   Input ~ 0
 Throttle_LV
-Text HLabel 1100 1700 0    60   Input ~ 0
-+5HV
-Text HLabel 1100 2600 0    60   Input ~ 0
-HV+
-Text HLabel 1100 2800 0    60   Input ~ 0
-HV-
-Text HLabel 1100 1150 0    60   Output ~ 0
-Throttle_HV
-Text HLabel 1100 800  0    60   Input ~ 0
+Text HLabel 1150 1800 0    60   Input ~ 0
 V_Measure
 Wire Wire Line
 	4000 3950 3800 3950
 Wire Wire Line
 	3250 3950 3500 3950
 $Comp
-L +5V #PWR093
+L +5V #PWR116
 U 1 1 58B246C4
 P 4650 2700
-F 0 "#PWR093" H 4650 2550 50  0001 C CNN
+F 0 "#PWR116" H 4650 2550 50  0001 C CNN
 F 1 "+5V" H 4650 2840 50  0000 C CNN
 F 2 "" H 4650 2700 50  0000 C CNN
 F 3 "" H 4650 2700 50  0000 C CNN
@@ -309,10 +300,10 @@ F 3 "" H 4650 2700 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR094
+L +5V #PWR119
 U 1 1 58B24710
 P 4950 2900
-F 0 "#PWR094" H 4950 2750 50  0001 C CNN
+F 0 "#PWR119" H 4950 2750 50  0001 C CNN
 F 1 "+5V" H 4950 3040 50  0000 C CNN
 F 2 "" H 4950 2900 50  0000 C CNN
 F 3 "" H 4950 2900 50  0000 C CNN
@@ -320,10 +311,10 @@ F 3 "" H 4950 2900 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR095
+L +5V #PWR113
 U 1 1 58B2475C
 P 3700 3100
-F 0 "#PWR095" H 3700 2950 50  0001 C CNN
+F 0 "#PWR113" H 3700 2950 50  0001 C CNN
 F 1 "+5V" H 3700 3240 50  0000 C CNN
 F 2 "" H 3700 3100 50  0000 C CNN
 F 3 "" H 3700 3100 50  0000 C CNN
@@ -331,10 +322,10 @@ F 3 "" H 3700 3100 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR096
+L GND #PWR114
 U 1 1 58B247A8
 P 3700 3700
-F 0 "#PWR096" H 3700 3450 50  0001 C CNN
+F 0 "#PWR114" H 3700 3450 50  0001 C CNN
 F 1 "GND" H 3700 3550 50  0000 C CNN
 F 2 "" H 3700 3700 50  0000 C CNN
 F 3 "" H 3700 3700 50  0000 C CNN
@@ -342,10 +333,10 @@ F 3 "" H 3700 3700 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR097
+L GND #PWR117
 U 1 1 58B2480E
 P 4800 4100
-F 0 "#PWR097" H 4800 3850 50  0001 C CNN
+F 0 "#PWR117" H 4800 3850 50  0001 C CNN
 F 1 "GND" H 4800 3950 50  0000 C CNN
 F 2 "" H 4800 4100 50  0000 C CNN
 F 3 "" H 4800 4100 50  0000 C CNN
@@ -355,10 +346,10 @@ $EndComp
 Wire Wire Line
 	4950 1900 4650 1900
 $Comp
-L GND #PWR098
+L GND #PWR115
 U 1 1 58B25770
 P 4650 2000
-F 0 "#PWR098" H 4650 1750 50  0001 C CNN
+F 0 "#PWR115" H 4650 1750 50  0001 C CNN
 F 1 "GND" H 4650 1850 50  0000 C CNN
 F 2 "" H 4650 2000 50  0000 C CNN
 F 3 "" H 4650 2000 50  0000 C CNN
@@ -366,10 +357,10 @@ F 3 "" H 4650 2000 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR099
+L +5V #PWR118
 U 1 1 58B257CF
 P 4950 1050
-F 0 "#PWR099" H 4950 900 50  0001 C CNN
+F 0 "#PWR118" H 4950 900 50  0001 C CNN
 F 1 "+5V" H 4950 1190 50  0000 C CNN
 F 2 "" H 4950 1050 50  0000 C CNN
 F 3 "" H 4950 1050 50  0000 C CNN
@@ -377,32 +368,29 @@ F 3 "" H 4950 1050 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1100 2800 1250 2800
+	1150 1450 1300 1450
 Wire Wire Line
-	1100 2600 1250 2600
+	1150 1250 1300 1250
 Wire Wire Line
-	1100 1150 1250 1150
+	1150 650  1300 650 
 Wire Wire Line
-	1100 800  1250 800 
+	1150 1800 1300 1800
 Wire Wire Line
-	1100 650  1250 650 
-Text Label 1250 650  0    60   ~ 0
+	1150 1650 1300 1650
+Text Label 1300 1650 0    60   ~ 0
 Throttle_LV
-Text Label 1250 800  0    60   ~ 0
+Text Label 1300 1800 0    60   ~ 0
 V_Measure
-Text Label 1250 1150 0    60   ~ 0
+Text Label 1300 650  0    60   ~ 0
 Throttle_HV
-Text Label 1350 1700 0    60   ~ 0
+Text Label 1400 950  0    60   ~ 0
 +5HV
-Text Label 1250 2600 0    60   ~ 0
+Text Label 1300 1250 0    60   ~ 0
 HV+
-Text Label 1250 2800 0    60   ~ 0
+Text Label 1300 1450 0    60   ~ 0
 HV-
 Wire Wire Line
-	1100 1700 1350 1700
-Connection ~ 1200 1700
-Wire Wire Line
-	1200 2000 1200 2100
+	1150 950  1400 950 
 $Comp
 L R R64
 U 1 1 58B6DFCC
@@ -670,20 +658,6 @@ F 6 "MCU0805MD4991BP100" V 6900 1150 60  0001 C CNN "Man P/N"
 	-1   0    0    1   
 $EndComp
 $Comp
-L C C25
-U 1 1 58B44F65
-P 1200 1850
-F 0 "C25" H 1225 1950 50  0000 L CNN
-F 1 "0.1u" H 1225 1750 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805_HandSoldering" H 1238 1700 50  0001 C CNN
-F 3 "http://www.kemet.com/Lists/ProductCatalog/Attachments/53/KEM_C1002_X7R_SMD.pdf" H 1200 1850 50  0001 C CNN
-F 4 "399-1168-1-ND" H 1200 1850 60  0001 C CNN "Digikey P/N"
-F 5 "http://www.digikey.com/product-detail/en/kemet/C0805C104K3RACTU/399-1168-1-ND/411443" H 1200 1850 60  0001 C CNN "URL"
-F 6 "C0805C104K3RACTU" H 1200 1850 60  0001 C CNN "Man P/N"
-	1    1200 1850
-	1    0    0    -1  
-$EndComp
-$Comp
 L ACPL-C870 U19
 U 1 1 58B45431
 P 5450 1250
@@ -697,7 +671,7 @@ F 6 "ACPL-C870-000E" H 5450 1250 60  0001 C CNN "Man P/N"
 	1    5450 1250
 	1    0    0    -1  
 $EndComp
-Text Notes 3400 2450 0    60   ~ 0
+Text Notes 2900 2400 0    60   ~ 0
 Note: Isolation Diff. Amps DO NOT have ass. footprints
 $Comp
 L ACPL-C870 U20
@@ -783,20 +757,15 @@ F 6 "MCP6004T-I/SL" H 3600 3400 60  0001 C CNN "Man P/N"
 	3    3600 3400
 	-1   0    0    -1  
 $EndComp
-Text Label 1350 2100 0    60   ~ 0
+Text Label 1400 1100 0    60   ~ 0
 I/O_Ground
 Text Label 6250 850  0    60   ~ 0
 I/O_Ground
-Connection ~ 1200 2100
 Wire Wire Line
-	1100 2100 1350 2100
-Text HLabel 1100 2100 0    60   Input ~ 0
-I/O_Ground
-Text HLabel 1100 1300 0    60   Output ~ 0
-Throttle_RTN
+	1150 1100 1400 1100
 Wire Wire Line
-	1100 1300 1250 1300
-Text Label 1250 1300 0    60   ~ 0
+	1150 800  1300 800 
+Text Label 1300 800  0    60   ~ 0
 I/O_Ground
 Wire Wire Line
 	6900 2100 7100 2100
@@ -805,7 +774,7 @@ Wire Wire Line
 Wire Wire Line
 	7200 1950 7200 1850
 Wire Wire Line
-	7200 1150 7200 1250
+	7200 1100 7200 1250
 $Comp
 L MCP6001 U21
 U 1 1 58B7DBA9
@@ -817,6 +786,142 @@ F 3 "" H 7350 1750 50  0000 C CNN
 	1    7300 1550
 	1    0    0    -1  
 $EndComp
-Text Notes 7500 1400 0    60   ~ 0
+Text Notes 7100 2350 0    60   ~ 0
 Need datasheet, footprint, part added
+$Comp
+L C C34
+U 1 1 58B8FF60
+P 8650 1550
+F 0 "C34" H 8675 1650 50  0000 L CNN
+F 1 "0.1u" H 8675 1450 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 8688 1400 50  0001 C CNN
+F 3 "http://www.kemet.com/Lists/ProductCatalog/Attachments/53/KEM_C1002_X7R_SMD.pdf" H 8650 1550 50  0001 C CNN
+F 4 "399-1168-1-ND" H 8650 1550 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/kemet/C0805C104K3RACTU/399-1168-1-ND/411443" H 8650 1550 60  0001 C CNN "URL"
+F 6 "C0805C104K3RACTU" H 8650 1550 60  0001 C CNN "Man P/N"
+	1    8650 1550
+	1    0    0    -1  
+$EndComp
+Text Label 8650 1900 0    60   ~ 0
+I/O_Ground
+Text Label 8650 1250 0    60   ~ 0
++5HV
+Wire Wire Line
+	8650 1900 8650 1700
+Wire Wire Line
+	8650 1400 8650 1250
+$Comp
+L C C33
+U 1 1 58B9348B
+P 3250 1450
+F 0 "C33" H 3275 1550 50  0000 L CNN
+F 1 "0.1u" H 3275 1350 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 3288 1300 50  0001 C CNN
+F 3 "http://www.kemet.com/Lists/ProductCatalog/Attachments/53/KEM_C1002_X7R_SMD.pdf" H 3250 1450 50  0001 C CNN
+F 4 "399-1168-1-ND" H 3250 1450 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/kemet/C0805C104K3RACTU/399-1168-1-ND/411443" H 3250 1450 60  0001 C CNN "URL"
+F 6 "C0805C104K3RACTU" H 3250 1450 60  0001 C CNN "Man P/N"
+	1    3250 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR111
+U 1 1 58B93547
+P 3250 1150
+F 0 "#PWR111" H 3250 1000 50  0001 C CNN
+F 1 "+5V" H 3250 1290 50  0000 C CNN
+F 2 "" H 3250 1150 50  0000 C CNN
+F 3 "" H 3250 1150 50  0000 C CNN
+	1    3250 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR112
+U 1 1 58B935AF
+P 3250 1750
+F 0 "#PWR112" H 3250 1500 50  0001 C CNN
+F 1 "GND" H 3250 1600 50  0000 C CNN
+F 2 "" H 3250 1750 50  0000 C CNN
+F 3 "" H 3250 1750 50  0000 C CNN
+	1    3250 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3250 1750 3250 1600
+Wire Wire Line
+	3250 1300 3250 1150
+$Comp
+L C C32
+U 1 1 58B939A0
+P 2250 3400
+F 0 "C32" H 2275 3500 50  0000 L CNN
+F 1 "0.1u" H 2275 3300 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 2288 3250 50  0001 C CNN
+F 3 "http://www.kemet.com/Lists/ProductCatalog/Attachments/53/KEM_C1002_X7R_SMD.pdf" H 2250 3400 50  0001 C CNN
+F 4 "399-1168-1-ND" H 2250 3400 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/kemet/C0805C104K3RACTU/399-1168-1-ND/411443" H 2250 3400 60  0001 C CNN "URL"
+F 6 "C0805C104K3RACTU" H 2250 3400 60  0001 C CNN "Man P/N"
+	1    2250 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR109
+U 1 1 58B939A6
+P 2250 3100
+F 0 "#PWR109" H 2250 2950 50  0001 C CNN
+F 1 "+5V" H 2250 3240 50  0000 C CNN
+F 2 "" H 2250 3100 50  0000 C CNN
+F 3 "" H 2250 3100 50  0000 C CNN
+	1    2250 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR110
+U 1 1 58B939AC
+P 2250 3700
+F 0 "#PWR110" H 2250 3450 50  0001 C CNN
+F 1 "GND" H 2250 3550 50  0000 C CNN
+F 2 "" H 2250 3700 50  0000 C CNN
+F 3 "" H 2250 3700 50  0000 C CNN
+	1    2250 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2250 3700 2250 3550
+Wire Wire Line
+	2250 3250 2250 3100
+$Comp
+L C C35
+U 1 1 58B93A5A
+P 9500 3450
+F 0 "C35" H 9525 3550 50  0000 L CNN
+F 1 "0.1u" H 9525 3350 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 9538 3300 50  0001 C CNN
+F 3 "http://www.kemet.com/Lists/ProductCatalog/Attachments/53/KEM_C1002_X7R_SMD.pdf" H 9500 3450 50  0001 C CNN
+F 4 "399-1168-1-ND" H 9500 3450 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/kemet/C0805C104K3RACTU/399-1168-1-ND/411443" H 9500 3450 60  0001 C CNN "URL"
+F 6 "C0805C104K3RACTU" H 9500 3450 60  0001 C CNN "Man P/N"
+	1    9500 3450
+	1    0    0    -1  
+$EndComp
+Text Label 9500 3800 0    60   ~ 0
+I/O_Ground
+Text Label 9500 3150 0    60   ~ 0
++5HV
+Wire Wire Line
+	9500 3800 9500 3600
+Wire Wire Line
+	9500 3300 9500 3150
+Text GLabel 1150 1250 0    60   Input ~ 0
+HV+
+Text GLabel 1150 1450 0    60   Input ~ 0
+HV-
+Text GLabel 1150 1100 0    60   Input ~ 0
+I/O_Ground
+Text GLabel 1150 950  0    60   Input ~ 0
++5HV
+Text GLabel 1150 800  0    60   Input ~ 0
+Throttle_RTN
+Text GLabel 1150 650  0    60   Input ~ 0
+Throttle_HV
 $EndSCHEMATC

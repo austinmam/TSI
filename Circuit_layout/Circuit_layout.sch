@@ -1,6 +1,5 @@
 EESchema Schematic File Version 2
 LIBS:Circuit_layout-rescue
-LIBS:TSI_KiCad_Lib
 LIBS:TSI_HV_Isolater-cache
 LIBS:74xgxx
 LIBS:74xx
@@ -147,10 +146,10 @@ TDI
 Text GLabel 5150 1750 0    50   BiDi ~ 0
 ~RESET_AVR
 $Comp
-L GND #PWR01
+L GND #PWR13
 U 1 1 58A83B78
 P 6800 5550
-F 0 "#PWR01" H 6800 5300 50  0001 C CNN
+F 0 "#PWR13" H 6800 5300 50  0001 C CNN
 F 1 "GND" H 6800 5400 50  0000 C CNN
 F 2 "" H 6800 5550 50  0000 C CNN
 F 3 "" H 6800 5550 50  0000 C CNN
@@ -158,10 +157,10 @@ F 3 "" H 6800 5550 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR02
+L +5V #PWR12
 U 1 1 58A840F4
 P 6800 1350
-F 0 "#PWR02" H 6800 1200 50  0001 C CNN
+F 0 "#PWR12" H 6800 1200 50  0001 C CNN
 F 1 "+5V" H 6800 1490 50  0000 C CNN
 F 2 "" H 6800 1350 50  0000 C CNN
 F 3 "" H 6800 1350 50  0000 C CNN
@@ -183,10 +182,10 @@ F 6 "ABLS-10.000MHZ-B2-T" H 4500 2300 60  0001 C CNN "Man P/N"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR03
+L GND #PWR10
 U 1 1 58A8695E
 P 4500 2900
-F 0 "#PWR03" H 4500 2650 50  0001 C CNN
+F 0 "#PWR10" H 4500 2650 50  0001 C CNN
 F 1 "GND" H 4500 2750 50  0000 C CNN
 F 2 "" H 4500 2900 50  0000 C CNN
 F 3 "" H 4500 2900 50  0000 C CNN
@@ -214,27 +213,18 @@ F0 "Status Lights" 60
 F1 "StatusLights.sch" 60
 F2 "D_LED_CTRL" I L 10650 3250 60 
 F3 "RTDS_CTRL" I L 10650 3450 60 
-F4 "BP_uC" I R 12200 3350 60 
-F5 "Brake_Light" O R 12200 3550 60 
-F6 "Heartbeat" I L 10650 3600 60 
-F7 "Spare_Red" I L 10650 3750 60 
-F8 "Spare_Blue" I L 10650 3900 60 
-F9 "RTDS" I R 12200 3750 60 
-F10 "Drive_LED" I R 12200 3900 60 
-F11 "IMD_Fault_LED" O R 12200 4100 60 
-F12 "IMD_Status" I R 12200 4300 60 
+F4 "BP_uC" I L 10650 4050 60 
+F5 "Heartbeat" I L 10650 3600 60 
+F6 "Spare_Red" I L 10650 3750 60 
+F7 "Spare_Blue" I L 10650 3900 60 
 $EndSheet
 $Sheet
 S 10600 1400 1600 950 
 U 58ADE5BC
 F0 "Power System" 60
 F1 "PowerSystem.sch" 60
-F2 "HV+" I R 12200 1550 60 
-F3 "HV-" I R 12200 1700 60 
-F4 "HVPL" I R 12200 1850 60 
-F5 "LV_RTN" I R 12200 2150 60 
 $EndSheet
-Text Label 4900 3550 0    60   ~ 0
+Text Label 10000 5300 0    60   ~ 0
 APPS2
 Text Label 4900 3650 0    60   ~ 0
 IMD
@@ -257,18 +247,12 @@ S 10600 5200 1700 1250
 U 58A289D2
 F0 "ThrottlePlausibility" 60
 F1 "ThrottlePlausibility.sch" 60
-F2 "RTN_GLV" O L 10600 5600 60 
-F3 "APPS1" O L 10600 5750 60 
-F4 "APPS2" O L 10600 5900 60 
-F5 "APPS1_10" O L 10600 5300 60 
-F6 "APPS2_5" O L 10600 5450 60 
-F7 "Throttle_SEL" I R 12300 5600 60 
-F8 "Throttle_uC" I R 12300 5450 60 
-F9 "Throttle_LV" O R 12300 5300 60 
-F10 "BP" I R 12300 6050 60 
-F11 "Brake_5" O R 12300 6350 60 
-F12 "BP_uC" I R 12300 6200 60 
-F13 "Throttle_PL" O R 12300 5750 60 
+F2 "APPS2" O L 10600 5300 60 
+F3 "Throttle_SEL" I L 10600 5750 60 
+F4 "Throttle_uC" I L 10600 5600 60 
+F5 "Throttle_LV" O L 10600 5450 60 
+F6 "BP_uC" I L 10600 6050 60 
+F7 "Throttle_PL" O L 10600 5900 60 
 $EndSheet
 Text Notes 950  4300 0    99   ~ 0
 Current Measurement
@@ -328,10 +312,10 @@ F 6 "ERJ-6ENF1001V" V 2100 1300 60  0001 C CNN "Man P/N"
 	0    1    1    0   
 $EndComp
 $Comp
-L +5V #PWR04
+L +5V #PWR7
 U 1 1 58B52706
 P 3400 1150
-F 0 "#PWR04" H 3400 1000 50  0001 C CNN
+F 0 "#PWR7" H 3400 1000 50  0001 C CNN
 F 1 "+5V" H 3400 1290 50  0000 C CNN
 F 2 "" H 3400 1150 50  0000 C CNN
 F 3 "" H 3400 1150 50  0000 C CNN
@@ -355,10 +339,10 @@ $EndComp
 Text Label 8750 1750 2    60   ~ 0
 Safety_Loop
 $Comp
-L GND #PWR05
+L GND #PWR4
 U 1 1 58B230AC
 P 2600 5600
-F 0 "#PWR05" H 2600 5350 50  0001 C CNN
+F 0 "#PWR4" H 2600 5350 50  0001 C CNN
 F 1 "GND" H 2600 5450 50  0000 C CNN
 F 2 "" H 2600 5600 50  0000 C CNN
 F 3 "" H 2600 5600 50  0000 C CNN
@@ -366,10 +350,10 @@ F 3 "" H 2600 5600 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR06
+L GND #PWR2
 U 1 1 58B23714
 P 1650 5900
-F 0 "#PWR06" H 1650 5650 50  0001 C CNN
+F 0 "#PWR2" H 1650 5650 50  0001 C CNN
 F 1 "GND" H 1650 5750 50  0000 C CNN
 F 2 "" H 1650 5900 50  0000 C CNN
 F 3 "" H 1650 5900 50  0000 C CNN
@@ -377,10 +361,10 @@ F 3 "" H 1650 5900 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR07
+L GND #PWR1
 U 1 1 58B237F4
 P 1650 4600
-F 0 "#PWR07" H 1650 4350 50  0001 C CNN
+F 0 "#PWR1" H 1650 4350 50  0001 C CNN
 F 1 "GND" H 1650 4450 50  0000 C CNN
 F 2 "" H 1650 4600 50  0000 C CNN
 F 3 "" H 1650 4600 50  0000 C CNN
@@ -388,21 +372,21 @@ F 3 "" H 1650 4600 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L +5V #PWR08
+L +5V #PWR3
 U 1 1 58B238C3
-P 2600 5000
-F 0 "#PWR08" H 2600 4850 50  0001 C CNN
-F 1 "+5V" H 2600 5140 50  0000 C CNN
-F 2 "" H 2600 5000 50  0000 C CNN
-F 3 "" H 2600 5000 50  0000 C CNN
-	1    2600 5000
+P 2600 4900
+F 0 "#PWR3" H 2600 4750 50  0001 C CNN
+F 1 "+5V" H 2600 5040 50  0000 C CNN
+F 2 "" H 2600 4900 50  0000 C CNN
+F 3 "" H 2600 4900 50  0000 C CNN
+	1    2600 4900
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR09
+L +5V #PWR5
 U 1 1 58B25F48
 P 2800 2400
-F 0 "#PWR09" H 2800 2250 50  0001 C CNN
+F 0 "#PWR5" H 2800 2250 50  0001 C CNN
 F 1 "+5V" H 2800 2540 50  0000 C CNN
 F 2 "" H 2800 2400 50  0000 C CNN
 F 3 "" H 2800 2400 50  0000 C CNN
@@ -410,10 +394,10 @@ F 3 "" H 2800 2400 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR010
+L GND #PWR6
 U 1 1 58B26028
 P 2800 3600
-F 0 "#PWR010" H 2800 3350 50  0001 C CNN
+F 0 "#PWR6" H 2800 3350 50  0001 C CNN
 F 1 "GND" H 2800 3450 50  0000 C CNN
 F 2 "" H 2800 3600 50  0000 C CNN
 F 3 "" H 2800 3600 50  0000 C CNN
@@ -421,18 +405,12 @@ F 3 "" H 2800 3600 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Sheet
-S 1500 6700 1600 1000
+S 850  6650 1600 1000
 U 58AF3ED4
 F0 "Isolators" 60
 F1 "isolators.sch" 60
-F2 "Throttle_LV" I L 1500 6800 60 
-F3 "+5HV" I R 3100 7100 60 
-F4 "HV+" I R 3100 7450 60 
-F5 "HV-" I R 3100 7600 60 
-F6 "Throttle_HV" O R 3100 6800 60 
-F7 "V_Measure" I L 1500 6950 60 
-F8 "I/O_Ground" I R 3100 7250 60 
-F9 "Throttle_RTN" O R 3100 6950 60 
+F2 "Throttle_LV" I R 2450 6750 60 
+F3 "V_Measure" I R 2450 6950 60 
 $EndSheet
 Text Notes 1250 2750 0    99   ~ 0
 IMD PWM LPF
@@ -604,12 +582,6 @@ F 6 "C0805C100J5GACTU" H 4350 2650 60  0001 C CNN "Man P/N"
 	1    4350 2650
 	1    0    0    -1  
 $EndComp
-Text GLabel 12350 3550 2    60   Input ~ 0
-Brake_Light
-Text Notes 5550 5950 0    60   ~ 0
-Add Bypass Caps\n\nAdd Mounting Holes
-Text Notes 3050 3750 0    60   ~ 0
-Add Bypass Caps
 NoConn ~ 8150 1850
 NoConn ~ 8150 1950
 NoConn ~ 8150 2350
@@ -646,68 +618,26 @@ AIRs+
 Text GLabel 1550 1500 0    60   Input ~ 0
 AIRs-
 NoConn ~ 8150 5150
-Text Label 10150 5300 0    60   ~ 0
-APPS1_10
-Text Label 10150 5450 0    60   ~ 0
-APPS2_5
-Text Label 10150 5600 0    60   ~ 0
-RTN_GLV
-Text Label 10150 5750 0    60   ~ 0
-APPS1
-Text Label 10150 5900 0    60   ~ 0
-APPS2
-Text Label 12400 5300 0    60   ~ 0
+Text Label 10000 5450 0    60   ~ 0
 Throttle_LV
-Text Label 12400 5450 0    60   ~ 0
+Text Label 10000 5600 0    60   ~ 0
 Throttle_uC
-Text Label 12400 5600 0    60   ~ 0
+Text Label 10000 5750 0    60   ~ 0
 Throttle_SEL
-Text Label 12400 5750 0    60   ~ 0
+Text Label 10000 5900 0    60   ~ 0
 Throttle_PL
-Text Label 12400 6200 0    60   ~ 0
+Text Label 10000 6050 0    60   ~ 0
 BP_uC
-Text Label 12300 3350 0    60   ~ 0
+Text Label 10050 4050 0    60   ~ 0
 BP_uC
 Text Label 10050 3250 0    60   ~ 0
 D_LED_CTRL
 Text Label 10050 3450 0    60   ~ 0
 RTDS_CTRL
-Text GLabel 12400 6350 2    60   Input ~ 0
-Brake_5
-Text GLabel 12400 6050 2    60   Input ~ 0
-BP
-Text GLabel 10150 5300 0    60   Input ~ 0
-APPS1_10
-Text GLabel 10150 5450 0    60   Input ~ 0
-APPS2_5
-Text GLabel 10150 5600 0    60   Input ~ 0
-RTN_GLV
-Text GLabel 10150 5750 0    60   Input ~ 0
-APPS1
-Text GLabel 10150 5900 0    60   Input ~ 0
-APPS2
-Text GLabel 3300 7450 2    60   Input ~ 0
-HV+
-Text GLabel 3300 7600 2    60   Input ~ 0
-HV-
-Text GLabel 3300 7250 2    60   Input ~ 0
-I/O_Ground
-Text GLabel 3300 7100 2    60   Input ~ 0
-+5HV
-Text GLabel 3300 6950 2    60   Input ~ 0
-Throttle_RTN
-Text GLabel 3300 6800 2    60   Input ~ 0
-Throttle_HV
-Text Label 950  6800 0    60   ~ 0
+Text Label 2650 6750 0    60   ~ 0
 Throttle_LV
-Text Label 950  6950 0    60   ~ 0
+Text Label 2650 6950 0    60   ~ 0
 V_Measure
-Text GLabel 12350 1550 2    60   Input ~ 0
-HV+
-Text GLabel 12350 1700 2    60   Input ~ 0
-HV-
-Text GLabel 12350 1850 2    60   Input ~ 0
-HVPL
 Text GLabel 1400 2950 0    60   Input ~ 0
 IMD_PWM
 Text Label 10050 3600 0    60   ~ 0
@@ -773,8 +703,6 @@ Wire Wire Line
 Wire Wire Line
 	4500 2800 4500 2900
 Connection ~ 4500 2800
-Wire Wire Line
-	5550 3550 4900 3550
 Wire Wire Line
 	5550 3650 4900 3650
 Wire Wire Line
@@ -843,8 +771,6 @@ Wire Wire Line
 Wire Wire Line
 	2450 2600 2450 2950
 Wire Wire Line
-	2800 2400 2800 2750
-Wire Wire Line
 	2000 2950 2000 3050
 Connection ~ 2000 2950
 Wire Wire Line
@@ -883,63 +809,11 @@ Wire Wire Line
 Wire Wire Line
 	1650 5850 1650 5900
 Wire Wire Line
-	12350 3550 12200 3550
-Wire Wire Line
-	10150 5300 10600 5300
-Wire Wire Line
-	10150 5450 10600 5450
-Wire Wire Line
-	10150 5600 10600 5600
-Wire Wire Line
-	10150 5750 10600 5750
-Wire Wire Line
-	10150 5900 10600 5900
-Wire Wire Line
-	12300 5300 12400 5300
-Wire Wire Line
-	12300 5450 12400 5450
-Wire Wire Line
-	12300 5600 12400 5600
-Wire Wire Line
-	12300 5750 12400 5750
-Wire Wire Line
-	12300 6050 12400 6050
-Wire Wire Line
-	12300 6200 12400 6200
-Wire Wire Line
-	12300 6350 12400 6350
-Wire Wire Line
-	12200 3350 12300 3350
-Wire Wire Line
 	1850 2950 2150 2950
-Wire Wire Line
-	3100 7600 3300 7600
-Wire Wire Line
-	3100 7450 3300 7450
-Wire Wire Line
-	3300 7250 3100 7250
-Wire Wire Line
-	3100 7100 3300 7100
-Wire Wire Line
-	3100 6800 3300 6800
-Wire Wire Line
-	3100 6950 3300 6950
-Wire Wire Line
-	1500 6800 950  6800
-Wire Wire Line
-	950  6950 1500 6950
 Wire Wire Line
 	8150 3250 8800 3250
 Wire Wire Line
 	8150 3350 8800 3350
-Wire Wire Line
-	12200 2150 12350 2150
-Wire Wire Line
-	12200 1850 12350 1850
-Wire Wire Line
-	12200 1700 12350 1700
-Wire Wire Line
-	12200 1550 12350 1550
 Wire Wire Line
 	1400 2950 1550 2950
 Wire Wire Line
@@ -956,30 +830,12 @@ Text Label 8800 3250 2    60   ~ 0
 Throttle_SEL
 Text Label 8800 3350 2    60   ~ 0
 Throttle_uC
-Text GLabel 12350 3750 2    60   Input ~ 0
-RTDS
-Text GLabel 12350 3900 2    60   Input ~ 0
-Drive_LED
-Wire Wire Line
-	12200 3750 12350 3750
-Wire Wire Line
-	12200 3900 12350 3900
 Text GLabel 1200 5400 0    60   Input ~ 0
 A2_LV
 Text GLabel 1200 5200 0    60   Input ~ 0
 A1_LV
-Wire Wire Line
-	12200 4300 12350 4300
-Text GLabel 12350 4300 2    60   Input ~ 0
-IMD_Status
-Text GLabel 12350 4100 2    60   Input ~ 0
-IMD_Fault_LED
-Wire Wire Line
-	12200 4100 12350 4100
 Text GLabel 8750 2250 2    60   Input ~ 0
 Drive_BTN
-Text GLabel 12350 2150 2    60   Input ~ 0
-+24V_RTN
 Text Notes 1550 950  0    99   ~ 0
 AIRs Measurement
 Text Notes 10700 5000 0    99   ~ 0
@@ -988,21 +844,121 @@ Text Notes 10850 2950 0    99   ~ 0
 Status Lights
 Text Notes 10800 1200 0    99   ~ 0
 DC DC Converters
-Text Notes 1600 6500 0    99   ~ 0
+Text Notes 950  6450 0    99   ~ 0
 Isolators
-Wire Wire Line
-	5550 2450 5350 2450
-Wire Wire Line
-	5350 2450 5350 2400
 $Comp
-L +5V #PWR011
-U 1 1 58BDF230
-P 5350 2400
-F 0 "#PWR011" H 5350 2250 50  0001 C CNN
-F 1 "+5V" H 5350 2540 50  0000 C CNN
-F 2 "" H 5350 2400 50  0000 C CNN
-F 3 "" H 5350 2400 50  0000 C CNN
-	1    5350 2400
+L C C31
+U 1 1 58B845F9
+P 5400 2650
+F 0 "C31" H 5425 2750 50  0000 L CNN
+F 1 "0.1u" H 5425 2550 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 5438 2500 50  0001 C CNN
+F 3 "http://www.kemet.com/Lists/ProductCatalog/Attachments/53/KEM_C1002_X7R_SMD.pdf" H 5400 2650 50  0001 C CNN
+F 4 "399-1168-1-ND" H 5400 2650 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/kemet/C0805C104K3RACTU/399-1168-1-ND/411443" H 5400 2650 60  0001 C CNN "URL"
+F 6 "C0805C104K3RACTU" H 5400 2650 60  0001 C CNN "Man P/N"
+	1    5400 2650
 	1    0    0    -1  
 $EndComp
+$Comp
+L GND #PWR11
+U 1 1 58B84EB4
+P 5400 2850
+F 0 "#PWR11" H 5400 2600 50  0001 C CNN
+F 1 "GND" H 5400 2700 50  0000 C CNN
+F 2 "" H 5400 2850 50  0000 C CNN
+F 3 "" H 5400 2850 50  0000 C CNN
+	1    5400 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 2850 5400 2800
+Wire Wire Line
+	5400 2500 5400 2450
+Wire Wire Line
+	5400 2450 5550 2450
+$Comp
+L C C25
+U 1 1 58B8C3A4
+P 3900 5250
+F 0 "C25" H 3925 5350 50  0000 L CNN
+F 1 "0.1u" H 3925 5150 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 3938 5100 50  0001 C CNN
+F 3 "http://www.kemet.com/Lists/ProductCatalog/Attachments/53/KEM_C1002_X7R_SMD.pdf" H 3900 5250 50  0001 C CNN
+F 4 "399-1168-1-ND" H 3900 5250 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/kemet/C0805C104K3RACTU/399-1168-1-ND/411443" H 3900 5250 60  0001 C CNN "URL"
+F 6 "C0805C104K3RACTU" H 3900 5250 60  0001 C CNN "Man P/N"
+	1    3900 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR8
+U 1 1 58B98E0E
+P 3900 4950
+F 0 "#PWR8" H 3900 4800 50  0001 C CNN
+F 1 "+5V" H 3900 5090 50  0000 C CNN
+F 2 "" H 3900 4950 50  0000 C CNN
+F 3 "" H 3900 4950 50  0000 C CNN
+	1    3900 4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2600 5000 2600 4900
+$Comp
+L GND #PWR9
+U 1 1 58B99168
+P 3900 5550
+F 0 "#PWR9" H 3900 5300 50  0001 C CNN
+F 1 "GND" H 3900 5400 50  0000 C CNN
+F 2 "" H 3900 5550 50  0000 C CNN
+F 3 "" H 3900 5550 50  0000 C CNN
+	1    3900 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 5550 3900 5400
+Wire Wire Line
+	3900 5100 3900 4950
+Wire Wire Line
+	2800 2400 2800 2750
+$Comp
+L PWR_FLAG #FLG1
+U 1 1 58BA7135
+P 2500 2450
+F 0 "#FLG1" H 2500 2545 50  0001 C CNN
+F 1 "PWR_FLAG" H 2500 2630 50  0000 C CNN
+F 2 "" H 2500 2450 50  0000 C CNN
+F 3 "" H 2500 2450 50  0000 C CNN
+	1    2500 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 2450 2500 2500
+Wire Wire Line
+	2500 2500 2800 2500
+Connection ~ 2800 2500
+Wire Wire Line
+	10050 4050 10650 4050
+Wire Wire Line
+	10000 5300 10600 5300
+Wire Wire Line
+	10000 6050 10600 6050
+Wire Wire Line
+	10000 5900 10600 5900
+Wire Wire Line
+	10000 5750 10600 5750
+Wire Wire Line
+	10000 5600 10600 5600
+Wire Wire Line
+	10000 5450 10600 5450
+Wire Wire Line
+	2450 6750 2650 6750
+Wire Wire Line
+	2450 6950 2650 6950
+Text GLabel 4900 3550 0    60   Input ~ 0
+APPS2
+Wire Wire Line
+	4900 3550 5550 3550
+Text Notes 4800 5700 0    60   ~ 0
+Add Mounting Holes
 $EndSCHEMATC

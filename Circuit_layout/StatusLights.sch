@@ -1,6 +1,5 @@
 EESchema Schematic File Version 2
 LIBS:Circuit_layout-rescue
-LIBS:TSI_KiCad_Lib
 LIBS:TSI_HV_Isolater-cache
 LIBS:74xgxx
 LIBS:74xx
@@ -113,10 +112,10 @@ F 7 "http://www.digikey.com/product-detail/en/toshiba-semiconductor-and-storage/
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR028
+L GND #PWR31
 U 1 1 58AF33D9
 P 5050 2150
-F 0 "#PWR028" H 5050 1900 50  0001 C CNN
+F 0 "#PWR31" H 5050 1900 50  0001 C CNN
 F 1 "GND" H 5050 2000 50  0000 C CNN
 F 2 "" H 5050 2150 50  0000 C CNN
 F 3 "" H 5050 2150 50  0000 C CNN
@@ -124,10 +123,10 @@ F 3 "" H 5050 2150 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +24V #PWR029
+L +24V #PWR33
 U 1 1 58AF3526
 P 6450 1700
-F 0 "#PWR029" H 6450 1550 50  0001 C CNN
+F 0 "#PWR33" H 6450 1550 50  0001 C CNN
 F 1 "+24V" H 6450 1840 50  0000 C CNN
 F 2 "" H 6450 1700 50  0000 C CNN
 F 3 "" H 6450 1700 50  0000 C CNN
@@ -150,10 +149,10 @@ F 7 "http://www.digikey.com/product-detail/en/toshiba-semiconductor-and-storage/
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR030
+L GND #PWR32
 U 1 1 58AF4273
 P 5050 3300
-F 0 "#PWR030" H 5050 3050 50  0001 C CNN
+F 0 "#PWR32" H 5050 3050 50  0001 C CNN
 F 1 "GND" H 5050 3150 50  0000 C CNN
 F 2 "" H 5050 3300 50  0000 C CNN
 F 3 "" H 5050 3300 50  0000 C CNN
@@ -161,10 +160,10 @@ F 3 "" H 5050 3300 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +24V #PWR031
+L +24V #PWR34
 U 1 1 58AF427B
 P 6450 2850
-F 0 "#PWR031" H 6450 2700 50  0001 C CNN
+F 0 "#PWR34" H 6450 2700 50  0001 C CNN
 F 1 "+24V" H 6450 2990 50  0000 C CNN
 F 2 "" H 6450 2850 50  0000 C CNN
 F 3 "" H 6450 2850 50  0000 C CNN
@@ -199,11 +198,11 @@ F 6 "ERJ-6ENF2001V" V 6150 3000 60  0001 C CNN "Man P/N"
 	1    6150 3000
 	0    1    1    0   
 $EndComp
-Text HLabel 4050 3000 0    60   Input ~ 0
+Text HLabel 1250 1750 0    60   Input ~ 0
 D_LED_CTRL
-Text HLabel 4100 1850 0    60   Input ~ 0
+Text HLabel 1250 1600 0    60   Input ~ 0
 RTDS_CTRL
-Text Notes 2750 4600 0    60   ~ 0
+Text Notes 3200 4950 0    60   ~ 0
 Confirm sizing of R:\nDatasheet lists 10mA/220mA as current draw of light.\nDesign for max? Currently roughly 80mA
 $Comp
 L R R18
@@ -234,10 +233,10 @@ F 6 "LG R971-KN-1" H 9300 1800 60  0001 C CNN "Man P/N"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR032
+L GND #PWR37
 U 1 1 58B26825
 P 8800 1900
-F 0 "#PWR032" H 8800 1650 50  0001 C CNN
+F 0 "#PWR37" H 8800 1650 50  0001 C CNN
 F 1 "GND" H 8800 1750 50  0000 C CNN
 F 2 "" H 8800 1900 50  0000 C CNN
 F 3 "" H 8800 1900 50  0000 C CNN
@@ -261,10 +260,10 @@ F 6 "LY R976-PS-36" H 9300 2250 60  0001 C CNN "Man P/N"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR033
+L GND #PWR38
 U 1 1 58B26F4E
 P 8800 2350
-F 0 "#PWR033" H 8800 2100 50  0001 C CNN
+F 0 "#PWR38" H 8800 2100 50  0001 C CNN
 F 1 "GND" H 8800 2200 50  0000 C CNN
 F 2 "" H 8800 2350 50  0000 C CNN
 F 3 "" H 8800 2350 50  0000 C CNN
@@ -288,10 +287,10 @@ F 6 "LS R976-NR-1" H 9300 2700 60  0001 C CNN "Man P/N"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR034
+L GND #PWR39
 U 1 1 58B272AA
 P 8800 2800
-F 0 "#PWR034" H 8800 2550 50  0001 C CNN
+F 0 "#PWR39" H 8800 2550 50  0001 C CNN
 F 1 "GND" H 8800 2650 50  0000 C CNN
 F 2 "" H 8800 2800 50  0000 C CNN
 F 3 "" H 8800 2800 50  0000 C CNN
@@ -315,10 +314,10 @@ F 6 "HSMR-C170" H 9300 3150 60  0001 C CNN "Man P/N"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR035
+L GND #PWR40
 U 1 1 58B27330
 P 8800 3250
-F 0 "#PWR035" H 8800 3000 50  0001 C CNN
+F 0 "#PWR40" H 8800 3000 50  0001 C CNN
 F 1 "GND" H 8800 3100 50  0000 C CNN
 F 2 "" H 8800 3250 50  0000 C CNN
 F 3 "" H 8800 3250 50  0000 C CNN
@@ -370,10 +369,10 @@ F 6 "ERJ-6ENF1001V" V 9850 3150 60  0001 C CNN "Man P/N"
 	0    1    1    0   
 $EndComp
 $Comp
-L +5V #PWR036
+L +5V #PWR41
 U 1 1 58B2809B
 P 10300 1800
-F 0 "#PWR036" H 10300 1650 50  0001 C CNN
+F 0 "#PWR41" H 10300 1650 50  0001 C CNN
 F 1 "+5V" H 10300 1940 50  0000 C CNN
 F 2 "" H 10300 1800 50  0000 C CNN
 F 3 "" H 10300 1800 50  0000 C CNN
@@ -385,69 +384,69 @@ Status/Debug LEDs
 Text Notes 9800 3550 0    60   ~ 0
 Make 100ohm
 $Comp
-L GND #PWR037
+L GND #PWR30
 U 1 1 58B21DFD
-P 2600 5450
-F 0 "#PWR037" H 2600 5200 50  0001 C CNN
-F 1 "GND" H 2600 5300 50  0000 C CNN
-F 2 "" H 2600 5450 50  0000 C CNN
-F 3 "" H 2600 5450 50  0000 C CNN
-	1    2600 5450
+P 3000 5900
+F 0 "#PWR30" H 3000 5650 50  0001 C CNN
+F 1 "GND" H 3000 5750 50  0000 C CNN
+F 2 "" H 3000 5900 50  0000 C CNN
+F 3 "" H 3000 5900 50  0000 C CNN
+	1    3000 5900
 	1    0    0    -1  
 $EndComp
-Text Notes 1550 4700 0    99   ~ 0
+Text Notes 1950 5150 0    99   ~ 0
 Brake Light
 $Comp
-L +12V #PWR038
+L +12V #PWR29
 U 1 1 58B22590
-P 2600 4050
-F 0 "#PWR038" H 2600 3900 50  0001 C CNN
-F 1 "+12V" H 2600 4190 50  0000 C CNN
-F 2 "" H 2600 4050 50  0000 C CNN
-F 3 "" H 2600 4050 50  0000 C CNN
-	1    2600 4050
+P 3000 4500
+F 0 "#PWR29" H 3000 4350 50  0001 C CNN
+F 1 "+12V" H 3000 4640 50  0000 C CNN
+F 2 "" H 3000 4500 50  0000 C CNN
+F 3 "" H 3000 4500 50  0000 C CNN
+	1    3000 4500
 	1    0    0    -1  
 $EndComp
 $Comp
 L R R13
 U 1 1 58B5DC19
-P 2000 5100
-F 0 "R13" V 2080 5100 50  0000 C CNN
-F 1 "1k" V 2000 5100 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 1930 5100 50  0001 C CNN
-F 3 "" H 2000 5100 50  0000 C CNN
-F 4 "P1.00KCCT-ND" V 2000 5100 60  0001 C CNN "DigiKey P/N"
-F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF1001V/P1.00KCCT-ND/118957" V 2000 5100 60  0001 C CNN "URL"
-F 6 "ERJ-6ENF1001V" V 2000 5100 60  0001 C CNN "Man P/N"
-	1    2000 5100
+P 2400 5550
+F 0 "R13" V 2480 5550 50  0000 C CNN
+F 1 "1k" V 2400 5550 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 2330 5550 50  0001 C CNN
+F 3 "" H 2400 5550 50  0000 C CNN
+F 4 "P1.00KCCT-ND" V 2400 5550 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF1001V/P1.00KCCT-ND/118957" V 2400 5550 60  0001 C CNN "URL"
+F 6 "ERJ-6ENF1001V" V 2400 5550 60  0001 C CNN "Man P/N"
+	1    2400 5550
 	0    1    1    0   
 $EndComp
 $Comp
 L MMBF170 Q1
 U 1 1 58B375B3
-P 2500 5050
-F 0 "Q1" H 2700 5125 50  0000 L CNN
-F 1 "MMBF170" H 2700 5050 50  0000 L CNN
-F 2 "TO_SOT_Packages_SMD:SOT-23" H 2700 4975 50  0001 L CIN
-F 3 "https://www.fairchildsemi.com/datasheets/MM/MMBF170.pdf" H 2500 5050 50  0001 L CNN
-F 4 "MMBF170CT-ND" H 2500 5050 60  0001 C CNN "Digikey P/N"
-F 5 "http://www.digikey.com/product-detail/en/fairchild-on-semiconductor/MMBF170/MMBF170CT-ND/244295" H 2500 5050 60  0001 C CNN "URL"
-F 6 "MMBF170" H 2500 5050 60  0001 C CNN "Man P/N"
-	1    2500 5050
+P 2900 5500
+F 0 "Q1" H 3100 5575 50  0000 L CNN
+F 1 "MMBF170" H 3100 5500 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 3100 5425 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/MM/MMBF170.pdf" H 2900 5500 50  0001 L CNN
+F 4 "MMBF170CT-ND" H 2900 5500 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/fairchild-on-semiconductor/MMBF170/MMBF170CT-ND/244295" H 2900 5500 60  0001 C CNN "URL"
+F 6 "MMBF170" H 2900 5500 60  0001 C CNN "Man P/N"
+	1    2900 5500
 	1    0    0    -1  
 $EndComp
 $Comp
 L R R17
 U 1 1 58B384ED
-P 2600 4450
-F 0 "R17" V 2680 4450 50  0000 C CNN
-F 1 "150" V 2600 4450 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 2530 4450 50  0001 C CNN
-F 3 "" H 2600 4450 50  0000 C CNN
-F 4 "311-150CRCT-ND" V 2600 4450 60  0001 C CNN "DigiKey P/N"
-F 5 "http://www.digikey.com/product-detail/en/yageo/RC0805FR-07150RL/311-150CRCT-ND/730560" V 2600 4450 60  0001 C CNN "URL"
-F 6 "RC0805FR-07150RL" V 2600 4450 60  0001 C CNN "Man P/N"
-	1    2600 4450
+P 3000 4900
+F 0 "R17" V 3080 4900 50  0000 C CNN
+F 1 "150" V 3000 4900 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 2930 4900 50  0001 C CNN
+F 3 "" H 3000 4900 50  0000 C CNN
+F 4 "311-150CRCT-ND" V 3000 4900 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/yageo/RC0805FR-07150RL/311-150CRCT-ND/730560" V 3000 4900 60  0001 C CNN "URL"
+F 6 "RC0805FR-07150RL" V 3000 4900 60  0001 C CNN "Man P/N"
+	1    3000 4900
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -478,75 +477,65 @@ F 6 "ERJ-6ENF2001V" V 6200 1850 60  0001 C CNN "Man P/N"
 	1    6200 1850
 	0    1    1    0   
 $EndComp
-Text HLabel 1250 5100 0    60   Input ~ 0
+Text HLabel 1650 5550 0    60   Input ~ 0
 BP_uC
-Text HLabel 3150 4800 2    60   Output ~ 0
-Brake_Light
-Text HLabel 10300 2250 2    60   Input ~ 0
+Text HLabel 1250 1900 0    60   Input ~ 0
 Heartbeat
-Text HLabel 10300 2700 2    60   Input ~ 0
+Text HLabel 1250 2050 0    60   Input ~ 0
 Spare_Red
-Text HLabel 10300 3150 2    60   Input ~ 0
+Text HLabel 1250 2200 0    60   Input ~ 0
 Spare_Blue
-Text HLabel 6000 2050 2    60   Input ~ 0
-RTDS
-Text HLabel 6200 3200 2    60   Input ~ 0
-Drive_LED
 $Comp
 L BSS84 Q3
 U 1 1 58BB9EF8
-P 6350 5050
-F 0 "Q3" H 6600 5125 50  0000 L CNN
-F 1 "BSS84" H 6600 5050 50  0000 L CNN
-F 2 "SOT-23" H 6600 4975 50  0000 L CIN
-F 3 "" H 6350 5050 50  0000 L CNN
-	1    6350 5050
+P 8200 5000
+F 0 "Q3" H 8450 5075 50  0000 L CNN
+F 1 "BSS84" H 8450 5000 50  0000 L CNN
+F 2 "SOT-23" H 8450 4925 50  0000 L CIN
+F 3 "" H 8200 5000 50  0000 L CNN
+	1    8200 5000
 	1    0    0    -1  
 $EndComp
 $Comp
 L R R85
 U 1 1 58BBA4D2
-P 6450 5600
-F 0 "R85" V 6530 5600 50  0000 C CNN
-F 1 "2k" V 6450 5600 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 6380 5600 50  0001 C CNN
-F 3 "" H 6450 5600 50  0000 C CNN
-F 4 "P2.00KCCT-ND" V 6450 5600 60  0001 C CNN "DigiKey P/N"
-F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF2001V/P2.00KCCT-ND/119044" V 6450 5600 60  0001 C CNN "URL"
-F 6 "ERJ-6ENF2001V" V 6450 5600 60  0001 C CNN "Man P/N"
-	1    6450 5600
+P 8300 5550
+F 0 "R85" V 8380 5550 50  0000 C CNN
+F 1 "2k" V 8300 5550 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 8230 5550 50  0001 C CNN
+F 3 "" H 8300 5550 50  0000 C CNN
+F 4 "P2.00KCCT-ND" V 8300 5550 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF2001V/P2.00KCCT-ND/119044" V 8300 5550 60  0001 C CNN "URL"
+F 6 "ERJ-6ENF2001V" V 8300 5550 60  0001 C CNN "Man P/N"
+	1    8300 5550
 	-1   0    0    1   
 $EndComp
 $Comp
-L GND #PWR039
+L GND #PWR36
 U 1 1 58BBA652
-P 6450 6000
-F 0 "#PWR039" H 6450 5750 50  0001 C CNN
-F 1 "GND" H 6450 5850 50  0000 C CNN
-F 2 "" H 6450 6000 50  0000 C CNN
-F 3 "" H 6450 6000 50  0000 C CNN
-	1    6450 6000
+P 8300 5950
+F 0 "#PWR36" H 8300 5700 50  0001 C CNN
+F 1 "GND" H 8300 5800 50  0000 C CNN
+F 2 "" H 8300 5950 50  0000 C CNN
+F 3 "" H 8300 5950 50  0000 C CNN
+	1    8300 5950
 	1    0    0    -1  
 $EndComp
-Text HLabel 6950 5350 2    60   Output ~ 0
-IMD_Fault_LED
 $Comp
 L R R84
 U 1 1 58BBA9F7
-P 5750 5100
-F 0 "R84" V 5830 5100 50  0000 C CNN
-F 1 "1k" V 5750 5100 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 5680 5100 50  0001 C CNN
-F 3 "" H 5750 5100 50  0000 C CNN
-F 4 "P1.00KCCT-ND" V 5750 5100 60  0001 C CNN "DigiKey P/N"
-F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF1001V/P1.00KCCT-ND/118957" V 5750 5100 60  0001 C CNN "URL"
-F 6 "ERJ-6ENF1001V" V 5750 5100 60  0001 C CNN "Man P/N"
-	1    5750 5100
+P 7600 5050
+F 0 "R84" V 7680 5050 50  0000 C CNN
+F 1 "1k" V 7600 5050 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 7530 5050 50  0001 C CNN
+F 3 "" H 7600 5050 50  0000 C CNN
+F 4 "P1.00KCCT-ND" V 7600 5050 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF1001V/P1.00KCCT-ND/118957" V 7600 5050 60  0001 C CNN "URL"
+F 6 "ERJ-6ENF1001V" V 7600 5050 60  0001 C CNN "Man P/N"
+	1    7600 5050
 	0    1    1    0   
 $EndComp
-Text HLabel 5000 5100 0    60   Input ~ 0
-IMD_Status
-Text Notes 5100 4800 0    99   ~ 0
+Text Notes 6950 4750 0    99   ~ 0
 IMD Fault Light
 Wire Wire Line
 	5050 2050 5150 2050
@@ -579,13 +568,13 @@ Wire Wire Line
 Wire Wire Line
 	4550 3000 4050 3000
 Wire Wire Line
-	2600 4850 2600 4600
+	3000 5300 3000 5050
 Wire Wire Line
-	2300 5100 2150 5100
+	2700 5550 2550 5550
 Wire Wire Line
-	1850 5100 1250 5100
+	2250 5550 1650 5550
 Wire Wire Line
-	2600 5250 2600 5450
+	3000 5700 3000 5900
 Wire Wire Line
 	9500 1800 9700 1800
 Wire Wire Line
@@ -619,50 +608,104 @@ Wire Wire Line
 Wire Wire Line
 	8800 3150 8800 3250
 Wire Wire Line
-	2600 4800 3150 4800
-Connection ~ 2600 4800
+	3000 5250 3550 5250
+Connection ~ 3000 5250
 Wire Wire Line
 	6450 3000 6450 2850
 Wire Wire Line
-	6450 5450 6450 5250
+	8300 5400 8300 5200
 Wire Wire Line
-	6450 4850 6450 4600
+	8300 4800 8300 4550
 Wire Wire Line
-	6450 6000 6450 5750
+	8300 5950 8300 5700
 Wire Wire Line
-	6450 5350 6950 5350
-Connection ~ 6450 5350
+	8300 5300 8800 5300
+Connection ~ 8300 5300
 Wire Wire Line
-	5600 5100 5000 5100
+	7450 5050 6850 5050
 Wire Wire Line
-	5900 5100 6150 5100
+	7750 5050 8000 5050
 Wire Wire Line
-	2600 4050 2600 4300
+	3000 4500 3000 4750
 $Comp
-L +12V #PWR040
+L +12V #PWR35
 U 1 1 58BBA60E
-P 6450 4600
-F 0 "#PWR040" H 6450 4450 50  0001 C CNN
-F 1 "+12V" H 6450 4740 50  0000 C CNN
-F 2 "" H 6450 4600 50  0000 C CNN
-F 3 "" H 6450 4600 50  0000 C CNN
-	1    6450 4600
+P 8300 4550
+F 0 "#PWR35" H 8300 4400 50  0001 C CNN
+F 1 "+12V" H 8300 4690 50  0000 C CNN
+F 2 "" H 8300 4550 50  0000 C CNN
+F 3 "" H 8300 4550 50  0000 C CNN
+	1    8300 4550
 	1    0    0    -1  
 $EndComp
+Text GLabel 1250 700  0    60   Input ~ 0
+Brake_Light
+Text GLabel 1250 850  0    60   Input ~ 0
+RTDS
+Text GLabel 1250 1000 0    60   Input ~ 0
+Drive_LED
+Text GLabel 1250 1400 0    60   Input ~ 0
+IMD_Status
+Text GLabel 1250 1200 0    60   Input ~ 0
+IMD_Fault_LED
 Wire Wire Line
-	2600 4200 2850 4200
+	1250 700  1400 700 
 Wire Wire Line
-	2850 4200 2850 4050
-Connection ~ 2600 4200
-$Comp
-L PWR_FLAG #FLG041
-U 1 1 58B907AF
-P 2850 4050
-F 0 "#FLG041" H 2850 4145 50  0001 C CNN
-F 1 "PWR_FLAG" H 2850 4230 50  0000 C CNN
-F 2 "" H 2850 4050 50  0000 C CNN
-F 3 "" H 2850 4050 50  0000 C CNN
-	1    2850 4050
-	1    0    0    -1  
-$EndComp
+	1250 850  1400 850 
+Wire Wire Line
+	1250 1000 1400 1000
+Wire Wire Line
+	1250 1200 1400 1200
+Wire Wire Line
+	1250 1400 1400 1400
+Text Label 1400 700  0    60   ~ 0
+Brake_Light
+Text Label 1400 850  0    60   ~ 0
+RTDS
+Text Label 1400 1000 0    60   ~ 0
+Drive_LED
+Text Label 1400 1200 0    60   ~ 0
+IMD_Fault_LED
+Text Label 1400 1400 0    60   ~ 0
+IMD_Status
+Text Label 6200 3200 0    60   ~ 0
+Drive_LED
+Text Label 6000 2050 0    60   ~ 0
+RTDS
+Text Label 3550 5250 0    60   ~ 0
+Brake_Light
+Text Label 8800 5300 0    60   ~ 0
+IMD_Fault_LED
+Text Label 6850 5050 0    60   ~ 0
+IMD_Status
+Text Label 1400 1900 0    60   ~ 0
+Heartbeat
+Text Label 1400 2050 0    60   ~ 0
+Spare_Red
+Text Label 1400 2200 0    60   ~ 0
+Spare_Blue
+Text Label 1400 1600 0    60   ~ 0
+RTDS_CTRL
+Text Label 1400 1750 0    60   ~ 0
+D_LED_CTRL
+Wire Wire Line
+	1250 2200 1400 2200
+Wire Wire Line
+	1250 2050 1400 2050
+Wire Wire Line
+	1250 1900 1400 1900
+Wire Wire Line
+	1250 1750 1400 1750
+Wire Wire Line
+	1250 1600 1400 1600
+Text Label 4100 1850 0    60   ~ 0
+RTDS_CTRL
+Text Label 4050 3000 0    60   ~ 0
+D_LED_CTRL
+Text Label 10300 2250 0    60   ~ 0
+Heartbeat
+Text Label 10300 2700 0    60   ~ 0
+Spare_Red
+Text Label 10300 3150 0    60   ~ 0
+Spare_Blue
 $EndSCHEMATC
