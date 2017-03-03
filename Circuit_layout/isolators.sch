@@ -79,6 +79,7 @@ LIBS:video
 LIBS:Xicor
 LIBS:xilinx
 LIBS:Zilog
+LIBS:pacman-main-cache
 LIBS:bss84
 LIBS:+10v
 LIBS:Circuit_layout-cache
