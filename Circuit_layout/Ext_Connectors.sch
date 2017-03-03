@@ -79,7 +79,6 @@ LIBS:video
 LIBS:Xicor
 LIBS:xilinx
 LIBS:Zilog
-LIBS:pacman-main-cache
 LIBS:bss84
 LIBS:+10v
 LIBS:Circuit_layout-cache
@@ -138,7 +137,7 @@ U 1 1 58A769D6
 P 900 5900
 F 0 "J4" H 900 6150 50  0000 C CNN
 F 1 "CONN_01X04" V 1000 5900 50  0000 C CNN
-F 2 "" H 900 5900 50  0000 C CNN
+F 2 "custom_footprints:TerminalBlock_Pheonix_MPT-5.08mm_4pol" H 0   6200 50  0000 C CNN
 F 3 "" H 900 5900 50  0000 C CNN
 F 4 "W-21" H 900 5900 60  0001 C CNN "Wire Number"
 	1    900  5900
@@ -158,7 +157,7 @@ U 1 1 58A769FE
 P 1150 4850
 F 0 "J3" H 1150 5000 50  0000 C CNN
 F 1 "CONN_01X02" V 1250 4850 50  0000 C CNN
-F 2 "" H 1150 4850 50  0000 C CNN
+F 2 "custom_footprints:TerminalBlock_Pheonix_MPT-5.08mm_2pol" H 600 5200 50  0000 C CNN
 F 3 "" H 1150 4850 50  0000 C CNN
 F 4 "W17" H 1150 4850 60  0001 C CNN "Wire Number"
 	1    1150 4850
@@ -176,7 +175,7 @@ U 1 1 58A76FC0
 P 9750 5050
 F 0 "J10" H 9750 5200 50  0000 C CNN
 F 1 "CONN_01X02" V 9850 5050 50  0000 C CNN
-F 2 "" H 9750 5050 50  0000 C CNN
+F 2 "custom_footprints:TerminalBlock_Pheonix_MPT-5.08mm_2pol" H 9750 4750 50  0000 C CNN
 F 3 "" H 9750 5050 50  0000 C CNN
 F 4 "W6" H 9750 5050 60  0001 C CNN "Wire Number"
 	1    9750 5050
@@ -490,7 +489,7 @@ U 1 1 58B7F8E6
 P 9750 5900
 F 0 "P3" H 9750 6100 50  0000 C CNN
 F 1 "CONN_01X03" V 9850 5900 50  0000 C CNN
-F 2 "" H 9750 5900 50  0000 C CNN
+F 2 "custom_footprints:TerminalBlock_Pheonix_MPT-5.08mm_3pol" H 9950 5650 50  0000 C CNN
 F 3 "" H 9750 5900 50  0000 C CNN
 	1    9750 5900
 	1    0    0    -1  
@@ -577,7 +576,7 @@ U 1 1 58B75CBA
 P 1100 3700
 F 0 "P4" H 1100 3900 50  0000 C CNN
 F 1 "CONN_01X03" V 1200 3700 50  0000 C CNN
-F 2 "" H 1100 3700 50  0000 C CNN
+F 2 "custom_footprints:TerminalBlock_Pheonix_MPT-5.08mm_3pol" H 550 4000 50  0000 C CNN
 F 3 "" H 1100 3700 50  0000 C CNN
 	1    1100 3700
 	-1   0    0    1   
@@ -638,7 +637,6 @@ Wire Wire Line
 	2150 3600 1300 3600
 Wire Wire Line
 	2150 3800 1300 3800
-NoConn ~ 9550 4400
 Text GLabel 8500 4300 0    60   Input ~ 0
 HVPL
 Wire Wire Line
@@ -658,14 +656,14 @@ GLV
 Text Label 8500 3800 0    60   ~ 0
 Cockpit_RTN
 $Comp
-L CONN_01X07 P5
+L CONN_01X06 P5
 U 1 1 58B87F5E
-P 9750 4100
-F 0 "P5" H 9750 4500 50  0000 C CNN
-F 1 "CONN_01X07" V 9850 4100 50  0000 C CNN
-F 2 "" H 9750 4100 50  0000 C CNN
-F 3 "" H 9750 4100 50  0000 C CNN
-	1    9750 4100
+P 9750 4050
+F 0 "P5" H 9750 4450 50  0000 C CNN
+F 1 "CONN_01X06" V 9850 4050 50  0000 C CNN
+F 2 "custom_footprints:TerminalBlock_Pheonix_MPT-5.08mm_6pol" H 9300 3650 50  0000 C CNN
+F 3 "" H 9750 4050 50  0000 C CNN
+	1    9750 4050
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -676,4 +674,6 @@ Text GLabel 8950 1400 0    60   Input ~ 0
 APPS2_5
 Wire Wire Line
 	8950 1400 9550 1400
+Text Notes 7750 6400 0    60   ~ 0
+Should this be 2 connectors? i dont think we need the return.\n-Jack (3/3)
 $EndSCHEMATC
