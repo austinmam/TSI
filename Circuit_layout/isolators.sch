@@ -1,6 +1,5 @@
 EESchema Schematic File Version 2
 LIBS:Circuit_layout-rescue
-LIBS:TSI_KiCad_Lib
 LIBS:TSI_HV_Isolater-cache
 LIBS:74xgxx
 LIBS:74xx
@@ -99,8 +98,6 @@ Comment4 "DEVELOPMENT ONLY"
 $EndDescr
 Text Label 5950 1050 0    60   ~ 0
 +5HV
-Wire Wire Line
-	4950 1600 4950 1900
 Text Label 7200 1100 0    60   ~ 0
 +5HV
 Text Label 7200 1950 0    60   ~ 0
@@ -134,17 +131,13 @@ Wire Wire Line
 Wire Wire Line
 	6900 900  6250 900 
 Connection ~ 6250 900 
-Connection ~ 4950 1750
 Wire Wire Line
-	4650 1850 4650 2000
-Connection ~ 4650 1900
+	4000 1550 4000 1450
+Connection ~ 4000 1450
 Wire Wire Line
-	4650 1550 4650 1450
-Connection ~ 4650 1450
+	3850 1450 4300 1450
 Wire Wire Line
-	4500 1450 4950 1450
-Wire Wire Line
-	3600 1450 4200 1450
+	2950 1450 3550 1450
 Wire Wire Line
 	5950 1600 5950 1750
 Wire Wire Line
@@ -264,7 +257,7 @@ Text Label 7900 1550 0    60   ~ 0
 Throttle_HV
 Wire Notes Line
 	5450 450  5450 7800
-Text Label 3600 1450 0    60   ~ 0
+Text Label 2950 1450 0    60   ~ 0
 Throttle_LV
 Wire Wire Line
 	4950 1300 4950 1050
@@ -333,8 +326,6 @@ F 3 "" H 4900 3700 50  0000 C CNN
 	1    4900 3700
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4950 1900 4650 1900
 $Comp
 L GND #PWR106
 U 1 1 58B25770
@@ -566,29 +557,29 @@ $EndComp
 $Comp
 L R R57
 U 1 1 58B7068E
-P 4350 1450
-F 0 "R57" V 4430 1450 50  0000 C CNN
-F 1 "3k" V 4350 1450 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 4280 1450 50  0001 C CNN
-F 3 "" H 4350 1450 50  0000 C CNN
-F 4 "P3.0KCCT-ND" V 4350 1450 60  0001 C CNN "DigiKey P/N"
-F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF3001V/P3.0KCCT-ND/1746847" V 4350 1450 60  0001 C CNN "URL"
-F 6 "ERJ-6ENF3001V" V 4350 1450 60  0001 C CNN "Man P/N"
-	1    4350 1450
+P 3700 1450
+F 0 "R57" V 3780 1450 50  0000 C CNN
+F 1 "3k" V 3700 1450 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 3630 1450 50  0001 C CNN
+F 3 "" H 3700 1450 50  0000 C CNN
+F 4 "P3.0KCCT-ND" V 3700 1450 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF3001V/P3.0KCCT-ND/1746847" V 3700 1450 60  0001 C CNN "URL"
+F 6 "ERJ-6ENF3001V" V 3700 1450 60  0001 C CNN "Man P/N"
+	1    3700 1450
 	0    1    1    0   
 $EndComp
 $Comp
 L R R58
 U 1 1 58B70843
-P 4650 1700
-F 0 "R58" V 4730 1700 50  0000 C CNN
-F 1 "2k" V 4650 1700 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 4580 1700 50  0001 C CNN
-F 3 "" H 4650 1700 50  0000 C CNN
-F 4 "P2.00KCCT-ND" V 4650 1700 60  0001 C CNN "DigiKey P/N"
-F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF2001V/P2.00KCCT-ND/119044" V 4650 1700 60  0001 C CNN "URL"
-F 6 "ERJ-6ENF2001V" V 4650 1700 60  0001 C CNN "Man P/N"
-	1    4650 1700
+P 4000 1700
+F 0 "R58" V 4080 1700 50  0000 C CNN
+F 1 "2k" V 4000 1700 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 3930 1700 50  0001 C CNN
+F 3 "" H 4000 1700 50  0000 C CNN
+F 4 "P2.00KCCT-ND" V 4000 1700 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF2001V/P2.00KCCT-ND/119044" V 4000 1700 60  0001 C CNN "URL"
+F 6 "ERJ-6ENF2001V" V 4000 1700 60  0001 C CNN "Man P/N"
+	1    4000 1700
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -666,15 +657,15 @@ Note: Isolation Diff. Amps DO NOT have ass. footprints
 $Comp
 L ACPL-C870 U20
 U 1 1 58B35F2C
-P 5450 3100
-F 0 "U20" H 5450 3300 60  0000 C CNN
-F 1 "ACPL-C870" H 5450 3200 60  0000 C CNN
-F 2 "" H 5450 3300 60  0000 C CNN
-F 3 "https://docs.broadcom.com/docs/AV02-3563EN" H 5450 3300 60  0001 C CNN
-F 4 "516-2578-5-ND" H 5450 3100 60  0001 C CNN "Digikey P/N"
-F 5 "http://www.digikey.com/product-detail/en/broadcom-limited/ACPL-C870-000E/516-2578-5-ND/3523705" H 5450 3100 60  0001 C CNN "URL"
-F 6 "ACPL-C870-000E" H 5450 3100 60  0001 C CNN "Man P/N"
-	1    5450 3100
+P 4800 5050
+F 0 "U20" H 4800 5250 60  0000 C CNN
+F 1 "ACPL-C870" H 4800 5150 60  0000 C CNN
+F 2 "" H 4800 5250 60  0000 C CNN
+F 3 "https://docs.broadcom.com/docs/AV02-3563EN" H 4800 5250 60  0001 C CNN
+F 4 "516-2578-5-ND" H 4800 5050 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/broadcom-limited/ACPL-C870-000E/516-2578-5-ND/3523705" H 4800 5050 60  0001 C CNN "URL"
+F 6 "ACPL-C870-000E" H 4800 5050 60  0001 C CNN "Man P/N"
+	1    4800 5050
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -789,43 +780,43 @@ Wire Wire Line
 $Comp
 L C C33
 U 1 1 58B9348B
-P 3250 1450
-F 0 "C33" H 3275 1550 50  0000 L CNN
-F 1 "0.1u" H 3275 1350 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805_HandSoldering" H 3288 1300 50  0001 C CNN
-F 3 "http://www.kemet.com/Lists/ProductCatalog/Attachments/53/KEM_C1002_X7R_SMD.pdf" H 3250 1450 50  0001 C CNN
-F 4 "399-1168-1-ND" H 3250 1450 60  0001 C CNN "Digikey P/N"
-F 5 "http://www.digikey.com/product-detail/en/kemet/C0805C104K3RACTU/399-1168-1-ND/411443" H 3250 1450 60  0001 C CNN "URL"
-F 6 "C0805C104K3RACTU" H 3250 1450 60  0001 C CNN "Man P/N"
-	1    3250 1450
+P 2150 1450
+F 0 "C33" H 2175 1550 50  0000 L CNN
+F 1 "0.1u" H 2175 1350 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 2188 1300 50  0001 C CNN
+F 3 "http://www.kemet.com/Lists/ProductCatalog/Attachments/53/KEM_C1002_X7R_SMD.pdf" H 2150 1450 50  0001 C CNN
+F 4 "399-1168-1-ND" H 2150 1450 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/kemet/C0805C104K3RACTU/399-1168-1-ND/411443" H 2150 1450 60  0001 C CNN "URL"
+F 6 "C0805C104K3RACTU" H 2150 1450 60  0001 C CNN "Man P/N"
+	1    2150 1450
 	1    0    0    -1  
 $EndComp
 $Comp
 L +5V #PWR102
 U 1 1 58B93547
-P 3250 1150
-F 0 "#PWR102" H 3250 1000 50  0001 C CNN
-F 1 "+5V" H 3250 1290 50  0000 C CNN
-F 2 "" H 3250 1150 50  0000 C CNN
-F 3 "" H 3250 1150 50  0000 C CNN
-	1    3250 1150
+P 2150 1150
+F 0 "#PWR102" H 2150 1000 50  0001 C CNN
+F 1 "+5V" H 2150 1290 50  0000 C CNN
+F 2 "" H 2150 1150 50  0000 C CNN
+F 3 "" H 2150 1150 50  0000 C CNN
+	1    2150 1150
 	1    0    0    -1  
 $EndComp
 $Comp
 L GND #PWR103
 U 1 1 58B935AF
-P 3250 1750
-F 0 "#PWR103" H 3250 1500 50  0001 C CNN
-F 1 "GND" H 3250 1600 50  0000 C CNN
-F 2 "" H 3250 1750 50  0000 C CNN
-F 3 "" H 3250 1750 50  0000 C CNN
-	1    3250 1750
+P 2150 1750
+F 0 "#PWR103" H 2150 1500 50  0001 C CNN
+F 1 "GND" H 2150 1600 50  0000 C CNN
+F 2 "" H 2150 1750 50  0000 C CNN
+F 3 "" H 2150 1750 50  0000 C CNN
+	1    2150 1750
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3250 1750 3250 1600
+	2150 1750 2150 1600
 Wire Wire Line
-	3250 1300 3250 1150
+	2150 1300 2150 1150
 $Comp
 L C C32
 U 1 1 58B939A0

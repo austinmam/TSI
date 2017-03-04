@@ -1,6 +1,5 @@
 EESchema Schematic File Version 2
 LIBS:Circuit_layout-rescue
-LIBS:TSI_KiCad_Lib
 LIBS:TSI_HV_Isolater-cache
 LIBS:74xgxx
 LIBS:74xx
@@ -340,8 +339,6 @@ F 3 "" H 10300 1800 50  0000 C CNN
 $EndComp
 Text Notes 8800 1500 0    99   ~ 0
 Status/Debug LEDs
-Text Notes 9800 3550 0    60   ~ 0
-Make 100ohm
 $Comp
 L GND #PWR30
 U 1 1 58B21DFD
