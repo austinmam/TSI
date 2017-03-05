@@ -1,5 +1,6 @@
 EESchema Schematic File Version 2
 LIBS:Circuit_layout-rescue
+LIBS:TSI_KiCad_Lib
 LIBS:TSI_HV_Isolater-cache
 LIBS:74xgxx
 LIBS:74xx
@@ -78,7 +79,6 @@ LIBS:video
 LIBS:Xicor
 LIBS:xilinx
 LIBS:Zilog
-LIBS:pacman-main-cache
 LIBS:bss84
 LIBS:+10v
 LIBS:Circuit_layout-cache
@@ -176,7 +176,7 @@ U 1 1 58A76FD9
 P 1500 1100
 F 0 "J5" H 1700 1600 50  0000 C CNN
 F 1 "RJ12" H 1350 1600 50  0000 C CNN
-F 2 "custom_footprints:MOLEX_RJ11" H 1500 1100 50  0000 C CNN
+F 2 "custom_footprints:MOLEX_RJ11" H 1500 1100 50  0001 C CNN
 F 3 "" H 1500 1100 50  0000 C CNN
 F 4 "WM3789CT-ND" H 1500 1100 60  0001 C CNN "DigiKey P/N"
 F 5 "http://www.digikey.com/product-search/en?keywords=WM3789CT-ND" H 1500 1100 60  0001 C CNN "URL"
@@ -328,22 +328,6 @@ F 3 "" H 7750 3150 50  0000 C CNN
 	1    7750 3150
 	1    0    0    -1  
 $EndComp
-$Comp
-L R R8
-U 1 1 58B4665F
-P 2200 7300
-F 0 "R8" V 2280 7300 50  0000 C CNN
-F 1 "10k" V 2200 7300 50  0000 C CNN
-F 2 "" V 2130 7300 50  0001 C CNN
-F 3 "" H 2200 7300 50  0000 C CNN
-F 4 "RW5S0FA10K0JE-ND" V 2200 7300 60  0001 C CNN "DigiKey P/N"
-F 5 "http://www.digikey.com/product-detail/en/ohmite/RW5S0FA10K0JE/RW5S0FA10K0JE-ND/3830231" V 2200 7300 60  0001 C CNN "URL"
-F 6 "RW5S0FA10K0JE" V 2200 7300 60  0001 C CNN "Man P/N"
-	1    2200 7300
-	0    -1   -1   0   
-$EndComp
-Text Notes 2750 7700 0    60   ~ 0
-5W Resistor for TSMP\n(20.47mm x 9.27mm)\nNeed footprint
 Wire Wire Line
 	1100 5850 1850 5850
 Wire Wire Line
@@ -425,53 +409,6 @@ Wire Wire Line
 	2200 6600 2200 6850
 Wire Wire Line
 	8950 1200 9550 1200
-Text Notes 2750 7350 0    99   ~ 0
-TSMP
-$Comp
-L R R14
-U 1 1 58B47866
-P 2200 7600
-F 0 "R14" V 2280 7600 50  0000 C CNN
-F 1 "10k" V 2200 7600 50  0000 C CNN
-F 2 "" V 2130 7600 50  0001 C CNN
-F 3 "" H 2200 7600 50  0000 C CNN
-F 4 "RW5S0FA10K0JE-ND" V 2200 7600 60  0001 C CNN "DigiKey P/N"
-F 5 "http://www.digikey.com/product-detail/en/ohmite/RW5S0FA10K0JE/RW5S0FA10K0JE-ND/3830231" V 2200 7600 60  0001 C CNN "URL"
-F 6 "RW5S0FA10K0JE" V 2200 7600 60  0001 C CNN "Man P/N"
-	1    2200 7600
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	2350 7300 2450 7300
-Wire Wire Line
-	2350 7600 2450 7600
-Text Label 2450 7300 0    60   ~ 0
-HV+
-Text Label 2450 7600 0    60   ~ 0
-HV-
-Wire Wire Line
-	1750 7300 2050 7300
-Wire Wire Line
-	1750 7600 2050 7600
-$Comp
-L CONN_01X02 P2
-U 1 1 58B47ED4
-P 950 7400
-F 0 "P2" H 950 7550 50  0000 C CNN
-F 1 "CONN_01X02" V 1050 7400 50  0000 C CNN
-F 2 "" H 950 7400 50  0000 C CNN
-F 3 "" H 950 7400 50  0000 C CNN
-	1    950  7400
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	1150 7450 1550 7450
-Wire Wire Line
-	1150 7350 1550 7350
-Text Label 1750 7300 0    60   ~ 0
-TSMP+
-Text Label 1750 7600 0    60   ~ 0
-TSMP-
 $Comp
 L CONN_01X03 P3
 U 1 1 58B7F8E6
@@ -553,10 +490,6 @@ F 3 "" H 8700 6050 50  0000 C CNN
 $EndComp
 Text Label 8700 6000 0    60   ~ 0
 IMD_RTN
-Text Label 1550 7350 2    60   ~ 0
-TSMP+
-Text Label 1550 7450 2    60   ~ 0
-TSMP-
 Text GLabel 8500 3900 0    60   Input ~ 0
 IMD_Fault_LED
 $Comp

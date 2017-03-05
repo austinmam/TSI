@@ -1,5 +1,6 @@
 EESchema Schematic File Version 2
 LIBS:Circuit_layout-rescue
+LIBS:TSI_KiCad_Lib
 LIBS:TSI_HV_Isolater-cache
 LIBS:74xgxx
 LIBS:74xx
@@ -78,7 +79,6 @@ LIBS:video
 LIBS:Xicor
 LIBS:xilinx
 LIBS:Zilog
-LIBS:pacman-main-cache
 LIBS:bss84
 LIBS:+10v
 LIBS:Circuit_layout-cache
@@ -126,12 +126,12 @@ CANTX
 Text Label 10350 4550 2    60   ~ 0
 CANRX
 $Sheet
-S 4500 6750 1650 900 
+S 4150 6750 1650 900 
 U 58A75E42
 F0 "External Connectors" 60
 F1 "Ext_Connectors.sch" 60
 $EndSheet
-Text Notes 4600 6550 0    99   ~ 0
+Text Notes 4250 6550 0    99   ~ 0
 CONNECTORS
 Text Notes 7000 6550 0    99   ~ 0
 CAN TRANSCEIVER
