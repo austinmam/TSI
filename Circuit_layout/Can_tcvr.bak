@@ -117,17 +117,6 @@ Text Label 4450 3750 0    60   ~ 0
 CANRX
 Text Label 4450 3850 0    60   ~ 0
 CANTX
-$Comp
-L R R11
-U 1 1 58A633B9
-P 6650 3950
-F 0 "R11" V 6730 3950 50  0000 C CNN
-F 1 "120" V 6650 3950 50  0000 C CNN
-F 2 "" V 6580 3950 50  0000 C CNN
-F 3 "" H 6650 3950 50  0000 C CNN
-	1    6650 3950
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5900 3850 6500 3850
 Wire Wire Line
@@ -249,5 +238,21 @@ F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ER
 F 6 "ERJ-6ENF1001V" V 4650 4150 60  0001 C CNN "Man P/N"
 	1    4650 4150
 	0    1    1    0   
+$EndComp
+$Comp
+L R R?
+U 1 1 58BD8957
+P 6650 3950
+F 0 "R?" V 6730 3950 50  0000 C CNN
+F 1 "120" V 6650 3950 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 6580 3950 50  0001 C CNN
+F 3 "" H 6650 3950 50  0000 C CNN
+F 4 "311-120CRCT-ND" V 6650 3950 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/yageo/RC0805FR-07120RL/311-120CRCT-ND/730522" V 6650 3950 60  0001 C CNN "URL"
+F 6 "RC0805FR-07120RL" V 6650 3950 60  0001 C CNN "Man P/N"
+F 7 "0.1" V 6650 3950 60  0001 C CNN "Price"
+F 8 "Yageo" V 6650 3950 60  0001 C CNN "Manufacturer"
+	1    6650 3950
+	-1   0    0    1   
 $EndComp
 $EndSCHEMATC
