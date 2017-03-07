@@ -258,6 +258,7 @@ F4 "Throttle_uC" I L 11600 5550 60
 F5 "Throttle_LV" O L 11600 5400 60 
 F6 "BP_uC" I L 11600 6000 60 
 F7 "Throttle_PL" O L 11600 5850 60 
+F8 "BOT_uC" I L 11600 6150 60 
 $EndSheet
 Text Notes 1750 4350 0    99   ~ 0
 Current Measurement
@@ -476,7 +477,6 @@ NoConn ~ 9750 2150
 NoConn ~ 9750 2250
 NoConn ~ 9750 2350
 NoConn ~ 9750 2450
-NoConn ~ 9750 3050
 NoConn ~ 9750 3450
 NoConn ~ 9750 3550
 NoConn ~ 9750 3650
@@ -1356,4 +1356,12 @@ Text Notes 11700 1050 0    60   ~ 0
 Pull-up resistor
 Text Notes 12000 1400 0    60   ~ 0
 Watchdog
+Wire Wire Line
+	11000 6150 11600 6150
+Text Label 11000 6150 0    60   ~ 0
+BOT_uC
+Wire Wire Line
+	9750 3050 10400 3050
+Text Label 10400 3050 2    60   ~ 0
+BOT_uC
 $EndSCHEMATC

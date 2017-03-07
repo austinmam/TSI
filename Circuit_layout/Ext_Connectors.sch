@@ -668,4 +668,6 @@ Wire Wire Line
 	9550 3000 9150 3000
 Wire Wire Line
 	9550 3100 9150 3100
+Text Notes 6750 800  0    60   ~ 0
+Add BOT to Pedal Cluster O/P - will need stepped down due to +24V/+5V
 $EndSCHEMATC

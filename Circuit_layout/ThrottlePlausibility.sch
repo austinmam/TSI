@@ -105,22 +105,8 @@ Text Label 6250 2200 0    60   ~ 0
 APPS2
 Text Label 6250 2000 0    60   ~ 0
 APPS1
-Text Label 4700 6050 0    60   ~ 0
+Text Label 4150 6000 0    60   ~ 0
 APPS_10
-$Comp
-L LM7810CT U2
-U 1 1 58A600F2
-P 4200 6100
-F 0 "U2" H 4000 6300 50  0000 C CNN
-F 1 "LM7810CT" H 4200 6300 50  0000 L CNN
-F 2 "TO_SOT_Packages_THT:TO-220_Vertical" H 4200 6200 50  0001 C CIN
-F 3 "https://www.fairchildsemi.com/datasheets/LM/LM7805.pdf" H 4200 6100 50  0001 C CNN
-F 4 "LM7810CT-ND" H 4200 6100 60  0001 C CNN "Digikey P/N"
-F 5 "http://www.digikey.com/product-detail/en/fairchild-on-semiconductor/LM7810CT/LM7810CT-ND/1954730" H 4200 6100 60  0001 C CNN "URL"
-F 6 "LM7810CT" H 4200 6100 60  0001 C CNN "Man P/N"
-	1    4200 6100
-	1    0    0    -1  
-$EndComp
 Text Label 12950 3250 0    60   ~ 0
 Pedal_Out
 Text Label 10550 3150 0    60   ~ 0
@@ -209,11 +195,9 @@ Wire Wire Line
 Connection ~ 8800 3150
 Connection ~ 8800 1050
 Wire Wire Line
-	4600 6050 4700 6050
+	3650 6350 3650 6450
 Wire Wire Line
-	4200 6350 4200 6450
-Wire Wire Line
-	3650 6050 3800 6050
+	3000 6000 3250 6000
 Wire Wire Line
 	12300 3350 12300 3800
 Wire Wire Line
@@ -243,7 +227,7 @@ Connection ~ 9300 1550
 Wire Wire Line
 	9300 2550 9300 2650
 Connection ~ 9300 2650
-Text HLabel 3200 2050 0    60   Input ~ 0
+Text HLabel 3200 2200 0    60   Input ~ 0
 Throttle_SEL
 $Comp
 L 74ACT11030 U8
@@ -330,9 +314,9 @@ Text Label 14000 5300 0    60   ~ 0
 Throttle_SEL
 Text Label 11000 6550 0    60   ~ 0
 Throttle_uC
-Text HLabel 3200 2300 0    60   Input ~ 0
+Text HLabel 3200 2450 0    60   Input ~ 0
 Throttle_uC
-Text HLabel 3200 2550 0    60   Output ~ 0
+Text HLabel 3200 2700 0    60   Output ~ 0
 Throttle_LV
 $Comp
 L LM339 U6
@@ -352,7 +336,7 @@ Wire Wire Line
 	14000 5050 14000 5300
 Wire Wire Line
 	6250 2000 6900 2000
-Text HLabel 3200 1800 0    60   Input ~ 0
+Text HLabel 3200 1750 0    60   Input ~ 0
 BP_uC
 Wire Wire Line
 	12350 2150 12350 1950
@@ -363,13 +347,11 @@ Wire Wire Line
 Text Label 11950 2150 0    60   ~ 0
 RTN_GLV
 Wire Wire Line
-	11950 1450 12550 1450
+	11950 1450 13250 1450
 Wire Wire Line
-	11950 2150 12550 2150
+	11950 2150 13000 2150
 Connection ~ 12350 1450
 Connection ~ 12350 2150
-Wire Wire Line
-	12850 1450 13250 1450
 $Comp
 L C C22
 U 1 1 58AE29E7
@@ -488,12 +470,12 @@ $EndComp
 $Comp
 L GND #PWR068
 U 1 1 58B26002
-P 4200 6450
-F 0 "#PWR068" H 4200 6200 50  0001 C CNN
-F 1 "GND" H 4200 6300 50  0000 C CNN
-F 2 "" H 4200 6450 50  0000 C CNN
-F 3 "" H 4200 6450 50  0000 C CNN
-	1    4200 6450
+P 3650 6450
+F 0 "#PWR068" H 3650 6200 50  0001 C CNN
+F 1 "GND" H 3650 6300 50  0000 C CNN
+F 2 "" H 3650 6450 50  0000 C CNN
+F 3 "" H 3650 6450 50  0000 C CNN
+	1    3650 6450
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -754,26 +736,24 @@ F 3 "" H 13000 2250 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	13000 2150 12850 2150
+	3250 1300 3450 1300
 Wire Wire Line
-	3200 1550 3400 1550
-Wire Wire Line
-	3200 1800 3400 1800
-Text Label 3400 1550 0    60   ~ 0
+	3200 1750 3400 1750
+Text Label 3450 1300 0    60   ~ 0
 BP
-Text Label 3400 1800 0    60   ~ 0
+Text Label 3400 1750 0    60   ~ 0
 BP_uC
 Wire Wire Line
-	3200 2050 3400 2050
+	3200 2200 3400 2200
 Wire Wire Line
-	3200 2300 3400 2300
+	3200 2450 3400 2450
 Wire Wire Line
-	3200 2550 3400 2550
-Text Label 3400 2050 0    60   ~ 0
+	3200 2700 3400 2700
+Text Label 3400 2200 0    60   ~ 0
 Throttle_SEL
-Text Label 3400 2300 0    60   ~ 0
+Text Label 3400 2450 0    60   ~ 0
 Throttle_uC
-Text Label 3400 2550 0    60   ~ 0
+Text Label 3400 2700 0    60   ~ 0
 Throttle_LV
 $Comp
 L R R31
@@ -914,34 +894,6 @@ F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ER
 F 6 "ERJ-6ENF1001V" V 11450 4000 60  0001 C CNN "Man P/N"
 	1    11450 4000
 	-1   0    0    1   
-$EndComp
-$Comp
-L R R52
-U 1 1 58B7D1EB
-P 12700 2150
-F 0 "R52" V 12780 2150 50  0000 C CNN
-F 1 "0" V 12700 2150 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 12630 2150 50  0001 C CNN
-F 3 "" H 12700 2150 50  0000 C CNN
-F 4 "P0.0ACT-ND" V 12700 2150 60  0001 C CNN "DigiKey P/N"
-F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6GEY0R00V/P0.0ACT-ND/82955" V 12700 2150 60  0001 C CNN "URL"
-F 6 "ERJ-6GEY0R00V" V 12700 2150 60  0001 C CNN "Man P/N"
-	1    12700 2150
-	0    -1   -1   0   
-$EndComp
-$Comp
-L R R51
-U 1 1 58B7D65D
-P 12700 1450
-F 0 "R51" V 12780 1450 50  0000 C CNN
-F 1 "0" V 12700 1450 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 12630 1450 50  0001 C CNN
-F 3 "" H 12700 1450 50  0000 C CNN
-F 4 "P0.0ACT-ND" V 12700 1450 60  0001 C CNN "DigiKey P/N"
-F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6GEY0R00V/P0.0ACT-ND/82955" V 12700 1450 60  0001 C CNN "URL"
-F 6 "ERJ-6GEY0R00V" V 12700 1450 60  0001 C CNN "Man P/N"
-	1    12700 1450
-	0    -1   -1   0   
 $EndComp
 $Comp
 L R R33
@@ -1146,11 +1098,11 @@ F 6 "ERJ-6ENF9311V" V 8500 4600 60  0001 C CNN "Man P/N"
 	1    0    0    -1  
 $EndComp
 Connection ~ 1700 1650
-Text HLabel 3200 2750 0    60   Output ~ 0
+Text HLabel 3200 2900 0    60   Output ~ 0
 Throttle_PL
 Wire Wire Line
-	3200 2750 3400 2750
-Text Label 3400 2750 0    60   ~ 0
+	3200 2900 3400 2900
+Text Label 3400 2900 0    60   ~ 0
 Throttle_PL
 Wire Wire Line
 	11450 4600 11650 4600
@@ -1196,7 +1148,7 @@ Text GLabel 1600 2350 0    60   Input ~ 0
 APPS1
 Text GLabel 1550 1650 0    60   Input ~ 0
 Brake_24
-Text GLabel 3200 1550 0    60   Input ~ 0
+Text GLabel 3250 1300 0    60   Input ~ 0
 BP
 $Comp
 L C C38
@@ -1272,33 +1224,30 @@ APPS_10
 $Comp
 L C C12
 U 1 1 58BC4640
-P 3650 6250
-F 0 "C12" H 3675 6350 50  0000 L CNN
-F 1 "0.1u" H 3675 6150 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805_HandSoldering" H 3688 6100 50  0001 C CNN
-F 3 "http://www.kemet.com/Lists/ProductCatalog/Attachments/53/KEM_C1002_X7R_SMD.pdf" H 3650 6250 50  0001 C CNN
-F 4 "399-1168-1-ND" H 3650 6250 60  0001 C CNN "Digikey P/N"
-F 5 "http://www.digikey.com/product-detail/en/kemet/C0805C104K3RACTU/399-1168-1-ND/411443" H 3650 6250 60  0001 C CNN "URL"
-F 6 "C0805C104K3RACTU" H 3650 6250 60  0001 C CNN "Man P/N"
-	1    3650 6250
+P 3100 6200
+F 0 "C12" H 3125 6300 50  0000 L CNN
+F 1 "0.1u" H 3125 6100 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 3138 6050 50  0001 C CNN
+F 3 "http://www.kemet.com/Lists/ProductCatalog/Attachments/53/KEM_C1002_X7R_SMD.pdf" H 3100 6200 50  0001 C CNN
+F 4 "399-1168-1-ND" H 3100 6200 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/kemet/C0805C104K3RACTU/399-1168-1-ND/411443" H 3100 6200 60  0001 C CNN "URL"
+F 6 "C0805C104K3RACTU" H 3100 6200 60  0001 C CNN "Man P/N"
+	1    3100 6200
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3650 6000 3650 6100
-Connection ~ 3650 6050
 $Comp
 L GND #PWR093
 U 1 1 58BC5060
-P 3650 6450
-F 0 "#PWR093" H 3650 6200 50  0001 C CNN
-F 1 "GND" H 3650 6300 50  0000 C CNN
-F 2 "" H 3650 6450 50  0000 C CNN
-F 3 "" H 3650 6450 50  0000 C CNN
-	1    3650 6450
+P 3100 6400
+F 0 "#PWR093" H 3100 6150 50  0001 C CNN
+F 1 "GND" H 3100 6250 50  0000 C CNN
+F 2 "" H 3100 6400 50  0000 C CNN
+F 3 "" H 3100 6400 50  0000 C CNN
+	1    3100 6400
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3650 6400 3650 6450
+	3100 6350 3100 6400
 $Comp
 L C C39
 U 1 1 58BC6414
@@ -1925,21 +1874,8 @@ Wire Wire Line
 	11850 6550 12300 6550
 Wire Wire Line
 	11000 6550 11550 6550
-$Comp
-L +24V #PWR0110
-U 1 1 58BBF851
-P 3650 6000
-F 0 "#PWR0110" H 3650 5850 50  0001 C CNN
-F 1 "+24V" H 3650 6140 50  0000 C CNN
-F 2 "" H 3650 6000 50  0000 C CNN
-F 3 "" H 3650 6000 50  0000 C CNN
-	1    3650 6000
-	1    0    0    -1  
-$EndComp
-Text Notes 4350 6500 0    60   ~ 0
-Rt Junc-to-Case: 5C/W\nRt Junc-to-Air: 65C/W
-Text Notes 2050 6550 0    60   ~ 0
-Alt. Option:\n12V Lin. Reg. w/ 0.3V Dropout\nBAJ0CC0FP-E2\n
+Text Notes 3800 6350 0    60   ~ 0
+0.3V LDO Regul.
 $Comp
 L C C20
 U 1 1 58BCC7DA
@@ -2006,4 +1942,108 @@ Wire Wire Line
 	9450 1900 9450 1950
 Wire Wire Line
 	4050 7750 4050 7650
+$Comp
+L BAJ0CC0FP-E2 U?
+U 1 1 58BE1957
+P 3650 6050
+F 0 "U?" H 3450 6250 50  0000 C CNN
+F 1 "BAJ0CC0FP-E2" H 3650 6250 50  0000 L CNN
+F 2 "" H 3650 6150 50  0001 C CIN
+F 3 "http://rohmfs.rohm.com/en/products/databook/datasheet/ic/power/linear_regulator/baxxdd0-e.pdf" H 3650 6050 50  0001 C CNN
+F 4 "BAJ0CC0FP-E2CT-ND" H 3650 6050 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/rohm-semiconductor/BAJ0CC0FP-E2/BAJ0CC0FP-E2CT-ND/3663771" H 3650 6050 60  0001 C CNN "URL"
+F 6 "BAJ0CC0FP-E2" H 3650 6050 60  0001 C CNN "Man P/N"
+F 7 "IC REG LDO 10V 1A TO252-3" H 3650 6050 60  0001 C CNN "Description"
+F 8 "1.62" H 3650 6050 60  0001 C CNN "Price"
+	1    3650 6050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 6000 4150 6000
+Wire Wire Line
+	3100 6000 3100 6050
+$Comp
+L +12V #PWR?
+U 1 1 58BE25CD
+P 3000 6000
+F 0 "#PWR?" H 3000 5850 50  0001 C CNN
+F 1 "+12V" H 3000 6140 50  0000 C CNN
+F 2 "" H 3000 6000 50  0000 C CNN
+F 3 "" H 3000 6000 50  0000 C CNN
+	1    3000 6000
+	1    0    0    -1  
+$EndComp
+Connection ~ 3100 6000
+Wire Wire Line
+	14400 2150 14400 1950
+Text Label 14000 1450 0    60   ~ 0
+BOT
+Wire Wire Line
+	14400 1450 14400 1650
+Text Label 14000 2150 0    60   ~ 0
+RTN_GLV
+Wire Wire Line
+	14000 1450 15300 1450
+Wire Wire Line
+	14000 2150 15050 2150
+Connection ~ 14400 1450
+Connection ~ 14400 2150
+$Comp
+L C C?
+U 1 1 58BE3051
+P 15050 1800
+F 0 "C?" H 15075 1900 50  0000 L CNN
+F 1 "DNP" H 15075 1700 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 15088 1650 50  0001 C CNN
+F 3 "" H 15050 1800 50  0000 C CNN
+	1    15050 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	15050 1950 15050 2250
+Connection ~ 15050 2150
+Wire Wire Line
+	15050 1650 15050 1450
+Connection ~ 15050 1450
+Text Label 15300 1450 0    60   ~ 0
+BOT_uC
+Text Notes 14000 1250 0    99   ~ 0
+Brake Overtravel
+$Comp
+L GND #PWR?
+U 1 1 58BE305D
+P 15050 2250
+F 0 "#PWR?" H 15050 2000 50  0001 C CNN
+F 1 "GND" H 15050 2100 50  0000 C CNN
+F 2 "" H 15050 2250 50  0000 C CNN
+F 3 "" H 15050 2250 50  0000 C CNN
+	1    15050 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 58BE3067
+P 14400 1800
+F 0 "R?" V 14480 1800 50  0000 C CNN
+F 1 "10k" V 14400 1800 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 14330 1800 50  0001 C CNN
+F 3 "" H 14400 1800 50  0000 C CNN
+F 4 "P10.0KCCT-ND" V 14400 1800 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF1002V/P10.0KCCT-ND/119248" V 14400 1800 60  0001 C CNN "URL"
+F 6 "ERJ-6ENF1002V" V 14400 1800 60  0001 C CNN "Man P/N"
+	1    14400 1800
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3250 1500 3450 1500
+Text Label 3450 1500 0    60   ~ 0
+BOT
+Text GLabel 3250 1500 0    60   Input ~ 0
+BOT
+Text HLabel 3200 1950 0    60   Input ~ 0
+BOT_uC
+Wire Wire Line
+	3200 1950 3400 1950
+Text Label 3400 1950 0    60   ~ 0
+BOT_uC
 $EndSCHEMATC
