@@ -1948,8 +1948,13 @@ U 1 1 58BE1957
 P 3650 6050
 F 0 "U?" H 3450 6250 50  0000 C CNN
 F 1 "BAJ0CC0FP-E2" H 3650 6250 50  0000 L CNN
-F 2 "TO-220" H 3650 6150 50  0001 C CIN
-F 3 "" H 3650 6050 50  0000 C CNN
+F 2 "" H 3650 6150 50  0001 C CIN
+F 3 "http://rohmfs.rohm.com/en/products/databook/datasheet/ic/power/linear_regulator/baxxdd0-e.pdf" H 3650 6050 50  0001 C CNN
+F 4 "BAJ0CC0FP-E2CT-ND" H 3650 6050 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/rohm-semiconductor/BAJ0CC0FP-E2/BAJ0CC0FP-E2CT-ND/3663771" H 3650 6050 60  0001 C CNN "URL"
+F 6 "BAJ0CC0FP-E2" H 3650 6050 60  0001 C CNN "Man P/N"
+F 7 "IC REG LDO 10V 1A TO252-3" H 3650 6050 60  0001 C CNN "Description"
+F 8 "1.62" H 3650 6050 60  0001 C CNN "Price"
 	1    3650 6050
 	1    0    0    -1  
 $EndComp

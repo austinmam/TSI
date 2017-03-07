@@ -125,7 +125,7 @@ Text Notes 650  5950 3    60   ~ 0
 Motor Controller
 Text Label 8500 4000 0    60   ~ 0
 Drive_BTN_+5
-Text Notes 10450 1300 2    60   ~ 0
+Text Notes 10250 1350 2    60   ~ 0
 To Pedals
 Text Notes 10250 2250 2    60   ~ 0
 To Lights
@@ -199,17 +199,17 @@ Text GLabel 1900 6350 2    60   Input ~ 0
 Throttle_HV
 Text GLabel 1900 6150 2    60   Input ~ 0
 +5HV
-Text GLabel 8950 1100 0    60   Input ~ 0
+Text GLabel 8850 1050 0    60   Input ~ 0
 Brake_24
-Text GLabel 8950 1200 0    60   Input ~ 0
-BP
-Text GLabel 8950 1300 0    60   Input ~ 0
+Text GLabel 8850 1150 0    60   Input ~ 0
+BOT
+Text GLabel 8850 1350 0    60   Input ~ 0
 APPS1_10
-Text GLabel 8950 1600 0    60   Input ~ 0
+Text GLabel 8850 1650 0    60   Input ~ 0
 RTN_GLV
-Text GLabel 8950 1700 0    60   Input ~ 0
+Text GLabel 8850 1750 0    60   Input ~ 0
 APPS1
-Text GLabel 8950 1800 0    60   Input ~ 0
+Text GLabel 8850 1850 0    60   Input ~ 0
 APPS2
 Text GLabel 1600 7050 2    60   Input ~ 0
 HV+
@@ -338,15 +338,15 @@ Wire Wire Line
 Wire Wire Line
 	8500 3900 9550 3900
 Wire Wire Line
-	9550 1800 8950 1800
+	9450 1850 8850 1850
 Wire Wire Line
-	9550 1700 8950 1700
+	9450 1750 8850 1750
 Wire Wire Line
-	9550 1600 8950 1600
+	9450 1650 8850 1650
 Wire Wire Line
-	9550 1300 8950 1300
+	9450 1350 8850 1350
 Wire Wire Line
-	9550 1100 8950 1100
+	9450 1050 8850 1050
 Wire Wire Line
 	1200 7150 1600 7150
 Wire Wire Line
@@ -395,7 +395,7 @@ Wire Wire Line
 Wire Wire Line
 	2250 7000 2250 7250
 Wire Wire Line
-	8950 1200 9550 1200
+	8850 1150 9450 1150
 $Comp
 L CONN_01X02 P3
 U 1 1 58B7F8E6
@@ -551,25 +551,14 @@ F 3 "" H 9750 4050 50  0000 C CNN
 $EndComp
 Wire Wire Line
 	8500 4200 9550 4200
-Text GLabel 8950 1400 0    60   Input ~ 0
+Text GLabel 8850 1450 0    60   Input ~ 0
 APPS2_5
 Wire Wire Line
-	8950 1400 9550 1400
-$Comp
-L CONN_01X08 P6
-U 1 1 58BE37C4
-P 9750 1450
-F 0 "P6" H 9750 1900 50  0000 C CNN
-F 1 "Pedals" V 9850 1450 50  0000 C CNN
-F 2 "custom_footprints:mkds_1,5-8" H 9750 1450 50  0001 C CNN
-F 3 "" H 9750 1450 50  0000 C CNN
-	1    9750 1450
-	1    0    0    -1  
-$EndComp
-Text GLabel 8950 1500 0    60   Input ~ 0
+	8850 1450 9450 1450
+Text GLabel 8850 1550 0    60   Input ~ 0
 APPS1_RTN
 Wire Wire Line
-	8950 1500 9550 1500
+	8850 1550 9450 1550
 $Comp
 L CONN_01X08 J1
 U 1 1 58BD8C78
@@ -668,6 +657,19 @@ Wire Wire Line
 	9550 3000 9150 3000
 Wire Wire Line
 	9550 3100 9150 3100
-Text Notes 6750 800  0    60   ~ 0
-Add BOT to Pedal Cluster O/P - will need stepped down due to +24V/+5V
+$Comp
+L CONN_01X09 P?
+U 1 1 58BFE0D2
+P 9650 1450
+F 0 "P?" H 9650 1950 50  0000 C CNN
+F 1 "Pedals" V 9750 1450 50  0000 C CNN
+F 2 "" H 9650 1450 50  0000 C CNN
+F 3 "" H 9650 1450 50  0000 C CNN
+	1    9650 1450
+	1    0    0    -1  
+$EndComp
+Text GLabel 8850 1250 0    60   Input ~ 0
+BP
+Wire Wire Line
+	8850 1250 9450 1250
 $EndSCHEMATC

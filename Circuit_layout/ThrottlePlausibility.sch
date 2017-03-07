@@ -339,37 +339,37 @@ Wire Wire Line
 Text HLabel 3200 1750 0    60   Input ~ 0
 BP_uC
 Wire Wire Line
-	12350 2150 12350 1950
-Text Label 11950 1450 0    60   ~ 0
+	11800 2150 11800 1950
+Text Label 11400 1450 0    60   ~ 0
 BP
 Wire Wire Line
-	12350 1450 12350 1650
-Text Label 11950 2150 0    60   ~ 0
+	11800 1450 11800 1650
+Text Label 11400 2150 0    60   ~ 0
 RTN_GLV
 Wire Wire Line
-	11950 1450 13250 1450
+	11400 1450 12700 1450
 Wire Wire Line
-	11950 2150 13000 2150
-Connection ~ 12350 1450
-Connection ~ 12350 2150
+	11400 2150 12450 2150
+Connection ~ 11800 1450
+Connection ~ 11800 2150
 $Comp
 L C C22
 U 1 1 58AE29E7
-P 13000 1800
-F 0 "C22" H 13025 1900 50  0000 L CNN
-F 1 "DNP" H 13025 1700 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805_HandSoldering" H 13038 1650 50  0001 C CNN
-F 3 "" H 13000 1800 50  0000 C CNN
-	1    13000 1800
+P 12450 1800
+F 0 "C22" H 12475 1900 50  0000 L CNN
+F 1 "DNP" H 12475 1700 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 12488 1650 50  0001 C CNN
+F 3 "" H 12450 1800 50  0000 C CNN
+	1    12450 1800
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	13000 1950 13000 2250
-Connection ~ 13000 2150
+	12450 1950 12450 2250
+Connection ~ 12450 2150
 Wire Wire Line
-	13000 1650 13000 1450
-Connection ~ 13000 1450
-Text Label 13250 1450 0    60   ~ 0
+	12450 1650 12450 1450
+Connection ~ 12450 1450
+Text Label 12700 1450 0    60   ~ 0
 BP_uC
 Wire Wire Line
 	12500 5800 12500 6150
@@ -722,17 +722,17 @@ Wire Wire Line
 	3250 1100 3600 1100
 Text Label 3600 1100 0    60   ~ 0
 RTN_GLV
-Text Notes 11950 1250 0    99   ~ 0
+Text Notes 11400 1250 0    99   ~ 0
 Brake Pressed
 $Comp
 L GND #PWR087
 U 1 1 58B4B2A9
-P 13000 2250
-F 0 "#PWR087" H 13000 2000 50  0001 C CNN
-F 1 "GND" H 13000 2100 50  0000 C CNN
-F 2 "" H 13000 2250 50  0000 C CNN
-F 3 "" H 13000 2250 50  0000 C CNN
-	1    13000 2250
+P 12450 2250
+F 0 "#PWR087" H 12450 2000 50  0001 C CNN
+F 1 "GND" H 12450 2100 50  0000 C CNN
+F 2 "" H 12450 2250 50  0000 C CNN
+F 3 "" H 12450 2250 50  0000 C CNN
+	1    12450 2250
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -856,15 +856,15 @@ $EndComp
 $Comp
 L R R50
 U 1 1 58B79345
-P 12350 1800
-F 0 "R50" V 12430 1800 50  0000 C CNN
-F 1 "10k" V 12350 1800 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 12280 1800 50  0001 C CNN
-F 3 "" H 12350 1800 50  0000 C CNN
-F 4 "P10.0KCCT-ND" V 12350 1800 60  0001 C CNN "DigiKey P/N"
-F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF1002V/P10.0KCCT-ND/119248" V 12350 1800 60  0001 C CNN "URL"
-F 6 "ERJ-6ENF1002V" V 12350 1800 60  0001 C CNN "Man P/N"
-	1    12350 1800
+P 11800 1800
+F 0 "R50" V 11880 1800 50  0000 C CNN
+F 1 "10k" V 11800 1800 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 11730 1800 50  0001 C CNN
+F 3 "" H 11800 1800 50  0000 C CNN
+F 4 "P10.0KCCT-ND" V 11800 1800 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF1002V/P10.0KCCT-ND/119248" V 11800 1800 60  0001 C CNN "URL"
+F 6 "ERJ-6ENF1002V" V 11800 1800 60  0001 C CNN "Man P/N"
+	1    11800 1800
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -1974,66 +1974,10 @@ F 3 "" H 3000 6000 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 3100 6000
-Wire Wire Line
-	14400 2150 14400 1950
-Text Label 14000 1450 0    60   ~ 0
-BOT
-Wire Wire Line
-	14400 1450 14400 1650
-Text Label 14000 2150 0    60   ~ 0
+Text Label 13500 1800 0    60   ~ 0
 RTN_GLV
-Wire Wire Line
-	14000 1450 15300 1450
-Wire Wire Line
-	14000 2150 15050 2150
-Connection ~ 14400 1450
-Connection ~ 14400 2150
-$Comp
-L C C?
-U 1 1 58BE3051
-P 15050 1800
-F 0 "C?" H 15075 1900 50  0000 L CNN
-F 1 "DNP" H 15075 1700 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805_HandSoldering" H 15088 1650 50  0001 C CNN
-F 3 "" H 15050 1800 50  0000 C CNN
-	1    15050 1800
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	15050 1950 15050 2250
-Connection ~ 15050 2150
-Wire Wire Line
-	15050 1650 15050 1450
-Connection ~ 15050 1450
-Text Label 15300 1450 0    60   ~ 0
-BOT_uC
-Text Notes 14000 1250 0    99   ~ 0
+Text Notes 13450 1250 0    99   ~ 0
 Brake Overtravel
-$Comp
-L GND #PWR?
-U 1 1 58BE305D
-P 15050 2250
-F 0 "#PWR?" H 15050 2000 50  0001 C CNN
-F 1 "GND" H 15050 2100 50  0000 C CNN
-F 2 "" H 15050 2250 50  0000 C CNN
-F 3 "" H 15050 2250 50  0000 C CNN
-	1    15050 2250
-	1    0    0    -1  
-$EndComp
-$Comp
-L R R?
-U 1 1 58BE3067
-P 14400 1800
-F 0 "R?" V 14480 1800 50  0000 C CNN
-F 1 "10k" V 14400 1800 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 14330 1800 50  0001 C CNN
-F 3 "" H 14400 1800 50  0000 C CNN
-F 4 "P10.0KCCT-ND" V 14400 1800 60  0001 C CNN "DigiKey P/N"
-F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF1002V/P10.0KCCT-ND/119248" V 14400 1800 60  0001 C CNN "URL"
-F 6 "ERJ-6ENF1002V" V 14400 1800 60  0001 C CNN "Man P/N"
-	1    14400 1800
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	3250 1500 3450 1500
 Text Label 3450 1500 0    60   ~ 0
@@ -2046,4 +1990,132 @@ Wire Wire Line
 	3200 1950 3400 1950
 Text Label 3400 1950 0    60   ~ 0
 BOT_uC
+$Comp
+L TLP291 U?
+U 1 1 58BF52E8
+P 14550 1700
+F 0 "U?" H 14350 1900 50  0000 L CNN
+F 1 "TLP293" H 14550 1900 50  0000 L CNN
+F 2 "Housings_SSOP:SOP-4_4.4x2.8mm_Pitch1.27mm" H 14350 1500 50  0001 L CIN
+F 3 "" H 14550 1700 50  0000 L CNN
+F 4 "TLP293(GB-TPLECT-ND" H 14550 1700 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/toshiba-semiconductor-and-storage/TLP293(GB-TPL,E/TLP293(GB-TPLECT-ND/4562965" H 14550 1700 60  0001 C CNN "URL"
+F 6 "TLP293(GB-TPLE" H 14550 1700 60  0001 C CNN "Man P/N"
+F 7 "http://www.digikey.com/product-detail/en/toshiba-semiconductor-and-storage/TLP291(GB-TP,SE/TLP291(GB-TPSECT-ND/4562949" H 14550 1700 60  0001 C CNN "TLP291"
+	1    14550 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 58BF52F2
+P 13950 1600
+F 0 "R?" V 14030 1600 50  0000 C CNN
+F 1 "1k" V 13950 1600 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 13880 1600 50  0001 C CNN
+F 3 "" H 13950 1600 50  0000 C CNN
+F 4 "P1.00KCCT-ND" V 13950 1600 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF1001V/P1.00KCCT-ND/118957" V 13950 1600 60  0001 C CNN "URL"
+F 6 "ERJ-6ENF1001V" V 13950 1600 60  0001 C CNN "Man P/N"
+	1    13950 1600
+	0    1    1    0   
+$EndComp
+$Comp
+L R R?
+U 1 1 58BF52FC
+P 14950 1350
+F 0 "R?" V 15030 1350 50  0000 C CNN
+F 1 "1k" V 14950 1350 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 14880 1350 50  0001 C CNN
+F 3 "" H 14950 1350 50  0000 C CNN
+F 4 "P1.00KCCT-ND" V 14950 1350 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF1001V/P1.00KCCT-ND/118957" V 14950 1350 60  0001 C CNN "URL"
+F 6 "ERJ-6ENF1001V" V 14950 1350 60  0001 C CNN "Man P/N"
+	1    14950 1350
+	-1   0    0    1   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 58BF5303
+P 14950 2200
+F 0 "#PWR?" H 14950 1950 50  0001 C CNN
+F 1 "GND" H 14950 2050 50  0000 C CNN
+F 2 "" H 14950 2200 50  0000 C CNN
+F 3 "" H 14950 2200 50  0000 C CNN
+	1    14950 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR?
+U 1 1 58BF60CD
+P 14950 1100
+F 0 "#PWR?" H 14950 950 50  0001 C CNN
+F 1 "+5V" H 14950 1240 50  0000 C CNN
+F 2 "" H 14950 1100 50  0000 C CNN
+F 3 "" H 14950 1100 50  0000 C CNN
+	1    14950 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 58BF69A9
+P 15200 1850
+F 0 "R?" V 15280 1850 50  0000 C CNN
+F 1 "10k" V 15200 1850 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 15130 1850 50  0001 C CNN
+F 3 "" H 15200 1850 50  0000 C CNN
+F 4 "P10.0KCCT-ND" V 15200 1850 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF1002V/P10.0KCCT-ND/119248" V 15200 1850 60  0001 C CNN "URL"
+F 6 "ERJ-6ENF1002V" V 15200 1850 60  0001 C CNN "Man P/N"
+	1    15200 1850
+	-1   0    0    1   
+$EndComp
+$Comp
+L C C?
+U 1 1 58BF6C5C
+P 15500 1850
+F 0 "C?" H 15525 1950 50  0000 L CNN
+F 1 "DNP" H 15525 1750 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 15538 1700 50  0001 C CNN
+F 3 "" H 15500 1850 50  0000 C CNN
+	1    15500 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	15500 1600 15500 1700
+Connection ~ 15500 1600
+Text Label 15700 1600 0    60   ~ 0
+BOT_uC
+Wire Wire Line
+	14850 1800 14850 2100
+Wire Wire Line
+	15500 2100 15500 2000
+Connection ~ 15500 2100
+Text Label 13500 1600 0    60   ~ 0
+BOT
+Wire Wire Line
+	13500 1600 13800 1600
+Wire Wire Line
+	14100 1600 14250 1600
+Wire Wire Line
+	13500 1800 14250 1800
+Wire Wire Line
+	14850 1600 15700 1600
+Wire Wire Line
+	14950 1500 14950 1600
+Connection ~ 14950 1600
+Wire Wire Line
+	15200 1700 15200 1600
+Connection ~ 15200 1600
+Wire Wire Line
+	14850 2100 15500 2100
+Wire Wire Line
+	15200 2100 15200 2000
+Connection ~ 15200 2100
+Wire Wire Line
+	14950 2200 14950 2100
+Connection ~ 14950 2100
+Wire Wire Line
+	14950 1100 14950 1200
+Text Notes 13550 2100 0    60   ~ 0
+Isolates +24V overtravel \nswitch to +5V for uC
 $EndSCHEMATC

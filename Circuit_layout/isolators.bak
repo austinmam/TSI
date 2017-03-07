@@ -495,8 +495,8 @@ Wire Wire Line
 	7100 1600 7100 1650
 Text Notes 5500 2300 0    60   ~ 0
 Iso. takes 2V input. \nScaled back to 5V on output.\nCircuit diagram matches p.11 of Datasheet.
-Text Notes 3450 2150 0    60   ~ 0
-Note: Isolation Diff. Amps \nDO NOT have ass. footprints
+Text Notes 3150 2100 0    60   ~ 0
+Note: Isolation Diff. Amps \nDO NOT have associated footprints
 Text Label 5950 2950 0    60   ~ 0
 +5HV
 $Comp
@@ -768,8 +768,6 @@ Wire Wire Line
 	3800 3650 3800 3700
 Text Notes 5550 4400 0    60   ~ 0
 Iso. takes 2V input (based on 120V input)\nScaled back to 5V on output.\nCircuit diagram matches p.11 of Datasheet.
-Text Notes 5300 4400 2    60   ~ 0
-Note: Isolation Diff. Amps \nDO NOT have ass. footprints
 $Comp
 L MCP6004 U17
 U 3 1 58BCA976
@@ -924,4 +922,6 @@ Wire Wire Line
 	8250 3500 8400 3500
 Wire Wire Line
 	8700 3500 8800 3500
+Text Notes 3500 4400 0    60   ~ 0
+Note: Isolation Diff. Amps \nDO NOT have associated footprints
 $EndSCHEMATC
