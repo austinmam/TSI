@@ -79,7 +79,6 @@ LIBS:video
 LIBS:Xicor
 LIBS:xilinx
 LIBS:Zilog
-LIBS:pacman-main-cache
 LIBS:bss84
 LIBS:+10v
 LIBS:Circuit_layout-cache
@@ -2001,7 +2000,7 @@ Connection ~ 14950 2100
 Wire Wire Line
 	14950 1100 14950 1200
 Text Notes 13550 2250 0    60   ~ 0
-Isolates +24V overtravel \nswitch to +5V for uC\n\nInv. signal
+Inv. signal\nCurr. Xfer. Ratio=200% \n(w/in rng)
 Text Notes 15300 2400 0    60   ~ 0
 Fix BOT
 $Comp

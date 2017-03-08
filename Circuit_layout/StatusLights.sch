@@ -79,7 +79,6 @@ LIBS:video
 LIBS:Xicor
 LIBS:xilinx
 LIBS:Zilog
-LIBS:pacman-main-cache
 LIBS:bss84
 LIBS:+10v
 LIBS:Circuit_layout-cache
@@ -497,96 +496,6 @@ F 6 "ERJ-6ENF1001V" V 6750 3650 60  0001 C CNN "Man P/N"
 $EndComp
 Text Notes 6100 3350 0    99   ~ 0
 IMD Fault Light
-Wire Wire Line
-	4250 1200 4350 1200
-Wire Wire Line
-	4350 1000 4100 1000
-Wire Wire Line
-	4250 1200 4250 1300
-Wire Wire Line
-	4950 1000 5250 1000
-Wire Wire Line
-	4950 1200 5200 1200
-Wire Wire Line
-	4250 2350 4300 2350
-Wire Wire Line
-	4300 2150 4050 2150
-Wire Wire Line
-	4250 2350 4250 2450
-Wire Wire Line
-	4900 2150 5200 2150
-Wire Wire Line
-	4900 2350 5400 2350
-Wire Wire Line
-	5500 2150 5650 2150
-Wire Wire Line
-	5550 1000 5650 1000
-Wire Wire Line
-	5650 1000 5650 850 
-Wire Wire Line
-	3800 1000 3300 1000
-Wire Wire Line
-	3750 2150 3250 2150
-Wire Wire Line
-	2650 3450 2650 3700
-Wire Wire Line
-	2350 3950 2200 3950
-Wire Wire Line
-	1900 3950 1300 3950
-Wire Wire Line
-	2650 4100 2650 4300
-Wire Wire Line
-	9450 1100 9650 1100
-Wire Wire Line
-	9950 1100 10250 1100
-Wire Wire Line
-	9050 1100 8750 1100
-Wire Wire Line
-	8750 1100 8750 1200
-Wire Wire Line
-	9450 1550 9650 1550
-Wire Wire Line
-	9950 1550 10250 1550
-Wire Wire Line
-	9050 1550 8750 1550
-Wire Wire Line
-	8750 1550 8750 1650
-Wire Wire Line
-	9450 2000 9650 2000
-Wire Wire Line
-	9950 2000 10250 2000
-Wire Wire Line
-	9050 2000 8750 2000
-Wire Wire Line
-	8750 2000 8750 2100
-Wire Wire Line
-	9450 2450 9650 2450
-Wire Wire Line
-	9950 2450 10250 2450
-Wire Wire Line
-	9050 2450 8750 2450
-Wire Wire Line
-	8750 2450 8750 2550
-Wire Wire Line
-	2650 3650 3200 3650
-Connection ~ 2650 3650
-Wire Wire Line
-	5650 2150 5650 2000
-Wire Wire Line
-	7450 3800 7450 4000
-Wire Wire Line
-	7450 3400 7450 3150
-Wire Wire Line
-	7450 4550 7450 4300
-Wire Wire Line
-	7450 3900 7950 3900
-Connection ~ 7450 3900
-Wire Wire Line
-	6600 3650 6000 3650
-Wire Wire Line
-	6900 3650 7150 3650
-Wire Wire Line
-	2650 2900 2650 3150
 $Comp
 L +12V #PWR049
 U 1 1 58BBA60E
@@ -608,16 +517,6 @@ Text GLabel 1250 1400 0    60   Input ~ 0
 IMD_Status
 Text GLabel 1250 1200 0    60   Input ~ 0
 IMD_Fault_LED
-Wire Wire Line
-	1250 700  1400 700 
-Wire Wire Line
-	1250 850  1400 850 
-Wire Wire Line
-	1250 1000 1400 1000
-Wire Wire Line
-	1250 1200 1400 1200
-Wire Wire Line
-	1250 1400 1400 1400
 Text Label 1400 700  0    60   ~ 0
 Brake_Light
 Text Label 1400 850  0    60   ~ 0
@@ -648,16 +547,6 @@ Text Label 1400 1600 0    60   ~ 0
 RTDS_CTRL
 Text Label 1400 1750 0    60   ~ 0
 D_LED_CTRL
-Wire Wire Line
-	1250 2200 1400 2200
-Wire Wire Line
-	1250 2050 1400 2050
-Wire Wire Line
-	1250 1900 1400 1900
-Wire Wire Line
-	1250 1750 1400 1750
-Wire Wire Line
-	1250 1600 1400 1600
 Text Label 3300 1000 0    60   ~ 0
 RTDS_CTRL
 Text Label 3250 2150 0    60   ~ 0
@@ -712,64 +601,8 @@ F 6 "ERJ-6ENF1000V" V 9800 2450 60  0001 C CNN "Man P/N"
 $EndComp
 Text Notes 4800 1650 0    60   ~ 0
 Review the outputs of these optoisolators
-Text Notes 6500 6350 0    60   ~ 0
-DC DC Converter\n9V-36V to 12V
-NoConn ~ 7600 5800
-$Comp
-L PDQ6-D U18
-U 1 1 58BC10A1
-P 6850 5800
-F 0 "U18" H 6850 5700 50  0000 C CNN
-F 1 "PDQ10-Q24-S12-D" H 6850 6000 50  0000 C CNN
-F 2 "custom_footprints:PDQ_DCDC" H 6850 5400 50  0001 C CNN
-F 3 "" H 6850 5300 50  0001 C CNN
-F 4 "102-3866-ND" H 6850 5800 60  0001 C CNN "DigiKey P/N "
-F 5 "http://www.digikey.com/product-detail/en/cui-inc/PDQ10-Q24-S12-D/102-3866-ND/6165207" H 6850 5800 60  0001 C CNN "URL"
-F 6 "PDQ10-Q24-S12-D" H 6850 5800 60  0001 C CNN "Man P/N"
-	1    6850 5800
-	1    0    0    -1  
-$EndComp
-Text Label 8800 5650 2    60   ~ 0
+Text Label 6650 5900 2    60   ~ 0
 HVPL
-$Comp
-L C C23
-U 1 1 58BC10AC
-P 5800 5750
-F 0 "C23" H 5825 5850 50  0000 L CNN
-F 1 "10uF" H 5825 5650 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805_HandSoldering" H 5838 5600 50  0001 C CNN
-F 3 "" H 5800 5750 50  0000 C CNN
-F 4 "490-10515-1-ND" H 5800 5750 60  0001 C CNN "DigiKey P/N"
-F 5 "http://www.digikey.com/product-detail/en/murata-electronics-north-america/GRM21BR6YA106ME43L/490-10515-1-ND/5026446" H 5800 5750 60  0001 C CNN "URL"
-F 6 "GRM21BR6YA106ME43L" H 5800 5750 60  0001 C CNN "Man P/N"
-	1    5800 5750
-	1    0    0    -1  
-$EndComp
-$Comp
-L C C48
-U 1 1 58BC10B6
-P 8100 5800
-F 0 "C48" H 8125 5900 50  0000 L CNN
-F 1 "10uF" H 8125 5700 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805_HandSoldering" H 8138 5650 50  0001 C CNN
-F 3 "" H 8100 5800 50  0000 C CNN
-F 4 "490-6473-1-ND" H 8100 5800 60  0001 C CNN "DigiKey P/N"
-F 5 "http://www.digikey.com/product-detail/en/murata-electronics-north-america/GRM21BR61C106KE15K/490-6473-1-ND/3845670" H 8100 5800 60  0001 C CNN "URL"
-F 6 "GRM21BR61C106KE15K" H 8100 5800 60  0001 C CNN "Man P/N"
-	1    8100 5800
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR050
-U 1 1 58BC10BD
-P 8800 6050
-F 0 "#PWR050" H 8800 5800 50  0001 C CNN
-F 1 "GND" H 8800 5900 50  0000 C CNN
-F 2 "" H 8800 6050 50  0000 C CNN
-F 3 "" H 8800 6050 50  0000 C CNN
-	1    8800 6050
-	1    0    0    -1  
-$EndComp
 Text Notes 600  5000 0    60   ~ 0
 High Voltage
 $Comp
@@ -779,7 +612,7 @@ P 2900 5700
 F 0 "U16" H 2900 5850 60  0000 C CNN
 F 1 "LTC3638" H 2900 5700 60  0000 C CNN
 F 2 "custom_footprints:TSSOP16_LTC3638" H 2900 5700 60  0001 C CNN
-F 3 "" H 2900 5700 60  0000 C CNN
+F 3 "http://cds.linear.com/docs/en/datasheet/3638fa.pdf" H 2900 5700 60  0001 C CNN
 F 4 "LTC3638EMSE#PBF-ND" H 2900 5700 60  0001 C CNN "DigiKey P/N"
 F 5 "http://www.digikey.com/product-detail/en/linear-technology/LTC3638EMSE-PBF/LTC3638EMSE-PBF-ND/4693775" H 2900 5700 60  0001 C CNN "URL"
 F 6 "LTC3638EMSE#PBF" H 2900 5700 60  0001 C CNN "Man P/N"
@@ -800,54 +633,6 @@ F 6 "RC0805FR-071ML" V 1700 5600 60  0001 C CNN "Man P/N"
 	1    1700 5600
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6100 5700 6000 5700
-Wire Wire Line
-	6000 5700 6000 5600
-Connection ~ 5800 5600
-Connection ~ 5800 5900
-Wire Wire Line
-	7600 5700 7900 5700
-Wire Wire Line
-	7600 5900 7900 5900
-Wire Wire Line
-	7900 5700 7900 5650
-Wire Wire Line
-	7900 5650 8800 5650
-Wire Wire Line
-	7900 5900 7900 5950
-Wire Wire Line
-	7900 5950 8800 5950
-Connection ~ 8100 5650
-Connection ~ 8100 5950
-Wire Wire Line
-	5800 5900 6100 5900
-Wire Wire Line
-	8800 5950 8800 6050
-Wire Wire Line
-	6000 5600 5550 5600
-Wire Wire Line
-	2800 6300 2800 6200
-Wire Wire Line
-	3000 6300 3000 6200
-Connection ~ 2900 6300
-Wire Wire Line
-	2250 6300 2250 5800
-Connection ~ 2800 6300
-Connection ~ 3000 6300
-Wire Wire Line
-	1150 6300 5800 6300
-Wire Wire Line
-	3400 6000 3550 6000
-Wire Wire Line
-	3550 6000 3550 5800
-Wire Wire Line
-	3550 5800 3400 5800
-Wire Wire Line
-	2250 6000 2400 6000
-Wire Wire Line
-	2250 5800 2400 5800
-Connection ~ 2250 6000
 $Comp
 L R R14
 U 1 1 58BC10F8
@@ -864,63 +649,17 @@ F 8 "0.1" V 1700 6050 60  0001 C CNN "Price"
 	1    1700 6050
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1700 5750 1700 5900
-Wire Wire Line
-	1700 6200 1700 6300
-Connection ~ 2250 6300
-Wire Wire Line
-	1700 5400 1700 5450
-Wire Wire Line
-	1700 5800 2050 5800
-Wire Wire Line
-	2050 5800 2050 5600
-Wire Wire Line
-	2050 5600 2400 5600
-Connection ~ 1700 5800
-Wire Wire Line
-	1400 5400 1400 5700
-Connection ~ 1700 5400
-Wire Wire Line
-	3400 5400 3850 5400
 $Comp
 L INDUCTOR L1
 U 1 1 58BC110A
 P 4150 5400
 F 0 "L1" V 4100 5400 50  0000 C CNN
-F 1 "100u" V 4250 5400 50  0000 C CNN
+F 1 "220uH" V 4250 5400 50  0000 C CNN
 F 2 "" H 4150 5400 50  0001 C CNN
 F 3 "" H 4150 5400 50  0000 C CNN
 	1    4150 5400
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	4450 5400 5550 5400
-$Comp
-L R R39
-U 1 1 58BC1117
-P 4650 5650
-F 0 "R39" V 4730 5650 50  0000 C CNN
-F 1 "750k" V 4650 5650 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 4580 5650 50  0001 C CNN
-F 3 "" H 4650 5650 50  0000 C CNN
-F 4 "311-750KCRCT-ND" V 4650 5650 60  0001 C CNN "DigiKey P/N"
-F 5 "http://www.digikey.com/product-detail/en/yageo/RC0805FR-07750KL/311-750KCRCT-ND/731082" V 4650 5650 60  0001 C CNN "URL"
-F 6 "RC0805FR-07750KL" V 4650 5650 60  0001 C CNN "Man P/N"
-F 7 "RES SMD 750K OHM 1% 1/8W 0805" V 4650 5650 60  0001 C CNN "Description"
-F 8 "0.10000" V 4650 5650 60  0001 C CNN "Price"
-	1    4650 5650
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4650 5800 4650 5950
-Wire Wire Line
-	3400 5600 4000 5600
-Wire Wire Line
-	4000 5600 4000 5850
-Wire Wire Line
-	4000 5850 4650 5850
-Connection ~ 4650 5850
 $Comp
 L C C8
 U 1 1 58BC112E
@@ -936,19 +675,10 @@ F 7 "CAP CER 1UF 250V X7R 2220" H 1400 5850 60  0001 C CNN "Description"
 	1    1400 5850
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1400 6000 1400 6300
-Connection ~ 1700 6300
-Connection ~ 1400 5400
-Connection ~ 1400 6300
-Wire Wire Line
-	2900 6300 2900 6200
 Text Label 1150 5400 0    60   ~ 0
 HV+
 Text Label 1150 6300 0    60   ~ 0
 HV-
-Wire Wire Line
-	1150 5400 2400 5400
 $Comp
 L PWR_FLAG #FLG051
 U 1 1 58BC113D
@@ -960,9 +690,6 @@ F 3 "" H 2150 5300 50  0000 C CNN
 	1    2150 5300
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2150 5300 2150 5400
-Connection ~ 2150 5400
 Text Notes 1250 6500 0    60   ~ 0
 Will turn on around 27V
 $Comp
@@ -980,58 +707,307 @@ F 7 "	DIODE SCHOTTKY 100V 3A DO214AC" H 3750 5850 60  0001 C CNN "Description"
 	1    3750 5850
 	0    1    1    0   
 $EndComp
+$Comp
+L C C19
+U 1 1 58BC115E
+P 4750 5850
+F 0 "C19" H 4775 5950 50  0000 L CNN
+F 1 "10uF" H 4775 5750 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 4788 5700 50  0001 C CNN
+F 3 "" H 4750 5850 50  0000 C CNN
+F 4 "490-10515-1-ND" H 4750 5850 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/murata-electronics-north-america/GRM21BR6YA106ME43L/490-10515-1-ND/5026446" H 4750 5850 60  0001 C CNN "URL"
+F 6 "GRM21BR6YA106ME43L" H 4750 5850 60  0001 C CNN "Man P/N"
+	1    4750 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L LTV-355T U?
+U 1 1 58C27110
+P 5700 5800
+F 0 "U?" H 5490 5990 50  0000 L CNN
+F 1 "PS2502-1" H 5700 6000 50  0000 L CNN
+F 2 "" H 5500 5600 50  0000 L CIN
+F 3 "http://www.cel.com/pdf/datasheets/ps2502.pdf" H 5700 5800 50  0001 L CNN
+F 4 "PS2502L-1-F3-ACT-ND" H 5700 5800 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/cel/PS2502L-1-F3-A/PS2502L-1-F3-ACT-ND/3646234" H 5700 5800 60  0001 C CNN "URL"
+F 6 "PS2502L-1-F3-A" H 5700 5800 60  0001 C CNN "Man P/N"
+F 7 "OPTOISOLATOR 5KV DARL 4SMD" H 5700 5800 60  0001 C CNN "Description"
+F 8 "1.10" H 5700 5800 60  0001 C CNN "Price"
+	1    5700 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 58C2C36E
+P 6300 5700
+F 0 "R?" V 6380 5700 50  0000 C CNN
+F 1 "150" V 6300 5700 50  0000 C CNN
+F 2 "" V 6230 5700 50  0000 C CNN
+F 3 "" H 6300 5700 50  0000 C CNN
+	1    6300 5700
+	0    1    1    0   
+$EndComp
+$Comp
+L +24V #PWR?
+U 1 1 58C2C48F
+P 6600 5600
+F 0 "#PWR?" H 6600 5450 50  0001 C CNN
+F 1 "+24V" H 6600 5740 50  0000 C CNN
+F 2 "" H 6600 5600 50  0000 C CNN
+F 3 "" H 6600 5600 50  0000 C CNN
+	1    6600 5600
+	1    0    0    -1  
+$EndComp
+Text Notes 2800 7600 0    60   ~ 0
+If want to go back to 24V\nsw - 750k - Vfb - 196k - gnd
+$Comp
+L R R?
+U 1 1 58C2FC44
+P 5100 5400
+F 0 "R?" V 5180 5400 50  0000 C CNN
+F 1 "250" V 5100 5400 50  0000 C CNN
+F 2 "" V 5030 5400 50  0000 C CNN
+F 3 "" H 5100 5400 50  0000 C CNN
+	1    5100 5400
+	0    1    1    0   
+$EndComp
 Wire Wire Line
-	4650 5400 4650 5500
+	4250 1200 4350 1200
+Wire Wire Line
+	4350 1000 4100 1000
+Wire Wire Line
+	4250 1200 4250 1300
+Wire Wire Line
+	4950 1000 5250 1000
+Wire Wire Line
+	4950 1200 5200 1200
+Wire Wire Line
+	4250 2350 4300 2350
+Wire Wire Line
+	4300 2150 4050 2150
+Wire Wire Line
+	4250 2350 4250 2450
+Wire Wire Line
+	4900 2150 5200 2150
+Wire Wire Line
+	4900 2350 5400 2350
+Wire Wire Line
+	5500 2150 5650 2150
+Wire Wire Line
+	5550 1000 5650 1000
+Wire Wire Line
+	5650 1000 5650 850 
+Wire Wire Line
+	3800 1000 3300 1000
+Wire Wire Line
+	3750 2150 3250 2150
+Wire Wire Line
+	2650 3450 2650 3650
+Wire Wire Line
+	2650 3650 2650 3700
+Wire Wire Line
+	2350 3950 2200 3950
+Wire Wire Line
+	1900 3950 1300 3950
+Wire Wire Line
+	2650 4100 2650 4300
+Wire Wire Line
+	9450 1100 9650 1100
+Wire Wire Line
+	9950 1100 10250 1100
+Wire Wire Line
+	9050 1100 8750 1100
+Wire Wire Line
+	8750 1100 8750 1200
+Wire Wire Line
+	9450 1550 9650 1550
+Wire Wire Line
+	9950 1550 10250 1550
+Wire Wire Line
+	9050 1550 8750 1550
+Wire Wire Line
+	8750 1550 8750 1650
+Wire Wire Line
+	9450 2000 9650 2000
+Wire Wire Line
+	9950 2000 10250 2000
+Wire Wire Line
+	9050 2000 8750 2000
+Wire Wire Line
+	8750 2000 8750 2100
+Wire Wire Line
+	9450 2450 9650 2450
+Wire Wire Line
+	9950 2450 10250 2450
+Wire Wire Line
+	9050 2450 8750 2450
+Wire Wire Line
+	8750 2450 8750 2550
+Wire Wire Line
+	2650 3650 3200 3650
+Connection ~ 2650 3650
+Wire Wire Line
+	5650 2150 5650 2000
+Wire Wire Line
+	7450 3800 7450 3900
+Wire Wire Line
+	7450 3900 7450 4000
+Wire Wire Line
+	7450 3400 7450 3150
+Wire Wire Line
+	7450 4550 7450 4300
+Wire Wire Line
+	7450 3900 7950 3900
+Connection ~ 7450 3900
+Wire Wire Line
+	6600 3650 6000 3650
+Wire Wire Line
+	6900 3650 7150 3650
+Wire Wire Line
+	2650 2900 2650 3150
+Wire Wire Line
+	1250 700  1400 700 
+Wire Wire Line
+	1250 850  1400 850 
+Wire Wire Line
+	1250 1000 1400 1000
+Wire Wire Line
+	1250 1200 1400 1200
+Wire Wire Line
+	1250 1400 1400 1400
+Wire Wire Line
+	1250 2200 1400 2200
+Wire Wire Line
+	1250 2050 1400 2050
+Wire Wire Line
+	1250 1900 1400 1900
+Wire Wire Line
+	1250 1750 1400 1750
+Wire Wire Line
+	1250 1600 1400 1600
+Wire Wire Line
+	2800 6300 2800 6200
+Wire Wire Line
+	3000 6300 3000 6200
+Connection ~ 2900 6300
+Wire Wire Line
+	2250 6300 2250 6000
+Wire Wire Line
+	2250 6000 2250 5800
+Connection ~ 2800 6300
+Connection ~ 3000 6300
+Wire Wire Line
+	3400 6000 3550 6000
+Wire Wire Line
+	3550 6000 3550 5800
+Wire Wire Line
+	3550 5800 3400 5800
+Wire Wire Line
+	2250 6000 2400 6000
+Wire Wire Line
+	2250 5800 2400 5800
+Connection ~ 2250 6000
+Wire Wire Line
+	1700 5750 1700 5800
+Wire Wire Line
+	1700 5800 1700 5900
+Wire Wire Line
+	1700 6200 1700 6300
+Connection ~ 2250 6300
+Wire Wire Line
+	1700 5400 1700 5450
+Wire Wire Line
+	1700 5800 2050 5800
+Wire Wire Line
+	2050 5800 2050 5600
+Wire Wire Line
+	2050 5600 2400 5600
+Connection ~ 1700 5800
+Wire Wire Line
+	1400 5400 1400 5700
+Connection ~ 1700 5400
+Wire Wire Line
+	3400 5400 3750 5400
+Wire Wire Line
+	3750 5400 3850 5400
+Wire Wire Line
+	4450 5400 4550 5400
+Wire Wire Line
+	4550 5400 4750 5400
+Wire Wire Line
+	4750 5400 4950 5400
+Wire Wire Line
+	4550 5600 3400 5600
+Wire Wire Line
+	1400 6000 1400 6300
+Connection ~ 1700 6300
+Connection ~ 1400 5400
+Connection ~ 1400 6300
+Wire Wire Line
+	2900 6300 2900 6200
+Wire Wire Line
+	1150 5400 1400 5400
+Wire Wire Line
+	1400 5400 1700 5400
+Wire Wire Line
+	1700 5400 2150 5400
+Wire Wire Line
+	2150 5400 2400 5400
+Wire Wire Line
+	2150 5300 2150 5400
+Connection ~ 2150 5400
+Wire Wire Line
+	4550 5400 4550 5600
 Wire Wire Line
 	3750 6000 3750 6300
 Connection ~ 3750 6300
 Wire Wire Line
 	3750 5400 3750 5700
 Connection ~ 3750 5400
-Wire Wire Line
-	4650 6300 4650 6250
-Wire Wire Line
-	5550 5400 5550 5600
-Connection ~ 4650 5400
-Wire Wire Line
-	5800 6300 5800 5900
-Connection ~ 4650 6300
-$Comp
-L C C19
-U 1 1 58BC115E
-P 4950 5850
-F 0 "C19" H 4975 5950 50  0000 L CNN
-F 1 "10uF" H 4975 5750 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805_HandSoldering" H 4988 5700 50  0001 C CNN
-F 3 "" H 4950 5850 50  0000 C CNN
-F 4 "490-10515-1-ND" H 4950 5850 60  0001 C CNN "DigiKey P/N"
-F 5 "http://www.digikey.com/product-detail/en/murata-electronics-north-america/GRM21BR6YA106ME43L/490-10515-1-ND/5026446" H 4950 5850 60  0001 C CNN "URL"
-F 6 "GRM21BR6YA106ME43L" H 4950 5850 60  0001 C CNN "Man P/N"
-	1    4950 5850
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4950 5700 4950 5400
-Connection ~ 4950 5400
-Wire Wire Line
-	4950 6000 4950 6300
-Connection ~ 4950 6300
+Connection ~ 4550 5400
 Wire Notes Line
 	450  4850 11250 4850
-$Comp
-L R R42
-U 1 1 58BC9D6A
-P 4650 6100
-F 0 "R42" V 4730 6100 50  0000 C CNN
-F 1 "196k" V 4650 6100 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 4580 6100 50  0001 C CNN
-F 3 "" H 4650 6100 50  0000 C CNN
-F 4 "311-196KCRCT-ND" V 4650 6100 60  0001 C CNN "DigiKey P/N"
-F 5 "http://www.digikey.com/product-detail/en/yageo/RC0805FR-07196KL/311-196KCRCT-ND/730609" V 4650 6100 60  0001 C CNN "URL"
-F 6 "RC0805FR-07196KL" V 4650 6100 60  0001 C CNN "Man P/N"
-F 7 "RES SMD 196K OHM 1% 1/8W 0805" V 4650 6100 60  0001 C CNN "Description"
-F 8 "0.10000" V 4650 6100 60  0001 C CNN "Price"
-	1    4650 6100
-	1    0    0    -1  
-$EndComp
+Wire Wire Line
+	6000 5900 6650 5900
+Wire Wire Line
+	6000 5700 6150 5700
+Wire Wire Line
+	6450 5700 6600 5700
+Wire Wire Line
+	6600 5700 6600 5600
+Wire Wire Line
+	4750 6000 4750 6300
+Connection ~ 4750 6300
+Wire Wire Line
+	4750 5700 4750 5400
+Connection ~ 4750 5400
+Wire Wire Line
+	5250 5400 5350 5400
+Wire Wire Line
+	5350 5400 5350 5700
+Wire Wire Line
+	5350 5700 5400 5700
+Wire Wire Line
+	5400 5900 5350 5900
+Wire Wire Line
+	5350 5900 5350 6300
+Wire Wire Line
+	1150 6300 1400 6300
+Wire Wire Line
+	1400 6300 1700 6300
+Wire Wire Line
+	1700 6300 2250 6300
+Wire Wire Line
+	2250 6300 2800 6300
+Wire Wire Line
+	2800 6300 2900 6300
+Wire Wire Line
+	2900 6300 3000 6300
+Wire Wire Line
+	3000 6300 3750 6300
+Wire Wire Line
+	3750 6300 4750 6300
+Wire Wire Line
+	4750 6300 5350 6300
 $EndSCHEMATC
