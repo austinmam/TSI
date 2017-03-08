@@ -79,7 +79,6 @@ LIBS:video
 LIBS:Xicor
 LIBS:xilinx
 LIBS:Zilog
-LIBS:pacman-main-cache
 LIBS:bss84
 LIBS:+10v
 LIBS:Circuit_layout-cache
@@ -2193,9 +2192,11 @@ F 3 "" H 10150 4150 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L SWITCH_INV SW2
+L SWITCH_INV-RESCUE-Circuit_layout SW2
 U 1 1 58C5A230
 P 14450 4800
+AR Path="/58C5A230" Ref="SW2"  Part="1" 
+AR Path="/58A289D2/58C5A230" Ref="SW2"  Part="1" 
 F 0 "SW2" H 14250 4950 50  0000 C CNN
 F 1 "TS5A3159" H 14150 4650 50  0000 C CNN
 F 2 "" H 14450 4800 50  0000 C CNN
