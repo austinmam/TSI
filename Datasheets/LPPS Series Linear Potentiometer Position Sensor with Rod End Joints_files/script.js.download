@@ -1,0 +1,6 @@
+$(document).ready(function() {
+	function renameCouponPane(){
+		$('#edit-panes-coupon-code-wrapper label').text('Promotion code:');
+	}
+	renameCouponPane();
+});
