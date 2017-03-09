@@ -359,20 +359,6 @@ Spare_Red
 Text HLabel 1250 2200 0    60   Input ~ 0
 Spare_Blue
 $Comp
-L BSS84 Q3
-U 1 1 58BB9EF8
-P 4700 3250
-F 0 "Q3" H 4950 3325 50  0000 L CNN
-F 1 "ZVP4525G" H 4950 3250 50  0000 L CNN
-F 2 "TO_SOT_Packages_SMD:SOT-23" H 4950 3175 50  0001 L CIN
-F 3 "https://www.fairchildsemi.com/datasheets/BS/BSS84.pdf" H 4700 3250 50  0001 L CNN
-F 4 "BSS84CT-ND" H 4700 3250 60  0001 C CNN "DigiKey P/N"
-F 5 "http://www.digikey.com/product-detail/en/fairchild-on-semiconductor/BSS84/BSS84CT-ND/244297" H 4700 3250 60  0001 C CNN "URL"
-F 6 "BSS84" H 4700 3250 60  0001 C CNN "Man P/N"
-	1    4700 3250
-	1    0    0    1   
-$EndComp
-$Comp
 L R R84
 U 1 1 58BBA9F7
 P 4200 3200
@@ -911,4 +897,20 @@ Text Label 12700 2700 0    60   ~ 0
 IMD_Status
 Wire Wire Line
 	4350 3200 4500 3200
+$Comp
+L ZVP4525G Q?
+U 1 1 58C19722
+P 4700 3250
+F 0 "Q?" H 4950 3175 50  0000 L CNN
+F 1 "ZVP4525G" H 4950 3250 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-223-3Lead_TabPin2" H 4950 3325 50  0001 L CIN
+F 3 "https://www.diodes.com/assets/Datasheets/ZVP4525G.pdf" H 4700 3250 50  0001 L CNN
+F 4 "ZVP4525GCT-ND" H 4700 3250 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/diodes-incorporated/ZVP4525GTA/ZVP4525GCT-ND/386036" H 4700 3250 60  0001 C CNN "URL"
+F 6 "ZVP4525GTA" H 4700 3250 60  0001 C CNN "Man P/N"
+F 7 "MOSFET P-CH 250V 0.265A SOT223" H 4700 3250 60  0001 C CNN "Description"
+F 8 "0.68" H 4700 3250 60  0001 C CNN "Cost"
+	1    4700 3250
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

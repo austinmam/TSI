@@ -79,6 +79,7 @@ LIBS:video
 LIBS:Xicor
 LIBS:xilinx
 LIBS:Zilog
+LIBS:pacman-main-cache
 LIBS:bss84
 LIBS:+10v
 LIBS:Circuit_layout-cache
@@ -151,12 +152,12 @@ $EndComp
 $Comp
 L GND #PWR040
 U 1 1 58AF4273
-P 4250 2450
-F 0 "#PWR040" H 4250 2200 50  0001 C CNN
-F 1 "GND" H 4250 2300 50  0000 C CNN
-F 2 "" H 4250 2450 50  0000 C CNN
-F 3 "" H 4250 2450 50  0000 C CNN
-	1    4250 2450
+P 4250 2500
+F 0 "#PWR040" H 4250 2250 50  0001 C CNN
+F 1 "GND" H 4250 2350 50  0000 C CNN
+F 2 "" H 4250 2500 50  0000 C CNN
+F 3 "" H 4250 2500 50  0000 C CNN
+	1    4250 2500
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -191,15 +192,15 @@ RTDS_CTRL
 $Comp
 L R R18
 U 1 1 58B266DE
-P 9800 1100
-F 0 "R18" V 9880 1100 50  0000 C CNN
-F 1 "100" V 9800 1100 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 9730 1100 50  0001 C CNN
-F 3 "" H 9800 1100 50  0000 C CNN
-F 4 "P100CCT-ND" V 9800 1100 60  0001 C CNN "DigiKey P/N"
-F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF1000V/P100CCT-ND/118668" V 9800 1100 60  0001 C CNN "URL"
-F 6 "ERJ-6ENF1000V" V 9800 1100 60  0001 C CNN "Man P/N"
-	1    9800 1100
+P 11950 1300
+F 0 "R18" V 12030 1300 50  0000 C CNN
+F 1 "100" V 11950 1300 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 11880 1300 50  0001 C CNN
+F 3 "" H 11950 1300 50  0000 C CNN
+F 4 "P100CCT-ND" V 11950 1300 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF1000V/P100CCT-ND/118668" V 11950 1300 60  0001 C CNN "URL"
+F 6 "ERJ-6ENF1000V" V 11950 1300 60  0001 C CNN "Man P/N"
+	1    11950 1300
 	0    1    1    0   
 $EndComp
 $Comp
@@ -358,20 +359,6 @@ Spare_Red
 Text HLabel 1250 2200 0    60   Input ~ 0
 Spare_Blue
 $Comp
-L BSS84 Q3
-U 1 1 58BB9EF8
-P 4700 3250
-F 0 "Q3" H 4950 3325 50  0000 L CNN
-F 1 "ZVP4525G" H 4950 3250 50  0000 L CNN
-F 2 "TO_SOT_Packages_SMD:SOT-23" H 4950 3175 50  0001 L CIN
-F 3 "https://www.fairchildsemi.com/datasheets/BS/BSS84.pdf" H 4700 3250 50  0001 L CNN
-F 4 "BSS84CT-ND" H 4700 3250 60  0001 C CNN "DigiKey P/N"
-F 5 "http://www.digikey.com/product-detail/en/fairchild-on-semiconductor/BSS84/BSS84CT-ND/244297" H 4700 3250 60  0001 C CNN "URL"
-F 6 "BSS84" H 4700 3250 60  0001 C CNN "Man P/N"
-	1    4700 3250
-	1    0    0    1   
-$EndComp
-$Comp
 L R R84
 U 1 1 58BBA9F7
 P 4200 3200
@@ -385,25 +372,21 @@ F 6 "ERJ-6ENF1001V" V 4200 3200 60  0001 C CNN "Man P/N"
 	1    4200 3200
 	0    1    1    0   
 $EndComp
-Text GLabel 1250 700  0    60   Input ~ 0
-Brake_Light
-Text GLabel 1250 850  0    60   Input ~ 0
+Text GLabel 1250 650  0    60   Input ~ 0
 RTDS
-Text GLabel 1250 1000 0    60   Input ~ 0
+Text GLabel 1250 800  0    60   Input ~ 0
 Drive_LED
-Text GLabel 1250 1400 0    60   Input ~ 0
-IMD_Status
 Text GLabel 1250 1200 0    60   Input ~ 0
+IMD_Status
+Text GLabel 1250 1000 0    60   Input ~ 0
 IMD_Fault_LED
-Text Label 1400 700  0    60   ~ 0
-Brake_Light
-Text Label 1400 850  0    60   ~ 0
+Text Label 1400 650  0    60   ~ 0
 RTDS
-Text Label 1400 1000 0    60   ~ 0
+Text Label 1400 800  0    60   ~ 0
 Drive_LED
-Text Label 1400 1200 0    60   ~ 0
+Text Label 1400 1000 0    60   ~ 0
 IMD_Fault_LED
-Text Label 1400 1400 0    60   ~ 0
+Text Label 1400 1200 0    60   ~ 0
 IMD_Status
 Text Label 5400 2350 0    60   ~ 0
 Drive_LED
@@ -433,48 +416,6 @@ Text Label 10250 2000 0    60   ~ 0
 Spare_Red
 Text Label 10250 2450 0    60   ~ 0
 Spare_Blue
-$Comp
-L R R86
-U 1 1 58C06BD6
-P 9800 1550
-F 0 "R86" V 9880 1550 50  0000 C CNN
-F 1 "100" V 9800 1550 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 9730 1550 50  0001 C CNN
-F 3 "" H 9800 1550 50  0000 C CNN
-F 4 "P100CCT-ND" V 9800 1550 60  0001 C CNN "DigiKey P/N"
-F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF1000V/P100CCT-ND/118668" V 9800 1550 60  0001 C CNN "URL"
-F 6 "ERJ-6ENF1000V" V 9800 1550 60  0001 C CNN "Man P/N"
-	1    9800 1550
-	0    1    1    0   
-$EndComp
-$Comp
-L R R19
-U 1 1 58B8F294
-P 9800 2000
-F 0 "R19" V 9880 2000 50  0000 C CNN
-F 1 "100" V 9800 2000 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 9730 2000 50  0001 C CNN
-F 3 "" H 9800 2000 50  0000 C CNN
-F 4 "P100CCT-ND" V 9800 2000 60  0001 C CNN "DigiKey P/N"
-F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF1000V/P100CCT-ND/118668" V 9800 2000 60  0001 C CNN "URL"
-F 6 "ERJ-6ENF1000V" V 9800 2000 60  0001 C CNN "Man P/N"
-	1    9800 2000
-	0    1    1    0   
-$EndComp
-$Comp
-L R R20
-U 1 1 58B8F2ED
-P 9800 2450
-F 0 "R20" V 9880 2450 50  0000 C CNN
-F 1 "100" V 9800 2450 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 9730 2450 50  0001 C CNN
-F 3 "" H 9800 2450 50  0000 C CNN
-F 4 "P100CCT-ND" V 9800 2450 60  0001 C CNN "DigiKey P/N"
-F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF1000V/P100CCT-ND/118668" V 9800 2450 60  0001 C CNN "URL"
-F 6 "ERJ-6ENF1000V" V 9800 2450 60  0001 C CNN "Man P/N"
-	1    9800 2450
-	0    1    1    0   
-$EndComp
 Text Label 6650 5900 2    60   ~ 0
 HVPL
 Text Notes 600  5000 0    60   ~ 0
@@ -661,7 +602,7 @@ Wire Wire Line
 Wire Wire Line
 	4300 2150 4050 2150
 Wire Wire Line
-	4250 2350 4250 2450
+	4250 2350 4250 2500
 Wire Wire Line
 	4900 2150 5650 2150
 Wire Wire Line
@@ -713,15 +654,13 @@ Wire Wire Line
 Wire Wire Line
 	4050 3200 3450 3200
 Wire Wire Line
-	1250 700  1400 700 
+	1250 650  1400 650 
 Wire Wire Line
-	1250 850  1400 850 
+	1250 800  1400 800 
 Wire Wire Line
 	1250 1000 1400 1000
 Wire Wire Line
 	1250 1200 1400 1200
-Wire Wire Line
-	1250 1400 1400 1400
 Wire Wire Line
 	1250 2200 1400 2200
 Wire Wire Line
@@ -840,10 +779,10 @@ F 3 "" H 4800 2750 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L TLP291 U?
+L TLP291 U25
 U 1 1 58C7728E
 P 14050 2800
-F 0 "U?" H 13850 3000 50  0000 L CNN
+F 0 "U25" H 13850 3000 50  0000 L CNN
 F 1 "TLP293" H 14050 3000 50  0000 L CNN
 F 2 "Housings_SSOP:SOP-4_4.4x2.8mm_Pitch1.27mm" H 13850 2600 50  0001 L CIN
 F 3 "" H 14050 2800 50  0000 L CNN
@@ -855,10 +794,10 @@ F 7 "http://www.digikey.com/product-detail/en/toshiba-semiconductor-and-storage/
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR?
+L GND #PWR050
 U 1 1 58C77294
 P 13700 3000
-F 0 "#PWR?" H 13700 2750 50  0001 C CNN
+F 0 "#PWR050" H 13700 2750 50  0001 C CNN
 F 1 "GND" H 13700 2850 50  0000 C CNN
 F 2 "" H 13700 3000 50  0000 C CNN
 F 3 "" H 13700 3000 50  0000 C CNN
@@ -866,10 +805,10 @@ F 3 "" H 13700 3000 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +24V #PWR?
+L +24V #PWR051
 U 1 1 58C7729A
 P 15100 2550
-F 0 "#PWR?" H 15100 2400 50  0001 C CNN
+F 0 "#PWR051" H 15100 2400 50  0001 C CNN
 F 1 "+24V" H 15100 2690 50  0000 C CNN
 F 2 "" H 15100 2550 50  0000 C CNN
 F 3 "" H 15100 2550 50  0000 C CNN
@@ -877,10 +816,10 @@ F 3 "" H 15100 2550 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R?
+L R R75
 U 1 1 58C772A3
 P 13350 2700
-F 0 "R?" V 13430 2700 50  0000 C CNN
+F 0 "R75" V 13430 2700 50  0000 C CNN
 F 1 "150" V 13350 2700 50  0000 C CNN
 F 2 "Resistors_SMD:R_0805_HandSoldering" V 13280 2700 50  0001 C CNN
 F 3 "" H 13350 2700 50  0000 C CNN
@@ -910,4 +849,250 @@ Text Label 12700 2700 0    60   ~ 0
 IMD_Status
 Wire Wire Line
 	4350 3200 4500 3200
+$Comp
+L ZVP4525G Q1
+U 1 1 58C19722
+P 4700 3250
+F 0 "Q1" H 4950 3175 50  0000 L CNN
+F 1 "ZVP4525G" H 4950 3250 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-223-3Lead_TabPin2" H 4950 3325 50  0001 L CIN
+F 3 "https://www.diodes.com/assets/Datasheets/ZVP4525G.pdf" H 4700 3250 50  0001 L CNN
+F 4 "ZVP4525GCT-ND" H 4700 3250 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/diodes-incorporated/ZVP4525GTA/ZVP4525GCT-ND/386036" H 4700 3250 60  0001 C CNN "URL"
+F 6 "ZVP4525GTA" H 4700 3250 60  0001 C CNN "Man P/N"
+F 7 "MOSFET P-CH 250V 0.265A SOT223" H 4700 3250 60  0001 C CNN "Description"
+F 8 "0.68" H 4700 3250 60  0001 C CNN "Cost"
+	1    4700 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R70
+U 1 1 58C1AF2B
+P -1000 6100
+F 0 "R70" V -920 6100 50  0000 C CNN
+F 1 "47k" V -1000 6100 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V -1070 6100 50  0001 C CNN
+F 3 "" H -1000 6100 50  0000 C CNN
+F 4 "311-47.0KCRCT-ND" V -1000 6100 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/yageo/RC0805FR-0747KL/311-47.0KCRCT-ND/730920" V -1000 6100 60  0001 C CNN "URL"
+F 6 "RC0805FR-0747KL" V -1000 6100 60  0001 C CNN "Man P/N"
+F 7 "RES SMD 47K OHM 1% 1/8W 0805" V -1000 6100 60  0001 C CNN "Description"
+F 8 "0.1" V -1000 6100 60  0001 C CNN "Price"
+	1    -1000 6100
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C24
+U 1 1 58C1AF35
+P -2950 5850
+F 0 "C24" H -2925 5950 50  0000 L CNN
+F 1 "1uF" H -2925 5750 50  0000 L CNN
+F 2 "Capacitors_SMD:C_2220_HandSoldering" H -2912 5700 50  0001 C CNN
+F 3 "" H -2950 5850 50  0000 C CNN
+F 4 "490-3550-1-ND" H -2950 5850 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/murata-electronics-north-america/GRM55DR72E105KW01L/490-3550-1-ND/789455" H -2950 5850 60  0001 C CNN "URL"
+F 6 "GRM55DR72E105KW01L" H -2950 5850 60  0001 C CNN "Man P/N"
+F 7 "CAP CER 1UF 250V X7R 2220" H -2950 5850 60  0001 C CNN "Description"
+	1    -2950 5850
+	1    0    0    -1  
+$EndComp
+Text Label -3450 5450 0    60   ~ 0
+HV+
+Text Label -3450 6350 0    60   ~ 0
+HV-
+$Comp
+L PWR_FLAG #FLG052
+U 1 1 58C1AF3D
+P -550 5350
+F 0 "#FLG052" H -550 5445 50  0001 C CNN
+F 1 "PWR_FLAG" H -550 5530 50  0000 C CNN
+F 2 "" H -550 5350 50  0000 C CNN
+F 3 "" H -550 5350 50  0000 C CNN
+	1    -550 5350
+	1    0    0    -1  
+$EndComp
+Text Notes -3300 6800 0    60   ~ 0
+Will turn on around 27V\n\n250V rated cap.
+Wire Wire Line
+	-450 6350 -450 5850
+Wire Wire Line
+	-450 6050 -300 6050
+Wire Wire Line
+	-450 5850 -300 5850
+Connection ~ -450 6050
+Wire Wire Line
+	-1000 6350 -1000 6250
+Connection ~ -450 6350
+Wire Wire Line
+	-1100 5850 -650 5850
+Wire Wire Line
+	-650 5850 -650 5650
+Wire Wire Line
+	-650 5650 -300 5650
+Connection ~ -1000 5850
+Connection ~ -1000 6350
+Wire Wire Line
+	-3450 5450 -300 5450
+Wire Wire Line
+	-550 5350 -550 5450
+Connection ~ -550 5450
+Wire Wire Line
+	-3450 6350 -250 6350
+$Comp
+L R R20
+U 1 1 58C1BB82
+P -1650 5850
+F 0 "R20" V -1570 5850 50  0000 C CNN
+F 1 "250k" V -1650 5850 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V -1720 5850 50  0001 C CNN
+F 3 "" H -1650 5850 50  0000 C CNN
+F 4 "P249KCCT-ND" V -1650 5850 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF2493V/P249KCCT-ND/119664" V -1650 5850 60  0001 C CNN "URL"
+F 6 "ERJ-6ENF2493V" V -1650 5850 60  0001 C CNN "Man P/N"
+F 7 "RES SMD 249K OHM 1% 1/8W 0805" V -1650 5850 60  0001 C CNN "Description"
+F 8 "0.10" V -1650 5850 60  0001 C CNN "Cost"
+	1    -1650 5850
+	0    1    1    0   
+$EndComp
+$Comp
+L R R69
+U 1 1 58C1BEEB
+P -1250 5850
+F 0 "R69" V -1170 5850 50  0000 C CNN
+F 1 "250k" V -1250 5850 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V -1320 5850 50  0001 C CNN
+F 3 "" H -1250 5850 50  0000 C CNN
+F 4 "P249KCCT-ND" V -1250 5850 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF2493V/P249KCCT-ND/119664" V -1250 5850 60  0001 C CNN "URL"
+F 6 "ERJ-6ENF2493V" V -1250 5850 60  0001 C CNN "Man P/N"
+F 7 "RES SMD 249K OHM 1% 1/8W 0805" V -1250 5850 60  0001 C CNN "Description"
+F 8 "0.10" V -1250 5850 60  0001 C CNN "Cost"
+	1    -1250 5850
+	0    1    1    0   
+$EndComp
+$Comp
+L R R19
+U 1 1 58C1BF7B
+P -2050 5850
+F 0 "R19" V -1970 5850 50  0000 C CNN
+F 1 "250k" V -2050 5850 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V -2120 5850 50  0001 C CNN
+F 3 "" H -2050 5850 50  0000 C CNN
+F 4 "P249KCCT-ND" V -2050 5850 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF2493V/P249KCCT-ND/119664" V -2050 5850 60  0001 C CNN "URL"
+F 6 "ERJ-6ENF2493V" V -2050 5850 60  0001 C CNN "Man P/N"
+F 7 "RES SMD 249K OHM 1% 1/8W 0805" V -2050 5850 60  0001 C CNN "Description"
+F 8 "0.10" V -2050 5850 60  0001 C CNN "Cost"
+	1    -2050 5850
+	0    1    1    0   
+$EndComp
+$Comp
+L R R16
+U 1 1 58C1C091
+P -2450 5850
+F 0 "R16" V -2370 5850 50  0000 C CNN
+F 1 "250k" V -2450 5850 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V -2520 5850 50  0001 C CNN
+F 3 "" H -2450 5850 50  0000 C CNN
+F 4 "P249KCCT-ND" V -2450 5850 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF2493V/P249KCCT-ND/119664" V -2450 5850 60  0001 C CNN "URL"
+F 6 "ERJ-6ENF2493V" V -2450 5850 60  0001 C CNN "Man P/N"
+F 7 "RES SMD 249K OHM 1% 1/8W 0805" V -2450 5850 60  0001 C CNN "Description"
+F 8 "0.10" V -2450 5850 60  0001 C CNN "Cost"
+	1    -2450 5850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	-2300 5850 -2200 5850
+Wire Wire Line
+	-1900 5850 -1800 5850
+Wire Wire Line
+	-1500 5850 -1400 5850
+Wire Wire Line
+	-1000 5950 -1000 5850
+Wire Wire Line
+	-2600 5850 -2700 5850
+Wire Wire Line
+	-2700 5850 -2700 5450
+Connection ~ -2700 5450
+Wire Wire Line
+	-2950 5450 -2950 5700
+Wire Wire Line
+	-2950 6000 -2950 6350
+Connection ~ -2950 6350
+Connection ~ -2950 5450
+Text Notes 11350 1100 0    60   ~ 0
+Changed resistor values: 25mA max. current, should be roughly 15mA now
+$Comp
+L R R71
+U 1 1 58C2A949
+P 9800 1100
+F 0 "R71" V 9880 1100 50  0000 C CNN
+F 1 "330" V 9800 1100 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 9730 1100 50  0001 C CNN
+F 3 "" H 9800 1100 50  0000 C CNN
+F 4 "P330CCT-ND" V 9800 1100 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF3300V/P330CCT-ND/1746851" V 9800 1100 60  0001 C CNN "URL"
+F 6 "ERJ-6ENF3300V" V 9800 1100 60  0001 C CNN "Man P/N"
+F 7 "RES SMD 330 OHM 1% 1/8W 0805" V 9800 1100 60  0001 C CNN "Description"
+F 8 "0.10" V 9800 1100 60  0001 C CNN "Cost"
+	1    9800 1100
+	0    1    1    0   
+$EndComp
+$Comp
+L R R72
+U 1 1 58C2AC1B
+P 9800 1550
+F 0 "R72" V 9880 1550 50  0000 C CNN
+F 1 "330" V 9800 1550 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 9730 1550 50  0001 C CNN
+F 3 "" H 9800 1550 50  0000 C CNN
+F 4 "P330CCT-ND" V 9800 1550 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF3300V/P330CCT-ND/1746851" V 9800 1550 60  0001 C CNN "URL"
+F 6 "ERJ-6ENF3300V" V 9800 1550 60  0001 C CNN "Man P/N"
+F 7 "RES SMD 330 OHM 1% 1/8W 0805" V 9800 1550 60  0001 C CNN "Description"
+F 8 "0.10" V 9800 1550 60  0001 C CNN "Cost"
+	1    9800 1550
+	0    1    1    0   
+$EndComp
+$Comp
+L R R73
+U 1 1 58C2ACAB
+P 9800 2000
+F 0 "R73" V 9880 2000 50  0000 C CNN
+F 1 "330" V 9800 2000 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 9730 2000 50  0001 C CNN
+F 3 "" H 9800 2000 50  0000 C CNN
+F 4 "P330CCT-ND" V 9800 2000 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF3300V/P330CCT-ND/1746851" V 9800 2000 60  0001 C CNN "URL"
+F 6 "ERJ-6ENF3300V" V 9800 2000 60  0001 C CNN "Man P/N"
+F 7 "RES SMD 330 OHM 1% 1/8W 0805" V 9800 2000 60  0001 C CNN "Description"
+F 8 "0.10" V 9800 2000 60  0001 C CNN "Cost"
+	1    9800 2000
+	0    1    1    0   
+$EndComp
+$Comp
+L R R74
+U 1 1 58C2AD40
+P 9800 2450
+F 0 "R74" V 9880 2450 50  0000 C CNN
+F 1 "330" V 9800 2450 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 9730 2450 50  0001 C CNN
+F 3 "" H 9800 2450 50  0000 C CNN
+F 4 "P330CCT-ND" V 9800 2450 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF3300V/P330CCT-ND/1746851" V 9800 2450 60  0001 C CNN "URL"
+F 6 "ERJ-6ENF3300V" V 9800 2450 60  0001 C CNN "Man P/N"
+F 7 "RES SMD 330 OHM 1% 1/8W 0805" V 9800 2450 60  0001 C CNN "Description"
+F 8 "0.10" V 9800 2450 60  0001 C CNN "Cost"
+	1    9800 2450
+	0    1    1    0   
+$EndComp
+Text Notes -3250 5000 0    60   ~ 0
+Changed for chain of resistors, dont know if necessary
+Text GLabel 1250 1400 0    60   Input ~ 0
+HVPL
+Text Label 1400 1400 0    60   ~ 0
+HVPL
+Wire Wire Line
+	1250 1400 1400 1400
 $EndSCHEMATC
