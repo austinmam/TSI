@@ -114,31 +114,31 @@ F 9 "12.89" H 7550 2800 60  0001 C CNN "Price"
 	1    7550 2800
 	1    0    0    -1  
 $EndComp
-Text Label 7100 6150 2    60   ~ 0
+Text Label 6500 6300 2    60   ~ 0
 CANTX
-Text Label 7100 6350 2    60   ~ 0
+Text Label 6500 6500 2    60   ~ 0
 CANRX
 Text Label 9450 4300 2    60   ~ 0
 CANTX
 Text Label 9450 4400 2    60   ~ 0
 CANRX
 $Sheet
-S 3300 6650 1650 900 
+S 3100 6850 1650 900 
 U 58A75E42
 F0 "External Connectors" 60
 F1 "Ext_Connectors.sch" 60
 $EndSheet
-Text Notes 3400 6450 0    99   ~ 0
+Text Notes 3200 6650 0    99   ~ 0
 CONNECTORS
-Text Notes 5600 5900 0    99   ~ 0
+Text Notes 5000 6050 0    99   ~ 0
 CAN TRANSCEIVER
-Text GLabel 5800 3300 0    50   BiDi ~ 0
+Text GLabel 5600 3300 0    50   BiDi ~ 0
 TCK
-Text GLabel 5800 3400 0    50   BiDi ~ 0
+Text GLabel 5600 3400 0    50   BiDi ~ 0
 TMS
-Text GLabel 5800 3500 0    50   BiDi ~ 0
+Text GLabel 7300 6750 0    50   BiDi ~ 0
 TDO
-Text GLabel 5800 3600 0    50   BiDi ~ 0
+Text GLabel 7300 7150 0    50   BiDi ~ 0
 TDI
 Text GLabel 5600 1100 0    50   BiDi ~ 0
 ~RESET_AVR
@@ -215,7 +215,7 @@ F5 "Spare_Red" I L 11650 3700 60
 F6 "Spare_Blue" I L 11650 3850 60 
 $EndSheet
 $Sheet
-S 5600 7200 950  350 
+S 5000 7350 950  350 
 U 58ADE5BC
 F0 "Power System" 60
 F1 "PowerSystem.sch" 60
@@ -325,12 +325,12 @@ F 3 "" H 2700 4800 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Sheet
-S 850  6650 1600 1000
+S 650  6850 1600 1000
 U 58AF3ED4
 F0 "Isolators" 60
 F1 "isolators.sch" 60
-F2 "Throttle_LV" I R 2450 6750 60 
-F3 "V_Measure" I R 2450 6950 60 
+F2 "Throttle_LV" I R 2250 6950 60 
+F3 "V_Measure" I R 2250 7150 60 
 $EndSheet
 Text Notes 2500 2000 0    99   ~ 0
 IMD PWM LPF
@@ -432,9 +432,9 @@ Text Label 11050 3200 0    60   ~ 0
 D_LED_CTRL
 Text Label 11050 3400 0    60   ~ 0
 RTDS_CTRL
-Text Label 2650 6750 0    60   ~ 0
+Text Label 2450 6950 0    60   ~ 0
 Throttle_LV
-Text Label 2650 6950 0    60   ~ 0
+Text Label 2450 7150 0    60   ~ 0
 V_Measure
 Text GLabel 1050 2750 0    60   Input ~ 0
 IMD_PWM
@@ -460,9 +460,9 @@ Text Notes 11700 4950 0    99   ~ 0
 Throttle Plausibility
 Text Notes 11850 2900 0    99   ~ 0
 Status Lights
-Text Notes 5600 7100 0    99   ~ 0
+Text Notes 5000 7250 0    99   ~ 0
 DC DC Converters
-Text Notes 950  6450 0    99   ~ 0
+Text Notes 750  6650 0    99   ~ 0
 Isolators
 $Comp
 L C C31
@@ -767,19 +767,15 @@ SDA
 Text Notes 12400 1900 2    99   ~ 0
 I2C Pullup
 Wire Wire Line
-	6650 6350 7100 6350
+	6050 6500 6500 6500
 Wire Wire Line
 	8850 4300 9450 4300
 Wire Wire Line
 	8850 4400 9450 4400
 Wire Wire Line
-	6250 3300 5800 3300
+	5600 3300 6250 3300
 Wire Wire Line
-	6250 3400 5800 3400
-Wire Wire Line
-	6250 3500 5800 3500
-Wire Wire Line
-	6250 3600 5800 3600
+	5600 3400 6250 3400
 Wire Wire Line
 	6250 1100 5600 1100
 Wire Wire Line
@@ -930,9 +926,9 @@ Wire Wire Line
 Wire Wire Line
 	11000 5400 11600 5400
 Wire Wire Line
-	2450 6750 2650 6750
+	2250 6950 2450 6950
 Wire Wire Line
-	2450 6950 2650 6950
+	2250 7150 2450 7150
 Wire Wire Line
 	5600 2900 6250 2900
 Wire Wire Line
@@ -1026,15 +1022,15 @@ $EndComp
 $Comp
 L R R43
 U 1 1 58BE67E2
-P 8500 6250
-F 0 "R43" V 8580 6250 50  0000 C CNN
-F 1 "10k" V 8500 6250 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 8430 6250 50  0001 C CNN
-F 3 "" H 8500 6250 50  0000 C CNN
-F 4 "P10.0KCCT-ND" V 8500 6250 60  0001 C CNN "DigiKey P/N"
-F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF1002V/P10.0KCCT-ND/119248" V 8500 6250 60  0001 C CNN "URL"
-F 6 "ERJ-6ENF1002V" V 8500 6250 60  0001 C CNN "Man P/N"
-	1    8500 6250
+P 9350 5750
+F 0 "R43" V 9430 5750 50  0000 C CNN
+F 1 "10k" V 9350 5750 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 9280 5750 50  0001 C CNN
+F 3 "" H 9350 5750 50  0000 C CNN
+F 4 "P10.0KCCT-ND" V 9350 5750 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF1002V/P10.0KCCT-ND/119248" V 9350 5750 60  0001 C CNN "URL"
+F 6 "ERJ-6ENF1002V" V 9350 5750 60  0001 C CNN "Man P/N"
+	1    9350 5750
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -1054,7 +1050,7 @@ Wire Wire Line
 	11700 2250 11400 2250
 Text Label 11400 2250 0    60   ~ 0
 SDA
-Text Label 7850 6000 0    60   ~ 0
+Text Label 8700 5500 0    60   ~ 0
 Throttle_SEL
 NoConn ~ 8850 1100
 Wire Wire Line
@@ -1062,7 +1058,7 @@ Wire Wire Line
 Text Notes 9100 -350 2    60   ~ 0
 Datasheet says AVCC should be connected to Vcc through a LPF
 Wire Wire Line
-	6650 6150 7100 6150
+	6050 6300 6500 6300
 Text Label 5600 1100 0    60   ~ 0
 ~RESET_AVR
 $Comp
@@ -1088,10 +1084,10 @@ Wire Wire Line
 Wire Wire Line
 	11400 1000 11400 950 
 $Comp
-L +5V #PWR024
+L +5V #PWR020
 U 1 1 58C14221
 P 11400 950
-F 0 "#PWR024" H 11400 800 50  0001 C CNN
+F 0 "#PWR020" H 11400 800 50  0001 C CNN
 F 1 "+5V" H 11400 1090 50  0000 C CNN
 F 2 "" H 11400 950 50  0000 C CNN
 F 3 "" H 11400 950 50  0000 C CNN
@@ -1156,10 +1152,10 @@ Wire Wire Line
 Text Label 11250 1450 0    60   ~ 0
 ~RESET_AVR
 $Comp
-L GND #PWR025
+L GND #PWR021
 U 1 1 58BFFF85
 P 12600 1500
-F 0 "#PWR025" H 12600 1250 50  0001 C CNN
+F 0 "#PWR021" H 12600 1250 50  0001 C CNN
 F 1 "GND" H 12600 1350 50  0000 C CNN
 F 2 "" H 12600 1500 50  0000 C CNN
 F 3 "" H 12600 1500 50  0000 C CNN
@@ -1167,12 +1163,12 @@ F 3 "" H 12600 1500 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Sheet
-S 5600 6050 1050 500 
+S 5000 6200 1050 500 
 U 58A62F55
 F0 "CAN Transceiver" 60
 F1 "Can_tcvr.sch" 60
-F2 "CANTX" I R 6650 6150 60 
-F3 "CANRX" I R 6650 6350 60 
+F2 "CANTX" I R 6050 6300 60 
+F3 "CANRX" I R 6050 6500 60 
 $EndSheet
 Text Notes 11750 750  0    99   ~ 0
 Reset
@@ -1238,7 +1234,7 @@ U 1 1 58C2BCC5
 P 7250 5200
 F 0 "W3" H 7250 5470 50  0000 C CNN
 F 1 "uC_GND" H 7250 5400 50  0000 C CNN
-F 2 "" H 7450 5200 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Big" H 7450 5200 50  0001 C CNN
 F 3 "" H 7450 5200 50  0000 C CNN
 	1    7250 5200
 	-1   0    0    1   
@@ -1250,7 +1246,7 @@ U 1 1 58C2CAF9
 P 4200 2500
 F 0 "W2" H 4200 2770 50  0000 C CNN
 F 1 "IMD_uC" H 4200 2700 50  0000 C CNN
-F 2 "" H 4400 2500 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Big" H 4400 2500 50  0001 C CNN
 F 3 "" H 4400 2500 50  0000 C CNN
 	1    4200 2500
 	1    0    0    -1  
@@ -1264,7 +1260,7 @@ U 1 1 58C2E496
 P 3300 5050
 F 0 "W1" H 3300 5320 50  0000 C CNN
 F 1 "I_Measure" H 3300 5250 50  0000 C CNN
-F 2 "" H 3500 5050 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Big" H 3500 5050 50  0001 C CNN
 F 3 "" H 3500 5050 50  0000 C CNN
 	1    3300 5050
 	1    0    0    -1  
@@ -1273,10 +1269,10 @@ Wire Wire Line
 	3300 5050 3300 5200
 Connection ~ 3300 5200
 $Comp
-L GND #PWR026
+L GND #PWR022
 U 1 1 58C35653
 P 3150 3250
-F 0 "#PWR026" H 3150 3000 50  0001 C CNN
+F 0 "#PWR022" H 3150 3000 50  0001 C CNN
 F 1 "GND" H 3150 3100 50  0000 C CNN
 F 2 "" H 3150 3250 50  0000 C CNN
 F 3 "" H 3150 3250 50  0000 C CNN
@@ -1288,24 +1284,72 @@ Wire Wire Line
 Wire Wire Line
 	3650 2950 3650 3000
 Wire Wire Line
-	8500 6000 8500 6100
+	9350 5500 9350 5600
 $Comp
-L GND #PWR027
+L GND #PWR023
 U 1 1 58D0C10E
-P 8500 6600
-F 0 "#PWR027" H 8500 6350 50  0001 C CNN
-F 1 "GND" H 8500 6450 50  0000 C CNN
-F 2 "" H 8500 6600 50  0000 C CNN
-F 3 "" H 8500 6600 50  0000 C CNN
-	1    8500 6600
+P 9350 6100
+F 0 "#PWR023" H 9350 5850 50  0001 C CNN
+F 1 "GND" H 9350 5950 50  0000 C CNN
+F 2 "" H 9350 6100 50  0000 C CNN
+F 3 "" H 9350 6100 50  0000 C CNN
+	1    9350 6100
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8500 6400 8500 6600
-Text Notes 7600 5850 0    99   ~ 0
+	9350 5900 9350 6100
+Text Notes 8450 5350 0    99   ~ 0
 Throttle Select Pulldown
 Wire Wire Line
 	12200 2250 12200 2100
 Wire Wire Line
-	7850 6000 8500 6000
+	8700 5500 9350 5500
+$Comp
+L JS202011CQN SW?
+U 1 1 58D14231
+P 7850 7050
+F 0 "SW?" H 8150 6550 50  0000 C CNN
+F 1 "JS202011CQN" H 8300 6450 50  0000 C CNN
+F 2 "" H 7850 7050 50  0001 C CNN
+F 3 "http://www.ckswitches.com/media/1422/js.pdf" H 7850 7050 50  0001 C CNN
+F 4 "401-2001-ND" H 7850 7050 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/c-k/JS202011CQN/401-2001-ND/1640097" H 7850 7050 60  0001 C CNN "URL"
+F 6 "JS202011CQN" H 7850 7050 60  0001 C CNN "Man P/N"
+F 7 "SWITCH SLIDE DPDT 300MA 6V" H 7850 7050 60  0001 C CNN "Description"
+F 8 "0.41" H 7850 7050 60  0001 C CNN "Cost"
+	1    7850 7050
+	-1   0    0    -1  
+$EndComp
+Text GLabel 7300 6950 0    60   Input ~ 0
+Spare_ADC_1
+Text GLabel 7300 7350 0    60   Input ~ 0
+Spare_ADC_2
+Text Notes 7650 7800 2    60   ~ 0
+No footprint
+Text Notes 9800 8800 0    60   ~ 0
+NOTE: Add footprints to test points (already in lib)
+Wire Wire Line
+	7450 7350 7300 7350
+Wire Wire Line
+	7450 7150 7300 7150
+Wire Wire Line
+	7450 6950 7300 6950
+Wire Wire Line
+	7450 6750 7300 6750
+Text Label 8400 6850 0    60   ~ 0
+PIN55
+Text Label 8400 7250 0    60   ~ 0
+PIN54
+Wire Wire Line
+	8250 7250 8400 7250
+Wire Wire Line
+	8250 6850 8400 6850
+Text Label 5600 3500 0    60   ~ 0
+PIN55
+Text Label 5600 3600 0    60   ~ 0
+PIN54
+Wire Wire Line
+	5600 3500 6250 3500
+Wire Wire Line
+	5600 3600 6250 3600
 $EndSCHEMATC
