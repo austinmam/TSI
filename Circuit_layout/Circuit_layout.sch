@@ -79,7 +79,6 @@ LIBS:video
 LIBS:Xicor
 LIBS:xilinx
 LIBS:Zilog
-LIBS:pacman-main-cache
 LIBS:bss84
 LIBS:+10v
 LIBS:Circuit_layout-cache
@@ -98,7 +97,7 @@ Comment3 ""
 Comment4 "DEVELOPMENT ONLY"
 $EndDescr
 $Comp
-L AT90CAN128-A U7
+L AT90CAN128-A-RESCUE-Circuit_layout U7
 U 1 1 58A74D86
 P 8500 3500
 F 0 "U7" H 7350 5400 50  0000 L BNN

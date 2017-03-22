@@ -79,7 +79,6 @@ LIBS:video
 LIBS:Xicor
 LIBS:xilinx
 LIBS:Zilog
-LIBS:pacman-main-cache
 LIBS:bss84
 LIBS:+10v
 LIBS:Circuit_layout-cache
@@ -664,13 +663,13 @@ Wire Wire Line
 Wire Wire Line
 	3350 4850 3350 5650
 Wire Wire Line
-	3500 4850 3250 4850
+	3250 4850 3500 4850
 Wire Wire Line
 	2500 4750 2500 5650
 Connection ~ 2500 4750
 Connection ~ 3350 4850
 Wire Wire Line
-	3500 4650 3250 4650
+	3250 4650 3500 4650
 Wire Wire Line
 	4000 4650 4000 4500
 Connection ~ 4000 4650
@@ -681,9 +680,9 @@ Wire Wire Line
 	3350 4100 3350 4200
 Connection ~ 6900 4650
 Wire Wire Line
-	7050 4650 5950 4650
+	5950 4650 7050 4650
 Wire Wire Line
-	4950 4650 3800 4650
+	3800 4650 4950 4650
 Wire Wire Line
 	1400 5100 1400 4900
 Wire Wire Line
@@ -720,10 +719,7 @@ Wire Wire Line
 Wire Wire Line
 	4600 4150 4950 4150
 Wire Wire Line
-	4950 4950 4600 4950
-Wire Wire Line
 	4600 4550 4600 5150
-Connection ~ 4600 4950
 Wire Wire Line
 	4950 4150 4950 4500
 Connection ~ 4600 4150
@@ -980,4 +976,7 @@ F 3 "" H 3050 5100 50  0000 C CNN
 	1    3050 5100
 	-1   0    0    -1  
 $EndComp
+Wire Wire Line
+	4950 4950 4600 4950
+Connection ~ 4600 4950
 $EndSCHEMATC

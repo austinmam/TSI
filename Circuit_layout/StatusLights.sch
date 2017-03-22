@@ -79,7 +79,6 @@ LIBS:video
 LIBS:Xicor
 LIBS:xilinx
 LIBS:Zilog
-LIBS:pacman-main-cache
 LIBS:bss84
 LIBS:+10v
 LIBS:Circuit_layout-cache
@@ -402,8 +401,6 @@ Text Label 10250 2000 0    60   ~ 0
 Spare_Red
 Text Label 10250 2450 0    60   ~ 0
 Spare_Blue
-Text Label 8100 5800 2    60   ~ 0
-HVPL
 Text Notes 600  5000 0    60   ~ 0
 High Voltage
 $Comp
@@ -425,9 +422,14 @@ L INDUCTOR L1
 U 1 1 58BC110A
 P 5600 5300
 F 0 "L1" V 5550 5300 50  0000 C CNN
-F 1 "220uH" V 5700 5300 50  0000 C CNN
-F 2 "" H 5600 5300 50  0001 C CNN
-F 3 "" H 5600 5300 50  0000 C CNN
+F 1 "100uH" V 5700 5300 50  0000 C CNN
+F 2 "Inductors:Inductor_Taiyo-Yuden_NR-80xx_HandSoldering" H 5600 5300 50  0001 C CNN
+F 3 "http://www.yuden.co.jp/productdata/catalog/en/wound04_e.pdf" H 5600 5300 50  0001 C CNN
+F 4 "587-2004-1-ND" V 5600 5300 60  0001 C CNN "DigiKey P/N"
+F 5 "https://www.digikey.com/product-detail/en/taiyo-yuden/NR8040T101M/587-2004-1-ND/1739117" V 5600 5300 60  0001 C CNN "URL"
+F 6 "NR8040T101M" V 5600 5300 60  0001 C CNN "Man P/N"
+F 7 "FIXED IND 100UH 1A 377 MOHM SMD" V 5600 5300 60  0001 C CNN "Description"
+F 8 "0.60" V 5600 5300 60  0001 C CNN "Price"
 	1    5600 5300
 	0    -1   -1   0   
 $EndComp
@@ -449,68 +451,19 @@ $EndComp
 $Comp
 L C C19
 U 1 1 58BC115E
-P 6200 5750
-F 0 "C19" H 6225 5850 50  0000 L CNN
-F 1 "10uF" H 6225 5650 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805_HandSoldering" H 6238 5600 50  0001 C CNN
-F 3 "" H 6200 5750 50  0000 C CNN
-F 4 "490-10515-1-ND" H 6200 5750 60  0001 C CNN "DigiKey P/N"
-F 5 "http://www.digikey.com/product-detail/en/murata-electronics-north-america/GRM21BR6YA106ME43L/490-10515-1-ND/5026446" H 6200 5750 60  0001 C CNN "URL"
-F 6 "GRM21BR6YA106ME43L" H 6200 5750 60  0001 C CNN "Man P/N"
-	1    6200 5750
+P 6600 5750
+F 0 "C19" H 6625 5850 50  0000 L CNN
+F 1 "10uF" H 6625 5650 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 6638 5600 50  0001 C CNN
+F 3 "" H 6600 5750 50  0000 C CNN
+F 4 "490-10515-1-ND" H 6600 5750 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/murata-electronics-north-america/GRM21BR6YA106ME43L/490-10515-1-ND/5026446" H 6600 5750 60  0001 C CNN "URL"
+F 6 "GRM21BR6YA106ME43L" H 6600 5750 60  0001 C CNN "Man P/N"
+	1    6600 5750
 	1    0    0    -1  
 $EndComp
-$Comp
-L LTV-355T U2
-U 1 1 58C27110
-P 7150 5700
-F 0 "U2" H 6940 5890 50  0000 L CNN
-F 1 "PS2502-1" H 7150 5900 50  0000 L CNN
-F 2 "" H 6950 5500 50  0000 L CIN
-F 3 "http://www.cel.com/pdf/datasheets/ps2502.pdf" H 7150 5700 50  0001 L CNN
-F 4 "PS2502L-1-F3-ACT-ND" H 7150 5700 60  0001 C CNN "DigiKey P/N"
-F 5 "http://www.digikey.com/product-detail/en/cel/PS2502L-1-F3-A/PS2502L-1-F3-ACT-ND/3646234" H 7150 5700 60  0001 C CNN "URL"
-F 6 "PS2502L-1-F3-A" H 7150 5700 60  0001 C CNN "Man P/N"
-F 7 "OPTOISOLATOR 5KV DARL 4SMD" H 7150 5700 60  0001 C CNN "Description"
-F 8 "1.10" H 7150 5700 60  0001 C CNN "Price"
-	1    7150 5700
-	1    0    0    -1  
-$EndComp
-$Comp
-L R R21
-U 1 1 58C2C36E
-P 7750 5600
-F 0 "R21" V 7830 5600 50  0000 C CNN
-F 1 "150" V 7750 5600 50  0000 C CNN
-F 2 "" V 7680 5600 50  0000 C CNN
-F 3 "" H 7750 5600 50  0000 C CNN
-	1    7750 5600
-	0    1    1    0   
-$EndComp
-$Comp
-L +24V #PWR045
-U 1 1 58C2C48F
-P 8050 5500
-F 0 "#PWR045" H 8050 5350 50  0001 C CNN
-F 1 "+24V" H 8050 5640 50  0000 C CNN
-F 2 "" H 8050 5500 50  0000 C CNN
-F 3 "" H 8050 5500 50  0000 C CNN
-	1    8050 5500
-	1    0    0    -1  
-$EndComp
-Text Notes 2950 8850 0    60   ~ 0
+Text Notes 3550 7400 0    60   ~ 0
 If want to go back to 24V\nsw - 750k - Vfb - 196k - gnd
-$Comp
-L R R17
-U 1 1 58C2FC44
-P 6550 5300
-F 0 "R17" V 6630 5300 50  0000 C CNN
-F 1 "250" V 6550 5300 50  0000 C CNN
-F 2 "" V 6480 5300 50  0000 C CNN
-F 3 "" H 6550 5300 50  0000 C CNN
-	1    6550 5300
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	4250 1200 4350 1200
 Wire Wire Line
@@ -609,57 +562,22 @@ Wire Wire Line
 Wire Wire Line
 	5000 5700 4850 5700
 Wire Wire Line
-	4850 5300 5300 5300
-Wire Wire Line
-	5900 5300 6400 5300
-Wire Wire Line
-	6000 5500 4850 5500
-Wire Wire Line
 	4350 6200 4350 6100
-Wire Wire Line
-	6000 5300 6000 5500
 Wire Wire Line
 	5200 6200 5200 5900
 Connection ~ 5200 6200
-Wire Wire Line
-	5200 5300 5200 5600
-Connection ~ 5200 5300
-Connection ~ 6000 5300
 Wire Notes Line
 	450  4850 11250 4850
-Wire Wire Line
-	7450 5800 8100 5800
-Wire Wire Line
-	7450 5600 7600 5600
-Wire Wire Line
-	7900 5600 8050 5600
-Wire Wire Line
-	8050 5600 8050 5500
-Wire Wire Line
-	6200 6200 6200 5900
 Connection ~ 6200 6200
-Wire Wire Line
-	6200 5600 6200 5300
-Connection ~ 6200 5300
-Wire Wire Line
-	6700 5300 6800 5300
-Wire Wire Line
-	6800 5300 6800 5600
-Wire Wire Line
-	6800 5600 6850 5600
-Wire Wire Line
-	6850 5800 6800 5800
-Wire Wire Line
-	6800 5800 6800 6200
 Wire Wire Line
 	4800 3450 4800 3550
 Wire Wire Line
 	4800 3550 4950 3550
 $Comp
-L +24V #PWR046
+L +24V #PWR045
 U 1 1 58C523A5
 P 4800 2750
-F 0 "#PWR046" H 4800 2600 50  0001 C CNN
+F 0 "#PWR045" H 4800 2600 50  0001 C CNN
 F 1 "+24V" H 4800 2890 50  0000 C CNN
 F 2 "" H 4800 2750 50  0000 C CNN
 F 3 "" H 4800 2750 50  0000 C CNN
@@ -682,10 +600,10 @@ F 7 "http://www.digikey.com/product-detail/en/toshiba-semiconductor-and-storage/
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR047
+L GND #PWR046
 U 1 1 58C77294
 P 13700 3000
-F 0 "#PWR047" H 13700 2750 50  0001 C CNN
+F 0 "#PWR046" H 13700 2750 50  0001 C CNN
 F 1 "GND" H 13700 2850 50  0000 C CNN
 F 2 "" H 13700 3000 50  0000 C CNN
 F 3 "" H 13700 3000 50  0000 C CNN
@@ -693,10 +611,10 @@ F 3 "" H 13700 3000 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +24V #PWR048
+L +24V #PWR047
 U 1 1 58C7729A
 P 15100 2550
-F 0 "#PWR048" H 15100 2400 50  0001 C CNN
+F 0 "#PWR047" H 15100 2400 50  0001 C CNN
 F 1 "+24V" H 15100 2690 50  0000 C CNN
 F 2 "" H 15100 2550 50  0000 C CNN
 F 3 "" H 15100 2550 50  0000 C CNN
@@ -789,10 +707,10 @@ HV+
 Text Label 700  6200 0    60   ~ 0
 HV-
 $Comp
-L PWR_FLAG #FLG049
+L PWR_FLAG #FLG048
 U 1 1 58C1AF3D
 P 3600 5200
-F 0 "#FLG049" H 3600 5295 50  0001 C CNN
+F 0 "#FLG048" H 3600 5295 50  0001 C CNN
 F 1 "PWR_FLAG" H 3600 5380 50  0000 C CNN
 F 2 "" H 3600 5200 50  0000 C CNN
 F 3 "" H 3600 5200 50  0000 C CNN
@@ -825,7 +743,7 @@ Wire Wire Line
 	3600 5200 3600 5300
 Connection ~ 3600 5300
 Wire Wire Line
-	6800 6200 700  6200
+	700  6200 7150 6200
 $Comp
 L R R20
 U 1 1 58C1BB82
@@ -981,4 +899,131 @@ Text Label 1400 1400 0    60   ~ 0
 HVPL
 Wire Wire Line
 	1250 1400 1400 1400
+$Comp
+L R R77
+U 1 1 58D32889
+P 6200 5950
+F 0 "R77" V 6280 5950 50  0000 C CNN
+F 1 "196k" V 6200 5950 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 6130 5950 50  0001 C CNN
+F 3 "" H 6200 5950 50  0000 C CNN
+F 4 "P196CCT-ND" V 6200 5950 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF1960V/P196CCT-ND/118752" V 6200 5950 60  0001 C CNN "URL"
+F 6 "ERJ-6ENF1960V" V 6200 5950 60  0001 C CNN "Man P/N"
+F 7 "RES SMD 196 OHM 1% 1/8W 0805" V 6200 5950 60  0001 C CNN "Description"
+F 8 "0.1" V 6200 5950 60  0001 C CNN "Price"
+	1    6200 5950
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R76
+U 1 1 58D32960
+P 6200 5550
+F 0 "R76" V 6280 5550 50  0000 C CNN
+F 1 "750k" V 6200 5550 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 6130 5550 50  0001 C CNN
+F 3 "" H 6200 5550 50  0000 C CNN
+F 4 "P750KCCT-ND" V 6200 5550 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF7503V/P750KCCT-ND/119800" V 6200 5550 60  0001 C CNN "URL"
+F 6 "ERJ-6ENF7503V" V 6200 5550 60  0001 C CNN "Man P/N"
+F 7 "RES SMD 750K OHM 1% 1/8W 0805" V 6200 5550 60  0001 C CNN "Description"
+F 8 "0.1" V 6200 5550 60  0001 C CNN "Price"
+	1    6200 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6200 5700 6200 5800
+Wire Wire Line
+	4850 5300 5300 5300
+Wire Wire Line
+	5200 5600 5200 5300
+Connection ~ 5200 5300
+Wire Wire Line
+	5900 5300 7150 5300
+Wire Wire Line
+	6200 5300 6200 5400
+Wire Wire Line
+	6200 6100 6200 6200
+Connection ~ 6200 5300
+Wire Wire Line
+	6600 5300 6600 5600
+Wire Wire Line
+	6600 5900 6600 6200
+Connection ~ 6600 6200
+Connection ~ 6600 5300
+$Comp
+L PDM2-S24-S12 U1
+U 1 1 58D3B6C8
+P 7900 5700
+F 0 "U1" H 7900 5600 50  0000 C CNN
+F 1 "PDM2-S24-S12" H 7900 5900 50  0000 C CNN
+F 2 "Converters_DCDC_ACDC:DCDC-Conv_TRACO_TMR_1-xxxx_Single" H 7900 5300 50  0001 C CNN
+F 3 "" H 7900 5200 50  0001 C CNN
+F 4 "102-2728-ND" H 7900 5700 60  0001 C CNN "DigiKey P/N"
+F 5 "https://www.digikey.com/product-detail/en/cui-inc/PDM2-S24-S12-S/102-2728-ND/4009652" H 7900 5700 60  0001 C CNN "URL"
+F 6 "PDM2-S24-S12-S" H 7900 5700 60  0001 C CNN "Man P/N"
+F 7 "CONVERT DC/DC 2W 12V 167MA OUT" H 7900 5700 60  0001 C CNN "Description"
+	1    7900 5700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7150 5300 7150 5600
+Wire Wire Line
+	7150 5800 7150 5800
+Wire Wire Line
+	7150 6200 7150 5800
+NoConn ~ 8650 5700
+$Comp
+L GND #PWR049
+U 1 1 58D3C796
+P 9400 5950
+F 0 "#PWR049" H 9400 5700 50  0001 C CNN
+F 1 "GND" H 9400 5800 50  0000 C CNN
+F 2 "" H 9400 5950 50  0000 C CNN
+F 3 "" H 9400 5950 50  0000 C CNN
+	1    9400 5950
+	1    0    0    -1  
+$EndComp
+Text Label 9500 5550 2    60   ~ 0
+HVPL
+Text Notes 8550 5400 0    60   ~ 0
+Note: this is going to three LEDs
+Text Notes 7350 6200 0    60   ~ 0
+Need to verify DC DC Conv
+$Comp
+L C C3
+U 1 1 58D40888
+P 9000 5700
+F 0 "C3" H 9025 5800 50  0000 L CNN
+F 1 "2.2uF" H 9025 5600 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 9038 5550 50  0001 C CNN
+F 3 "" H 9000 5700 50  0000 C CNN
+F 4 "587-1293-1-ND" H 9000 5700 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/taiyo-yuden/EMK212BJ225KG-T/587-1293-1-ND/931070" H 9000 5700 60  0001 C CNN "URL"
+F 6 "EMK212BJ225KG-T" H 9000 5700 60  0001 C CNN "Man P/N"
+F 7 "CAP CER 2.2UF 16V X5R 0805" H 9000 5700 60  0001 C CNN "Description"
+	1    9000 5700
+	1    0    0    -1  
+$EndComp
+Text Notes 7600 5350 0    60   ~ 0
+Outputs +12V
+Wire Wire Line
+	8650 5800 8650 5850
+Wire Wire Line
+	8650 5850 9400 5850
+Wire Wire Line
+	8650 5600 8650 5550
+Wire Wire Line
+	8650 5550 9500 5550
+Connection ~ 9000 5550
+Wire Wire Line
+	9400 5850 9400 5950
+Connection ~ 9000 5850
+Wire Wire Line
+	4850 5500 6000 5500
+Wire Wire Line
+	6000 5500 6000 5750
+Wire Wire Line
+	6000 5750 6200 5750
+Connection ~ 6200 5750
 $EndSCHEMATC
