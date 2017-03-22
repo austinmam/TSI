@@ -79,6 +79,7 @@ LIBS:video
 LIBS:Xicor
 LIBS:xilinx
 LIBS:Zilog
+LIBS:pacman-main-cache
 LIBS:bss84
 LIBS:+10v
 LIBS:Circuit_layout-cache
@@ -1006,7 +1007,7 @@ U 1 1 58D14231
 P 12550 2200
 F 0 "SW3" H 12850 1700 50  0000 C CNN
 F 1 "JS202011CQN" H 13000 1600 50  0000 C CNN
-F 2 "" H 12550 2200 50  0001 C CNN
+F 2 "custom_footprints:CK_DPDT_Switch" H 12550 2200 50  0001 C CNN
 F 3 "http://www.ckswitches.com/media/1422/js.pdf" H 12550 2200 50  0001 C CNN
 F 4 "401-2001-ND" H 12550 2200 60  0001 C CNN "DigiKey P/N"
 F 5 "http://www.digikey.com/product-detail/en/c-k/JS202011CQN/401-2001-ND/1640097" H 12550 2200 60  0001 C CNN "URL"
