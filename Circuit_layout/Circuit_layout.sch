@@ -950,7 +950,7 @@ U 1 1 58C2BCC5
 P 8200 5900
 F 0 "W3" H 8200 6170 50  0000 C CNN
 F 1 "uC_GND" H 8200 6100 50  0000 C CNN
-F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Big" H 8400 5900 50  0001 C CNN
+F 2 "Measurement_Points:Measurement_Point_Square-SMD-Pad_Big" H 8400 5900 50  0001 C CNN
 F 3 "" H 8400 5900 50  0000 C CNN
 	1    8200 5900
 	-1   0    0    1   
@@ -1021,8 +1021,6 @@ Text GLabel 12000 2100 0    60   Input ~ 0
 Spare_ADC_1
 Text GLabel 12000 2500 0    60   Input ~ 0
 Spare_ADC_2
-Text Notes 13150 2700 2    60   ~ 0
-No footprint
 Text Notes 9800 -400 0    60   ~ 0
 NOTE: Add footprints to test points (already in lib)
 Text Label 13100 2000 0    60   ~ 0

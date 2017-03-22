@@ -266,4 +266,32 @@ F 3 "" H 5350 1300 50  0000 C CNN
 	1    5350 1300
 	1    0    0    -1  
 $EndComp
+$Comp
+L TEST_1P W?
+U 1 1 58D4724A
+P 5050 900
+F 0 "W?" H 5050 1170 50  0000 C CNN
+F 1 "+5DC/DC" H 5050 1100 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Big" H 5250 900 50  0001 C CNN
+F 3 "" H 5250 900 50  0000 C CNN
+	1    5050 900 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 1000 5050 900 
+Connection ~ 5050 1000
+$Comp
+L TEST_1P W?
+U 1 1 58D4731B
+P 5000 1300
+F 0 "W?" H 5000 1570 50  0000 C CNN
+F 1 "+5DC/DC_GND" H 5000 1500 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Square-SMD-Pad_Big" H 5200 1300 50  0001 C CNN
+F 3 "" H 5200 1300 50  0000 C CNN
+	1    5000 1300
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5000 1300 5000 1200
+Connection ~ 5000 1200
 $EndSCHEMATC

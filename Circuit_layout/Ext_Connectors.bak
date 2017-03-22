@@ -452,7 +452,7 @@ F 3 "" H 1400 3250 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1200 3000 1650 3000
+	1200 3000 2100 3000
 Wire Wire Line
 	1400 3000 1400 3250
 Text GLabel 2150 3800 2    60   Input ~ 0
@@ -460,7 +460,7 @@ Text GLabel 2150 3800 2    60   Input ~ 0
 Text GLabel 1100 2750 0    60   Input ~ 0
 +24V
 Wire Wire Line
-	1100 2750 1650 2750
+	1100 2750 2050 2750
 Wire Wire Line
 	1350 2750 1350 2600
 $Comp
@@ -654,13 +654,43 @@ Wire Wire Line
 $Comp
 L PWR_FLAG #FLG036
 U 1 1 58D3F022
-P 1650 3000
-F 0 "#FLG036" H 1650 3095 50  0001 C CNN
-F 1 "PWR_FLAG" H 1650 3180 50  0000 C CNN
-F 2 "" H 1650 3000 50  0000 C CNN
-F 3 "" H 1650 3000 50  0000 C CNN
-	1    1650 3000
-	0    1    1    0   
+P 1750 3250
+F 0 "#FLG036" H 1750 3345 50  0001 C CNN
+F 1 "PWR_FLAG" H 1750 3430 50  0000 C CNN
+F 2 "" H 1750 3250 50  0000 C CNN
+F 3 "" H 1750 3250 50  0000 C CNN
+	1    1750 3250
+	-1   0    0    1   
 $EndComp
 Connection ~ 1400 3000
+$Comp
+L TEST_1P W?
+U 1 1 58D4655B
+P 2050 2600
+F 0 "W?" H 2050 2870 50  0000 C CNN
+F 1 "+24V" H 2050 2800 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Big" H 2250 2600 50  0001 C CNN
+F 3 "" H 2250 2600 50  0000 C CNN
+	1    2050 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2050 2750 2050 2600
+Connection ~ 1650 2750
+$Comp
+L TEST_1P W?
+U 1 1 58D46659
+P 2100 3200
+F 0 "W?" H 2100 3470 50  0000 C CNN
+F 1 "CH_GND" H 2100 3400 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Square-SMD-Pad_Big" H 2300 3200 50  0001 C CNN
+F 3 "" H 2300 3200 50  0000 C CNN
+	1    2100 3200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1750 3000 1750 3250
+Wire Wire Line
+	2100 3000 2100 3200
+Connection ~ 1750 3000
 $EndSCHEMATC
