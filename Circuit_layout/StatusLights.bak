@@ -1005,10 +1005,10 @@ Connection ~ 6800 5300
 Text Notes 2450 -100 0    60   ~ 0
 U11/12: Verify that these will supply necessary current. Add high side switch on output if necessary. Also could be accomplished with NMOS followed by PMOS
 $Comp
-L R R?
+L R R17
 U 1 1 58D617C3
 P 4200 3200
-F 0 "R?" V 4280 3200 50  0000 C CNN
+F 0 "R17" V 4280 3200 50  0000 C CNN
 F 1 "10k" V 4200 3200 50  0000 C CNN
 F 2 "Resistors_SMD:R_0805_HandSoldering" V 4130 3200 50  0001 C CNN
 F 3 "" H 4200 3200 50  0000 C CNN
