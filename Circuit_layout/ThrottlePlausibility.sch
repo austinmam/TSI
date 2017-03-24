@@ -2370,4 +2370,8 @@ F 8 "0.34" H 12600 5900 60  0001 C CNN "Cost"
 $EndComp
 Text Label 10350 1750 0    60   ~ 0
 APPS_10
+Text Notes 14450 5300 0    60   ~ 0
+Fix pin numbers
+Text Notes 1800 6800 0    60   ~ 0
+Move cap to r29 so create a LPF on the +5V
 $EndSCHEMATC

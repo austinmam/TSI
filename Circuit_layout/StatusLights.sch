@@ -1016,4 +1016,6 @@ Connection ~ 6750 6200
 Wire Wire Line
 	6800 5200 6800 5300
 Connection ~ 6800 5300
+Text Notes 2450 -100 0    60   ~ 0
+U11/12: Verify that these will supply necessary current. Add high side switch on output if necessary. Also could be accomplished with NMOS followed by PMOS
 $EndSCHEMATC
