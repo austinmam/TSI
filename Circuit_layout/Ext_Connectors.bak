@@ -123,9 +123,9 @@ Text Notes 650  5950 3    60   ~ 0
 Motor Controller
 Text Label 7750 2700 2    60   ~ 0
 Drive_BTN_+5
-Text Label 7100 1950 2    60   ~ 0
+Text Label 5900 1150 2    60   ~ 0
 CAN_L
-Text Label 7100 1850 2    60   ~ 0
+Text Label 5900 1050 2    60   ~ 0
 CAN_H
 Text Label 7100 3100 2    60   ~ 0
 RTDS_RTN
@@ -161,7 +161,7 @@ F 3 "" H 1000 7100 50  0000 C CNN
 $EndComp
 Text Notes 4800 2900 0    60   ~ 0
 AIRs
-Text Notes 7800 1950 2    60   ~ 0
+Text Notes 5200 1050 2    60   ~ 0
 CAN Bus
 Text GLabel 1900 6450 2    60   Input ~ 0
 Throttle_RTN
@@ -169,9 +169,9 @@ Text GLabel 1900 6350 2    60   Input ~ 0
 Throttle_HV
 Text GLabel 1900 6150 2    60   Input ~ 0
 +5HV
-Text GLabel 5600 1050 0    60   Input ~ 0
+Text GLabel 7250 1950 2    60   Input ~ 0
 Brake_24
-Text GLabel 5600 1150 0    60   Input ~ 0
+Text GLabel 7250 1850 2    60   Input ~ 0
 BOT
 Text GLabel 5600 1350 0    60   Input ~ 0
 APPS1_10
@@ -217,10 +217,10 @@ TDI
 Text GLabel 6800 4600 2    60   Input ~ 0
 ~RESET_AVR
 $Comp
-L +5V #PWR022
+L +5V #PWR020
 U 1 1 58A81530
 P 6800 4400
-F 0 "#PWR022" H 6800 4250 50  0001 C CNN
+F 0 "#PWR020" H 6800 4250 50  0001 C CNN
 F 1 "+5V" H 6800 4540 50  0000 C CNN
 F 2 "" H 6800 4400 50  0000 C CNN
 F 3 "" H 6800 4400 50  0000 C CNN
@@ -230,10 +230,10 @@ $EndComp
 Text GLabel 5600 2600 0    60   Input ~ 0
 +24V_RTN
 $Comp
-L +24V #PWR023
+L +24V #PWR021
 U 1 1 58AF1C5B
 P 2250 1250
-F 0 "#PWR023" H 2250 1100 50  0001 C CNN
+F 0 "#PWR021" H 2250 1100 50  0001 C CNN
 F 1 "+24V" H 2250 1390 50  0000 C CNN
 F 2 "" H 2250 1250 50  0000 C CNN
 F 3 "" H 2250 1250 50  0000 C CNN
@@ -245,10 +245,10 @@ RTDS
 Text GLabel 7750 2900 2    60   Input ~ 0
 Drive_LED
 $Comp
-L +5V #PWR024
+L +5V #PWR022
 U 1 1 58B1052B
 P 8600 2700
-F 0 "#PWR024" H 8600 2550 50  0001 C CNN
+F 0 "#PWR022" H 8600 2550 50  0001 C CNN
 F 1 "+5V" H 8600 2840 50  0000 C CNN
 F 2 "" H 8600 2700 50  0000 C CNN
 F 3 "" H 8600 2700 50  0000 C CNN
@@ -268,16 +268,235 @@ I/O_Ground
 Text Label 2250 7250 0    60   ~ 0
 Throttle_RTN
 $Comp
-L GND #PWR025
+L GND #PWR023
 U 1 1 58B4A72F
 P 7500 3150
-F 0 "#PWR025" H 7500 2900 50  0001 C CNN
+F 0 "#PWR023" H 7500 2900 50  0001 C CNN
 F 1 "GND" H 7500 3000 50  0000 C CNN
 F 2 "" H 7500 3150 50  0000 C CNN
 F 3 "" H 7500 3150 50  0000 C CNN
 	1    7500 3150
 	-1   0    0    -1  
 $EndComp
+Text Notes 4800 3100 0    60   ~ 0
+IMD
+Text GLabel 5600 3000 0    60   Input ~ 0
+IMD_Status
+Text GLabel 5600 3100 0    60   Input ~ 0
+IMD_PWM
+Text GLabel 7250 1050 2    60   Input ~ 0
+HVPL
+Text GLabel 7250 1150 2    60   Input ~ 0
+HVPL
+Text GLabel 2600 4050 3    60   Input ~ 0
+A2_LV
+Text GLabel 2500 4050 3    60   Input ~ 0
+A1_LV
+Text GLabel 7750 2600 2    60   Input ~ 0
+IMD_Fault_LED
+Text GLabel 5600 2500 0    60   Input ~ 0
+CH_GND
+$Comp
+L GND #PWR024
+U 1 1 58B7A0E8
+P 8850 2700
+F 0 "#PWR024" H 8850 2450 50  0001 C CNN
+F 1 "GND" H 8850 2550 50  0000 C CNN
+F 2 "" H 8850 2700 50  0000 C CNN
+F 3 "" H 8850 2700 50  0000 C CNN
+	1    8850 2700
+	-1   0    0    -1  
+$EndComp
+Text GLabel 2100 1650 0    60   Input ~ 0
+CH_GND
+$Comp
+L GND #PWR025
+U 1 1 58B888D9
+P 2300 1900
+F 0 "#PWR025" H 2300 1650 50  0001 C CNN
+F 1 "GND" H 2300 1750 50  0000 C CNN
+F 2 "" H 2300 1900 50  0000 C CNN
+F 3 "" H 2300 1900 50  0000 C CNN
+	1    2300 1900
+	1    0    0    -1  
+$EndComp
+Text GLabel 5600 2700 0    60   Input ~ 0
++24V
+Text GLabel 2000 1400 0    60   Input ~ 0
++24V
+$Comp
+L PWR_FLAG #FLG026
+U 1 1 58B89230
+P 2550 1250
+F 0 "#FLG026" H 2550 1345 50  0001 C CNN
+F 1 "PWR_FLAG" H 2550 1430 50  0000 C CNN
+F 2 "" H 2550 1250 50  0000 C CNN
+F 3 "" H 2550 1250 50  0000 C CNN
+	1    2550 1250
+	1    0    0    -1  
+$EndComp
+Text GLabel 7250 1250 2    60   Input ~ 0
+HVPL
+Text GLabel 5600 1050 0    60   Input ~ 0
+CANH
+Text GLabel 5600 1150 0    60   Input ~ 0
+CANL
+Text Notes 4950 2650 2    60   ~ 0
+GLV
+Text Label 7750 2500 2    60   ~ 0
+Cockpit_RTN
+Text GLabel 5600 1450 0    60   Input ~ 0
+APPS2_5
+Text GLabel 5600 1550 0    60   Input ~ 0
+APPS1_RTN
+$Comp
+L CONN_01X08 J1
+U 1 1 58BD8C78
+P 8350 4650
+F 0 "J1" H 8350 5100 50  0000 C CNN
+F 1 "Spare_Conns" V 8450 4650 50  0000 C CNN
+F 2 "custom_footprints:Molex_8x1_2.54mm" H 8350 4650 50  0001 C CNN
+F 3 "" H 8350 4650 50  0000 C CNN
+F 4 "WM4128-ND" H 8350 4650 60  0001 C CNN "DigiKey P/N"
+F 5 "https://www.digikey.com/product-detail/en/molex-llc/0705430112/WM4128-ND/1643361" H 8350 4650 60  0001 C CNN "URL"
+F 6 "0705430112" H 8350 4650 60  0001 C CNN "Man P/N"
+F 7 "CONN HEADER 8POS .100 VERT 30AU" H 8350 4650 60  0001 C CNN "Description"
+F 8 "1.88" H 8350 4650 60  0001 C CNN "Price"
+	1    8350 4650
+	-1   0    0    1   
+$EndComp
+Text Notes 7900 4150 0    60   ~ 0
+Spare connections to uC
+Text GLabel 8950 5000 2    60   Input ~ 0
+UART_RX
+Text GLabel 8950 4900 2    60   Input ~ 0
+UART_TX
+Text GLabel 8950 4800 2    60   Input ~ 0
+SCL
+Text GLabel 8950 4700 2    60   Input ~ 0
+SDA
+Text GLabel 8950 4600 2    60   Input ~ 0
+Spare_OC
+Text GLabel 8950 4500 2    60   Input ~ 0
+Spare_ICP
+Text GLabel 8950 4400 2    60   Input ~ 0
+Spare_ADC_1
+Text GLabel 8950 4300 2    60   Input ~ 0
+Spare_ADC_2
+$Comp
+L GND #PWR027
+U 1 1 58C3E939
+P 7850 1600
+F 0 "#PWR027" H 7850 1350 50  0001 C CNN
+F 1 "GND" H 7850 1450 50  0000 C CNN
+F 2 "" H 7850 1600 50  0000 C CNN
+F 3 "" H 7850 1600 50  0000 C CNN
+	1    7850 1600
+	-1   0    0    -1  
+$EndComp
+Text GLabel 7250 1750 2    60   Input ~ 0
+BP
+Text Notes 7650 3100 0    60   ~ 0
+RTDS
+$Comp
+L GND #PWR028
+U 1 1 58D1CF0B
+P 6650 4900
+F 0 "#PWR028" H 6650 4650 50  0001 C CNN
+F 1 "GND" H 6650 4750 50  0000 C CNN
+F 2 "" H 6650 4900 50  0000 C CNN
+F 3 "" H 6650 4900 50  0000 C CNN
+	1    6650 4900
+	1    0    0    -1  
+$EndComp
+Text GLabel 2700 4050 3    60   Input ~ 0
+I_RTN
+$Comp
+L PWR_FLAG #FLG029
+U 1 1 58D3F022
+P 2650 1900
+F 0 "#FLG029" H 2650 1995 50  0001 C CNN
+F 1 "PWR_FLAG" H 2650 2080 50  0000 C CNN
+F 2 "" H 2650 1900 50  0000 C CNN
+F 3 "" H 2650 1900 50  0000 C CNN
+	1    2650 1900
+	-1   0    0    1   
+$EndComp
+$Comp
+L TEST_1P W16
+U 1 1 58D4655B
+P 2950 1250
+F 0 "W16" H 2950 1520 50  0000 C CNN
+F 1 "+24V" H 2950 1450 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Big" H 3150 1250 50  0001 C CNN
+F 3 "" H 3150 1250 50  0000 C CNN
+	1    2950 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L TEST_1P W17
+U 1 1 58D46659
+P 3000 1850
+F 0 "W17" H 3000 2120 50  0000 C CNN
+F 1 "CH_GND" H 3000 2050 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Square-SMD-Pad_Big" H 3200 1850 50  0001 C CNN
+F 3 "" H 3200 1850 50  0000 C CNN
+	1    3000 1850
+	-1   0    0    1   
+$EndComp
+$Comp
+L +5V #PWR030
+U 1 1 58D6E615
+P 3100 3950
+F 0 "#PWR030" H 3100 3800 50  0001 C CNN
+F 1 "+5V" H 3100 4090 50  0000 C CNN
+F 2 "" H 3100 3950 50  0000 C CNN
+F 3 "" H 3100 3950 50  0000 C CNN
+	1    3100 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_02X07 P3
+U 1 1 58D5A394
+P 6450 2800
+F 0 "P3" H 6450 3200 50  0000 C CNN
+F 1 "CONN_02X07" V 6450 2800 50  0000 C CNN
+F 2 "Connect:IDC_Header_Straight_14pins" H 6450 2350 50  0001 C CNN
+F 3 "" H 6450 1600 50  0000 C CNN
+F 4 "WM8632-ND" H 6450 2800 60  0001 C CNN "DigiKey P/N"
+F 5 "https://www.digikey.com/product-detail/en/molex-connector-corporation/0905711141/WM8632-ND/3044753" H 6450 2800 60  0001 C CNN "URL"
+F 6 "0905711141" H 6450 2800 60  0001 C CNN "Man P/N"
+F 7 "CONN HEADER 14POS 2.54MM VERT" H 6450 2800 60  0001 C CNN "Description"
+F 8 "2.40" H 6450 2800 60  0001 C CNN "Price"
+	1    6450 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_02X10 P2
+U 1 1 58D5A47F
+P 6450 1500
+F 0 "P2" H 6450 2050 50  0000 C CNN
+F 1 "CONN_02X10" V 6450 1500 50  0000 C CNN
+F 2 "Connect:IDC_Header_Straight_20pins" H 6450 900 50  0001 C CNN
+F 3 "" H 6450 300 50  0000 C CNN
+F 4 "WM14741-ND" H 6450 1500 60  0001 C CNN "DigiKey P/N"
+F 5 "https://www.digikey.com/product-detail/en/molex-llc/0906631201/WM14741-ND/3469224" H 6450 1500 60  0001 C CNN "URL"
+F 6 "0906631201" H 6450 1500 60  0001 C CNN "Man P/N"
+F 7 "QF50 SRD HDR VT .1AU 20POS" H 6450 1500 60  0001 C CNN "Description"
+F 8 "2.31" H 6450 1500 60  0001 C CNN "Price"
+	1    6450 1500
+	1    0    0    -1  
+$EndComp
+Text Label 7250 1250 2    60   ~ 0
+HVPL_Cock
+Text Label 6700 1550 0    60   ~ 0
+HVPL_Cock_RTN
+Text Notes 4950 1500 2    60   ~ 0
+Pedals
+Text Notes 7700 1150 0    60   ~ 0
+HVPL
+NoConn ~ 6200 1950
+NoConn ~ 6700 1650
 Wire Wire Line
 	1150 6250 1900 6250
 Wire Wire Line
@@ -300,8 +519,6 @@ Wire Wire Line
 	6200 1650 5600 1650
 Wire Wire Line
 	6200 1350 5600 1350
-Wire Wire Line
-	6200 1050 5600 1050
 Wire Wire Line
 	1200 7150 1600 7150
 Wire Wire Line
@@ -350,78 +567,19 @@ Wire Wire Line
 Wire Wire Line
 	2250 7000 2250 7250
 Wire Wire Line
-	5600 1150 6200 1150
-Text Notes 4800 3100 0    60   ~ 0
-IMD
-Wire Wire Line
 	5600 3100 6200 3100
 Wire Wire Line
 	5600 3000 6200 3000
-Text GLabel 5600 3000 0    60   Input ~ 0
-IMD_Status
-Text GLabel 5600 3100 0    60   Input ~ 0
-IMD_PWM
-Text GLabel 7250 1050 2    60   Input ~ 0
-HVPL
-Text GLabel 7250 1150 2    60   Input ~ 0
-HVPL
 Wire Wire Line
 	2800 3700 2800 4050
-Text GLabel 2600 4050 3    60   Input ~ 0
-A2_LV
-Text GLabel 2500 4050 3    60   Input ~ 0
-A1_LV
-Text GLabel 7750 2600 2    60   Input ~ 0
-IMD_Fault_LED
-Text GLabel 5600 2500 0    60   Input ~ 0
-CH_GND
-$Comp
-L GND #PWR026
-U 1 1 58B7A0E8
-P 8850 2700
-F 0 "#PWR026" H 8850 2450 50  0001 C CNN
-F 1 "GND" H 8850 2550 50  0000 C CNN
-F 2 "" H 8850 2700 50  0000 C CNN
-F 3 "" H 8850 2700 50  0000 C CNN
-	1    8850 2700
-	-1   0    0    -1  
-$EndComp
-Text GLabel 2100 1650 0    60   Input ~ 0
-CH_GND
-$Comp
-L GND #PWR027
-U 1 1 58B888D9
-P 2300 1900
-F 0 "#PWR027" H 2300 1650 50  0001 C CNN
-F 1 "GND" H 2300 1750 50  0000 C CNN
-F 2 "" H 2300 1900 50  0000 C CNN
-F 3 "" H 2300 1900 50  0000 C CNN
-	1    2300 1900
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2100 1650 3000 1650
 Wire Wire Line
 	2300 1650 2300 1900
-Text GLabel 5600 2700 0    60   Input ~ 0
-+24V
-Text GLabel 2000 1400 0    60   Input ~ 0
-+24V
 Wire Wire Line
 	2000 1400 2950 1400
 Wire Wire Line
 	2250 1400 2250 1250
-$Comp
-L PWR_FLAG #FLG028
-U 1 1 58B89230
-P 2550 1250
-F 0 "#FLG028" H 2550 1345 50  0001 C CNN
-F 1 "PWR_FLAG" H 2550 1430 50  0000 C CNN
-F 2 "" H 2550 1250 50  0000 C CNN
-F 3 "" H 2550 1250 50  0000 C CNN
-	1    2550 1250
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2550 1400 2550 1250
 Connection ~ 2250 1400
@@ -429,52 +587,16 @@ Wire Wire Line
 	5600 2500 6200 2500
 Wire Wire Line
 	5600 2700 6200 2700
-Text GLabel 7250 1250 2    60   Input ~ 0
-HVPL
 Wire Wire Line
 	8850 2500 6700 2500
-Text GLabel 7100 1850 2    60   Input ~ 0
-CANH
-Text GLabel 7100 1950 2    60   Input ~ 0
-CANL
-Wire Wire Line
-	6700 1950 7100 1950
-Wire Wire Line
-	7100 1850 6700 1850
 Wire Wire Line
 	5600 2600 6200 2600
-Text Notes 4950 2650 2    60   ~ 0
-GLV
-Text Label 7750 2500 2    60   ~ 0
-Cockpit_RTN
 Wire Wire Line
 	7750 2900 6700 2900
-Text GLabel 5600 1450 0    60   Input ~ 0
-APPS2_5
 Wire Wire Line
 	5600 1450 6200 1450
-Text GLabel 5600 1550 0    60   Input ~ 0
-APPS1_RTN
 Wire Wire Line
 	5600 1550 6200 1550
-$Comp
-L CONN_01X08 J1
-U 1 1 58BD8C78
-P 8350 4650
-F 0 "J1" H 8350 5100 50  0000 C CNN
-F 1 "Spare_Conns" V 8450 4650 50  0000 C CNN
-F 2 "custom_footprints:Molex_8x1_2.54mm" H 8350 4650 50  0001 C CNN
-F 3 "" H 8350 4650 50  0000 C CNN
-F 4 "WM4128-ND" H 8350 4650 60  0001 C CNN "DigiKey P/N"
-F 5 "https://www.digikey.com/product-detail/en/molex-llc/0705430112/WM4128-ND/1643361" H 8350 4650 60  0001 C CNN "URL"
-F 6 "0705430112" H 8350 4650 60  0001 C CNN "Man P/N"
-F 7 "CONN HEADER 8POS .100 VERT 30AU" H 8350 4650 60  0001 C CNN "Description"
-F 8 "1.88" H 8350 4650 60  0001 C CNN "Price"
-	1    8350 4650
-	-1   0    0    1   
-$EndComp
-Text Notes 7900 4150 0    60   ~ 0
-Spare connections to uC
 Wire Wire Line
 	8550 5000 8950 5000
 Wire Wire Line
@@ -491,172 +613,54 @@ Wire Wire Line
 	8550 4400 8950 4400
 Wire Wire Line
 	8550 4300 8950 4300
-Text GLabel 8950 5000 2    60   Input ~ 0
-UART_RX
-Text GLabel 8950 4900 2    60   Input ~ 0
-UART_TX
-Text GLabel 8950 4800 2    60   Input ~ 0
-SCL
-Text GLabel 8950 4700 2    60   Input ~ 0
-SDA
-Text GLabel 8950 4600 2    60   Input ~ 0
-Spare_OC
-Text GLabel 8950 4500 2    60   Input ~ 0
-Spare_ICP
-Text GLabel 8950 4400 2    60   Input ~ 0
-Spare_ADC_1
-Text GLabel 8950 4300 2    60   Input ~ 0
-Spare_ADC_2
 Wire Wire Line
 	6700 1050 7250 1050
 Wire Wire Line
 	6700 1150 7250 1150
 Wire Wire Line
-	7450 1350 6700 1350
+	6700 1350 7600 1350
 Wire Wire Line
 	7450 1450 6700 1450
-Wire Wire Line
-	7450 1350 7450 1600
-Connection ~ 7450 1450
-$Comp
-L GND #PWR029
-U 1 1 58C3E939
-P 7450 1600
-F 0 "#PWR029" H 7450 1350 50  0001 C CNN
-F 1 "GND" H 7450 1450 50  0000 C CNN
-F 2 "" H 7450 1600 50  0000 C CNN
-F 3 "" H 7450 1600 50  0000 C CNN
-	1    7450 1600
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
 	7500 3100 6700 3100
 Wire Wire Line
 	6700 3000 7100 3000
-Text GLabel 5600 1250 0    60   Input ~ 0
-BP
-Wire Wire Line
-	5600 1250 6200 1250
 Wire Wire Line
 	7500 3100 7500 3150
-Text Notes 7650 3100 0    60   ~ 0
-RTDS
-$Comp
-L GND #PWR030
-U 1 1 58D1CF0B
-P 6650 4900
-F 0 "#PWR030" H 6650 4650 50  0001 C CNN
-F 1 "GND" H 6650 4750 50  0000 C CNN
-F 2 "" H 6650 4900 50  0000 C CNN
-F 3 "" H 6650 4900 50  0000 C CNN
-	1    6650 4900
-	1    0    0    -1  
-$EndComp
-Text GLabel 2700 4050 3    60   Input ~ 0
-I_RTN
 Wire Wire Line
 	8850 2500 8850 2700
-$Comp
-L PWR_FLAG #FLG031
-U 1 1 58D3F022
-P 2650 1900
-F 0 "#FLG031" H 2650 1995 50  0001 C CNN
-F 1 "PWR_FLAG" H 2650 2080 50  0000 C CNN
-F 2 "" H 2650 1900 50  0000 C CNN
-F 3 "" H 2650 1900 50  0000 C CNN
-	1    2650 1900
-	-1   0    0    1   
-$EndComp
 Connection ~ 2300 1650
-$Comp
-L TEST_1P W16
-U 1 1 58D4655B
-P 2950 1250
-F 0 "W16" H 2950 1520 50  0000 C CNN
-F 1 "+24V" H 2950 1450 50  0000 C CNN
-F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Big" H 3150 1250 50  0001 C CNN
-F 3 "" H 3150 1250 50  0000 C CNN
-	1    2950 1250
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2950 1400 2950 1250
 Connection ~ 2550 1400
-$Comp
-L TEST_1P W17
-U 1 1 58D46659
-P 3000 1850
-F 0 "W17" H 3000 2120 50  0000 C CNN
-F 1 "CH_GND" H 3000 2050 50  0000 C CNN
-F 2 "Measurement_Points:Measurement_Point_Square-SMD-Pad_Big" H 3200 1850 50  0001 C CNN
-F 3 "" H 3200 1850 50  0000 C CNN
-	1    3000 1850
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	2650 1650 2650 1900
 Wire Wire Line
 	3000 1650 3000 1850
 Connection ~ 2650 1650
-$Comp
-L +5V #PWR032
-U 1 1 58D6E615
-P 3100 3950
-F 0 "#PWR032" H 3100 3800 50  0001 C CNN
-F 1 "+5V" H 3100 4090 50  0000 C CNN
-F 2 "" H 3100 3950 50  0000 C CNN
-F 3 "" H 3100 3950 50  0000 C CNN
-	1    3100 3950
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2800 4050 3100 4050
 Wire Wire Line
 	3100 4050 3100 3950
-$Comp
-L CONN_02X07 P3
-U 1 1 58D5A394
-P 6450 2800
-F 0 "P3" H 6450 3200 50  0000 C CNN
-F 1 "CONN_02X07" V 6450 2800 50  0000 C CNN
-F 2 "Connect:IDC_Header_Straight_14pins" H 6450 2350 50  0001 C CNN
-F 3 "" H 6450 1600 50  0000 C CNN
-F 4 "WM8632-ND" H 6450 2800 60  0001 C CNN "DigiKey P/N"
-F 5 "https://www.digikey.com/product-detail/en/molex-connector-corporation/0905711141/WM8632-ND/3044753" H 6450 2800 60  0001 C CNN "URL"
-F 6 "0905711141" H 6450 2800 60  0001 C CNN "Man P/N"
-F 7 "CONN HEADER 14POS 2.54MM VERT" H 6450 2800 60  0001 C CNN "Description"
-F 8 "2.40" H 6450 2800 60  0001 C CNN "Price"
-	1    6450 2800
-	1    0    0    -1  
-$EndComp
-$Comp
-L CONN_02X10 P2
-U 1 1 58D5A47F
-P 6450 1500
-F 0 "P2" H 6450 2050 50  0000 C CNN
-F 1 "CONN_02X10" V 6450 1500 50  0000 C CNN
-F 2 "Connect:IDC_Header_Straight_20pins" H 6450 900 50  0001 C CNN
-F 3 "" H 6450 300 50  0000 C CNN
-F 4 "WM14741-ND" H 6450 1500 60  0001 C CNN "DigiKey P/N"
-F 5 "https://www.digikey.com/product-detail/en/molex-llc/0906631201/WM14741-ND/3469224" H 6450 1500 60  0001 C CNN "URL"
-F 6 "0906631201" H 6450 1500 60  0001 C CNN "Man P/N"
-F 7 "QF50 SRD HDR VT .1AU 20POS" H 6450 1500 60  0001 C CNN "Description"
-F 8 "2.31" H 6450 1500 60  0001 C CNN "Price"
-	1    6450 1500
-	1    0    0    -1  
-$EndComp
-Text Label 7250 1250 2    60   ~ 0
-HVPL_Cock
 Wire Wire Line
-	6700 1550 7450 1550
+	6700 1550 7850 1550
+Wire Wire Line
+	7850 1550 7850 1600
+Wire Wire Line
+	7450 1450 7450 1550
 Connection ~ 7450 1550
-Text Label 6700 1550 0    60   ~ 0
-HVPL_Cock_RTN
-Text Notes 4950 1500 2    60   ~ 0
-Pedals
-Text Notes 7700 1150 0    60   ~ 0
-HVPL
-NoConn ~ 6200 1950
-NoConn ~ 6700 1650
-NoConn ~ 6700 1750
+Wire Wire Line
+	7600 1350 7600 1550
+Connection ~ 7600 1550
+Wire Wire Line
+	6700 1750 7250 1750
+Wire Wire Line
+	6700 1850 7250 1850
+Wire Wire Line
+	6700 1950 7250 1950
+Wire Wire Line
+	5600 1150 6200 1150
+Wire Wire Line
+	5600 1050 6200 1050
+NoConn ~ 6200 1250
 $EndSCHEMATC
