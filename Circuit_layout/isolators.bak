@@ -826,10 +826,10 @@ Note: Isolation Diff. Amps \nDO NOT have associated footprints
 Wire Notes Line
 	5450 7800 5450 450 
 $Comp
-L TEST_1P Thrtl_HV
+L TEST_1P Thrtl_HV1
 U 1 1 58C2EF83
 P 8500 2550
-F 0 "Thrtl_HV" H 8500 2820 50  0000 C CNN
+F 0 "Thrtl_HV1" H 8500 2820 50  0000 C CNN
 F 1 "Throttle_HV" H 8500 2750 50  0000 C CNN
 F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Big" H 8700 2550 50  0001 C CNN
 F 3 "" H 8700 2550 50  0000 C CNN
@@ -840,10 +840,10 @@ Wire Wire Line
 	8500 2550 8500 2700
 Connection ~ 8500 2700
 $Comp
-L TEST_1P +5HV
+L TEST_1P +5HV1
 U 1 1 58C2F5EA
 P 9500 2400
-F 0 "+5HV" H 9500 2670 50  0000 C CNN
+F 0 "+5HV1" H 9500 2670 50  0000 C CNN
 F 1 "+5HV" H 9500 2600 50  0000 C CNN
 F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Big" H 9700 2400 50  0001 C CNN
 F 3 "" H 9700 2400 50  0000 C CNN
@@ -851,10 +851,10 @@ F 3 "" H 9700 2400 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L TEST_1P IO_GND
+L TEST_1P IO_GND1
 U 1 1 58C2F6F4
 P 9500 2900
-F 0 "IO_GND" H 9500 3170 50  0000 C CNN
+F 0 "IO_GND1" H 9500 3170 50  0000 C CNN
 F 1 "I/O_Ground" H 9500 3100 50  0000 C CNN
 F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Big" H 9700 2900 50  0001 C CNN
 F 3 "" H 9700 2900 50  0000 C CNN
@@ -868,10 +868,10 @@ Wire Wire Line
 	9250 2900 9500 2900
 Connection ~ 9250 2900
 $Comp
-L TEST_1P V_Meas
+L TEST_1P V_Meas1
 U 1 1 58C2FC1B
 P 2300 4600
-F 0 "V_Meas" H 2300 4870 50  0000 C CNN
+F 0 "V_Meas1" H 2300 4870 50  0000 C CNN
 F 1 "V_Measure" H 2300 4800 50  0000 C CNN
 F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Big" H 2500 4600 50  0001 C CNN
 F 3 "" H 2500 4600 50  0000 C CNN
@@ -912,10 +912,10 @@ Wire Wire Line
 	4450 5050 4600 5050
 Connection ~ 4600 5050
 $Comp
-L TEST_1P V_Meas_GND
+L TEST_1P V_Meas_GND1
 U 1 1 58D30357
 P 4450 5050
-F 0 "V_Meas_GND" H 4450 5320 50  0000 C CNN
+F 0 "V_Meas_GND1" H 4450 5320 50  0000 C CNN
 F 1 "V_Meas_GND" H 4450 5250 50  0000 C CNN
 F 2 "Measurement_Points:Measurement_Point_Square-SMD-Pad_Big" H 4650 5050 50  0001 C CNN
 F 3 "" H 4650 5050 50  0000 C CNN

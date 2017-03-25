@@ -868,9 +868,11 @@ Wire Wire Line
 Connection ~ 6600 6200
 Connection ~ 6600 5300
 $Comp
-L PDM2-S24-S12 U1
+L PDM2-S24-S12-RESCUE-Circuit_layout U1
 U 1 1 58D3B6C8
 P 7900 5700
+AR Path="/58D3B6C8" Ref="U1"  Part="1" 
+AR Path="/58ADE509/58D3B6C8" Ref="U1"  Part="1" 
 F 0 "U1" H 7900 5600 50  0000 C CNN
 F 1 "PDM2-S24-S12" H 7900 5900 50  0000 C CNN
 F 2 "custom_footprints:DCDC-Conv_TRACO_TMR_1-xxxx_Single" H 7900 5300 50  0001 C CNN
