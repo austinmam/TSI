@@ -437,34 +437,6 @@ F 6 "ERJ-6ENF1002V" V 9300 1300 60  0001 C CNN "Man P/N"
 	-1   0    0    1   
 $EndComp
 $Comp
-L R R46
-U 1 1 58B795F8
-P 11050 3150
-F 0 "R46" V 11130 3150 50  0000 C CNN
-F 1 "1k" V 11050 3150 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 10980 3150 50  0001 C CNN
-F 3 "" H 11050 3150 50  0000 C CNN
-F 4 "P1.00KCCT-ND" V 11050 3150 60  0001 C CNN "DigiKey P/N"
-F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF1001V/P1.00KCCT-ND/118957" V 11050 3150 60  0001 C CNN "URL"
-F 6 "ERJ-6ENF1001V" V 11050 3150 60  0001 C CNN "Man P/N"
-	1    11050 3150
-	0    1    1    0   
-$EndComp
-$Comp
-L R R48
-U 1 1 58B79789
-P 11450 4000
-F 0 "R48" V 11530 4000 50  0000 C CNN
-F 1 "1k" V 11450 4000 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 11380 4000 50  0001 C CNN
-F 3 "" H 11450 4000 50  0000 C CNN
-F 4 "P1.00KCCT-ND" V 11450 4000 60  0001 C CNN "DigiKey P/N"
-F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF1001V/P1.00KCCT-ND/118957" V 11450 4000 60  0001 C CNN "URL"
-F 6 "ERJ-6ENF1001V" V 11450 4000 60  0001 C CNN "Man P/N"
-	1    11450 4000
-	-1   0    0    1   
-$EndComp
-$Comp
 L R R33
 U 1 1 58B83525
 P 8500 2100
@@ -2344,4 +2316,32 @@ Wire Wire Line
 Wire Wire Line
 	15050 5000 15050 5050
 Connection ~ 15050 5000
+$Comp
+L R R?
+U 1 1 58D71EC5
+P 11050 3150
+F 0 "R?" V 11130 3150 50  0000 C CNN
+F 1 "10k" V 11050 3150 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 10980 3150 50  0001 C CNN
+F 3 "" H 11050 3150 50  0000 C CNN
+F 4 "P10.0KCCT-ND" V 11050 3150 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF1002V/P10.0KCCT-ND/119248" V 11050 3150 60  0001 C CNN "URL"
+F 6 "ERJ-6ENF1002V" V 11050 3150 60  0001 C CNN "Man P/N"
+	1    11050 3150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R?
+U 1 1 58D72007
+P 11450 4000
+F 0 "R?" V 11530 4000 50  0000 C CNN
+F 1 "10k" V 11450 4000 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 11380 4000 50  0001 C CNN
+F 3 "" H 11450 4000 50  0000 C CNN
+F 4 "P10.0KCCT-ND" V 11450 4000 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF1002V/P10.0KCCT-ND/119248" V 11450 4000 60  0001 C CNN "URL"
+F 6 "ERJ-6ENF1002V" V 11450 4000 60  0001 C CNN "Man P/N"
+	1    11450 4000
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
