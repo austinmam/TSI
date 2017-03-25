@@ -1,0 +1,8 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP LM95071-Q1
+D SENSOR TEMPERATURE SPI SOT23-5
+F http://www.ti.com/lit/ds/symlink/lm95071-q1.pdf
+$ENDCMP
+#
+#End Doc Library

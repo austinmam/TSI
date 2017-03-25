@@ -345,10 +345,7 @@ $EndComp
 NoConn ~ 9800 1900
 NoConn ~ 9800 2000
 NoConn ~ 9800 2400
-NoConn ~ 9800 2700
-NoConn ~ 9800 2800
 NoConn ~ 9800 2900
-NoConn ~ 9800 3000
 NoConn ~ 9800 4000
 NoConn ~ 9800 4100
 NoConn ~ 9800 4200
@@ -793,10 +790,10 @@ F 3 "" H 8400 5900 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L TEST_1P W2
+L TEST_1P IMD_uC
 U 1 1 58C2CAF9
 P 3100 2800
-F 0 "W2" H 3100 3070 50  0000 C CNN
+F 0 "IMD_uC" H 3100 3070 50  0000 C CNN
 F 1 "IMD_uC" H 3100 3000 50  0000 C CNN
 F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Big" H 3300 2800 50  0001 C CNN
 F 3 "" H 3300 2800 50  0000 C CNN
@@ -804,11 +801,11 @@ F 3 "" H 3300 2800 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L TEST_1P W1
+L TEST_1P I_Meas
 U 1 1 58C2E496
 P 2900 5250
-F 0 "W1" H 2900 5520 50  0000 C CNN
-F 1 "I_Measure" H 2900 5450 50  0000 C CNN
+F 0 "I_Meas" H 2900 5520 50  0000 C CNN
+F 1 "I_Meas" H 2900 5450 50  0000 C CNN
 F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Big" H 3100 5250 50  0001 C CNN
 F 3 "" H 3100 5250 50  0000 C CNN
 	1    2900 5250
@@ -1291,5 +1288,98 @@ F 8 "0.10" V 2050 3300 60  0001 C CNN "Cost"
 $EndComp
 Wire Wire Line
 	1450 3050 1600 3050
-NoConn ~ 4500 3400
+$Comp
+L LM95071-Q1 U4
+U 1 1 58D6F35A
+P 4350 3150
+F 0 "U4" H 4400 3250 60  0000 C CNN
+F 1 "LM95071-Q1" H 4650 2850 60  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23-5_HandSoldering" H 4350 3150 60  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm95071-q1.pdf" H 4350 3150 60  0001 C CNN
+F 4 "296-40259-1-ND" H 4350 3150 60  0001 C CNN "DigiKey P/N"
+F 5 "https://www.digikey.com/products/en/sensors-transducers/temperature-sensors-analog-and-digital-output/518?k=temperature+sensor&k=&pkeyword=temperature+sensor&s=39106&FV=fff4001e%2Cfff80137%2Cffe00206%2C1c0002%2Ca401d5%2C1f140000&mnonly=0&newproducts=0&ColumnSort=0&page=1&stock=1&quantity=0&ptm=0&fid=0&pageSize=25" H 4350 3150 60  0001 C CNN "URL"
+F 6 "LM95071QIMFX/NOPB" H 4350 3150 60  0001 C CNN "Man P/N"
+F 7 "	SENSOR TEMPERATURE SPI SOT23-5" H 4350 3150 60  0001 C CNN "Description"
+F 8 "2.90" H 4350 3150 60  0001 C CNN "Cost"
+	1    4350 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C1
+U 1 1 58D70B06
+P 5150 3100
+F 0 "C1" H 5175 3200 50  0000 L CNN
+F 1 "0.1u" H 5175 3000 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 5188 2950 50  0001 C CNN
+F 3 "http://www.kemet.com/Lists/ProductCatalog/Attachments/53/KEM_C1002_X7R_SMD.pdf" H 5150 3100 50  0001 C CNN
+F 4 "399-1168-1-ND" H 5150 3100 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/kemet/C0805C104K3RACTU/399-1168-1-ND/411443" H 5150 3100 60  0001 C CNN "URL"
+F 6 "C0805C104K3RACTU" H 5150 3100 60  0001 C CNN "Man P/N"
+	1    5150 3100
+	1    0    0    -1  
+$EndComp
+Text Label 3900 3150 0    60   ~ 0
+~SS
+Text Label 3900 3350 0    60   ~ 0
+MISO
+$Comp
+L GND #PWR020
+U 1 1 58D73DB2
+P 4150 3650
+F 0 "#PWR020" H 4150 3400 50  0001 C CNN
+F 1 "GND" H 4150 3500 50  0000 C CNN
+F 2 "" H 4150 3650 50  0000 C CNN
+F 3 "" H 4150 3650 50  0000 C CNN
+	1    4150 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 3250 4150 3250
+Wire Wire Line
+	4150 3250 4150 3650
+$Comp
+L +5V #PWR021
+U 1 1 58D747D8
+P 5000 2850
+F 0 "#PWR021" H 5000 2700 50  0001 C CNN
+F 1 "+5V" H 5000 2990 50  0000 C CNN
+F 2 "" H 5000 2850 50  0000 C CNN
+F 3 "" H 5000 2850 50  0000 C CNN
+	1    5000 2850
+	1    0    0    -1  
+$EndComp
+Connection ~ 4150 3600
+Wire Wire Line
+	5000 2850 5000 3150
+Connection ~ 5000 2900
+Text Label 5350 3350 0    60   ~ 0
+SCK
+Wire Wire Line
+	3900 3150 4250 3150
+Wire Wire Line
+	3900 3350 4250 3350
+Wire Wire Line
+	5150 3250 5150 3600
+Wire Wire Line
+	5150 3600 4150 3600
+Wire Wire Line
+	5150 2950 5150 2900
+Wire Wire Line
+	5150 2900 5000 2900
+Wire Wire Line
+	5000 3350 5350 3350
+Text Label 10250 2800 0    60   ~ 0
+SCK
+Text Label 10250 3000 0    60   ~ 0
+MISO
+Text Label 10300 2700 0    60   ~ 0
+~SS
+Wire Wire Line
+	10300 2700 9800 2700
+Wire Wire Line
+	10250 2800 9800 2800
+Wire Wire Line
+	10250 3000 9800 3000
+Text Notes 3800 2950 0    99   ~ 0
+Temp. Sensor
 $EndSCHEMATC
