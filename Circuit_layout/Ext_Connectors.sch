@@ -113,9 +113,13 @@ U 1 1 58A769D6
 P 950 6300
 F 0 "J4" H 950 6550 50  0000 C CNN
 F 1 "Motor_Ctrl" V 1050 6300 50  0000 C CNN
-F 2 "custom_footprints:TerminalBlock_Pheonix_MPT-5.08mm_4pol" H 50  6600 50  0001 C CNN
+F 2 "custom_footprints:Molex_4x1_2.54mm" H 50  6600 50  0001 C CNN
 F 3 "" H 950 6300 50  0000 C CNN
-F 4 "W-21" H 950 6300 60  0001 C CNN "Wire Number"
+F 4 "WM4802-ND" H 950 6300 60  0001 C CNN "DigiKey P/N"
+F 5 "https://www.digikey.com/product-detail/en/molex-llc/0705430003/WM4802-ND/114923" H 950 6300 60  0001 C CNN "URL"
+F 6 "0705430003" H 950 6300 60  0001 C CNN "Man P/N"
+F 7 "CONN HEADER 4POS .100 VERT GOLD" H 950 6300 60  0001 C CNN "Description"
+F 8 "0.94" H 950 6300 60  0001 C CNN "Price"
 	1    950  6300
 	-1   0    0    1   
 $EndComp
@@ -154,8 +158,13 @@ U 1 1 58A76FE8
 P 1000 7100
 F 0 "P1" H 1000 7250 50  0000 C CNN
 F 1 "TSV" V 1100 7100 50  0000 C CNN
-F 2 "custom_footprints:TerminalBlock_Pheonix_MPT-5.08mm_2pol" H 1000 7100 50  0001 C CNN
+F 2 "custom_footprints:AMPCONN_2" H 1000 7100 50  0001 C CNN
 F 3 "" H 1000 7100 50  0000 C CNN
+F 4 "A113980-ND" H 1000 7100 60  0001 C CNN "DigiKey P/N"
+F 5 "https://www.digikey.com/product-detail/en/te-connectivity-amp-connectors/556881-2/A113980-ND/294120" H 1000 7100 60  0001 C CNN "URL"
+F 6 "556881-2" H 1000 7100 60  0001 C CNN "Man P/N"
+F 7 "CONN RCPT 2POS 11.18MM PCB SLDR" H 1000 7100 60  0001 C CNN "Description"
+F 8 "7.13" H 1000 7100 60  0001 C CNN "Price"
 	1    1000 7100
 	-1   0    0    1   
 $EndComp

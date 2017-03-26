@@ -353,7 +353,6 @@ NoConn ~ 9800 4300
 NoConn ~ 9800 4700
 NoConn ~ 9800 4800
 NoConn ~ 9800 4900
-NoConn ~ 7200 5100
 NoConn ~ 7200 4900
 NoConn ~ 7200 4700
 NoConn ~ 7200 3000
@@ -681,7 +680,7 @@ Text Notes 3650 1300 0    60   ~ 0
 Pull-up resistor
 Text Label 11100 6250 0    60   ~ 0
 BOT_uC
-Text Label 10450 3600 2    60   ~ 0
+Text Label 6600 5100 0    60   ~ 0
 BOT_uC
 $Comp
 L SW_PUSH SW1
@@ -1184,8 +1183,6 @@ Wire Wire Line
 Wire Wire Line
 	11100 6250 11700 6250
 Wire Wire Line
-	9800 3600 10450 3600
-Wire Wire Line
 	4600 1600 4850 1600
 Wire Wire Line
 	4850 1600 4850 1650
@@ -1382,4 +1379,7 @@ Wire Wire Line
 	10250 3000 9800 3000
 Text Notes 3800 2950 0    99   ~ 0
 Temp. Sensor
+Wire Wire Line
+	7200 5100 6600 5100
+NoConn ~ 9800 3600
 $EndSCHEMATC
