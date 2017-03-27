@@ -443,17 +443,6 @@ F 3 "" H 3150 1250 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L TEST_1P CH_GND1
-U 1 1 58D46659
-P 3000 1850
-F 0 "CH_GND1" H 3000 2120 50  0000 C CNN
-F 1 "CH_GND" H 3000 2050 50  0000 C CNN
-F 2 "Measurement_Points:Measurement_Point_Square-SMD-Pad_Big" H 3200 1850 50  0001 C CNN
-F 3 "" H 3200 1850 50  0000 C CNN
-	1    3000 1850
-	-1   0    0    1   
-$EndComp
-$Comp
 L +5V #PWR032
 U 1 1 58D6E615
 P 3100 3950
@@ -582,8 +571,6 @@ Wire Wire Line
 Wire Wire Line
 	2800 3700 2800 4050
 Wire Wire Line
-	2100 1650 3000 1650
-Wire Wire Line
 	2300 1650 2300 1900
 Wire Wire Line
 	2000 1400 2950 1400
@@ -644,8 +631,6 @@ Wire Wire Line
 Connection ~ 2550 1400
 Wire Wire Line
 	2650 1650 2650 1900
-Wire Wire Line
-	3000 1650 3000 1850
 Connection ~ 2650 1650
 Wire Wire Line
 	2800 4050 3100 4050
@@ -672,4 +657,6 @@ Wire Wire Line
 Wire Wire Line
 	5600 1050 6200 1050
 NoConn ~ 6200 1250
+Wire Wire Line
+	2100 1650 2650 1650
 $EndSCHEMATC

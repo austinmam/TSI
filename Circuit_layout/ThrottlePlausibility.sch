@@ -2080,20 +2080,6 @@ Wire Wire Line
 	2600 3850 2600 4050
 Connection ~ 2600 4050
 $Comp
-L TEST_1P +10_GND1
-U 1 1 58C1F29F
-P 2400 4450
-F 0 "+10_GND1" H 2400 4720 50  0000 C CNN
-F 1 "+10_GND" H 2400 4650 50  0000 C CNN
-F 2 "Measurement_Points:Measurement_Point_Square-SMD-Pad_Big" H 2600 4450 50  0001 C CNN
-F 3 "" H 2600 4450 50  0000 C CNN
-	1    2400 4450
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	2000 4450 2400 4450
-Connection ~ 2000 4450
-$Comp
 L TEST_1P APPS2_b1
 U 1 1 58C20466
 P 3450 8850

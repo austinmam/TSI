@@ -778,17 +778,6 @@ F 6 "ERJ-6ENF1002V" V 2350 6000 60  0001 C CNN "Man P/N"
 	0    1    1    0   
 $EndComp
 $Comp
-L TEST_1P W3
-U 1 1 58C2BCC5
-P 8200 5900
-F 0 "W3" H 8200 6170 50  0000 C CNN
-F 1 "uC_GND" H 8200 6100 50  0000 C CNN
-F 2 "Measurement_Points:Measurement_Point_Square-SMD-Pad_Big" H 8400 5900 50  0001 C CNN
-F 3 "" H 8400 5900 50  0000 C CNN
-	1    8200 5900
-	-1   0    0    1   
-$EndComp
-$Comp
 L TEST_1P IMD_uC1
 U 1 1 58C2CAF9
 P 3100 2800
@@ -987,8 +976,6 @@ Wire Wire Line
 	6550 4100 7200 4100
 Wire Wire Line
 	7200 1800 6550 1800
-Wire Wire Line
-	8200 5500 8200 5900
 Wire Wire Line
 	8200 5550 8700 5550
 Wire Wire Line
@@ -1382,4 +1369,12 @@ Temp. Sensor
 Wire Wire Line
 	7200 5100 6600 5100
 NoConn ~ 9800 3600
+Wire Wire Line
+	8200 5500 8200 5550
+Text Notes 6300 1500 0    60   ~ 0
+Add Cap. on back for each pwr supply
+Text Notes 6100 1300 0    60   ~ 0
+Fix LM7810 to make sure that no short on back
+Text Notes 6400 1100 0    60   ~ 0
+Add GND to uC
 $EndSCHEMATC
