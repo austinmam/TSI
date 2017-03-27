@@ -1,6 +1,19 @@
 EESchema-LIBRARY Version 2.3
 #encoding utf-8
 #
+# Mounting_hole
+#
+DEF Mounting_hole U 0 40 Y Y 1 F N
+F0 "U" -150 150 60 H V C CNN
+F1 "Mounting_hole" 50 -200 60 H V C CNN
+F2 "" 0 0 60 H V C CNN
+F3 "" 0 0 60 H V C CNN
+DRAW
+C 0 0 71 0 1 0 N
+C 0 0 141 0 1 0 N
+ENDDRAW
+ENDDEF
+#
 # PDM2-S24-S12-RESCUE-Circuit_layout
 #
 DEF PDM2-S24-S12-RESCUE-Circuit_layout U 0 40 Y Y 1 F N

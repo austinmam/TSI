@@ -201,9 +201,10 @@ F0 "Status Lights" 60
 F1 "StatusLights.sch" 60
 F2 "D_LED_CTRL" I L 11850 3500 60 
 F3 "RTDS_CTRL" I L 11850 3700 60 
-F4 "Heartbeat" I L 11850 3850 60 
-F5 "Spare_Red" I L 11850 4000 60 
-F6 "Spare_Blue" I L 11850 4150 60 
+F4 "Heartbeat" I L 11850 4000 60 
+F5 "Spare_Red" I L 11850 4150 60 
+F6 "Spare_Blue" I L 11850 4300 60 
+F7 "CC_LED_CTRL" I L 11850 3850 60 
 $EndSheet
 $Sheet
 S 5500 7350 950  350 
@@ -343,7 +344,6 @@ F 6 "C0805C100J5GACTU" H 6000 2700 60  0001 C CNN "Man P/N"
 	1    0    0    -1  
 $EndComp
 NoConn ~ 9800 1900
-NoConn ~ 9800 2000
 NoConn ~ 9800 2400
 NoConn ~ 9800 2900
 NoConn ~ 9800 4000
@@ -385,11 +385,11 @@ Text Label 2450 7150 0    60   ~ 0
 V_Measure
 Text GLabel 1450 3050 0    60   Input ~ 0
 IMD_PWM
-Text Label 11250 3850 0    60   ~ 0
-Heartbeat
 Text Label 11250 4000 0    60   ~ 0
-Spare_Red
+Heartbeat
 Text Label 11250 4150 0    60   ~ 0
+Spare_Red
+Text Label 11250 4300 0    60   ~ 0
 Spare_Blue
 Text Label 10450 3300 2    60   ~ 0
 Throttle_SEL
@@ -1075,12 +1075,6 @@ Wire Wire Line
 Wire Wire Line
 	11250 3700 11850 3700
 Wire Wire Line
-	11250 4150 11850 4150
-Wire Wire Line
-	11250 4000 11850 4000
-Wire Wire Line
-	11250 3850 11850 3850
-Wire Wire Line
 	7050 2900 7050 2850
 Wire Wire Line
 	7050 2550 7050 2500
@@ -1371,10 +1365,140 @@ Wire Wire Line
 NoConn ~ 9800 3600
 Wire Wire Line
 	8200 5500 8200 5550
-Text Notes 6300 1500 0    60   ~ 0
-Add Cap. on back for each pwr supply
 Text Notes 6100 1300 0    60   ~ 0
 Fix LM7810 to make sure that no short on back
-Text Notes 6400 1100 0    60   ~ 0
-Add GND to uC
+$Comp
+L C C2
+U 1 1 58D986BE
+P 8850 1000
+F 0 "C2" H 8875 1100 50  0000 L CNN
+F 1 "0.1u" H 8875 900 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 8888 850 50  0001 C CNN
+F 3 "http://www.kemet.com/Lists/ProductCatalog/Attachments/53/KEM_C1002_X7R_SMD.pdf" H 8850 1000 50  0001 C CNN
+F 4 "399-1168-1-ND" H 8850 1000 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/kemet/C0805C104K3RACTU/399-1168-1-ND/411443" H 8850 1000 60  0001 C CNN "URL"
+F 6 "C0805C104K3RACTU" H 8850 1000 60  0001 C CNN "Man P/N"
+	1    8850 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C7
+U 1 1 58D987D1
+P 9150 1000
+F 0 "C7" H 9175 1100 50  0000 L CNN
+F 1 "0.1u" H 9175 900 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 9188 850 50  0001 C CNN
+F 3 "http://www.kemet.com/Lists/ProductCatalog/Attachments/53/KEM_C1002_X7R_SMD.pdf" H 9150 1000 50  0001 C CNN
+F 4 "399-1168-1-ND" H 9150 1000 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/kemet/C0805C104K3RACTU/399-1168-1-ND/411443" H 9150 1000 60  0001 C CNN "URL"
+F 6 "C0805C104K3RACTU" H 9150 1000 60  0001 C CNN "Man P/N"
+	1    9150 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C8
+U 1 1 58D988B5
+P 9450 1000
+F 0 "C8" H 9475 1100 50  0000 L CNN
+F 1 "0.1u" H 9475 900 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 9488 850 50  0001 C CNN
+F 3 "http://www.kemet.com/Lists/ProductCatalog/Attachments/53/KEM_C1002_X7R_SMD.pdf" H 9450 1000 50  0001 C CNN
+F 4 "399-1168-1-ND" H 9450 1000 60  0001 C CNN "Digikey P/N"
+F 5 "http://www.digikey.com/product-detail/en/kemet/C0805C104K3RACTU/399-1168-1-ND/411443" H 9450 1000 60  0001 C CNN "URL"
+F 6 "C0805C104K3RACTU" H 9450 1000 60  0001 C CNN "Man P/N"
+	1    9450 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR022
+U 1 1 58D98999
+P 9450 750
+F 0 "#PWR022" H 9450 600 50  0001 C CNN
+F 1 "+5V" H 9450 890 50  0000 C CNN
+F 2 "" H 9450 750 50  0000 C CNN
+F 3 "" H 9450 750 50  0000 C CNN
+	1    9450 750 
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR023
+U 1 1 58D98A6D
+P 9150 750
+F 0 "#PWR023" H 9150 600 50  0001 C CNN
+F 1 "+5V" H 9150 890 50  0000 C CNN
+F 2 "" H 9150 750 50  0000 C CNN
+F 3 "" H 9150 750 50  0000 C CNN
+	1    9150 750 
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR024
+U 1 1 58D98B41
+P 8850 750
+F 0 "#PWR024" H 8850 600 50  0001 C CNN
+F 1 "+5V" H 8850 890 50  0000 C CNN
+F 2 "" H 8850 750 50  0000 C CNN
+F 3 "" H 8850 750 50  0000 C CNN
+	1    8850 750 
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR025
+U 1 1 58D98C15
+P 8850 1250
+F 0 "#PWR025" H 8850 1000 50  0001 C CNN
+F 1 "GND" H 8850 1100 50  0000 C CNN
+F 2 "" H 8850 1250 50  0000 C CNN
+F 3 "" H 8850 1250 50  0000 C CNN
+	1    8850 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR026
+U 1 1 58D98CE9
+P 9150 1250
+F 0 "#PWR026" H 9150 1000 50  0001 C CNN
+F 1 "GND" H 9150 1100 50  0000 C CNN
+F 2 "" H 9150 1250 50  0000 C CNN
+F 3 "" H 9150 1250 50  0000 C CNN
+	1    9150 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR027
+U 1 1 58D98DBD
+P 9450 1250
+F 0 "#PWR027" H 9450 1000 50  0001 C CNN
+F 1 "GND" H 9450 1100 50  0000 C CNN
+F 2 "" H 9450 1250 50  0000 C CNN
+F 3 "" H 9450 1250 50  0000 C CNN
+	1    9450 1250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8850 750  8850 850 
+Wire Wire Line
+	9150 750  9150 850 
+Wire Wire Line
+	9450 750  9450 850 
+Wire Wire Line
+	9450 1250 9450 1150
+Wire Wire Line
+	9150 1250 9150 1150
+Wire Wire Line
+	8850 1250 8850 1150
+Text Label 11250 3850 0    60   ~ 0
+CC_LED_CTRL
+Wire Wire Line
+	11250 3850 11850 3850
+Wire Wire Line
+	11250 4000 11850 4000
+Wire Wire Line
+	11250 4150 11850 4150
+Wire Wire Line
+	11250 4300 11850 4300
+Text Label 9850 2000 0    60   ~ 0
+CC_LED_CTRL
+Wire Wire Line
+	9800 2000 9850 2000
 $EndSCHEMATC

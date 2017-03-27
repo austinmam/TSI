@@ -113,10 +113,10 @@ F 7 "http://www.digikey.com/product-detail/en/toshiba-semiconductor-and-storage/
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR033
+L GND #PWR038
 U 1 1 58AF33D9
 P 4250 1300
-F 0 "#PWR033" H 4250 1050 50  0001 C CNN
+F 0 "#PWR038" H 4250 1050 50  0001 C CNN
 F 1 "GND" H 4250 1150 50  0000 C CNN
 F 2 "" H 4250 1300 50  0000 C CNN
 F 3 "" H 4250 1300 50  0000 C CNN
@@ -124,10 +124,10 @@ F 3 "" H 4250 1300 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +24V #PWR034
+L +24V #PWR039
 U 1 1 58AF3526
 P 5650 850
-F 0 "#PWR034" H 5650 700 50  0001 C CNN
+F 0 "#PWR039" H 5650 700 50  0001 C CNN
 F 1 "+24V" H 5650 990 50  0000 C CNN
 F 2 "" H 5650 850 50  0000 C CNN
 F 3 "" H 5650 850 50  0000 C CNN
@@ -150,10 +150,10 @@ F 7 "http://www.digikey.com/product-detail/en/toshiba-semiconductor-and-storage/
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR035
+L GND #PWR040
 U 1 1 58AF4273
 P 4250 2500
-F 0 "#PWR035" H 4250 2250 50  0001 C CNN
+F 0 "#PWR040" H 4250 2250 50  0001 C CNN
 F 1 "GND" H 4250 2350 50  0000 C CNN
 F 2 "" H 4250 2500 50  0000 C CNN
 F 3 "" H 4250 2500 50  0000 C CNN
@@ -161,10 +161,10 @@ F 3 "" H 4250 2500 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +24V #PWR036
+L +24V #PWR041
 U 1 1 58AF427B
 P 5650 2000
-F 0 "#PWR036" H 5650 1850 50  0001 C CNN
+F 0 "#PWR041" H 5650 1850 50  0001 C CNN
 F 1 "+24V" H 5650 2140 50  0000 C CNN
 F 2 "" H 5650 2000 50  0000 C CNN
 F 3 "" H 5650 2000 50  0000 C CNN
@@ -185,9 +185,9 @@ F 6 "RC0805FR-07150RL" V 3900 2150 60  0001 C CNN "Man P/N"
 	1    3900 2150
 	0    1    1    0   
 $EndComp
-Text HLabel 1250 1750 0    60   Input ~ 0
+Text HLabel 1250 1900 0    60   Input ~ 0
 D_LED_CTRL
-Text HLabel 1250 1600 0    60   Input ~ 0
+Text HLabel 1250 1750 0    60   Input ~ 0
 RTDS_CTRL
 $Comp
 L LED D1
@@ -204,10 +204,10 @@ F 6 "LG R971-KN-1" H 9250 1100 60  0001 C CNN "Man P/N"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR037
+L GND #PWR042
 U 1 1 58B26825
 P 8750 1200
-F 0 "#PWR037" H 8750 950 50  0001 C CNN
+F 0 "#PWR042" H 8750 950 50  0001 C CNN
 F 1 "GND" H 8750 1050 50  0000 C CNN
 F 2 "" H 8750 1200 50  0000 C CNN
 F 3 "" H 8750 1200 50  0000 C CNN
@@ -231,10 +231,10 @@ F 6 "LY R976-PS-36" H 9250 1550 60  0001 C CNN "Man P/N"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR038
+L GND #PWR043
 U 1 1 58B26F4E
 P 8750 1650
-F 0 "#PWR038" H 8750 1400 50  0001 C CNN
+F 0 "#PWR043" H 8750 1400 50  0001 C CNN
 F 1 "GND" H 8750 1500 50  0000 C CNN
 F 2 "" H 8750 1650 50  0000 C CNN
 F 3 "" H 8750 1650 50  0000 C CNN
@@ -258,10 +258,10 @@ F 6 "LS R976-NR-1" H 9250 2000 60  0001 C CNN "Man P/N"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR039
+L GND #PWR044
 U 1 1 58B272AA
 P 8750 2100
-F 0 "#PWR039" H 8750 1850 50  0001 C CNN
+F 0 "#PWR044" H 8750 1850 50  0001 C CNN
 F 1 "GND" H 8750 1950 50  0000 C CNN
 F 2 "" H 8750 2100 50  0000 C CNN
 F 3 "" H 8750 2100 50  0000 C CNN
@@ -285,10 +285,10 @@ F 6 "HSMR-C170" H 9250 2450 60  0001 C CNN "Man P/N"
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR040
+L GND #PWR045
 U 1 1 58B27330
 P 8750 2550
-F 0 "#PWR040" H 8750 2300 50  0001 C CNN
+F 0 "#PWR045" H 8750 2300 50  0001 C CNN
 F 1 "GND" H 8750 2400 50  0000 C CNN
 F 2 "" H 8750 2550 50  0000 C CNN
 F 3 "" H 8750 2550 50  0000 C CNN
@@ -298,10 +298,10 @@ $EndComp
 Text Notes 8750 2450 0    60   ~ 0
 Blue
 $Comp
-L +5V #PWR041
+L +5V #PWR046
 U 1 1 58B2809B
 P 10250 1100
-F 0 "#PWR041" H 10250 950 50  0001 C CNN
+F 0 "#PWR046" H 10250 950 50  0001 C CNN
 F 1 "+5V" H 10250 1240 50  0000 C CNN
 F 2 "" H 10250 1100 50  0000 C CNN
 F 3 "" H 10250 1100 50  0000 C CNN
@@ -324,45 +324,45 @@ F 6 "RC0805FR-07150RL" V 3950 1000 60  0001 C CNN "Man P/N"
 	1    3950 1000
 	0    1    1    0   
 $EndComp
-Text HLabel 1250 1900 0    60   Input ~ 0
+Text HLabel 1250 2250 0    60   Input ~ 0
 Heartbeat
-Text HLabel 1250 2050 0    60   Input ~ 0
+Text HLabel 1250 2400 0    60   Input ~ 0
 Spare_Red
-Text HLabel 1250 2200 0    60   Input ~ 0
+Text HLabel 1250 2550 0    60   Input ~ 0
 Spare_Blue
 Text GLabel 1250 650  0    60   Input ~ 0
 RTDS
 Text GLabel 1250 800  0    60   Input ~ 0
 Drive_LED
-Text GLabel 1250 1200 0    60   Input ~ 0
+Text GLabel 1250 1400 0    60   Input ~ 0
 IMD_Status
-Text GLabel 1250 1000 0    60   Input ~ 0
+Text GLabel 1250 1200 0    60   Input ~ 0
 IMD_Fault_LED
 Text Label 1400 650  0    60   ~ 0
 RTDS
 Text Label 1400 800  0    60   ~ 0
 Drive_LED
-Text Label 1400 1000 0    60   ~ 0
-IMD_Fault_LED
 Text Label 1400 1200 0    60   ~ 0
+IMD_Fault_LED
+Text Label 1400 1400 0    60   ~ 0
 IMD_Status
 Text Label 5400 2350 0    60   ~ 0
 Drive_LED
 Text Label 5200 1200 0    60   ~ 0
 RTDS
-Text Label 4950 3550 0    60   ~ 0
+Text Label 4950 4500 0    60   ~ 0
 IMD_Fault_LED
-Text Label 3450 3200 0    60   ~ 0
+Text Label 3450 4150 0    60   ~ 0
 IMD_Status
-Text Label 1400 1900 0    60   ~ 0
+Text Label 1400 2250 0    60   ~ 0
 Heartbeat
-Text Label 1400 2050 0    60   ~ 0
+Text Label 1400 2400 0    60   ~ 0
 Spare_Red
-Text Label 1400 2200 0    60   ~ 0
+Text Label 1400 2550 0    60   ~ 0
 Spare_Blue
-Text Label 1400 1600 0    60   ~ 0
-RTDS_CTRL
 Text Label 1400 1750 0    60   ~ 0
+RTDS_CTRL
+Text Label 1400 1900 0    60   ~ 0
 D_LED_CTRL
 Text Label 3300 1000 0    60   ~ 0
 RTDS_CTRL
@@ -498,27 +498,27 @@ Wire Wire Line
 Wire Wire Line
 	5650 2150 5650 2000
 Wire Wire Line
-	4800 2750 4800 3050
+	4800 3700 4800 4000
 Wire Wire Line
-	4050 3200 3450 3200
+	4050 4150 3450 4150
 Wire Wire Line
 	1250 650  1400 650 
 Wire Wire Line
 	1250 800  1400 800 
 Wire Wire Line
-	1250 1000 1400 1000
-Wire Wire Line
 	1250 1200 1400 1200
 Wire Wire Line
-	1250 2200 1400 2200
+	1250 1400 1400 1400
 Wire Wire Line
-	1250 2050 1400 2050
+	1250 2550 1400 2550
+Wire Wire Line
+	1250 2400 1400 2400
+Wire Wire Line
+	1250 2250 1400 2250
 Wire Wire Line
 	1250 1900 1400 1900
 Wire Wire Line
 	1250 1750 1400 1750
-Wire Wire Line
-	1250 1600 1400 1600
 Wire Wire Line
 	4250 6200 4250 6100
 Wire Wire Line
@@ -539,36 +539,36 @@ Wire Wire Line
 Connection ~ 5200 6200
 Connection ~ 6200 6200
 Wire Wire Line
-	4800 3450 4800 3550
+	4800 4400 4800 4500
 Wire Wire Line
-	4800 3550 4950 3550
+	4800 4500 4950 4500
 $Comp
-L +24V #PWR042
+L +24V #PWR047
 U 1 1 58C523A5
-P 4800 2750
-F 0 "#PWR042" H 4800 2600 50  0001 C CNN
-F 1 "+24V" H 4800 2890 50  0000 C CNN
-F 2 "" H 4800 2750 50  0000 C CNN
-F 3 "" H 4800 2750 50  0000 C CNN
-	1    4800 2750
+P 4800 3700
+F 0 "#PWR047" H 4800 3550 50  0001 C CNN
+F 1 "+24V" H 4800 3840 50  0000 C CNN
+F 2 "" H 4800 3700 50  0000 C CNN
+F 3 "" H 4800 3700 50  0000 C CNN
+	1    4800 3700
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4350 3200 4500 3200
+	4350 4150 4500 4150
 $Comp
 L ZVP4525G Q1
 U 1 1 58C19722
-P 4700 3250
-F 0 "Q1" H 4950 3175 50  0000 L CNN
-F 1 "ZVP4525G" H 4950 3250 50  0000 L CNN
-F 2 "TO_SOT_Packages_SMD:SOT-223-3Lead_TabPin2" H 4950 3325 50  0001 L CIN
-F 3 "https://www.diodes.com/assets/Datasheets/ZVP4525G.pdf" H 4700 3250 50  0001 L CNN
-F 4 "ZVP4525GCT-ND" H 4700 3250 60  0001 C CNN "DigiKey P/N"
-F 5 "http://www.digikey.com/product-detail/en/diodes-incorporated/ZVP4525GTA/ZVP4525GCT-ND/386036" H 4700 3250 60  0001 C CNN "URL"
-F 6 "ZVP4525GTA" H 4700 3250 60  0001 C CNN "Man P/N"
-F 7 "MOSFET P-CH 250V 0.265A SOT223" H 4700 3250 60  0001 C CNN "Description"
-F 8 "0.68" H 4700 3250 60  0001 C CNN "Cost"
-	1    4700 3250
+P 4700 4200
+F 0 "Q1" H 4950 4125 50  0000 L CNN
+F 1 "ZVP4525G" H 4950 4200 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-223-3Lead_TabPin2" H 4950 4275 50  0001 L CIN
+F 3 "https://www.diodes.com/assets/Datasheets/ZVP4525G.pdf" H 4700 4200 50  0001 L CNN
+F 4 "ZVP4525GCT-ND" H 4700 4200 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/diodes-incorporated/ZVP4525GTA/ZVP4525GCT-ND/386036" H 4700 4200 60  0001 C CNN "URL"
+F 6 "ZVP4525GTA" H 4700 4200 60  0001 C CNN "Man P/N"
+F 7 "MOSFET P-CH 250V 0.265A SOT223" H 4700 4200 60  0001 C CNN "Description"
+F 8 "0.68" H 4700 4200 60  0001 C CNN "Cost"
+	1    4700 4200
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -603,10 +603,10 @@ F 7 "CAP CER 1UF 250V X7R 2220" H 1200 5700 60  0001 C CNN "Description"
 	1    0    0    -1  
 $EndComp
 $Comp
-L PWR_FLAG #FLG043
+L PWR_FLAG #FLG048
 U 1 1 58C1AF3D
 P 3600 5200
-F 0 "#FLG043" H 3600 5295 50  0001 C CNN
+F 0 "#FLG048" H 3600 5295 50  0001 C CNN
 F 1 "PWR_FLAG" H 3600 5380 50  0000 C CNN
 F 2 "" H 3600 5200 50  0000 C CNN
 F 3 "" H 3600 5200 50  0000 C CNN
@@ -789,12 +789,12 @@ F 8 "0.10" V 9800 2450 60  0001 C CNN "Cost"
 	1    9800 2450
 	0    1    1    0   
 $EndComp
-Text GLabel 1250 1400 0    60   Input ~ 0
+Text GLabel 1250 1600 0    60   Input ~ 0
 HVPL
-Text Label 1400 1400 0    60   ~ 0
+Text Label 1400 1600 0    60   ~ 0
 HVPL
 Wire Wire Line
-	1250 1400 1400 1400
+	1250 1600 1400 1600
 $Comp
 L R R77
 U 1 1 58D32889
@@ -872,10 +872,10 @@ Wire Wire Line
 	7150 6200 7150 5800
 NoConn ~ 8650 5700
 $Comp
-L GND #PWR044
+L GND #PWR049
 U 1 1 58D3C796
 P 9400 5950
-F 0 "#PWR044" H 9400 5700 50  0001 C CNN
+F 0 "#PWR049" H 9400 5700 50  0001 C CNN
 F 1 "GND" H 9400 5800 50  0000 C CNN
 F 2 "" H 9400 5950 50  0000 C CNN
 F 3 "" H 9400 5950 50  0000 C CNN
@@ -989,19 +989,100 @@ U11/12: Verify that these will supply necessary current. Add high side switch on
 $Comp
 L R R17
 U 1 1 58D617C3
-P 4200 3200
-F 0 "R17" V 4280 3200 50  0000 C CNN
-F 1 "10k" V 4200 3200 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 4130 3200 50  0001 C CNN
-F 3 "" H 4200 3200 50  0000 C CNN
-F 4 "P10.0KCCT-ND" V 4200 3200 60  0001 C CNN "DigiKey P/N"
-F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF1002V/P10.0KCCT-ND/119248" V 4200 3200 60  0001 C CNN "URL"
-F 6 "ERJ-6ENF1002V" V 4200 3200 60  0001 C CNN "Man P/N"
-	1    4200 3200
+P 4200 4150
+F 0 "R17" V 4280 4150 50  0000 C CNN
+F 1 "10k" V 4200 4150 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 4130 4150 50  0001 C CNN
+F 3 "" H 4200 4150 50  0000 C CNN
+F 4 "P10.0KCCT-ND" V 4200 4150 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF1002V/P10.0KCCT-ND/119248" V 4200 4150 60  0001 C CNN "URL"
+F 6 "ERJ-6ENF1002V" V 4200 4150 60  0001 C CNN "Man P/N"
+	1    4200 4150
 	0    1    1    0   
 $EndComp
 Text GLabel 850  5300 0    60   Input ~ 0
 HV+
 Text GLabel 850  6200 0    60   Input ~ 0
 HV-
+Text HLabel 1250 2050 0    60   Input ~ 0
+CC_LED_CTRL
+Text Label 1400 2050 0    60   ~ 0
+CC_LED_CTRL
+Wire Wire Line
+	1250 2050 1400 2050
+$Comp
+L TLP291 U27
+U 1 1 58DA1E4C
+P 4600 3100
+F 0 "U27" H 4400 3300 50  0000 L CNN
+F 1 "TLP293" H 4600 3300 50  0000 L CNN
+F 2 "Housings_SSOP:SOP-4_4.4x2.8mm_Pitch1.27mm" H 4400 2900 50  0001 L CIN
+F 3 "" H 4600 3100 50  0000 L CNN
+F 4 "TLP293(GB-TPLECT-ND" H 4600 3100 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/toshiba-semiconductor-and-storage/TLP293(GB-TPL,E/TLP293(GB-TPLECT-ND/4562965" H 4600 3100 60  0001 C CNN "URL"
+F 6 "TLP293(GB-TPLE" H 4600 3100 60  0001 C CNN "Man P/N"
+F 7 "http://www.digikey.com/product-detail/en/toshiba-semiconductor-and-storage/TLP291(GB-TP,SE/TLP291(GB-TPSECT-ND/4562949" H 4600 3100 60  0001 C CNN "TLP291"
+	1    4600 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR050
+U 1 1 58DA1E52
+P 4250 3350
+F 0 "#PWR050" H 4250 3100 50  0001 C CNN
+F 1 "GND" H 4250 3200 50  0000 C CNN
+F 2 "" H 4250 3350 50  0000 C CNN
+F 3 "" H 4250 3350 50  0000 C CNN
+	1    4250 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L +24V #PWR051
+U 1 1 58DA1E58
+P 5650 2850
+F 0 "#PWR051" H 5650 2700 50  0001 C CNN
+F 1 "+24V" H 5650 2990 50  0000 C CNN
+F 2 "" H 5650 2850 50  0000 C CNN
+F 3 "" H 5650 2850 50  0000 C CNN
+	1    5650 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R27
+U 1 1 58DA1E61
+P 3900 3000
+F 0 "R27" V 3980 3000 50  0000 C CNN
+F 1 "150" V 3900 3000 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 3830 3000 50  0001 C CNN
+F 3 "" H 3900 3000 50  0000 C CNN
+F 4 "311-150CRCT-ND" V 3900 3000 60  0001 C CNN "DigiKey P/N"
+F 5 "http://www.digikey.com/product-detail/en/yageo/RC0805FR-07150RL/311-150CRCT-ND/730560" V 3900 3000 60  0001 C CNN "URL"
+F 6 "RC0805FR-07150RL" V 3900 3000 60  0001 C CNN "Man P/N"
+	1    3900 3000
+	0    1    1    0   
+$EndComp
+Text Label 5400 3200 0    60   ~ 0
+CC_LED
+Text Label 3250 3000 0    60   ~ 0
+CC_LED_CTRL
+Wire Wire Line
+	4250 3200 4300 3200
+Wire Wire Line
+	4300 3000 4050 3000
+Wire Wire Line
+	4250 3200 4250 3350
+Wire Wire Line
+	4900 3000 5650 3000
+Wire Wire Line
+	4900 3200 5400 3200
+Wire Wire Line
+	3750 3000 3250 3000
+Wire Wire Line
+	5650 3000 5650 2850
+Text GLabel 1250 1000 0    60   Input ~ 0
+CC_LED
+Text Label 1400 1000 0    60   ~ 0
+CC_LED
+Wire Wire Line
+	1250 1000 1400 1000
 $EndSCHEMATC
