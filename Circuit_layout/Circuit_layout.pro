@@ -1,4 +1,4 @@
-update=3/25/2017 5:33:41 PM
+update=3/27/2017 11:31:44 AM
 version=1
 last_client=kicad
 [pcbnew]
@@ -23,16 +23,6 @@ ModuleOutlineThickness=0.150000000000
 [cvpcb]
 version=1
 NetIExt=net
-[schematic_editor]
-version=1
-PageLayoutDescrFile=
-PlotDirectoryName=
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=
-SpiceForceRefPrefix=0
-SpiceUseNetNumbers=0
-LabSize=60
 [general]
 version=1
 [eeschema]
@@ -123,3 +113,13 @@ LibName81=C:/Users/nessa/Desktop/TSI/TSI_KiCad_Lib
 LibName82=C:/Users/nessa/Desktop/TSI_repo/pacman_hardware_rev_0_8/project/pacman-main-cache
 LibName83=bss84
 LibName84=+10v
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
