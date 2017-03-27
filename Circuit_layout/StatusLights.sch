@@ -324,20 +324,6 @@ F 6 "RC0805FR-07150RL" V 3950 1000 60  0001 C CNN "Man P/N"
 	1    3950 1000
 	0    1    1    0   
 $EndComp
-$Comp
-L R R35
-U 1 1 58B38C61
-P 5400 1000
-F 0 "R35" V 5480 1000 50  0000 C CNN
-F 1 "2k" V 5400 1000 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 5330 1000 50  0001 C CNN
-F 3 "" H 5400 1000 50  0000 C CNN
-F 4 "P2.00KCCT-ND" V 5400 1000 60  0001 C CNN "DigiKey P/N"
-F 5 "http://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-6ENF2001V/P2.00KCCT-ND/119044" V 5400 1000 60  0001 C CNN "URL"
-F 6 "ERJ-6ENF2001V" V 5400 1000 60  0001 C CNN "Man P/N"
-	1    5400 1000
-	0    1    1    0   
-$EndComp
 Text HLabel 1250 1900 0    60   Input ~ 0
 Heartbeat
 Text HLabel 1250 2050 0    60   Input ~ 0
@@ -458,7 +444,7 @@ Wire Wire Line
 Wire Wire Line
 	4250 1200 4250 1300
 Wire Wire Line
-	4950 1000 5250 1000
+	4950 1000 5650 1000
 Wire Wire Line
 	4950 1200 5200 1200
 Wire Wire Line
@@ -471,8 +457,6 @@ Wire Wire Line
 	4900 2150 5650 2150
 Wire Wire Line
 	4900 2350 5400 2350
-Wire Wire Line
-	5550 1000 5650 1000
 Wire Wire Line
 	5650 1000 5650 850 
 Wire Wire Line
@@ -618,10 +602,6 @@ F 7 "CAP CER 1UF 250V X7R 2220" H 1200 5700 60  0001 C CNN "Description"
 	1    1200 5700
 	1    0    0    -1  
 $EndComp
-Text Label 700  5300 0    60   ~ 0
-HV+
-Text Label 700  6200 0    60   ~ 0
-HV-
 $Comp
 L PWR_FLAG #FLG043
 U 1 1 58C1AF3D
@@ -654,12 +634,12 @@ Wire Wire Line
 Connection ~ 3150 5700
 Connection ~ 3150 6200
 Wire Wire Line
-	700  5300 3850 5300
+	850  5300 3850 5300
 Wire Wire Line
 	3600 5200 3600 5300
 Connection ~ 3600 5300
 Wire Wire Line
-	700  6200 7150 6200
+	850  6200 7150 6200
 $Comp
 L R R20
 U 1 1 58C1BB82
@@ -1020,4 +1000,8 @@ F 6 "ERJ-6ENF1002V" V 4200 3200 60  0001 C CNN "Man P/N"
 	1    4200 3200
 	0    1    1    0   
 $EndComp
+Text GLabel 850  5300 0    60   Input ~ 0
+HV+
+Text GLabel 850  6200 0    60   Input ~ 0
+HV-
 $EndSCHEMATC
