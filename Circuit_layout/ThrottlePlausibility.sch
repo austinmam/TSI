@@ -1240,9 +1240,11 @@ $EndComp
 Text Label 6200 8500 0    60   ~ 0
 APPS1_b
 $Comp
-L LM7810CT U5
+L LM7810CT-RESCUE-Circuit_layout U5
 U 1 1 58C0F20F
 P 2000 4100
+AR Path="/58C0F20F" Ref="U5"  Part="1" 
+AR Path="/58A289D2/58C0F20F" Ref="U5"  Part="1" 
 F 0 "U5" H 1800 4300 50  0000 C CNN
 F 1 "LM7810CT" H 2000 4300 50  0000 L CNN
 F 2 "custom_footprints:TO-220_Horizontal_Plated_Hole" H 2000 4200 50  0001 C CIN
@@ -2161,7 +2163,7 @@ F 3 "" H 11650 6150 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L TS5A3159-Q1 SW2
+L TS5A3159-Q1-RESCUE-Circuit_layout SW2
 U 1 1 58D04155
 P 15550 5050
 AR Path="/58D04155" Ref="SW2"  Part="1" 

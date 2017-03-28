@@ -1245,7 +1245,7 @@ U 1 1 58C0F20F
 P 2000 4100
 F 0 "U5" H 1800 4300 50  0000 C CNN
 F 1 "LM7810CT" H 2000 4300 50  0000 L CNN
-F 2 "TO_SOT_Packages_THT:TO-220_Horizontal" H 2000 4200 50  0001 C CIN
+F 2 "custom_footprints:TO-220_Horizontal_Plated_Hole" H 2000 4200 50  0001 C CIN
 F 3 "https://www.fairchildsemi.com/datasheets/LM/LM7805.pdf" H 2000 4100 50  0001 C CNN
 F 4 "LM7810CT-ND" H 2000 4100 60  0001 C CNN "DigiKey P/N"
 F 5 "http://www.digikey.com/products/en?keywords=lm7810ct" H 2000 4100 60  0001 C CNN "URL"
