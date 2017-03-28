@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="D">
   <design>
-    <source>C:\Users\nessa\Desktop\TSI_repo\Circuit_layout\Circuit_layout.sch</source>
-    <date>3/28/2017 11:15:37 AM</date>
+    <source>C:/Users/nessa/Desktop/TSI_repo/Circuit_layout/Circuit_layout.sch</source>
+    <date>3/28/2017 5:13:42 PM</date>
     <tool>Eeschema 4.0.2-stable</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -145,7 +145,8 @@
         <field name="DigiKey P/N">TLP293(GB-TPLECT-ND</field>
         <field name="URL">http://www.digikey.com/product-detail/en/toshiba-semiconductor-and-storage/TLP293(GB-TPL,E/TLP293(GB-TPLECT-ND/4562965</field>
         <field name="Man P/N">TLP293(GB-TPLE</field>
-        <field name="TLP291">http://www.digikey.com/product-detail/en/toshiba-semiconductor-and-storage/TLP291(GB-TP,SE/TLP291(GB-TPSECT-ND/4562949</field>
+        <field name="Description">OPTOISOLATOR 3.75KV TRANS 4-SO</field>
+        <field name="Price">0.52</field>
       </fields>
       <libsource lib="opto" part="TLP291"/>
       <sheetpath names="/" tstamps="/"/>
@@ -291,7 +292,6 @@
     <comp ref="SW1">
       <value>SW_PUSH</value>
       <footprint>custom_footprints:SW_RACON_8</footprint>
-      <datasheet>http://media.digikey.com/pdf/Data%20Sheets/C&amp;K/RACON_8,12.pdf</datasheet>
       <fields>
         <field name="DigiKey P/N">1715-1676-1-ND</field>
         <field name="URL">http://www.digikey.com/products/en?keywords=ckn9363ct-nd</field>
@@ -376,7 +376,7 @@
         <field name="Description">SWITCH SLIDE DPDT 300MA 6V</field>
         <field name="Cost">0.41</field>
       </fields>
-      <libsource lib="TSI_KiCad_Lib" part="JS202011CQN"/>
+      <libsource lib="Circuit_layout-cache" part="JS202011CQN"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>58D14231</tstamp>
     </comp>
@@ -819,7 +819,7 @@
         <field name="Description">MOSFET P-CH 250V 0.265A SOT223</field>
         <field name="Cost">0.68</field>
       </fields>
-      <libsource lib="TSI_KiCad_Lib" part="ZVP4525G"/>
+      <libsource lib="Circuit_layout-cache" part="ZVP4525G"/>
       <sheetpath names="/Status Lights/" tstamps="/58ADE509/"/>
       <tstamp>58C19722</tstamp>
     </comp>
@@ -1153,7 +1153,7 @@
         <field name="URL">http://www.digikey.com/product-detail/en/texas-instruments/74ACT11030DR/296-4180-1-ND/375133</field>
         <field name="Man P/N">74ACT11030DR</field>
       </fields>
-      <libsource lib="74xx" part="74ACT11030"/>
+      <libsource lib="Circuit_layout-cache" part="74ACT11030"/>
       <sheetpath names="/ThrottlePlausibility/" tstamps="/58A289D2/"/>
       <tstamp>58AA6885</tstamp>
     </comp>
@@ -2357,9 +2357,7 @@
     </comp>
   </components>
   <libparts>
-    <libpart lib="74xx" part="74ACT11030">
-      <description>8-input NAND</description>
-      <docs>http://www.ti.com/product/74ACT11030/description</docs>
+    <libpart lib="Circuit_layout-cache" part="74ACT11030">
       <footprints>
         <fp>14PDIP</fp>
       </footprints>
@@ -2677,9 +2675,7 @@
         <pin num="2" name="2" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="TSI_KiCad_Lib" part="JS202011CQN">
-      <description>Double Pole Double Throw (DPDT) Switch</description>
-      <docs>http://www.ckswitches.com/media/1422/js.pdf</docs>
+    <libpart lib="Circuit_layout-cache" part="JS202011CQN">
       <fields>
         <field name="Reference">SW</field>
         <field name="Value">JS202011CQN</field>
@@ -3028,9 +3024,7 @@
         <pin num="8" name="V+" type="power_in"/>
       </pins>
     </libpart>
-    <libpart lib="TSI_KiCad_Lib" part="ZVP4525G">
-      <description>P-Channel 250V 265mA (Ta) 2W (Ta) Surface Mount SOT-223</description>
-      <docs>https://www.diodes.com/assets/Datasheets/ZVP4525G.pdf</docs>
+    <libpart lib="Circuit_layout-cache" part="ZVP4525G">
       <fields>
         <field name="Reference">Q</field>
         <field name="Value">ZVP4525G</field>
@@ -3044,44 +3038,41 @@
     </libpart>
   </libparts>
   <libraries>
-    <library logical="opto">
-      <uri>C:\Program Files\KiCad\share\kicad\library\opto.lib</uri>
-    </library>
-    <library logical="conn">
-      <uri>C:\Program Files\KiCad\share\kicad\library\conn.lib</uri>
-    </library>
-    <library logical="74xx">
-      <uri>C:\Program Files\KiCad\share\kicad\library\74xx.lib</uri>
-    </library>
     <library logical="Circuit_layout-rescue">
       <uri>C:\Users\nessa\Desktop\TSI_repo\Circuit_layout\Circuit_layout-rescue.lib</uri>
-    </library>
-    <library logical="TSI_HV_Isolater-cache">
-      <uri>C:\Users\nessa\Desktop\TSI_repo\Circuit_layout\TSI_HV_Isolater-cache.lib</uri>
     </library>
     <library logical="TSI_KiCad_Lib">
       <uri>C:\Users\plumbj\Desktop\TSI\TSI_KiCad_Lib.lib</uri>
     </library>
+    <library logical="TSI_HV_Isolater-cache">
+      <uri>C:\Users\nessa\Desktop\TSI_repo\Circuit_layout\TSI_HV_Isolater-cache.lib</uri>
+    </library>
+    <library logical="atmel">
+      <uri>C:\Program Files\KiCad\share\kicad\library\atmel.lib</uri>
+    </library>
+    <library logical="conn">
+      <uri>C:\Program Files\KiCad\share\kicad\library\conn.lib</uri>
+    </library>
+    <library logical="device">
+      <uri>C:\Program Files\KiCad\share\kicad\library\device.lib</uri>
+    </library>
     <library logical="interface">
       <uri>C:\Program Files\KiCad\share\kicad\library\interface.lib</uri>
+    </library>
+    <library logical="linear">
+      <uri>C:\Program Files\KiCad\share\kicad\library\linear.lib</uri>
+    </library>
+    <library logical="opto">
+      <uri>C:\Program Files\KiCad\share\kicad\library\opto.lib</uri>
+    </library>
+    <library logical="transistors">
+      <uri>C:\Program Files\KiCad\share\kicad\library\transistors.lib</uri>
     </library>
     <library logical="pacman-main-cache">
       <uri>C:\Users\nessa\Desktop\TSI_repo\pacman_hardware_rev_0_8\project\pacman-main-cache.lib</uri>
     </library>
     <library logical="Circuit_layout-cache">
       <uri>C:\Users\nessa\Desktop\TSI_repo\Circuit_layout\Circuit_layout-cache.lib</uri>
-    </library>
-    <library logical="linear">
-      <uri>C:\Program Files\KiCad\share\kicad\library\linear.lib</uri>
-    </library>
-    <library logical="transistors">
-      <uri>C:\Program Files\KiCad\share\kicad\library\transistors.lib</uri>
-    </library>
-    <library logical="device">
-      <uri>C:\Program Files\KiCad\share\kicad\library\device.lib</uri>
-    </library>
-    <library logical="atmel">
-      <uri>C:\Program Files\KiCad\share\kicad\library\atmel.lib</uri>
     </library>
   </libraries>
   <nets>
