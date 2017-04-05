@@ -28,22 +28,24 @@ typedef struct {
 * @name 
 * @{ */
 // PORTA gpio pins
-static const GPIO_PIN WATCHDOG    =  {&PORTA, &DDRA, &PINA, 0};
-static const GPIO_PIN SW_SDA      =  {&PORTA, &DDRA, &PINA, 1};
-static const GPIO_PIN SW_SCL      =  {&PORTA, &DDRA, &PINA, 2};
-static const GPIO_PIN SLOOP_CTRL  =  {&PORTA, &DDRA, &PINA, 3};
-static const GPIO_PIN CHRG_CTRL   =  {&PORTA, &DDRA, &PINA, 4};
-static const GPIO_PIN FAN_CTRL    =  {&PORTA, &DDRA, &PINA, 5};
+//static const GPIO_PIN GPIO_PA0    =  {&PORTA, &DDRA, &PINA, 0};
+//static const GPIO_PIN GPIO_PA1    =  {&PORTA, &DDRA, &PINA, 1};
+static const GPIO_PIN CC_LED_CTRL =  {&PORTA, &DDRA, &PINA, 2};
+static const GPIO_PIN D_LED_CTRL  =  {&PORTA, &DDRA, &PINA, 3};
+static const GPIO_PIN RTDS_CTRL   =  {&PORTA, &DDRA, &PINA, 4};
+static const GPIO_PIN DRIVE_BTN   =  {&PORTA, &DDRA, &PINA, 5};
+//static const GPIO_PIN GPIO_PA6    =  {&PORTA, &DDRA, &PINA, 6};
+static const GPIO_PIN I_END       =  {&PORTA, &DDRA, &PINA, 7};
 
 // PORTB gpio pins
-static const GPIO_PIN GPIO_PB0    =  {&PORTB, &DDRB, &PINB, 0};
-static const GPIO_PIN GPIO_PB1    =  {&PORTB, &DDRB, &PINB, 1};
-static const GPIO_PIN GPIO_PB2    =  {&PORTB, &DDRB, &PINB, 2};
-static const GPIO_PIN GPIO_PB3    =  {&PORTB, &DDRB, &PINB, 3};
-static const GPIO_PIN GPIO_PB4    =  {&PORTB, &DDRB, &PINB, 4};
-static const GPIO_PIN GPIO_PB5    =  {&PORTB, &DDRB, &PINB, 5};
-static const GPIO_PIN GPIO_PB6    =  {&PORTB, &DDRB, &PINB, 6};
-static const GPIO_PIN GPIO_PB7    =  {&PORTB, &DDRB, &PINB, 7};
+static const GPIO_PIN SS_n        =  {&PORTB, &DDRB, &PINB, 0};
+static const GPIO_PIN SCK         =  {&PORTB, &DDRB, &PINB, 1};
+//static const GPIO_PIN GPIO_PB2    =  {&PORTB, &DDRB, &PINB, 2};
+static const GPIO_PIN MISO        =  {&PORTB, &DDRB, &PINB, 3};
+static const GPIO_PIN BP_uC       =  {&PORTB, &DDRB, &PINB, 4};
+static const GPIO_PIN THRTL_PL    =  {&PORTB, &DDRB, &PINB, 5};
+static const GPIO_PIN THRTL_SEL   =  {&PORTB, &DDRB, &PINB, 6};
+static const GPIO_PIN THRTL_uC    =  {&PORTB, &DDRB, &PINB, 7};
 
 // PORTC gpio pins
 static const GPIO_PIN FAULT       =  {&PORTC, &DDRC, &PINC, 0};
