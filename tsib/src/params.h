@@ -57,6 +57,8 @@ volatile bool LOW_DET;
 volatile bool button_up;
 volatile bool button_down;
 volatile bool button_enter; // Is always high for some reason
+//volatile bool throttle_pl; // Added by TSI
+
 
 volatile uint16_t CANADD_PACKINFO1;
 volatile uint16_t CANADD_PACKINFO2;

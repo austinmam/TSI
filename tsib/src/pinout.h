@@ -41,7 +41,7 @@ static const GPIO_PIN GPIO_PB1    =  {&PORTB, &DDRB, &PINB, 1};
 static const GPIO_PIN GPIO_PB2    =  {&PORTB, &DDRB, &PINB, 2};
 static const GPIO_PIN GPIO_PB3    =  {&PORTB, &DDRB, &PINB, 3};
 static const GPIO_PIN GPIO_PB4    =  {&PORTB, &DDRB, &PINB, 4};
-static const GPIO_PIN GPIO_PB5    =  {&PORTB, &DDRB, &PINB, 5};
+static const GPIO_PIN THROTTLE_PL =  {&PORTB, &DDRB, &PINB, 5};
 static const GPIO_PIN GPIO_PB6    =  {&PORTB, &DDRB, &PINB, 6};
 static const GPIO_PIN GPIO_PB7    =  {&PORTB, &DDRB, &PINB, 7};
 

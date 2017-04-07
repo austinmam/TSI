@@ -7,7 +7,7 @@
 
 void heartbeat_init(void){
 	DDRB |= (0x40); // Sets port for Throttle Select (for initial debug purposes)
-	DDRC |= (0x07); // Sets port for (3) spare LEDs
+	DDRC |= (0x0E); // Sets port for (3) spare LEDs
 }	
 
 void task_heartbeat(uint32_t data) {
@@ -15,17 +15,17 @@ void task_heartbeat(uint32_t data) {
 	heartbeat_init();
 	
 	for(;;) {
-		PORTB |= 0x40; // Driving Throttle Select HIGH always (for initial debug purposes)
+		PORTB |= 0x40; // Driving Throttle Select HIGH always (for initial debug purposes)	
 		//turn on the fault led if pack state is fault, updates about twice a second
-/*	      	if(pack_state == flt){
-			PORTC |= 0x02;
+	      /*	if(PINB &= 0x10){
+			PORTC |= 0x03;
 		}else{
-			PORTC &= ~(0x02);
+			PORTC &= ~(0x03);
 		}*/
 		//blink Heartbeat LED twice a second
-		PORTC |= 0x02;
+		PORTC |= 0x0E;
 		atomTimerDelay(25);
-		PORTC &= ~(0x02);
+		PORTC &= ~(0x0E);
 		atomTimerDelay(25);
 	}
 }
