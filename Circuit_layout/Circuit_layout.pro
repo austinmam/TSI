@@ -1,4 +1,4 @@
-update=3/28/2017 9:55:01 AM
+update=4/5/2017 7:10:15 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -25,16 +25,6 @@ version=1
 NetIExt=net
 [general]
 version=1
-[schematic_editor]
-version=1
-PageLayoutDescrFile=
-PlotDirectoryName=
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=
-SpiceForceRefPrefix=0
-SpiceUseNetNumbers=0
-LabSize=60
 [eeschema]
 version=1
 LibDir=
@@ -123,3 +113,13 @@ LibName81=C:/Users/nessa/Desktop/TSI/TSI_KiCad_Lib
 LibName82=C:/Users/nessa/Desktop/TSI_repo/pacman_hardware_rev_0_8/project/pacman-main-cache
 LibName83=bss84
 LibName84=+10v
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
