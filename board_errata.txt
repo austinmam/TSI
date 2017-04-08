@@ -2,3 +2,5 @@ Tied +24_RTN & CH_GND
 	- Consider using 2nd DC/DC for 10V, or use DC/DC w/ two outputs (5/12)
 
 Fix footprint outlines for header pins (currently plastic goes outside silkscreen.	
+
+R58 replaced w/ 15kohm (orig. 24.9k). This was due to incorrect gain calculations on isolation circuits.
