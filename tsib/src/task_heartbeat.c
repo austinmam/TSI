@@ -5,7 +5,9 @@
 #include "atomtimer.h"
 
 void heartbeat_init(void){
+	DDRA = (1 << DDA7);
 	DDRC = (1 << DDC1) | (1 << DDC2) | (1 << DDC3); // Sets port for (3) spare LEDs
+	PORTA = 0x00;
 	PORTC = 0x00;
 	DDRB = (1 << DDB6); // Sets port for Throttle Select as output
 	
@@ -22,9 +24,13 @@ void task_heartbeat(uint32_t data) {
 	heartbeat_init();
 
 	if((PINB & (1 << PB4))) PORTC |= (1 << PC2);
-	if((PINB & (1 << PB5))) PORTC |= (1 << PC3);
+	if((PINB & (1 << PB5))){
+		PORTA |= (1 << PA7); 
+		PORTC |= (1 << PC3);
+	}
 	//if((PINE & (1 << PE6))) PORTC |= (1 << PC3);
 	//else PORTC = (0 << PC2);
+       
 	/*
 	for(;;){
 		//blink Heartbeat LED twice a second
