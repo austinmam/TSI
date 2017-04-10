@@ -64,7 +64,7 @@ ALL_OBJECTS = $(APP_OBJECTS) $(KERNEL_ASM_OBJECTS) $(KERNEL_OBJECTS) $(LIBRARY_O
 BUILT_OBJECTS = $(patsubst %,$(BUILD_DIR)/%,$(ALL_OBJECTS))
 
 # Program Target Name
-TARGET_NAME=tsib
+TARGET_NAME=pacman
 
 # Hex/Elf File Extensions
 TARGET_HEX=$(TARGET_NAME).hex
