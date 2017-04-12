@@ -109,7 +109,7 @@ volatile uint8_t ams_board_count;
 #define READ_CAL_DATA 0x02
 #define READ_MAGIC    0x03
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
+/*
 typedef enum{shunt, pack} ina_selection;
 ina_selection v_select;
 uint16_t ams_voltage;
@@ -126,8 +126,10 @@ void select_shunt_voltage(void);
 void select_pack_voltage(void);
 void lcd_init(void);
 void lcd_reset(void);
-void lcd_transmit(uint8_t data, uint8_t rs, uint8_t rw);
-void lcd_message(unsigned char* message, uint8_t width);
+*/
+void i2c_transmit(uint8_t data, uint8_t rs, uint8_t rw);
+
+//void lcd_message(unsigned char* message, uint8_t width);
 
 
 /**

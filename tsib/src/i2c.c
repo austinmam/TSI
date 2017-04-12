@@ -21,26 +21,16 @@ void i2c_init(void) {
 	
 	// initialize i2c controller
 	TWI_Master_Initialise();
-/*	
-	I2C_ADDR_AMS[0] = 0x10;
-	I2C_ADDR_AMS[1] = 0x11;
-	I2C_ADDR_AMS[2] = 0x12;
-	I2C_ADDR_AMS[3] = 0x13;
-	I2C_ADDR_AMS[4] = 0x14;
-	I2C_ADDR_AMS[5] = 0x15;
-	I2C_ADDR_AMS[6] = 0x16;
-	I2C_ADDR_AMS[7] = 0x17;//not a real board
-*/
 
 	atomMutexGet(&i2c_mutex, 0); // take mutex, wait until available
 	//locate_ams_boards();
-	current_sensor_off();
+	//current_sensor_off();
 	atomTimerDelay(100); // wait period to ensure AMS boards have been located
 	//get_ams_serial();
 	atomMutexPut(&i2c_mutex);	// release mutex
 
 }
-
+/*
 //Initialize the ADC that the TSV current sensor data is acquired through
 void adc_init(void){
 	//adc address, point to config reg, MSB config, LSB config (pg11 and pg18)
@@ -133,7 +123,7 @@ void lcd_init(void){
 	TWI_Start_Transceiver_With_Data(&msg[0], 2);
 	
 	//Enable low to complete transmission
-	msg[1] = EN_LOW;
+	//msg[1] = EN_LOW;
 	
 	//send data on i2c bus
 	TWI_Start_Transceiver_With_Data(&msg[0], 2);
@@ -154,15 +144,42 @@ void lcd_reset(void){
 	lcd_transmit(0x06, 0, 0);
 	
 }
-
+*/
+/*
 //Transmit a whole message to the LCD screen. Writes to Data Register
-void lcd_message(unsigned char* message, uint8_t width){
+void i2c_message(unsigned char* message, uint8_t width){
 	uint8_t i = 0;
 	for(i = 0; i < width; i=i+1){
-		lcd_transmit(message[i], 1, 0);
+		i2c_transmit(message[i], 1, 0);
 	}
 }
-
+*/
+void i2c_transmit(uint8_t data, uint8_t rs, uint8_t rw){
+	// take mutex, wait until available
+	atomMutexGet(&i2c_mutex, 0);
+	
+	//message that will be sent, start with SLA
+	unsigned char msg[3] = {0x55,0xAB,0xCD};
+	
+	//high nibble
+	//msg[1] = (data & 0xF0) | (0x0C) | (rs) | (rw<<1);
+	
+	//Enable low to clock high nibble to LCD
+	//msg[2] = EN_LOW;
+	
+	//low nibble
+	//msg[3] = ((data & 0x0F)<<4) | (0x0C) | (rs) | (rw<<1);
+	
+	//Enable low to complete transmission
+	//msg[4] = EN_LOW;
+	
+	//send data on i2c bus
+	TWI_Start_Transceiver_With_Data(&msg[0], 3);
+	
+	// release mutex
+	atomMutexPut(&i2c_mutex);
+}
+/*
 //Transmits a byte to the LCD screen
 void lcd_transmit(uint8_t data, uint8_t rs, uint8_t rw){
 	// take mutex, wait until available
@@ -175,13 +192,13 @@ void lcd_transmit(uint8_t data, uint8_t rs, uint8_t rw){
 	msg[1] = (data & 0xF0) | (0x0C) | (rs) | (rw<<1);
 	
 	//Enable low to clock high nibble to LCD
-	msg[2] = EN_LOW;
+	//msg[2] = EN_LOW;
 	
 	//low nibble
 	msg[3] = ((data & 0x0F)<<4) | (0x0C) | (rs) | (rw<<1);
 	
 	//Enable low to complete transmission
-	msg[4] = EN_LOW;
+	//msg[4] = EN_LOW;
 	
 	//send data on i2c bus
 	TWI_Start_Transceiver_With_Data(&msg[0], 5);
@@ -189,5 +206,5 @@ void lcd_transmit(uint8_t data, uint8_t rs, uint8_t rw){
 	// release mutex
 	atomMutexPut(&i2c_mutex);
 }
-
+*/
 

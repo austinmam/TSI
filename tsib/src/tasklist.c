@@ -29,18 +29,17 @@
 #include "task_i2c.h"
 #include "task_safety.h"
 #include "task_heartbeat.h"
-#include "task_can.h"
 #include "task_button.h"
 
 // task control block variables
-//static ATOM_TCB task_i2c_tcb;
+static ATOM_TCB task_i2c_tcb;
 //static ATOM_TCB task_safety_tcb;
 static ATOM_TCB task_heartbeat_tcb;
 //static ATOM_TCB task_can_tcb;
 //static ATOM_TCB task_button_tcb;
 
 // task stack size declarations
-//static uint8_t task_i2c_stack[TASK_I2C_SIZE];
+static uint8_t task_i2c_stack[TASK_I2C_SIZE];
 //static uint8_t task_safety_stack[TASK_SAFETY_SIZE];
 static uint8_t task_heartbeat_stack[TASK_HEARTBEAT_SIZE];
 //static uint8_t task_can_stack[TASK_CAN_SIZE];
@@ -51,16 +50,16 @@ const ATOM_TASK task_list[] = {
 	
 	// TASK PCB, PRIORITY, FUNC NAME, ENTRY PARAM
 	// STACK TOP, STACKSIZE
-	/*
+
 	// I2C handler task
 	{&task_i2c_tcb,        16, task_i2c,        0,
 		&task_i2c_stack[TASK_I2C_SIZE-1], TASK_I2C_SIZE},
-	
+/*	
 	// safety monitor task
 	{&task_safety_tcb,     16, task_safety,     0,
 		&task_safety_stack[TASK_SAFETY_SIZE-1], TASK_SAFETY_SIZE},
+*/	
 	
-	*/	
 	// heartbeat led task
 	{&task_heartbeat_tcb,	16, task_heartbeat, 0,
 		&task_heartbeat_stack[TASK_HEARTBEAT_SIZE-1], TASK_HEARTBEAT_SIZE},
