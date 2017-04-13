@@ -154,27 +154,23 @@ void i2c_message(unsigned char* message, uint8_t width){
 	}
 }
 */
-void i2c_transmit(uint8_t data, uint8_t rs, uint8_t rw){
+void i2c_transmit(uint8_t data){
 	// take mutex, wait until available
 	atomMutexGet(&i2c_mutex, 0);
 	
 	//message that will be sent, start with SLA
-	unsigned char msg[3] = {0x55,0xAB,0xCD};
+	unsigned char msg[5] = {0x55,0x00,0x00,0x00,0x00};
 	
-	//high nibble
-	//msg[1] = (data & 0xF0) | (0x0C) | (rs) | (rw<<1);
-	
-	//Enable low to clock high nibble to LCD
-	//msg[2] = EN_LOW;
-	
-	//low nibble
-	//msg[3] = ((data & 0x0F)<<4) | (0x0C) | (rs) | (rw<<1);
-	
-	//Enable low to complete transmission
-	//msg[4] = EN_LOW;
-	
+	msg[1] = (data & 0xF0);
+
+	msg[2] = 0x08;
+
+	msg[3] = ((data & 0x0F) << 4);
+
+	msg[4] = 0x08;
+
 	//send data on i2c bus
-	TWI_Start_Transceiver_With_Data(&msg[0], 3);
+	TWI_Start_Transceiver_With_Data(&msg[0], 5);
 	
 	// release mutex
 	atomMutexPut(&i2c_mutex);

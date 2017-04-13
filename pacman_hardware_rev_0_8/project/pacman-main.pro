@@ -1,4 +1,4 @@
-update=12/22/2016 4:41:25 PM
+update=Mon 03 Apr 2017 11:58:43 AM EDT
 version=1
 last_client=kicad
 [cvpcb]
@@ -25,6 +25,16 @@ BoardOutlineThickness=0.09999999999999999
 ModuleOutlineThickness=0.15
 [general]
 version=1
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=/home/strong/Documents/ECE492/pacman/hardware/Rev0_5/
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=Pcbnew
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
 [eeschema]
 version=1
 LibDir=/usr/share/kicad/library
@@ -74,13 +84,3 @@ LibName42=/home/jgehrig/.kicad/eeschema-library/SiliconLabs
 LibName43=/home/jgehrig/.kicad/eeschema-library/LinearTechnology
 LibName44=pacman-main-cache
 LibName45=tca9617b
-[schematic_editor]
-version=1
-PageLayoutDescrFile=
-PlotDirectoryName=/home/strong/Documents/ECE492/pacman/hardware/Rev0_5/
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=Pcbnew
-SpiceForceRefPrefix=0
-SpiceUseNetNumbers=0
-LabSize=60

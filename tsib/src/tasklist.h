@@ -9,20 +9,17 @@
 
 // RTOS tasks includes
 #include "task_i2c.h"
-#include "task_i2c.h"
-#include "task_safety.h"
 #include "task_heartbeat.h"
+#include "task_button.h"
+#include "task_state.h"
 
-/**
-* @name 
-* @{ */
-#define TASK_I2C_SIZE       200//was 100
+#define TASK_I2C_SIZE       200
 #define TASK_SAFETY_SIZE    200
 #define TASK_CONFIG_SIZE    200
 #define TASK_HEARTBEAT_SIZE 200
-#define TASK_CAN_SIZE		200
-#define TASK_BUTTON_SIZE	200
-/**  @} */
+#define TASK_CAN_SIZE	    200
+#define TASK_BUTTON_SIZE    200
+#define TASK_STATE_SIZE     200
 
 
 /**

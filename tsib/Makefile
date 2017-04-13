@@ -50,7 +50,7 @@ LIB_DIR=lib
 BUILD_DIR=build
 
 # Application Object Files
-APP_OBJECTS = main.o i2c.o task_button.o task_i2c.o task_safety.o task_heartbeat.o tasklist.o
+APP_OBJECTS = main.o i2c.o task_button.o task_i2c.o task_safety.o task_heartbeat.o task_state.o tasklist.o
 
 # RTOS Object Files
 KERNEL_ASM_OBJECTS = atomport-asm.o
