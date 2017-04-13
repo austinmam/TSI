@@ -264,7 +264,8 @@ F 3 "" H 2050 1550 50  0000 L CNN
 F 4 "TLP293(GB-TPLECT-ND" H 2050 1550 60  0001 C CNN "DigiKey P/N"
 F 5 "http://www.digikey.com/product-detail/en/toshiba-semiconductor-and-storage/TLP293(GB-TPL,E/TLP293(GB-TPLECT-ND/4562965" H 2050 1550 60  0001 C CNN "URL"
 F 6 "TLP293(GB-TPLE" H 2050 1550 60  0001 C CNN "Man P/N"
-F 7 "http://www.digikey.com/product-detail/en/toshiba-semiconductor-and-storage/TLP291(GB-TP,SE/TLP291(GB-TPSECT-ND/4562949" H 2050 1550 60  0001 C CNN "TLP291"
+F 7 "OPTOISOLATOR 3.75KV TRANS 4-SO" H 2050 1550 60  0001 C CNN "Description"
+F 8 "0.52" H 2050 1550 60  0001 C CNN "Price"
 	1    2050 1550
 	1    0    0    -1  
 $EndComp
@@ -689,7 +690,7 @@ P 4300 1600
 F 0 "SW1" H 4450 1710 50  0000 C CNN
 F 1 "SW_PUSH" H 4300 1520 50  0000 C CNN
 F 2 "custom_footprints:SW_RACON_8" H 4300 1600 50  0001 C CNN
-F 3 "http://media.digikey.com/pdf/Data%20Sheets/C&K/RACON_8,12.pdf" H 4300 1600 50  0001 C CNN
+F 3 "" H 4300 1600 50  0001 C CNN
 F 4 "1715-1676-1-ND" H 4300 1600 60  0001 C CNN "DigiKey P/N"
 F 5 "http://www.digikey.com/products/en?keywords=ckn9363ct-nd" H 4300 1600 60  0001 C CNN "URL"
 F 6 "1.14100.5030000" H 4300 1600 60  0001 C CNN "Man P/N"
