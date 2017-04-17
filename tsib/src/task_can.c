@@ -1,10 +1,6 @@
 #include "task_can.h"
 #include <avr/eeprom.h>
 
-// at usb2can.com 8 devices
-// download one of windows drivers, plus test application v1.0
-//
-
 volatile uint16_t i;
 volatile uint8_t num_cells;
 
@@ -12,8 +8,7 @@ void task_can_init(void){
 	for(i = 0; i<7; i = i + 1){
 		can_buff[i] = 0x00;//lets make a nice clean buffer
 	}
-	// load can buffs to desired values - Adam comment
-	can_frame.dlc = 2;
+	can_frame.dlc = 7;
 	can_frame.pt_data = (uint8_t*)&can_buff;
 	can_frame.cmd = CMD_TX; //This frame is for transmission only.  Make another for receiving if needed
 	//can_frame_ctrl.rtr = false;

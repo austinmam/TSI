@@ -27,41 +27,67 @@
 
 // RTOS tasks includes
 #include "task_i2c.h"
+#include "task_gui.h"
+#include "task_watchdog.h"
+#include "task_charge.h"
+#include "task_safety.h"
+#include "task_config.h"
 #include "task_heartbeat.h"
+#include "task_can.h"
 #include "task_button.h"
-#include "task_state.h"
 
 // task control block variables
-static ATOM_TCB task_i2c_tcb;
+//static ATOM_TCB task_i2c_tcb;
+//static ATOM_TCB task_gui_tcb;
+//static ATOM_TCB task_watchdog_tcb;
+//static ATOM_TCB task_charge_tcb;
 //static ATOM_TCB task_safety_tcb;
+//static ATOM_TCB task_config_tcb;
 static ATOM_TCB task_heartbeat_tcb;
 //static ATOM_TCB task_can_tcb;
-static ATOM_TCB task_button_tcb;
-static ATOM_TCB task_state_tcb;
+//static ATOM_TCB task_button_tcb;
 
 // task stack size declarations
-static uint8_t task_i2c_stack[TASK_I2C_SIZE];
+//static uint8_t task_i2c_stack[TASK_I2C_SIZE];
+//static uint8_t task_gui_stack[TASK_GUI_SIZE];
+//static uint8_t task_watchdog_stack[TASK_WATCHDOG_SIZE];
+//static uint8_t task_charge_stack[TASK_CHARGE_SIZE];
 //static uint8_t task_safety_stack[TASK_SAFETY_SIZE];
+//static uint8_t task_config_stack[TASK_CONFIG_SIZE];
 static uint8_t task_heartbeat_stack[TASK_HEARTBEAT_SIZE];
 //static uint8_t task_can_stack[TASK_CAN_SIZE];
-static uint8_t task_button_stack[TASK_BUTTON_SIZE];
-static uint8_t task_state_stack[TASK_STATE_SIZE];
+//static uint8_t task_button_stack[TASK_BUTTON_SIZE];
 
 // system wide task list
 const ATOM_TASK task_list[] = {
 	
 	// TASK PCB, PRIORITY, FUNC NAME, ENTRY PARAM
 	// STACK TOP, STACKSIZE
-
+	/*
 	// I2C handler task
 	{&task_i2c_tcb,        16, task_i2c,        0,
 		&task_i2c_stack[TASK_I2C_SIZE-1], TASK_I2C_SIZE},
-/*	
+	
+	// GUI and user input task
+	{&task_gui_tcb,        16, task_gui,        0,
+		&task_gui_stack[TASK_GUI_SIZE-1], TASK_GUI_SIZE},
+	
+	// watchdog handler task
+	{&task_watchdog_tcb,   16, task_watchdog,   0,
+		&task_watchdog_stack[TASK_WATCHDOG_SIZE-1], TASK_WATCHDOG_SIZE},
+	
+	// charging and SOC task
+	{&task_charge_tcb,     16, task_charge,     0,
+		&task_charge_stack[TASK_CHARGE_SIZE-1], TASK_CHARGE_SIZE},
+	
 	// safety monitor task
 	{&task_safety_tcb,     16, task_safety,     0,
 		&task_safety_stack[TASK_SAFETY_SIZE-1], TASK_SAFETY_SIZE},
-*/	
 	
+	// configuration and debugging task
+	{&task_config_tcb,     16, task_config,     0,
+		&task_config_stack[TASK_CONFIG_SIZE-1], TASK_CONFIG_SIZE},
+	*/	
 	// heartbeat led task
 	{&task_heartbeat_tcb,	16, task_heartbeat, 0,
 		&task_heartbeat_stack[TASK_HEARTBEAT_SIZE-1], TASK_HEARTBEAT_SIZE},
@@ -69,13 +95,11 @@ const ATOM_TASK task_list[] = {
 	// CAN comm task
 	{&task_can_tcb,	16, task_can, 0,
 		&task_can_stack[TASK_CAN_SIZE-1], TASK_CAN_SIZE},
-	*/	
+		
 	// Button press task
 	{&task_button_tcb,	16, task_button, 0,
-		&task_button_stack[TASK_BUTTON_SIZE-1], TASK_BUTTON_SIZE},
-	
-	{&task_state_tcb,	16, task_state, 0,
-		&task_state_stack[TASK_STATE_SIZE-1], TASK_STATE_SIZE}
+		&task_button_stack[TASK_BUTTON_SIZE-1], TASK_BUTTON_SIZE}
+		*/
 };
 
 

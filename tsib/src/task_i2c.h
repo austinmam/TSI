@@ -1,12 +1,9 @@
 #ifndef TASK_I2C_H
 #define TASK_I2C_H
 
-// standard library
-#include <stdio.h>
 #include <stdint.h>
-
-#include <../lib/atmel/TWI_Master.h>
-//#include "i2c.h"
+#include "lcd.h"
+#include "i2c.h"
 #include "params.h"
 #include "config.h"
 
