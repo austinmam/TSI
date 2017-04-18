@@ -45,7 +45,7 @@
 //static ATOM_TCB task_config_tcb;
 static ATOM_TCB task_heartbeat_tcb;
 //static ATOM_TCB task_can_tcb;
-//static ATOM_TCB task_button_tcb;
+static ATOM_TCB task_button_tcb;
 
 // task stack size declarations
 //static uint8_t task_i2c_stack[TASK_I2C_SIZE];
@@ -56,7 +56,7 @@ static ATOM_TCB task_heartbeat_tcb;
 //static uint8_t task_config_stack[TASK_CONFIG_SIZE];
 static uint8_t task_heartbeat_stack[TASK_HEARTBEAT_SIZE];
 //static uint8_t task_can_stack[TASK_CAN_SIZE];
-//static uint8_t task_button_stack[TASK_BUTTON_SIZE];
+static uint8_t task_button_stack[TASK_BUTTON_SIZE];
 
 // system wide task list
 const ATOM_TASK task_list[] = {
@@ -95,11 +95,11 @@ const ATOM_TASK task_list[] = {
 	// CAN comm task
 	{&task_can_tcb,	16, task_can, 0,
 		&task_can_stack[TASK_CAN_SIZE-1], TASK_CAN_SIZE},
-		
+	*/	
 	// Button press task
 	{&task_button_tcb,	16, task_button, 0,
 		&task_button_stack[TASK_BUTTON_SIZE-1], TASK_BUTTON_SIZE}
-		*/
+		
 };
 
 
