@@ -41,7 +41,7 @@
 //static ATOM_TCB task_gui_tcb;
 //static ATOM_TCB task_watchdog_tcb;
 //static ATOM_TCB task_charge_tcb;
-//static ATOM_TCB task_safety_tcb;
+static ATOM_TCB task_safety_tcb;
 //static ATOM_TCB task_config_tcb;
 static ATOM_TCB task_heartbeat_tcb;
 //static ATOM_TCB task_can_tcb;
@@ -52,7 +52,7 @@ static ATOM_TCB task_button_tcb;
 //static uint8_t task_gui_stack[TASK_GUI_SIZE];
 //static uint8_t task_watchdog_stack[TASK_WATCHDOG_SIZE];
 //static uint8_t task_charge_stack[TASK_CHARGE_SIZE];
-//static uint8_t task_safety_stack[TASK_SAFETY_SIZE];
+static uint8_t task_safety_stack[TASK_SAFETY_SIZE];
 //static uint8_t task_config_stack[TASK_CONFIG_SIZE];
 static uint8_t task_heartbeat_stack[TASK_HEARTBEAT_SIZE];
 //static uint8_t task_can_stack[TASK_CAN_SIZE];
@@ -79,11 +79,11 @@ const ATOM_TASK task_list[] = {
 	// charging and SOC task
 	{&task_charge_tcb,     16, task_charge,     0,
 		&task_charge_stack[TASK_CHARGE_SIZE-1], TASK_CHARGE_SIZE},
-	
+	*/
 	// safety monitor task
 	{&task_safety_tcb,     16, task_safety,     0,
 		&task_safety_stack[TASK_SAFETY_SIZE-1], TASK_SAFETY_SIZE},
-	
+	/*
 	// configuration and debugging task
 	{&task_config_tcb,     16, task_config,     0,
 		&task_config_stack[TASK_CONFIG_SIZE-1], TASK_CONFIG_SIZE},

@@ -5,9 +5,21 @@
 
 
 void safety_init(void) {
-	PORTA |= 0x08;
-	DDRA |= 0x39;
-	sloop_state = false;
+
+	//sloop_state = false;
+
+	// Set Throttle Plausibility as output
+	DDRB |= (1 << DDB6);
+
+	// PB4 - BP_uC - Needs pull-up
+	// PB5 - Throttle_PL - Simple read
+	PORTB |= (1 << PB4);
+
+	// Sets port for spare LEDs as output
+	DDRC  |= (1 << DDC2) | (1 << DDC3);
+
+	// PE6 - BOT_uC - Needs pull-up
+	PORTE |= (1 << PE6);
 
 }
 
@@ -16,7 +28,26 @@ void task_safety(uint32_t data) {
 	safety_init();
 	
 	for(;;) {
-		sloop_state = (PINA & 0x04)==0x04? false : true;
+
+		//if((PINB & (1 << PB4))) PORTC |= (1 << PC2); // Read Brake Pressed
+		//else PORTC &= ~(1 << PC2);
+		
+		if((PINB & (1 << PB5))) PORTC |= (1 << PC3); // Read Throttle Plausibility
+		else PORTC &= ~(1 << PC3);
+
+		if(buttonPushed && (PINB & (1 << PB4))) {
+			PORTB |= (1 << PB6); // Sets Throttle Select HIGH
+			PORTC |= (1 << PC2);
+		}
+		else {
+			PORTB &= ~(1 << PB6); // Sets Throttle Select LOW
+			PORTC &= ~(1 << PC2);
+		}
+
+		//if(buttonPushed) PORTC |= (1 << PC2);
+		//else PORTC &= ~(1 << PC2);
+
+/*		sloop_state = (PINA & 0x04)==0x04? false : true;
 		if(pack_state == rdy){
 			PORTA &= ~(0x08);// close safety loop relay
 			if(sloop_state){//ready and loop is closed
@@ -24,6 +55,6 @@ void task_safety(uint32_t data) {
 			}
 		}else{
 			PORTA |= 0x08;// open safety loop relay
-		}
+		}*/
 	}
 }
