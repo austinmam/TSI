@@ -73,8 +73,8 @@ void task_button(uint32_t data){
 				break;
 			case MAYBEPUSH:
 				if (PINA & (1 << PA5)) {
-					pushState = PUSHED;
 					buttonPushed = ~buttonPushed;
+					pushState = PUSHED;
 				} else pushState = NOPUSH;
 				break;
 			case PUSHED:
@@ -87,7 +87,8 @@ void task_button(uint32_t data){
 				break;
 		}
 
-		if((pushState == PUSHED)) PORTC |= (1 << PC2);
+		if(buttonPushed) PORTC |= (1 << PC2);
+		//if((pushState == PUSHED)) PORTC |= (1 << PC2);
 		else PORTC &= ~(1 << PC2);
 		
 	}
