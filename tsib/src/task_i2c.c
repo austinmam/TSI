@@ -54,7 +54,7 @@ void bypass_selection(void){
 
 void task_i2c(uint32_t data) {
 	i2c_init();
-	adc_init();
+	//adc_init();
 	power_init();
 	lcd_init();
 	uint8_t i = 0;

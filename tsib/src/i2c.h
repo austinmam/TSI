@@ -117,7 +117,7 @@ uint16_t ams_temp;
 
 void current_sensor_on(void);
 void current_sensor_off(void);
-void adc_init(void);
+//void adc_init(void);
 void power_init(void);
 int16_t get_adc_current(void);
 int16_t get_shunt_voltage(void);

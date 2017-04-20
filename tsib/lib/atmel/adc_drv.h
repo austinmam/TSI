@@ -26,10 +26,12 @@
 //_____ I N C L U D E S ________________________________________________________
 
 #include "config.h"
-#include "compiler.h"
+//#include "compiler.h"
 #include <avr/io.h>
 
 //_____ D E F I N I T I O N S __________________________________________________
+#define TRUE             1
+#define FALSE            0
 
 #define EXTERNAL_AREF    0   
 #define AVCC_AS_VREF     1
@@ -38,8 +40,8 @@
 #define LEFT_ADJUST      1   
 #define NO_LEFT_ADJUST   0
 
-#define ADC_FULL_RANGE       ((U16)(0x03FF))   // 10-bit ADC
-#define INTERNAL_VREF_VALUE  ((U16)(   256))   // 2.56 Volts
+#define ADC_FULL_RANGE       ((uint16_t)(0x03FF))   // 10-bit ADC
+#define INTERNAL_VREF_VALUE  ((uint16_t)(   256))   // 2.56 Volts
 
 #ifndef FOSC
         #error You must define FOSC in config.h
@@ -173,7 +175,7 @@
 //!                 Left adjust result >2,
 //!          TRUE:  In range
 //!
-U8   adc_init(U8 voltage_ref, Bool left_adjust, U8 adc_channel);
+uint8_t   adc_init(uint8_t voltage_ref, uint8_t left_adjust, uint8_t adc_channel);
 
 //------------------------------------------------------------------------------
 //  @fn adc_single_conversion
@@ -185,9 +187,9 @@ U8   adc_init(U8 voltage_ref, Bool left_adjust, U8 adc_channel);
 //!
 //! @param adc_input_pin   ADC I/O pin selection
 //!
-//! @return Conversion value (U16).
+//! @return Conversion value (uint16_t).
 //!
-U16  adc_single_conversion(U8 adc_input_pin);
+uint16_t  adc_single_conversion(uint8_t adc_input_pin);
 
 //______________________________________________________________________________
 

@@ -111,6 +111,7 @@ void get_detect(void) {
 }
 
 //Initialize the ADC that the TSV current sensor data is acquired through
+/*
 void adc_init(void){
 	//adc address, point to config reg, MSB config, LSB config (pg11 and pg18)
 	unsigned char msg[4] = {I2C_ADDR_HVADC_W, 0x01, 0x82, 0x83};
@@ -129,6 +130,7 @@ void adc_init(void){
 	// release mutex
 	atomMutexPut(&i2c_mutex);
 }
+*/
 
 //Initialize the INA226 that pack voltage and charge current is acquired from
 void power_init(void){

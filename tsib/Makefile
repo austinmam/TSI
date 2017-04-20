@@ -57,7 +57,7 @@ KERNEL_ASM_OBJECTS = atomport-asm.o
 KERNEL_OBJECTS = atomkernel.o atomsem.o atommutex.o atomtimer.o atomqueue.o atomport.o
 
 # Library Object Files
-LIBRARY_OBJECTS = atmel/TWI_Master.o atmel/can_lib.o atmel/can_drv.o#i2c_lcd/i2c_lcd.o
+LIBRARY_OBJECTS = atmel/TWI_Master.o atmel/can_lib.o atmel/can_drv.o atmel/adc_drv.o#i2c_lcd/i2c_lcd.o
 
 # Collection of Built Objects
 ALL_OBJECTS = $(APP_OBJECTS) $(KERNEL_ASM_OBJECTS) $(KERNEL_OBJECTS) $(LIBRARY_OBJECTS)

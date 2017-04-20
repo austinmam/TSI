@@ -3,6 +3,7 @@
 
 #include <avr/io.h>
 #include <stdint.h>
+#include "atmel/adc_drv.h"
 #include "config.h"
 
 void task_heartbeat(uint32_t data);

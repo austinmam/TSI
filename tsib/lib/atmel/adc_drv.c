@@ -48,10 +48,10 @@
 //!          TRUE:  In range
 //!
 //------------------------------------------------------------------------------
-U8 adc_init(U8 voltage_ref, Bool left_adjust, U8 adc_channel)
+uint8_t adc_init(uint8_t voltage_ref, uint8_t left_adjust, uint8_t adc_channel)
 {
-    U8 range_voltage_ref;
-    U8 range_left_adjust;
+    uint8_t range_voltage_ref;
+    uint8_t range_left_adjust;
         
     range_voltage_ref = TRUE;
     range_left_adjust = TRUE;
@@ -111,14 +111,14 @@ U8 adc_init(U8 voltage_ref, Bool left_adjust, U8 adc_channel)
 //!
 //! @param adc_input_pin   ADC I/O pin selection
 //!
-//! @return Conversion value (U16).
+//! @return Conversion value (uint16_t).
 //!
 //------------------------------------------------------------------------------
-U16 adc_single_conversion(U8 adc_input_pin)
+uint16_t adc_single_conversion(uint8_t adc_input_pin)
 {
-    U8  i;
-    U16 j, adc_result;
-    U16 accu_adc_result = 0;
+    uint8_t  i;
+    uint16_t j, adc_result;
+    uint16_t accu_adc_result = 0;
     
     // --- To save power, the voltage over the ADC is turned off when not used.
     // --- This is done by controlling the voltage from the ADC I/O-pin.
@@ -141,7 +141,7 @@ U16 adc_single_conversion(U8 adc_input_pin)
     // --- This stabilizes INTERNAL_VREF rising level (if used) after enable ADC
     if ( Get_vref() == ((1<<REFS1)|(1<<REFS0)) )
     {
-        for (j=0; j<(0x3FF<<(ADC_PRESCALER-1)); j++) {asm("nop");asm("nop");}
+        for (j=0; j<(0x3FF<<(ADC_PRESCALER-1)); j++) {__asm("nop");__asm("nop");}
     }
     // --- Perform a dummy single conversion first
     Start_conv();                   // Do single conversion
