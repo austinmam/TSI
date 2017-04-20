@@ -21,6 +21,8 @@ void safety_init(void) {
 	// PE6 - BOT_uC - Needs pull-up
 	PORTE |= (1 << PE6);
 
+	state = IDLE;
+
 }
 
 void task_safety(uint32_t data) {
@@ -35,14 +37,42 @@ void task_safety(uint32_t data) {
 		if((PINB & (1 << PB5))) PORTC |= (1 << PC3); // Read Throttle Plausibility
 		else PORTC &= ~(1 << PC3);
 
-		if(buttonPushed && (PINB & (1 << PB4))) {
-			PORTB |= (1 << PB6); // Sets Throttle Select HIGH
-			PORTC |= (1 << PC2);
+		switch(state) {
+			case IDLE:
+				if(buttonPushed){
+					if((PINB & (1 << PB4))) state = SETUP_DRIVE;
+					buttonPushed = 0;
+				}
+				break;
+
+			case SETUP_DRIVE:
+				PORTB |= (1 << PB6); // Sets Throttle Select HIGH
+				PORTC |= (1 << PC2);
+				state = DRIVE;
+				break;
+
+			case DRIVE:
+				if(buttonPushed){
+					state = SETUP_IDLE;
+					buttonPushed = 0;
+				}
+				break;
+
+			case SETUP_IDLE:
+				PORTB &= ~(1 << PB6); // Sets Throttle Select LOW
+				PORTC &= ~(1 << PC2);
+				state = IDLE;
+				break;
 		}
-		else {
-			PORTB &= ~(1 << PB6); // Sets Throttle Select LOW
-			PORTC &= ~(1 << PC2);
-		}
+
+		// if(buttonPushed && (PINB & (1 << PB4))) {
+		// 	PORTB |= (1 << PB6); // Sets Throttle Select HIGH
+		// 	PORTC |= (1 << PC2);
+		// }
+		// else {
+		// 	PORTB &= ~(1 << PB6); // Sets Throttle Select LOW
+		// 	PORTC &= ~(1 << PC2);
+		// }
 
 		//if(buttonPushed) PORTC |= (1 << PC2);
 		//else PORTC &= ~(1 << PC2);
