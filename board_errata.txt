@@ -4,3 +4,5 @@ Tied +24_RTN & CH_GND
 Fix footprint outlines for header pins (currently plastic goes outside silkscreen.	
 
 R58 replaced w/ 15kohm (orig. 24.9k). This was due to incorrect gain calculations on isolation circuits.
+
+Drive Button needed a pull-up. Now using Drive Button pin w/ internal pull-up, and a spare/open GND pin.
