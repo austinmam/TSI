@@ -8,6 +8,9 @@ void safety_init(void) {
 
 	//sloop_state = false;
 
+	// Set Drive LED as output
+	DDRA |= (1 << DDA3);
+
 	// Set Throttle Plausibility as output
 	DDRB |= (1 << DDB6);
 
@@ -46,6 +49,7 @@ void task_safety(uint32_t data) {
 				break;
 
 			case SETUP_DRIVE:
+				PORTA |= (1 << PA3);
 				PORTB |= (1 << PB6); // Sets Throttle Select HIGH
 				PORTC |= (1 << PC2);
 				state = DRIVE;
@@ -59,6 +63,7 @@ void task_safety(uint32_t data) {
 				break;
 
 			case SETUP_IDLE:
+				PORTA &= ~(1 << PA3);
 				PORTB &= ~(1 << PB6); // Sets Throttle Select LOW
 				PORTC &= ~(1 << PC2);
 				state = IDLE;

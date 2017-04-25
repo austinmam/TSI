@@ -10,7 +10,7 @@ void heartbeat_init(void){
 	
 	DDRC  |= (1 << DDC1); // Sets port heartbeat LED
 
-	ADCSRA |= _BV(ADEN);
+	//ADCSRA |= _BV(ADEN); - ADC attempt residual
 
 	
 	// PE6 - BOT_uC - Needs pull-up
@@ -22,12 +22,12 @@ void task_heartbeat(uint32_t data) {
 	// initialize heartbeat task
 	heartbeat_init();
 	//adc_init(EXTERNAL_AREF, 0x00, 0x00);
-	uint16_t measurement;
+	//uint16_t measurement; - ADC attempt residual
 	//if((PINE & (1 << PE6))) PORTC |= (1 << PC2);
        
 	
 	for(;;){
-		
+		/*  - ADC attempt residual
 		ADMUX &= 0xF0;
 		ADMUX |= 0x00;
 
@@ -42,13 +42,14 @@ void task_heartbeat(uint32_t data) {
 
 		if(measurement > 512) PORTC |=  (1 << PC1);
 		else PORTC &= ~(1 << PC1);
-		/*
+		*/
+		
 		//blink Heartbeat LED twice a second
 		PORTC |=  (1 << PC1);
 		atomTimerDelay(25);
 		PORTC &= ~(1 << PC1);
 		atomTimerDelay(25);
-		*/
+		
 	}
 	
 }
