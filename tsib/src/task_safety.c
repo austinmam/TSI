@@ -8,8 +8,9 @@ void safety_init(void) {
 
 	//sloop_state = false;
 
+	// Set CC LED to Track Throttle Plausibility
 	// Set Drive LED as output
-	DDRA |= (1 << DDA3);
+	DDRA |= (1 << DDA2) | (1 << DDA3);
 
 	// Set Throttle Plausibility as output
 	DDRB |= (1 << DDB6);
@@ -21,8 +22,9 @@ void safety_init(void) {
 	// Sets port for spare LEDs as output
 	DDRC  |= (1 << DDC2) | (1 << DDC3);
 
+	// PE5 - AIR's - Needs pull-up
 	// PE6 - BOT_uC - Needs pull-up
-	PORTE |= (1 << PE6);
+	PORTE |= (1 << PE5) | (1 << PE6);
 
 	state = IDLE;
 
@@ -37,13 +39,19 @@ void task_safety(uint32_t data) {
 		//if((PINB & (1 << PB4))) PORTC |= (1 << PC2); // Read Brake Pressed
 		//else PORTC &= ~(1 << PC2);
 		
-		if((PINB & (1 << PB5))) PORTC |= (1 << PC3); // Read Throttle Plausibility
-		else PORTC &= ~(1 << PC3);
+		if((PINB & (1 << PB5))) { // Read Throttle Plausibility
+			PORTA |= (1 << PA2); // Using CC LED as Throttle Plausibility indicator
+			PORTC |= (1 << PC3); 
+		}
+		else {
+			PORTA &= ~(1 << PA2);
+			PORTC &= ~(1 << PC3);
+		}
 
 		switch(state) {
 			case IDLE:
 				if(buttonPushed){
-					if((PINB & (1 << PB4))) state = SETUP_DRIVE;
+					if(!(PINB & (1 << PB4))) state = SETUP_DRIVE;
 					buttonPushed = 0;
 				}
 				break;
@@ -56,10 +64,10 @@ void task_safety(uint32_t data) {
 				break;
 
 			case DRIVE:
-				if(buttonPushed){
-					state = SETUP_IDLE;
+				if(!(PINE & (1 << PE5)) || !(PINE & (1 << PE6)) || buttonPushed) { // AIRs, BOT, or Button Press send out of drive
+					state = SETUP_IDLE; 
 					buttonPushed = 0;
-				}
+				} 
 				break;
 
 			case SETUP_IDLE:

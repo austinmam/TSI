@@ -5,44 +5,14 @@
 #include "atomtimer.h"
 
 void heartbeat_init(void){
-
-	
-	
 	DDRC  |= (1 << DDC1); // Sets port heartbeat LED
-
-	//ADCSRA |= _BV(ADEN); - ADC attempt residual
-
-	
-	// PE6 - BOT_uC - Needs pull-up
-	//DDRE = (1 << DDE6);
-	//PORTE = (1 << PE6);
 }	
 
 void task_heartbeat(uint32_t data) {
 	// initialize heartbeat task
 	heartbeat_init();
-	//adc_init(EXTERNAL_AREF, 0x00, 0x00);
-	//uint16_t measurement; - ADC attempt residual
-	//if((PINE & (1 << PE6))) PORTC |= (1 << PC2);
-       
 	
 	for(;;){
-		/*  - ADC attempt residual
-		ADMUX &= 0xF0;
-		ADMUX |= 0x00;
-
-		ADCSRA |= _BV(ADSC);
-
-		while((ADCSRA & _BV(ADSC)));
-
-		measurement = ADC;
-
-		ADCSRA &= ~_BV(ADSC);
-		//measurement = adc_single_conversion(0x01);
-
-		if(measurement > 512) PORTC |=  (1 << PC1);
-		else PORTC &= ~(1 << PC1);
-		*/
 		
 		//blink Heartbeat LED twice a second
 		PORTC |=  (1 << PC1);
