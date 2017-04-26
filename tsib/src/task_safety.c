@@ -64,7 +64,7 @@ void task_safety(uint32_t data) {
 				break;
 
 			case DRIVE:
-				if(!(PINE & (1 << PE5)) || buttonPushed) { // AIRs, or Button Press send out of drive
+				if((PINE & (1 << PE5)) || buttonPushed) { // AIRs, or Button Press send out of drive
 					state = SETUP_IDLE; 
 					buttonPushed = 0;
 				} 
