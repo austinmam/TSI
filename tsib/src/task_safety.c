@@ -23,8 +23,8 @@ void safety_init(void) {
 	DDRC  |= (1 << DDC2) | (1 << DDC3);
 
 	// PE5 - AIR's - Needs pull-up
-	// PE6 - BOT_uC - Needs pull-up
-	PORTE |= (1 << PE5) | (1 << PE6);
+	// PE6 - BOT_uC - Needs pull-up (not currently used)
+	PORTE |= (1 << PE5);
 
 	state = IDLE;
 
@@ -64,7 +64,7 @@ void task_safety(uint32_t data) {
 				break;
 
 			case DRIVE:
-				if(!(PINE & (1 << PE5)) || !(PINE & (1 << PE6)) || buttonPushed) { // AIRs, BOT, or Button Press send out of drive
+				if(!(PINE & (1 << PE5)) || buttonPushed) { // AIRs, or Button Press send out of drive
 					state = SETUP_IDLE; 
 					buttonPushed = 0;
 				} 
