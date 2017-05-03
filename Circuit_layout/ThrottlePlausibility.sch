@@ -79,7 +79,6 @@ LIBS:video
 LIBS:Xicor
 LIBS:xilinx
 LIBS:Zilog
-LIBS:pacman-main-cache
 LIBS:bss84
 LIBS:+10v
 LIBS:Circuit_layout-cache
@@ -2332,9 +2331,10 @@ F 6 "ERJ-6ENF1002V" V 7050 2200 60  0001 C CNN "Man P/N"
 $EndComp
 Wire Wire Line
 	6250 2200 6900 2200
-Wire Wire Line
-	2000 4400 2150 4400
-Wire Wire Line
-	2150 4400 2150 4350
-Connection ~ 2000 4400
+Text Notes 5750 1350 0    39   ~ 0
+Consider using potentiometer for R33, or R34&R32 (Plausibility Window Compators). \nThis way sensitivity may be altered depending on configuration.\n\nNote: Current value of 499 does NOT give 10% window (incorrect, gives 5%)
+Text Notes 2200 4650 0    39   ~ 0
+Current configuration means +24_RTN & CH_GND are tied on DC/DC.\nConsider using DC/DC w/ dual outputs to avoid giving up isolation,\ne.g. +24V to +5V AND +10V\n\nAdditionally, expose the GND plane underneath the package of this regulator (footprint).\nShould allow for better heat dissipation.
+Text Notes 1450 10000 0    39   ~ 0
+If this arrangement is used, perhaps add clamping diodes to better protect from outside signals.\nWith the clutter of the box, it is easy to connect wires incorrectly.\n\nR25 and R26 could be replaced by potentiometers,\nso that tuning to the pedal cluster can be more accurate.\n
 $EndSCHEMATC

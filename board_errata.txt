@@ -1,5 +1,5 @@
 Tied +24_RTN & CH_GND
-	- Consider using 2nd DC/DC for 10V, or use DC/DC w/ two outputs (5/12)
+Consider using 2nd DC/DC for 10V, or use DC/DC w/ two outputs (5/12)
 
 Fix footprint outlines for header pins (currently plastic goes outside silkscreen.	
 
@@ -9,8 +9,14 @@ Drive Button needed a pull-up. Now using Drive Button pin w/ internal pull-up, a
 
 Tied Pins 19 & 20 together for +24V to Brake Overtravel/Brake Pressed
 
-Replaced R33 w/ 2k resistor to get roughly 17% plausibility window. This was for testing purposes and concern over the accuracy of the potentiometers/method of mounting them. The 500 ohm resistor in original design is incorrect. This will result in 5% window, not 10%. Needs fixed.
+Replaced R33 w/ 2k resistor to get roughly 17% plausibility window. 
+This was for testing purposes and concern over the accuracy of the potentiometers/method of mounting them. 
+The 500 ohm resistor in original design is incorrect. This will result in 5% window, not 10%. Needs fixed.
 
-Replaced R25 w/ 4.75k resistor to match APPS2 on car pedal cluster. Replaced R26 w/ 4.99k resistor to match APPS1 on car pedal cluster. The datasheet for the pots was incorrect, saying 2k, instead of 5k.
+Replaced R25 w/ 4.75k resistor to match APPS2 on car pedal cluster. 
+Replaced R26 w/ 4.99k resistor to match APPS1 on car pedal cluster. 
+The datasheet for the pots was incorrect, saying 2k, instead of 5k.
 
-Once suggestion would be to add trimmer pots as R25, R26, that was there may be adjustment depending on the actual potentiometer values. Another location a pot may be useful is R33 to the plausibility window may be changed.
+One suggestion would be to add trimmer pots as R25, R26, 
+that way there may be adjustment depending on the actual potentiometer values. 
+Another location a pot may be useful is R33 to the plausibility window may be changed.

@@ -1,5 +1,6 @@
 EESchema Schematic File Version 2
 LIBS:Circuit_layout-rescue
+LIBS:TSI_KiCad_Lib
 LIBS:TSI_HV_Isolater-cache
 LIBS:74xgxx
 LIBS:74xx
@@ -473,8 +474,6 @@ F 3 "" H 3600 5650 50  0000 C CNN
 $EndComp
 Text GLabel 6550 3600 0    60   Input ~ 0
 APPS2
-Text Notes 7100 5500 0    60   ~ 0
-Add Mounting Holes
 Text Notes 2250 4200 0    60   ~ 0
 Intended for 10Hz PWM\ntau=6.345s
 $Comp
@@ -644,8 +643,8 @@ SCL
 Text Label 9950 950  0    60   ~ 0
 Throttle_SEL
 NoConn ~ 9800 1800
-Text Notes 9100 -350 2    60   ~ 0
-Datasheet says AVCC should be connected to Vcc through a LPF
+Text Notes 8050 1450 2    39   ~ 0
+Datasheet says AVCC should be\nconnected to Vcc through a LPF
 Text Label 6550 1800 0    60   ~ 0
 ~RESET_AVR
 $Comp
@@ -842,8 +841,6 @@ Text GLabel 11900 2100 0    60   Input ~ 0
 Spare_ADC_1
 Text GLabel 11900 2400 0    60   Input ~ 0
 Spare_ADC_2
-Text Notes 9800 -400 0    60   ~ 0
-NOTE: Add footprints to test points (already in lib)
 Text Label 13100 2050 0    60   ~ 0
 PIN55
 Text Label 6550 4200 0    60   ~ 0
@@ -906,8 +903,6 @@ F 8 "0.10" V 1500 1450 60  0001 C CNN "Cost"
 	1    1500 1450
 	0    -1   -1   0   
 $EndComp
-Text Notes 600  -100 0    60   ~ 0
-Increased the R on AIRs to match pullups of of BP, BOT to limit current
 $Comp
 L MMBF170 Q3
 U 1 1 58D1260E
@@ -1364,8 +1359,6 @@ Wire Wire Line
 NoConn ~ 9800 3600
 Wire Wire Line
 	8200 5500 8200 5550
-Text Notes 6100 1300 0    60   ~ 0
-Fix LM7810 to make sure that no short on back
 $Comp
 L C C2
 U 1 1 58D986BE
