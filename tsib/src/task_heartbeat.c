@@ -24,6 +24,9 @@ void task_heartbeat(uint32_t data) {
 	
 }
 /*
+This code was found in an attempt to get the ADC's working.
+Did not have any success, but it is a start
+
 https://gist.github.com/Wollw/2396604
 
 
