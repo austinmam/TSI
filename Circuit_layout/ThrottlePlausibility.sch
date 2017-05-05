@@ -79,6 +79,7 @@ LIBS:video
 LIBS:Xicor
 LIBS:xilinx
 LIBS:Zilog
+LIBS:pacman-main-cache
 LIBS:bss84
 LIBS:+10v
 LIBS:Circuit_layout-cache
@@ -2335,6 +2336,14 @@ Text Notes 5750 1350 0    39   ~ 0
 Consider using potentiometer for R33, or R34&R32 (Plausibility Window Compators). \nThis way sensitivity may be altered depending on configuration.\n\nNote: Current value of 499 does NOT give 10% window (incorrect, gives 5%)
 Text Notes 2200 4650 0    39   ~ 0
 Current configuration means +24_RTN & CH_GND are tied on DC/DC.\nConsider using DC/DC w/ dual outputs to avoid giving up isolation,\ne.g. +24V to +5V AND +10V\n\nAdditionally, expose the GND plane underneath the package of this regulator (footprint).\nShould allow for better heat dissipation.
-Text Notes 1450 10000 0    39   ~ 0
-If this arrangement is used, perhaps add clamping diodes to better protect from outside signals.\nWith the clutter of the box, it is easy to connect wires incorrectly.\n\nR25 and R26 could be replaced by potentiometers,\nso that tuning to the pedal cluster can be more accurate.\n
+Text Notes 1450 10400 0    39   ~ 0
+If this arrangement is used, perhaps add clamping diodes to better protect from outside signals.\nWith the clutter of the box, it is easy to connect wires incorrectly.\n\nR25 and R26 could be replaced by potentiometers,\nso that tuning to the pedal cluster can be more accurate.\n\nR25 and R26 are also incorrectly sized. \nTheir size was based upon the potentiometer datasheet, which is incorrect. \nThey were replaced on the board with values closer to the measured values ( APPS1-5k, APPS2-4.75k)\n\nAdditionally, the pedal potentiometers need to be wired inverted from their diagram, \nso that the wiper tracks as expected.\n
+Text Notes 1300 5550 0    99   ~ 0
+APPS1 Stepdown
+Text Notes 1300 7200 0    60   ~ 0
+Brings the 5-10V biases APPS1 signal down to 0-5V
+Text Notes 650  3650 0    99   ~ 0
+10V Regulator
+Text Notes 13700 4250 0    99   ~ 0
+Throttle Select Switch
 $EndSCHEMATC

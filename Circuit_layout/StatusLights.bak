@@ -79,7 +79,6 @@ LIBS:video
 LIBS:Xicor
 LIBS:xilinx
 LIBS:Zilog
-LIBS:pacman-main-cache
 LIBS:bss84
 LIBS:+10v
 LIBS:Circuit_layout-cache
@@ -723,8 +722,6 @@ Wire Wire Line
 	1200 5850 1200 6200
 Connection ~ 1200 6200
 Connection ~ 1200 5300
-Text Notes 11350 1100 0    60   ~ 0
-Changed resistor values: 25mA max. current, should be roughly 15mA now
 $Comp
 L R R71
 U 1 1 58C2A949
@@ -984,8 +981,6 @@ Connection ~ 6750 6200
 Wire Wire Line
 	6800 5200 6800 5300
 Connection ~ 6800 5300
-Text Notes 2450 -100 0    60   ~ 0
-U11/12: Verify that these will supply necessary current. Add high side switch on output if necessary. Also could be accomplished with NMOS followed by PMOS
 $Comp
 L R R17
 U 1 1 58D617C3

@@ -79,7 +79,6 @@ LIBS:video
 LIBS:Xicor
 LIBS:xilinx
 LIBS:Zilog
-LIBS:pacman-main-cache
 LIBS:bss84
 LIBS:+10v
 LIBS:Circuit_layout-cache
@@ -308,4 +307,6 @@ F 3 "" H 5650 950 50  0000 C CNN
 $EndComp
 Wire Wire Line
 	5650 1000 5650 950 
+Text Notes 3850 1800 0    39   ~ 0
+Consider using dual-output DC/DC.\n(+5V/+10V)
 $EndSCHEMATC

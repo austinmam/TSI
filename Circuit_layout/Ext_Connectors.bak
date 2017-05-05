@@ -79,7 +79,6 @@ LIBS:video
 LIBS:Xicor
 LIBS:xilinx
 LIBS:Zilog
-LIBS:pacman-main-cache
 LIBS:bss84
 LIBS:+10v
 LIBS:Circuit_layout-cache
@@ -99,8 +98,6 @@ Comment4 "DEVELOPMENT ONLY"
 $EndDescr
 Text Label 7250 1050 2    60   ~ 0
 HVPL_1
-Text Notes 8400 2950 0    60   ~ 0
-To Cockpit
 Text Label 7250 1350 2    60   ~ 0
 HVPL_1_RTN
 Text Label 7250 1150 2    60   ~ 0
@@ -392,8 +389,6 @@ F 3 "" H 7850 1600 50  0000 C CNN
 $EndComp
 Text GLabel 7250 1750 2    60   Input ~ 0
 BP
-Text Notes 7650 3100 0    60   ~ 0
-RTDS
 $Comp
 L GND #PWR035
 U 1 1 58D1CF0B
@@ -686,10 +681,16 @@ F 3 "" H 10050 750 60  0000 C CNN
 	1    10050 750 
 	1    0    0    -1  
 $EndComp
-Text Notes 9050 2550 0    60   ~ 0
-Removed Cockpit Return
 Text GLabel 7750 2500 2    60   Input ~ 0
 CC_LED
 Wire Wire Line
 	7750 2500 6700 2500
+Text Notes 8300 2900 0    39   ~ 0
+PIN6 of P3 is unused. Instead Drive_BTN (PIN8) now goes in to uC,\nwhere an interal pull-up is used. 
+Text Notes 6350 2200 0    39   ~ 0
+On current board PIN19 is tied to PIN20 of P2. \nThis due to BOT and BP needing +24V.
+Text Notes 5100 3400 0    39   ~ 0
+PIN1 and PIN3 tied, due to voltage regulator used (LM7810).\nSee note on Throttle Plausibiliy sheet.
+Text Notes 7700 3750 0    39   ~ 0
+Note on P2 and P3:\nBoth of these connectors are ordered in less-than-ideal ways if ribbon cables are used.\nAdditionally, the ribbon cable used is too small of gauge.\nThis DOES NOT mean using screw terminals.\n\nConsider using completely different connectors.\nAlso, the footprints do not accurately portray this plastic layout of the\nconnectors themselves. Remeasure/redraw.
 $EndSCHEMATC

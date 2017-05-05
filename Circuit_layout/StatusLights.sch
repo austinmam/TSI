@@ -79,6 +79,7 @@ LIBS:video
 LIBS:Xicor
 LIBS:xilinx
 LIBS:Zilog
+LIBS:pacman-main-cache
 LIBS:bss84
 LIBS:+10v
 LIBS:Circuit_layout-cache
@@ -434,8 +435,6 @@ F 6 "GRM21BR6YA106ME43L" H 6600 5750 60  0001 C CNN "Man P/N"
 	1    6600 5750
 	1    0    0    -1  
 $EndComp
-Text Notes 3550 7400 0    60   ~ 0
-If want to go back to 24V\nsw - 750k - Vfb - 196k - gnd
 Wire Wire Line
 	4250 1200 4350 1200
 Wire Wire Line
@@ -883,8 +882,6 @@ Text Label 9500 5550 2    60   ~ 0
 HVPL
 Text Notes 9550 5750 0    60   ~ 0
 Note: this is going to three LEDs
-Text Notes 8000 6400 0    60   ~ 0
-Need to verify DC DC Conv
 $Comp
 L C C3
 U 1 1 58D40888
@@ -1080,4 +1077,6 @@ Text Label 1400 1000 0    60   ~ 0
 CC_LED
 Wire Wire Line
 	1250 1000 1400 1000
+Text Notes 3900 6450 0    99   ~ 0
+HVPL
 $EndSCHEMATC

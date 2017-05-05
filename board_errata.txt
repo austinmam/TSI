@@ -20,3 +20,5 @@ The datasheet for the pots was incorrect, saying 2k, instead of 5k.
 One suggestion would be to add trimmer pots as R25, R26, 
 that way there may be adjustment depending on the actual potentiometer values. 
 Another location a pot may be useful is R33 to the plausibility window may be changed.
+
+Serial Number mask is incorrect. Currently exposes GND plane.

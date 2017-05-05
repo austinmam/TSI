@@ -79,7 +79,6 @@ LIBS:video
 LIBS:Xicor
 LIBS:xilinx
 LIBS:Zilog
-LIBS:pacman-main-cache
 LIBS:bss84
 LIBS:+10v
 LIBS:Circuit_layout-cache
@@ -952,4 +951,6 @@ Wire Wire Line
 Wire Wire Line
 	3350 4100 3900 4100
 Connection ~ 3550 4100
+Text Notes 2800 2400 0    39   ~ 0
+Current R58 (24.9k) results in incorrect amplification.\nReplaced w/ 15k
 $EndSCHEMATC

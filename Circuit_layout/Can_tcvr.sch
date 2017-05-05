@@ -79,6 +79,7 @@ LIBS:video
 LIBS:Xicor
 LIBS:xilinx
 LIBS:Zilog
+LIBS:pacman-main-cache
 LIBS:bss84
 LIBS:+10v
 LIBS:Circuit_layout-cache
@@ -210,7 +211,7 @@ CANTX
 Text Label 1700 1200 2    60   ~ 0
 CANRX
 Text Notes 3050 2600 0    60   ~ 0
-NOTE: DO NOT populate R11.\n\nR11 provides the ability to use this board \nas a terminating  CAN node in development only.
+NOTE: DO NOT populate R44.\n\nR44 provides the ability to use this board \nas a terminating CAN node in development only.
 $Comp
 L C C18
 U 1 1 58B93C80

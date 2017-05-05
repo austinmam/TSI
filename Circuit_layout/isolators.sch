@@ -79,6 +79,7 @@ LIBS:video
 LIBS:Xicor
 LIBS:xilinx
 LIBS:Zilog
+LIBS:pacman-main-cache
 LIBS:bss84
 LIBS:+10v
 LIBS:Circuit_layout-cache
@@ -478,8 +479,6 @@ F 6 "C0805C101J5GACTU" H 7300 2300 60  0001 C CNN "Man P/N"
 $EndComp
 Text Notes 5500 3450 0    60   ~ 0
 Iso. takes 2V input. \nScaled back to 5V on output.\nCircuit diagram matches p.11 of Datasheet.
-Text Notes 3150 3250 0    60   ~ 0
-Note: Isolation Diff. Amps \nDO NOT have associated footprints
 Text Label 5950 4100 0    60   ~ 0
 +5HV
 $Comp
@@ -820,8 +819,6 @@ Wire Wire Line
 	8250 4650 8400 4650
 Wire Wire Line
 	8700 4650 8800 4650
-Text Notes 3500 5550 0    60   ~ 0
-Note: Isolation Diff. Amps \nDO NOT have associated footprints
 Wire Notes Line
 	5450 7800 5450 450 
 $Comp
