@@ -22,3 +22,11 @@ that way there may be adjustment depending on the actual potentiometer values.
 Another location a pot may be useful is R33 to the plausibility window may be changed.
 
 Serial Number mask is incorrect. Currently exposes GND plane.
+
+Board as is installed on the car currently bypasses Throttle Plausibility directly to jumper. 
+Still allows for Drive Button control.
+
+The HVPL circuit seems burnt out. Traced back to buck converter, seems to go bad there.
+
+Current Motor Controller cable is incorrect. +5V from Motor Controller does not come as intended, 
+had to splice into +5V being supplied to encoder.
