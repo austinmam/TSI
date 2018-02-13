@@ -52,9 +52,9 @@ static const GPIO_PIN LOW_VOLT    =  {&PORTC, &DDRC, &PINC, 2};
 
 // PORTF gpio pins
 static const GPIO_PIN GPIO_ADC0   =  {&PORTF, &DDRF, &PINF, 0};
-static const GPIO_PIN GPIO_ADC1   =  {&PORTF, &DDRF, &PINF, 1};
-static const GPIO_PIN GPIO_ADC2   =  {&PORTF, &DDRF, &PINF, 2};
-static const GPIO_PIN GPIO_ADC3   =  {&PORTF, &DDRF, &PINF, 3};
+static const GPIO_PIN GPIO_ADC1   =  {&PORTF, &DDRF, &PINF, 1}; //IMD
+static const GPIO_PIN GPIO_ADC2   =  {&PORTF, &DDRF, &PINF, 2}; //V_measure
+static const GPIO_PIN GPIO_ADC3   =  {&PORTF, &DDRF, &PINF, 3}; //I_measure
 /**  @} */
 
 

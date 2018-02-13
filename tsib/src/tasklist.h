@@ -17,11 +17,14 @@
 #include "task_config.h"
 #include "task_heartbeat.h"
 #include "task_button.h"
+#include "task_readCurrent.h"
+#include "task_readIMD.h"
+#include "task_readVoltage.h"
 
 /**
 * @name 
 * @{ */
-#define TASK_I2C_SIZE       200//was 100
+#define TASK_I2C_SIZE       200 //was 100
 #define TASK_GUI_SIZE       200
 #define TASK_WATCHDOG_SIZE  200
 #define TASK_CHARGE_SIZE    200
@@ -30,6 +33,9 @@
 #define TASK_HEARTBEAT_SIZE 200
 #define TASK_CAN_SIZE		200
 #define TASK_BUTTON_SIZE	200
+#define TASK_READCURRENT    200
+#define TASK_READIMD        200
+#define TASK_READVOLTAGE    200
 /**  @} */
 
 
