@@ -38,6 +38,7 @@
 #include "task_readCurrent.h"
 #include "task_readIMD.h"
 #include "task_readVoltage.h"
+#include "task_readOvertravel.h"
 
 // task control block variables
 //static ATOM_TCB task_i2c_tcb;
@@ -52,6 +53,7 @@ static ATOM_TCB task_button_tcb;
 static ATOM_TCB task_readCurrent_tcb;
 static ATOM_TCB task_readIMD_tcb; 
 static ATOM_TCB task_readVoltage_tcb;
+static ATOM_TCB task_readOvertravel_tcb;
 
 // task stack size declarations
 //static uint8_t task_i2c_stack[TASK_I2C_SIZE];
@@ -66,6 +68,8 @@ static uint8_t task_button_stack[TASK_BUTTON_SIZE];
 static uint8_t task_readCurrent_stack[TASK_READCURRENT_SIZE];
 static uint8_t task_readIMD_stack[TASK_READIMD_SIZE];
 static uint8_t task_readVoltage_stack[TASK_READVOLTAGE_SIZE];
+static uint8_t task_readOvertravel_stack[TASK_READOVERTRAVEL_SIZE];
+
 
 // system wide task list
 const ATOM_TASK task_list[] = {
@@ -110,13 +114,16 @@ const ATOM_TASK task_list[] = {
 		&task_button_stack[TASK_BUTTON_SIZE-1], TASK_BUTTON_SIZE},
 
 	{&task_readCurrent_tcb,	16, task_readCurrent, 0,
-		&task_readCurrent_stack[TASK_READCURRENT_SIZE-1], TASK_READCURRENT_SIZE},	
+		&task_readCurrent_stack[TASK_READOVERTRAVEL_SIZE-1], TASK_READOVERTRAVEL_SIZE},	
 
-	 {&task_readIMD_tcb,	16, task_readIMD, 0,
-	 	&task_readIMD_stack[TASK_READIMD_SIZE-1], TASK_READIMD_SIZE},
+	{&task_readIMD_tcb,	16, task_readIMD, 0,
+		&task_readIMD_stack[TASK_READIMD_SIZE-1], TASK_READIMD_SIZE},
 
-	 {&task_readVoltage_tcb,	16, task_readVoltage, 0,
-	 	&task_readVoltage_stack[TASK_READVOLTAGE_SIZE-1], TASK_READVOLTAGE_SIZE}			
+	{&task_readVoltage_tcb,	16, task_readVoltage, 0,
+		&task_readVoltage_stack[TASK_READVOLTAGE_SIZE-1], TASK_READVOLTAGE_SIZE}
+
+	{&task_readOvertravel_tcb,	16, task_readOvertravel, 0,
+		&task_readOvertravel_stack[TASK_READOVERTRAVEL_SIZE-1], TASK_READOVERTRAVEL_SIZE}			
 		
 };
 
