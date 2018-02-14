@@ -3,12 +3,11 @@
 
 #include "config.h"
 #include "params.h"
-#include "pinout.h"
-#include "atoms.h"
+#include "atom.h"
 #include "atomtimer.h"
 #include "atmel/adc_drv.h"
 
-uint16_t voltReading;
+// uint16_t voltReading;
 
 void task_readVoltage(uint32_t data);
 
