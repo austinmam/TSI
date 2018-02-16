@@ -18,7 +18,7 @@ void task_can_receive(uint32_t data){
 		if (can_get_status(&can_frame_receive) == CAN_STATUS_NOT_COMPLETED) {
 			throttle_control = can_buff_receive;
 		}else{
-			can_frame_receive.cmd = CMD_ABORT
+			can_frame_receive.cmd = CMD_ABORT;
 		}
 		
 		atomTimerDelay(100);  ///MARTY CHANGE - delay 1s (supposedly)
