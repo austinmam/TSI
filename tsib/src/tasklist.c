@@ -38,6 +38,8 @@
 #include "task_readCurrent.h"
 #include "task_readIMD.h"
 #include "task_readVoltage.h"
+#include "task_can_receive.h"
+#include "tasK_temp.h"
 
 // task control block variables
 //static ATOM_TCB task_i2c_tcb;
@@ -52,6 +54,8 @@ static ATOM_TCB task_button_tcb;
 static ATOM_TCB task_readCurrent_tcb;
 static ATOM_TCB task_readIMD_tcb; 
 static ATOM_TCB task_readVoltage_tcb;
+static ATOM_TCB task_can_receive_tcb;
+static ATOM_TCB task_temp_tcb;
 
 // task stack size declarations
 //static uint8_t task_i2c_stack[TASK_I2C_SIZE];
@@ -66,6 +70,8 @@ static uint8_t task_button_stack[TASK_BUTTON_SIZE];
 static uint8_t task_readCurrent_stack[TASK_BUTTON_SIZE];
 static uint8_t task_readIMD_stack[TASK_BUTTON_SIZE];
 static uint8_t task_readVoltage_stack[TASK_BUTTON_SIZE];
+static uint8_t task_can_receive_stack[TASK_BUTTON_SIZE];
+static uint8_t task_temp_stack[TASK_BUTTON_SIZE];
 
 // system wide task list
 const ATOM_TASK task_list[] = {
@@ -116,7 +122,13 @@ const ATOM_TASK task_list[] = {
 		&task_readIMD_stack[TASK_readIMD_SIZE-1], TASK_readIMD_SIZE},
 
 	{&task_readVoltage_tcb,	16, task_readVoltage, 0,
-		&task_readVoltage_stack[TASK_readVoltage_SIZE-1], TASK_readVoltage_SIZE}			
+		&task_readVoltage_stack[TASK_readVoltage_SIZE-1], TASK_readVoltage_SIZE},
+	
+	{&task_can_receive_tcb,	16, task_can_receive, 0,
+		&task_can_receive_stack[TASK_CAN_RECEIVE_SIZE-1], TASK_CAN_RECEIVE_SIZE},
+	
+	{&task_temp_tcb,	16, task_temp, 0,
+		&task_temp_stack[TASK_TEMP_SIZE-1], TASK_TEMP_SIZE}
 		
 };
 
