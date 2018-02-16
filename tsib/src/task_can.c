@@ -27,35 +27,35 @@ void task_can_init(void){
 	//Throttle - 0xF4
 
 	//FIRST PACKET
-	CAN_PACK1 = eeprom_read_word((uint8_t*)EEPROM_STATE_IMD);
+	CAN_PACK1 = eeprom_read_byte((uint8_t*)EEPROM_STATE_IMD);
 	if((CAN_PACK1 == 0x00) || (CAN_PACK1 == 0xFF)) {
 		eeprom_write_byte((uint8_t*)EEPROM_STATE_IMD, CAN_STATE_IMD);
 	 	CAN_PACK1 = eeprom_read_byte((uint8_t*)EEPROM_STATE_IMD); 
 	}
 
 	//SECOND PACKET
-	CAN_PACK2 = eeprom_read_word((uint8_t*)EEPROM_BRAKE);
+	CAN_PACK2 = eeprom_read_byte((uint8_t*)EEPROM_BRAKE);
 	if((CAN_PACK2 == 0x00) || (CAN_PACK2 == 0xFF)) {
 		eeprom_write_byte((uint8_t*)EEPROM_BRAKE, CAN_BRAKE);
 	 	CAN_PACK2 = eeprom_read_byte((uint8_t*)EEPROM_BRAKE); 
 	}
 
 	//THIRD PACKET
-	CAN_PACK3 = eeprom_read_word((uint8_t*)EEPROM_THROTTLE);
+	CAN_PACK3 = eeprom_read_byte((uint8_t*)EEPROM_THROTTLE);
 	if((CAN_PACK3 == 0x00) || (CAN_PACK3 == 0xFF)) {
 	 	eeprom_write_byte((uint8_t*)EEPROM_THROTTLE, CAN_THROTTLE);
 	 	CAN_PACK3 = eeprom_read_byte((uint8_t*)EEPROM_THROTTLE); 
 	}
 
 	//FOURTH PACKET
-	CAN_PACK4 = eeprom_read_word((uint8_t*)EEPROM_VOLTAGE);
+	CAN_PACK4 = eeprom_read_byte((uint8_t*)EEPROM_VOLTAGE);
 	if((CAN_PACK4 == 0x00) || (CAN_PACK4 == 0xFF)) {
 	 	eeprom_write_byte((uint8_t*)EEPROM_VOLTAGE, CAN_VOLTAGE);
 	 	CAN_PACK4 = eeprom_read_byte((uint8_t*)EEPROM_VOLTAGE); 
 	}
 
 	//FIFTH PACKET
-	CAN_PACK5 = eeprom_read_word((uint8_t*)EEPROM_CURRENT);
+	CAN_PACK5 = eeprom_read_byte((uint8_t*)EEPROM_CURRENT);
 	if((CAN_PACK5 == 0x00) || (CAN_PACK5 == 0xFF)) {
 	 	eeprom_write_byte((uint8_t*)EEPROM_CURRENT, CAN_CURRENT);
 	 	CAN_PACK5 = eeprom_read_byte((uint8_t*)EEPROM_CURRENT); 
@@ -91,26 +91,24 @@ void task_can(uint32_t data){
 		*/
 
 		//SECOND PACKET - BRAKE
-		/*
+		
 		can_frame.id.std = (CAN_PACK2<<8) & 0x7FF;
-		can_frame.dlc = ;
+		can_frame.dlc = 1;
 		
-		can_buff[0] = 
-		
+		can_buff[0] = overtravel;
+		/*
 		can_buff[1] = 
 		can_buff[2] = 
-
 		can_buff[3] = 
 		can_buff[4] = 
 		can_buff[5] = 
 		can_buff[6] = 
-
 		can_buff[7] = 
-		
+		*/
 		while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){
 		}
 		while(can_get_status(&can_frame) == CAN_STATUS_NOT_COMPLETED);
-		*/
+		
 
 		//THIRD PACKET - THROTTLE
 		/*
