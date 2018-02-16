@@ -38,6 +38,30 @@ struct flt_cond {
 
 volatile struct flt_cond flt_cnd;
 
+//New Variables
+volatile uint16_t currReading;
+volatile uint16_t imdReading;
+volatile uint16_t voltReading;
+volatile bool overtravel;
+
+//New EEPROM Addresses
+#define CAN_STATE_IMD 0xF2
+#define CAN_BRAKE     0xF3
+#define CAN_THROTTLE  0xF4
+#define CAN_VOLTAGE   0xF5
+#define CAN_CURRENT   0xF6
+
+#define EEPROM_STATE_IMD 1
+#define EEPROM_BRAKE     2
+#define EEPROM_THROTTLE  3
+#define EEPROM_VOLTAGE   4
+#define EEPROM_CURRENT   5
+
+volatile uint8_t CAN_PACK1;
+volatile uint8_t CAN_PACK2;
+volatile uint8_t CAN_PACK3;
+volatile uint8_t CAN_PACK4;
+volatile uint8_t CAN_PACK5;
 
 //various parameters that will be displayed on the LCD
 volatile int16_t shunt_voltage;  //part of pack current calc
@@ -117,4 +141,13 @@ ATOM_MUTEX A_mutex;
 #define EEPROM_INA226_ASLP 	17
 #define EEPROM_INA226_ASLP 	19
 */
+
+//Parameters from the TSI
+volatile uint16_t temperature;
+volatile uint8_t throttle_control; //thinking of making it 0 for throttle off, and throttle on otherwise
+volatile uint8_t can_buff_receive;
+
+//CAN receive params
+st_cmd_t can_frame_receive;
+
 #endif

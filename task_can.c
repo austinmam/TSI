@@ -17,290 +17,161 @@ void task_can_init(void){
 	//can_frame_id.std = CANADD_PACKINFO;
 	//can_frame.id.std = CANADD_PACKINFO1;
 	
-	
+
 	// READ CAN ADDRESSES FROM EEPROM
+	//Current - 0xF6
+	//Voltage - 0xF5
+	//IMD - 0xF2
+	//Brake - 0xF3
+	//State - 0xF2
+	//Throttle - 0xF4
 
-	//eventually want this to be configured by hte pushbuttons and lcd display, but for now this works.  Just change depending on which pack it is.
-	
-	
-	 CANADD_PACKINFO1 = eeprom_read_word((uint16_t*)EEPROM_CAN_ADDR1);
+	//FIRST PACKET
+	CAN_PACK1 = eeprom_read_byte((uint8_t*)EEPROM_STATE_IMD);
+	if((CAN_PACK1 == 0x00) || (CAN_PACK1 == 0xFF)) {
+		eeprom_write_byte((uint8_t*)EEPROM_STATE_IMD, CAN_STATE_IMD);
+	 	CAN_PACK1 = eeprom_read_byte((uint8_t*)EEPROM_STATE_IMD); 
+	}
 
-	 if((CANADD_PACKINFO1 == 0x0000) || (CANADD_PACKINFO1 == 0xFFFF)) {
-	 	 eeprom_write_word((uint16_t*)EEPROM_CAN_ADDR1, DEFAULT_CAN_ADDR1);
-	 	 CANADD_PACKINFO1 = eeprom_read_word((uint16_t*)EEPROM_CAN_ADDR1); 
-	 }
+	//SECOND PACKET
+	CAN_PACK2 = eeprom_read_byte((uint8_t*)EEPROM_BRAKE);
+	if((CAN_PACK2 == 0x00) || (CAN_PACK2 == 0xFF)) {
+		eeprom_write_byte((uint8_t*)EEPROM_BRAKE, CAN_BRAKE);
+	 	CAN_PACK2 = eeprom_read_byte((uint8_t*)EEPROM_BRAKE); 
+	}
 
- 	 CANADD_PACKINFO2 = eeprom_read_word((uint16_t*)EEPROM_CAN_ADDR2);
+	//THIRD PACKET
+	CAN_PACK3 = eeprom_read_byte((uint8_t*)EEPROM_THROTTLE);
+	if((CAN_PACK3 == 0x00) || (CAN_PACK3 == 0xFF)) {
+	 	eeprom_write_byte((uint8_t*)EEPROM_THROTTLE, CAN_THROTTLE);
+	 	CAN_PACK3 = eeprom_read_byte((uint8_t*)EEPROM_THROTTLE); 
+	}
 
-	 if((CANADD_PACKINFO2 == 0x0000) || (CANADD_PACKINFO2 == 0xFFFF)) {
-	 	 eeprom_write_word((uint16_t*)EEPROM_CAN_ADDR2, DEFAULT_CAN_ADDR2);
-	 	 CANADD_PACKINFO2 = eeprom_read_word((uint16_t*)EEPROM_CAN_ADDR2); 
-	 }
+	//FOURTH PACKET
+	CAN_PACK4 = eeprom_read_byte((uint8_t*)EEPROM_VOLTAGE);
+	if((CAN_PACK4 == 0x00) || (CAN_PACK4 == 0xFF)) {
+	 	eeprom_write_byte((uint8_t*)EEPROM_VOLTAGE, CAN_VOLTAGE);
+	 	CAN_PACK4 = eeprom_read_byte((uint8_t*)EEPROM_VOLTAGE); 
+	}
 
-	 CANADD_CELLINFO = eeprom_read_word((uint16_t*)EEPROM_CAN_ADDR3);
-
-	 if((CANADD_CELLINFO == 0x0000) || (CANADD_CELLINFO == 0xFFFF)) {
-	 	 eeprom_write_word((uint16_t*)EEPROM_CAN_ADDR3, DEFAULT_CAN_ADDR3);
-	 	 CANADD_CELLINFO = eeprom_read_word((uint16_t*)EEPROM_CAN_ADDR3); 
-	 }
-
-	 PACK_NUM = eeprom_read_byte((uint8_t*)EEPROM_PACK_ID);
-
-	 if((PACK_NUM == 0x00) || (PACK_NUM == 0xFF)) {
-	 	 eeprom_write_byte((uint8_t*)EEPROM_PACK_ID, DEFAULT_PACK_NUM);
-	 	 PACK_NUM = eeprom_read_byte((uint8_t*)EEPROM_PACK_ID); 
-	 }
-
-	 // DOING THIS FOR NOW, EVENTUALLY MAKE THIS CONFIGURABLE BY THE LCD DISPLAY AND PUSH BUTTONS:
-	 num_cells = 7;
+	//FIFTH PACKET
+	CAN_PACK5 = eeprom_read_byte((uint8_t*)EEPROM_CURRENT);
+	if((CAN_PACK5 == 0x00) || (CAN_PACK5 == 0xFF)) {
+	 	eeprom_write_byte((uint8_t*)EEPROM_CURRENT, CAN_CURRENT);
+	 	CAN_PACK5 = eeprom_read_byte((uint8_t*)EEPROM_CURRENT); 
+	}
 }
 
 void task_can(uint32_t data){
 	task_can_init();
 	can_init(0);
-	
-	//uint16_t PACK_NUM = 0x001;
-	//uint32_t system_time = 0;  // PROBABLY WANT TO USE AGAIN
-	for(;;){	//loop forever
+
+	for(;;) {
+
+		//FIRST PACKET - STATE and IMD
+		/*
+		can_frame.id.std = (CAN_PACK1<<8) & 0x7FF;
+		can_frame.dlc = ;
+		
+		can_buff[0] = 
+		
+		can_buff[1] = 
+		can_buff[2] = 
+
+		can_buff[3] = 
+		can_buff[4] = 
+		can_buff[5] = 
+		can_buff[6] = 
+
+		can_buff[7] = 
+		
+		while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){
+		}
+		while(can_get_status(&can_frame) == CAN_STATUS_NOT_COMPLETED);
+		*/
+
+		//SECOND PACKET - BRAKE
+		
+		can_frame.id.std = (CAN_PACK2<<8) & 0x7FF;
+		can_frame.dlc = 1;
+		
+		can_buff[0] = overtravel;
+		/*
+		can_buff[1] = 
+		can_buff[2] = 
+		can_buff[3] = 
+		can_buff[4] = 
+		can_buff[5] = 
+		can_buff[6] = 
+		can_buff[7] = 
+		*/
+		while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){
+		}
+		while(can_get_status(&can_frame) == CAN_STATUS_NOT_COMPLETED);
 		
 
-
-		// OLD:
-		// can_buff[0] = pack_state;
-		// can_buff[1] = pack_voltage >> 8;
-		// can_buff[2] = pack_voltage & 0xFF;
-		// can_buff[3] = pack_current >> 24 & 0xFF;
-		// can_buff[4] = pack_current >> 16 & 0xFF;
-		// can_buff[5] = pack_current >> 8 & 0xFF;
-		// can_buff[6] = pack_current & 0xFF;
-		// can_buff[7] = pack_SOC;
-		// can_frame.dlc = 8;
-		// can_frame.id.std = CANADD_PACKINFO1;
-		// while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){
-		// }
-		// while(can_get_status(&can_frame) == CAN_STATUS_NOT_COMPLETED);
-		// //atomTimerDelay(10);
-
-		//NEW:
-
-
-
-		// FIRST PACKET: PACK STATE ; PACK VOLTAGE ; PACK CURRENT ; PACK SOC
-
-		can_frame.id.std = (PACK_NUM<<8) & 0x7FF;
-		can_frame.dlc = 8;
+		//THIRD PACKET - THROTTLE
+		/*
+		can_frame.id.std = (CAN_PACK3<<8) & 0x7FF;
+		can_frame.dlc = ;
 		
-		can_buff[0] = pack_state;
+		can_buff[0] = 
 		
-		can_buff[1] = pack_voltage >> 8;
-		can_buff[2] = pack_voltage & 0xFF;
+		can_buff[1] = 
+		can_buff[2] = 
 
-		can_buff[3] = pack_current >> 24 & 0xFF;
-		can_buff[4] = pack_current >> 16 & 0xFF;
-		can_buff[5] = pack_current >> 8 & 0xFF;
-		can_buff[6] = pack_current & 0xFF;
+		can_buff[3] = 
+		can_buff[4] = 
+		can_buff[5] = 
+		can_buff[6] = 
 
-		can_buff[7] = pack_SOC;
+		can_buff[7] = 
+		
+		while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){
+		}
+		while(can_get_status(&can_frame) == CAN_STATUS_NOT_COMPLETED);
+		*/
+
+		//FOURTH PACKET - VOLTAGE
+		can_frame.id.std = (CAN_PACK4<<8) & 0x7FF;
+		can_frame.dlc = 2;
+		
+		can_buff[0] = voltReading >> 8;		
+		can_buff[1] = voltReading & 0xFF;
+		/*
+		can_buff[2] = 
+		can_buff[3] = 
+		can_buff[4] = 
+		can_buff[5] = 
+		can_buff[6] = 
+
+		can_buff[7] = 
+		*/
+
+		while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){
+		}
+		while(can_get_status(&can_frame) == CAN_STATUS_NOT_COMPLETED);
+
+		//FIFTH PACKET - CURRENT
+		can_frame.id.std = (CAN_PACK5<<8) & 0x7FF;
+		can_frame.dlc = 2;
+		
+		can_buff[0] = currReading >> 8;		
+		can_buff[1] = currReading & 0xFF;
+		/*
+		can_buff[2] = 
+		can_buff[3] = 
+		can_buff[4] = 
+		can_buff[5] = 
+		can_buff[6] = 
+
+		can_buff[7] = 
+		*/
 		
 		while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){
 		}
 		while(can_get_status(&can_frame) == CAN_STATUS_NOT_COMPLETED);
 
-	        // SECOND PACKET: PACK COULOMBS ; CELL 1 STATUS ; CELL 3 STATUS ; CELL 4 STATUS ...
-
-		can_buff[0] = pack_coulombs>>24 & 0xFF;
-		can_buff[1] = pack_coulombs>>16 & 0xFF;
-		can_buff[2] = pack_coulombs>>8 & 0xFF;
-		can_buff[3] = pack_coulombs & 0xFF;
-
-		uint8_t packet_num = 1;
-		uint8_t packet_offset = 4;
-		uint8_t cell_num = 1;
-		uint8_t bytes_left = 4;
-
-		//SEND THE CELL STATUSES:
-		while(cell_num <= num_cells){
-		  while((bytes_left > 0) && (cell_num <= num_cells)){
-		    can_buff[packet_offset] = cell_status[cell_num];
-		    packet_offset++;
-		    cell_num++;
-		    bytes_left--;
-		  }
-		  if(bytes_left == 0){
-		    //SEND THE PACKET:
-		    can_frame.id.std = (PACK_NUM<<8 | packet_num) & 0x7FF;
-		    can_frame.dlc = packet_offset;
-		    while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){
-		    }
-		    while(can_get_status(&can_frame) == CAN_STATUS_NOT_COMPLETED);
-		    packet_num++;
-		    packet_offset = 0;
-		    bytes_left = 8;
-		  }
-		}
-		
-		// FINISHED SENDING CELL STATUSES, NOW SEND CELL VOLTAGES:
-
-		cell_num = 1;
-
-		while(cell_num <= num_cells){
-		  while((bytes_left > 1) && (cell_num <= num_cells)){
-		    can_buff[packet_offset] = cell_V[cell_num] >> 8;
-		    can_buff[packet_offset+1] = cell_V[cell_num] & 0xFF;
-		    packet_offset = packet_offset+2;
-		    cell_num++;
-		    bytes_left = bytes_left - 2;
-		  }
-		  if(bytes_left <= 1){
-		    //SEND THE PACKET:
-		    can_frame.id.std = (PACK_NUM<<8 | packet_num) & 0x7FF;
-		    can_frame.dlc = packet_offset;
-		    while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){
-		    }
-		    while(can_get_status(&can_frame) == CAN_STATUS_NOT_COMPLETED);
-		    packet_num++;
-		    packet_offset = 0;
-		    bytes_left = 8;
-		  }
-		}
-
-		// FINISHED SENDING CELL VOLTAGES, NOW SEND CELL TEMPERATURES:
-
-		cell_num = 1;
-
-		while(cell_num <= num_cells){
-		  while((bytes_left > 1) && (cell_num <= num_cells)){
-		    can_buff[packet_offset] = cell_T[cell_num] >> 8;
-		    can_buff[packet_offset+1] = cell_T[cell_num] & 0xFF;
-		    packet_offset = packet_offset+2;
-		    cell_num++;
-		    bytes_left = bytes_left - 2;
-		  }
-		  if(bytes_left <= 1){
-		    //SEND THE PACKET:
-		    can_frame.id.std = (PACK_NUM<<8 | packet_num) & 0x7FF;
-		    can_frame.dlc = packet_offset;
-		    while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){
-		    }
-		    while(can_get_status(&can_frame) == CAN_STATUS_NOT_COMPLETED);
-		    packet_num++;
-		    packet_offset = 0;
-		    bytes_left = 8;
-		  }
-		}
-
-		/* can_frame.dlc = 2; */
-		/* can_frame.id.std = (PACK_NUM<<8 | 0x001) & 0x7FF; */
-		/* while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){ */
-		/* } */
-		/* while(can_get_status(&can_frame) == CAN_STATUS_NOT_COMPLETED); */
-
-		// PACK CURRENT
-		/* can_buff[0] = pack_current >> 24 & 0xFF; */
-		/* can_buff[1] = pack_current >> 16 & 0xFF; */
-		/* can_buff[2] = pack_current >> 8 & 0xFF; */
-		/* can_buff[3] = pack_current & 0xFF; */
-		/* can_frame.dlc = 4; */
-		/* can_frame.id.std = (PACK_NUM<<8 | 0x002) & 0x7FF; */
-		/* while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){ */
-		/* } */
-		/* while(can_get_status(&can_frame) == CAN_STATUS_NOT_COMPLETED); */
-
-		// PACK SOC
-		/* can_buff[0] = pack_SOC; */
-		/* can_frame.dlc = 1; */
-		/* can_frame.id.std = (PACK_NUM<<8 | 0x003) & 0x7FF; */
-		/* while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){ */
-		/* } */
-		/* while(can_get_status(&can_frame) == CAN_STATUS_NOT_COMPLETED); */
-
-		// PACK COULOMBS
-		/* can_buff[0] = pack_coulombs>>24 & 0xFF; */
-		/* can_buff[1] = pack_coulombs>>16 & 0xFF; */
-		/* can_buff[2] = pack_coulombs>>8 & 0xFF; */
-		/* can_buff[3] = pack_coulombs & 0xFF; */
-		/* can_frame.dlc = 4; */
-		/* can_frame.id.std = (PACK_NUM<<8 | 0x004) & 0x7FF; */
-		/* while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){ */
-		/* } */
-		/* while(can_get_status(&can_frame) == CAN_STATUS_NOT_COMPLETED); */
-
-		///////////////////////////////////////////////////////////////////////////////////////
-		
-		
-
-
-		//atomTimerDelay(10);
-		
-		// OLD:
-		// system_time = atomTimeGet();
-		// can_buff[0] = system_time>>24 & 0xFF;
-		// can_buff[1] = system_time>>16 & 0xFF;
-		// can_buff[2] = system_time>>8 & 0xFF;
-		// can_buff[3] = system_time & 0xFF;
-		// can_buff[4] = pack_coulombs>>24 & 0xFF;
-		// can_buff[5] = pack_coulmobs>>16 & 0xFF;
-		// can_buff[6] = pack_coulombs>>8 & 0xFF;
-		// can_buff[7] = pack_coulombs & 0xFF;
-		// can_frame.dlc = 8;
-		// can_frame.id.std = CANADD_PACKINFO2;
-		// while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){
-		// }
-		// while(can_get_status(&can_frame) == CAN_STATUS_NOT_COMPLETED);
-		// //atomTimerDelay(50);
-		
-		// OLD:
-		// for(i = 0; i < 7; i = i +1){
-		// 	can_buff[0] = i;
-		// 	can_buff[1] = cell_status[i];
-		// 	can_buff[2] = cell_V[i] >> 8;
-		// 	can_buff[3] = cell_V[i] & 0xFF;
-		// 	can_buff[4] = cell_T[i] >> 8;
-		// 	can_buff[5] = cell_T[i] & 0xFF;
-		// 	can_buff[6] = 0;
-		// 	can_frame.dlc = 6;
-		// 	can_frame.id.std = CANADD_CELLINFO;
-		// 	while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){
-		// 	}
-		// 	while(can_get_status(&can_frame) == CAN_STATUS_NOT_COMPLETED);
-			
-		// }
-
-		// NEW:
-		// iterate for each cell
-		/* for(i = 0; i < 7; i = i +1){ */
-		/* 	can_buff[0] = cell_status[i]; */
-		/* 	can_frame.dlc = 1; */
-		/* 	can_frame.id.std = (PACK_NUM<<8 | 0x010 | i) & 0x7FF; */
-		/* 	while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){ */
-		/* 	} */
-		/* 	while(can_get_status(&can_frame) == CAN_STATUS_NOT_COMPLETED); */
-
-		/* 	can_buff[0] = cell_V[i] >> 8; */
-		/* 	can_buff[1] = cell_V[i] & 0xFF; */
-		/* 	can_frame.dlc = 2; */
-		/* 	can_frame.id.std = (PACK_NUM<<8 | 0x020 | i) & 0x7FF; */
-		/* 	while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){ */
-		/* 	} */
-		/* 	while(can_get_status(&can_frame) == CAN_STATUS_NOT_COMPLETED); */
-
-		/* 	can_buff[0] = cell_T[i] >> 8; */
-		/*  	can_buff[1] = cell_T[i] & 0xFF; */
-		/* 	can_frame.dlc = 2; */
-		/* 	can_frame.id.std = (PACK_NUM<<8 | 0x030 | i) & 0x7FF; */
-		/* 	while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){ */
-		/* 	} */
-		/* 	while(can_get_status(&can_frame) == CAN_STATUS_NOT_COMPLETED); */
-
-			
-		/* } */
-
-
-
-////////////////////////////////////////////////////////////////////////
-
-		atomTimerDelay(100);  ///MARTY CHANGE - delay 1s (supposedly)
-
-	}//end of loop
-
+		atomTimerDelay(100); 
+	}
 }

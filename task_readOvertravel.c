@@ -5,7 +5,7 @@ void overtravel_init(void) {
 	PORTE |= (1 << PE6);
 }
 
-void task_readCurrent(uint32_t data) {
+void task_readOvertravel(uint32_t data) {
 	overtravel_init();
 
 	for(;;) {

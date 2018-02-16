@@ -3,12 +3,11 @@
 
 #include "config.h"
 #include "params.h"
-//#include "pinout.h"
 #include "atom.h"
 #include "atomtimer.h"
 #include "atmel/adc_drv.h"
 
-uint16_t currReading;
+//uint16_t currReading;
 
 void task_readCurrent(uint32_t data);
 

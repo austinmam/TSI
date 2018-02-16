@@ -20,7 +20,8 @@
 #include "task_readCurrent.h"
 #include "task_readIMD.h"
 #include "task_readVoltage.h"
-#INCLUDE "TRASK_readOvertravel.h"
+#include "task_temp.h"
+#include "task_can_receive.h"
 
 /**
 * @name 
@@ -37,7 +38,8 @@
 #define TASK_READCURRENT_SIZE    200
 #define TASK_READIMD_SIZE        200
 #define TASK_READVOLTAGE_SIZE    200
-#define TASK_READOVERTRAVEL_SIZE 200
+#define TASK_TEMP_SIZE           200
+#define TASK_CAN_RECEIVE_SIZE    200
 /**  @} */
 
 
