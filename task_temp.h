@@ -9,6 +9,6 @@
 
 void temp_init(void);
 
-void task_temp(void);
+void task_temp(uint32_t data);
 
 #endif /*TASK_READTEMP_H*/

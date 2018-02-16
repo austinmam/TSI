@@ -128,7 +128,7 @@ const ATOM_TASK task_list[] = {
 		&task_can_receive_stack[TASK_CAN_RECEIVE_SIZE-1], TASK_CAN_RECEIVE_SIZE},
 	
 	{&task_temp_tcb,	16, task_temp, 0,
-		&task_temp_stack[TASK_TEMP_SIZE-1], TASK_TEMP_SIZE},
+		&task_temp_stack[TASK_TEMP_SIZE-1], TASK_TEMP_SIZE}
 		
 };
 
