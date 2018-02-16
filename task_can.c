@@ -27,39 +27,39 @@ void task_can_init(void){
 	//Throttle - 0xF4
 
 	//FIRST PACKET
-	CAN_PACK1 = eeprom_read_byte((uint8_t*)EEPROM_STATE_IMD);
-	if((CAN_PACK1 == 0x00) || (CAN_PACK1 == 0xFF)) {
-		eeprom_write_byte((uint8_t*)EEPROM_STATE_IMD, CAN_STATE_IMD);
-	 	CAN_PACK1 = eeprom_read_byte((uint8_t*)EEPROM_STATE_IMD); 
-	}
+	// CAN_PACK1 = eeprom_read_byte((uint8_t*)EEPROM_STATE_IMD);
+	// if((CAN_PACK1 == 0x00) || (CAN_PACK1 == 0xFF)) {
+	// 	eeprom_write_byte((uint8_t*)EEPROM_STATE_IMD, CAN_STATE_IMD);
+	//  	CAN_PACK1 = eeprom_read_byte((uint8_t*)EEPROM_STATE_IMD); 
+	// }
 
-	//SECOND PACKET
-	CAN_PACK2 = eeprom_read_byte((uint8_t*)EEPROM_BRAKE);
-	if((CAN_PACK2 == 0x00) || (CAN_PACK2 == 0xFF)) {
-		eeprom_write_byte((uint8_t*)EEPROM_BRAKE, CAN_BRAKE);
-	 	CAN_PACK2 = eeprom_read_byte((uint8_t*)EEPROM_BRAKE); 
-	}
+	// //SECOND PACKET
+	// CAN_PACK2 = eeprom_read_byte((uint8_t*)EEPROM_BRAKE);
+	// if((CAN_PACK2 == 0x00) || (CAN_PACK2 == 0xFF)) {
+	// 	eeprom_write_byte((uint8_t*)EEPROM_BRAKE, CAN_BRAKE);
+	//  	CAN_PACK2 = eeprom_read_byte((uint8_t*)EEPROM_BRAKE); 
+	// }
 
-	//THIRD PACKET
-	CAN_PACK3 = eeprom_read_byte((uint8_t*)EEPROM_THROTTLE);
-	if((CAN_PACK3 == 0x00) || (CAN_PACK3 == 0xFF)) {
-	 	eeprom_write_byte((uint8_t*)EEPROM_THROTTLE, CAN_THROTTLE);
-	 	CAN_PACK3 = eeprom_read_byte((uint8_t*)EEPROM_THROTTLE); 
-	}
+	// //THIRD PACKET
+	// CAN_PACK3 = eeprom_read_byte((uint8_t*)EEPROM_THROTTLE);
+	// if((CAN_PACK3 == 0x00) || (CAN_PACK3 == 0xFF)) {
+	//  	eeprom_write_byte((uint8_t*)EEPROM_THROTTLE, CAN_THROTTLE);
+	//  	CAN_PACK3 = eeprom_read_byte((uint8_t*)EEPROM_THROTTLE); 
+	// }
 
-	//FOURTH PACKET
-	CAN_PACK4 = eeprom_read_byte((uint8_t*)EEPROM_VOLTAGE);
-	if((CAN_PACK4 == 0x00) || (CAN_PACK4 == 0xFF)) {
-	 	eeprom_write_byte((uint8_t*)EEPROM_VOLTAGE, CAN_VOLTAGE);
-	 	CAN_PACK4 = eeprom_read_byte((uint8_t*)EEPROM_VOLTAGE); 
-	}
+	// //FOURTH PACKET
+	// CAN_PACK4 = eeprom_read_byte((uint8_t*)EEPROM_VOLTAGE);
+	// if((CAN_PACK4 == 0x00) || (CAN_PACK4 == 0xFF)) {
+	//  	eeprom_write_byte((uint8_t*)EEPROM_VOLTAGE, CAN_VOLTAGE);
+	//  	CAN_PACK4 = eeprom_read_byte((uint8_t*)EEPROM_VOLTAGE); 
+	// }
 
-	//FIFTH PACKET
-	CAN_PACK5 = eeprom_read_byte((uint8_t*)EEPROM_CURRENT);
-	if((CAN_PACK5 == 0x00) || (CAN_PACK5 == 0xFF)) {
-	 	eeprom_write_byte((uint8_t*)EEPROM_CURRENT, CAN_CURRENT);
-	 	CAN_PACK5 = eeprom_read_byte((uint8_t*)EEPROM_CURRENT); 
-	}
+	// //FIFTH PACKET
+	// CAN_PACK5 = eeprom_read_byte((uint8_t*)EEPROM_CURRENT);
+	// if((CAN_PACK5 == 0x00) || (CAN_PACK5 == 0xFF)) {
+	//  	eeprom_write_byte((uint8_t*)EEPROM_CURRENT, CAN_CURRENT);
+	//  	CAN_PACK5 = eeprom_read_byte((uint8_t*)EEPROM_CURRENT); 
+	// }
 }
 
 void task_can(uint32_t data){
@@ -91,25 +91,29 @@ void task_can(uint32_t data){
 		*/
 
 		//SECOND PACKET - BRAKE
+		//PORTC |=  ~(1 << PC2);
+		can_frame.id.std = CAN_BRAKE;
+		can_frame.dlc = 8;
 		
-		can_frame.id.std = (CAN_PACK2<<8) & 0x7FF;
-		can_frame.dlc = 1;
+		//can_buff[0] = overtravel;
+		can_buff[0] = 0x01;
 		
-		can_buff[0] = overtravel;
-		/*
-		can_buff[1] = 
-		can_buff[2] = 
-		can_buff[3] = 
-		can_buff[4] = 
-		can_buff[5] = 
-		can_buff[6] = 
-		can_buff[7] = 
-		*/
+		can_buff[1] = 0x01;
+		can_buff[2] = 0x01;
+		can_buff[3] = 0x01;
+		can_buff[4] = 0x01;
+		can_buff[5] = 0x01;
+		can_buff[6] = 0x01;
+		can_buff[7] = 0x01;
+		
 		while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){
+			
 		}
+		//PORTC |=  (1 << PC2);
+		//PORTC |=  ~(1 << PC2);
 		while(can_get_status(&can_frame) == CAN_STATUS_NOT_COMPLETED);
+		atomTimerDelay(100); 
 		
-
 		//THIRD PACKET - THROTTLE
 		/*
 		can_frame.id.std = (CAN_PACK3<<8) & 0x7FF;
@@ -133,44 +137,44 @@ void task_can(uint32_t data){
 		*/
 
 		//FOURTH PACKET - VOLTAGE
-		can_frame.id.std = (CAN_PACK4<<8) & 0x7FF;
-		can_frame.dlc = 2;
+		// can_frame.id.std = (CAN_PACK4<<8) & 0x7FF;
+		// can_frame.dlc = 2;
 		
-		can_buff[0] = voltReading >> 8;		
-		can_buff[1] = voltReading & 0xFF;
-		/*
-		can_buff[2] = 
-		can_buff[3] = 
-		can_buff[4] = 
-		can_buff[5] = 
-		can_buff[6] = 
+		// can_buff[0] = voltReading >> 8;		
+		// can_buff[1] = voltReading & 0xFF;
+		// /*
+		// can_buff[2] = 
+		// can_buff[3] = 
+		// can_buff[4] = 
+		// can_buff[5] = 
+		// can_buff[6] = 
 
-		can_buff[7] = 
-		*/
+		// can_buff[7] = 
+		// */
 
-		while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){
-		}
-		while(can_get_status(&can_frame) == CAN_STATUS_NOT_COMPLETED);
+		// while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){
+		// }
+		// while(can_get_status(&can_frame) == CAN_STATUS_NOT_COMPLETED);
 
-		//FIFTH PACKET - CURRENT
-		can_frame.id.std = (CAN_PACK5<<8) & 0x7FF;
-		can_frame.dlc = 2;
+		// //FIFTH PACKET - CURRENT
+		// can_frame.id.std = (CAN_PACK5<<8) & 0x7FF;
+		// can_frame.dlc = 2;
 		
-		can_buff[0] = currReading >> 8;		
-		can_buff[1] = currReading & 0xFF;
-		/*
-		can_buff[2] = 
-		can_buff[3] = 
-		can_buff[4] = 
-		can_buff[5] = 
-		can_buff[6] = 
+		// can_buff[0] = currReading >> 8;		
+		// can_buff[1] = currReading & 0xFF;
+		// /*
+		// can_buff[2] = 
+		// can_buff[3] = 
+		// can_buff[4] = 
+		// can_buff[5] = 
+		// can_buff[6] = 
 
-		can_buff[7] = 
-		*/
+		// can_buff[7] = 
+		// */
 		
-		while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){
-		}
-		while(can_get_status(&can_frame) == CAN_STATUS_NOT_COMPLETED);
+		// while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){
+		// }
+		// while(can_get_status(&can_frame) == CAN_STATUS_NOT_COMPLETED);
 
 		atomTimerDelay(100); 
 	}

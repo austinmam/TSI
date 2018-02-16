@@ -145,7 +145,7 @@ ATOM_MUTEX A_mutex;
 //Parameters from the TSI
 volatile uint16_t temperature;
 volatile uint8_t throttle_control; //thinking of making it 0 for throttle off, and throttle on otherwise
-volatile uint8_t can_buff_receive;
+//volatile uint8_t can_buff_receive;
 
 //CAN receive params
 st_cmd_t can_frame_receive;
