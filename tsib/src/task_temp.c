@@ -11,7 +11,7 @@
 //temperature sensor and the microcontroller
 void temp_init(void) {
 	//Set SCK as an output, all others input
-	DDRB = (1<<DDB!);
+	DDRB = (1<<DDB1);
 	//Enable SPI, Master, set clock rate fck/16
 	SPCR = (1<<SPE) | (1<<MSTR) | (1<<SPR0);
 };
