@@ -3,13 +3,12 @@
 
 #include "config.h"
 #include "params.h"
-#include "pinout.h"
-#include "atoms.h"
+#include "atom.h"
 #include "atomtimer.h"
 #include "atmel/adc_drv.h"
 
 void temp_init(void);
 
-void task_temp(void);
+void task_temp(uint32_t data);
 
 #endif /*TASK_READTEMP_H*/

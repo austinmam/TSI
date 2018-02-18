@@ -39,7 +39,7 @@
 #include "task_readIMD.h"
 #include "task_readVoltage.h"
 #include "task_can_receive.h"
-#include "tasK_temp.h"
+#include "task_temp.h"
 
 // task control block variables
 //static ATOM_TCB task_i2c_tcb;
@@ -49,7 +49,8 @@
 static ATOM_TCB task_safety_tcb;
 //static ATOM_TCB task_config_tcb;
 static ATOM_TCB task_heartbeat_tcb;
-//static ATOM_TCB task_can_tcb;
+static ATOM_TCB task_can_tcb;
+
 static ATOM_TCB task_button_tcb;
 static ATOM_TCB task_readCurrent_tcb;
 static ATOM_TCB task_readIMD_tcb; 
@@ -65,7 +66,8 @@ static ATOM_TCB task_temp_tcb;
 static uint8_t task_safety_stack[TASK_SAFETY_SIZE];
 //static uint8_t task_config_stack[TASK_CONFIG_SIZE];
 static uint8_t task_heartbeat_stack[TASK_HEARTBEAT_SIZE];
-//static uint8_t task_can_stack[TASK_CAN_SIZE];
+static uint8_t task_can_stack[TASK_CAN_SIZE];
+
 static uint8_t task_button_stack[TASK_BUTTON_SIZE];
 static uint8_t task_readCurrent_stack[TASK_BUTTON_SIZE];
 static uint8_t task_readIMD_stack[TASK_BUTTON_SIZE];
@@ -106,30 +108,30 @@ const ATOM_TASK task_list[] = {
 	// heartbeat led task
 	{&task_heartbeat_tcb,	16, task_heartbeat, 0,
 		&task_heartbeat_stack[TASK_HEARTBEAT_SIZE-1], TASK_HEARTBEAT_SIZE},
-	/*
+	
 	// CAN comm task
 	{&task_can_tcb,	16, task_can, 0,
 		&task_can_stack[TASK_CAN_SIZE-1], TASK_CAN_SIZE},
-	*/	
+	
+		
 	// Button press task
 	{&task_button_tcb,	16, task_button, 0,
 		&task_button_stack[TASK_BUTTON_SIZE-1], TASK_BUTTON_SIZE},
 
 	{&task_readCurrent_tcb,	16, task_readCurrent, 0,
-		&task_readCurrent_stack[TASK_readCurrent_SIZE-1], TASK_readCurrent_SIZE},	
+		&task_readCurrent_stack[TASK_READCURRENT_SIZE-1], TASK_READCURRENT_SIZE},	
 
 	{&task_readIMD_tcb,	16, task_readIMD, 0,
-		&task_readIMD_stack[TASK_readIMD_SIZE-1], TASK_readIMD_SIZE},
+		&task_readIMD_stack[TASK_READIMD_SIZE-1], TASK_READIMD_SIZE},
 
 	{&task_readVoltage_tcb,	16, task_readVoltage, 0,
-		&task_readVoltage_stack[TASK_readVoltage_SIZE-1], TASK_readVoltage_SIZE},
+		&task_readVoltage_stack[TASK_READVOLTAGE_SIZE-1], TASK_READVOLTAGE_SIZE},
 	
 	{&task_can_receive_tcb,	16, task_can_receive, 0,
 		&task_can_receive_stack[TASK_CAN_RECEIVE_SIZE-1], TASK_CAN_RECEIVE_SIZE},
 	
 	{&task_temp_tcb,	16, task_temp, 0,
 		&task_temp_stack[TASK_TEMP_SIZE-1], TASK_TEMP_SIZE}
-		
 };
 
 

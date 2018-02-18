@@ -42,7 +42,7 @@ volatile struct flt_cond flt_cnd;
 volatile uint16_t currReading;
 volatile uint16_t imdReading;
 volatile uint16_t voltReading;
-volatile bool overtravel;
+volatile uint8_t overtravel;
 
 //New EEPROM Addresses
 #define CAN_STATE_IMD 0xF2
@@ -50,6 +50,7 @@ volatile bool overtravel;
 #define CAN_THROTTLE  0xF4
 #define CAN_VOLTAGE   0xF5
 #define CAN_CURRENT   0xF6
+#define CAN_TEMP	  0xF7
 
 #define EEPROM_STATE_IMD 1
 #define EEPROM_BRAKE     2
@@ -112,9 +113,10 @@ volatile float cell_Tslp[7];
 // #define CANADD_PACKINFO2  0x0501  //additional packs should be at 0x0511, 0x521, 0x0531
 // #define CANADD_CELLINFO   0x0502  //additional packs should be at 0x0512, 0x522, 0x0532
 volatile uint8_t can_buff[8];
-st_cmd_t can_frame;
 volatile can_ctrl_t can_frame_ctrl;
 volatile can_id_t can_frame_id;
+
+st_cmd_t can_frame;
 
 //SOC parameters
 #define MAX_COULOMBS  216000000 // * 10^-3 coulombs in a full pack
@@ -143,11 +145,13 @@ ATOM_MUTEX A_mutex;
 */
 
 //Parameters from the TSI
-volatile uint16_t temperature;
+volatile int16_t temperature;
 volatile uint8_t throttle_control; //thinking of making it 0 for throttle off, and throttle on otherwise
-volatile uint8_t can_buff_receive;
+volatile uint8_t can_buff_receive[8];
+
 
 //CAN receive params
 st_cmd_t can_frame_receive;
+#define SCADA_SRC_ID 0x010 //High priority for the message. Lower number -> higher priority. Need to change in VSCADA as well.
 
 #endif

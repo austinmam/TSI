@@ -26,20 +26,20 @@
 /**
 * @name 
 * @{ */
-#define TASK_I2C_SIZE       200 //was 100
-#define TASK_GUI_SIZE       200
-#define TASK_WATCHDOG_SIZE  200
-#define TASK_CHARGE_SIZE    200
-#define TASK_SAFETY_SIZE    200
-#define TASK_CONFIG_SIZE    200
-#define TASK_HEARTBEAT_SIZE 200
-#define TASK_CAN_SIZE		200
-#define TASK_BUTTON_SIZE	200
-#define TASK_READCURRENT    200
-#define TASK_READIMD        200
-#define TASK_READVOLTAGE    200
-#define TASK_TEMP_SIZE      200
-#define TASK_CAN_RECEIVE_SIZE 200
+#define TASK_I2C_SIZE            200 //was 100
+#define TASK_GUI_SIZE            200
+#define TASK_WATCHDOG_SIZE       200
+#define TASK_CHARGE_SIZE         200
+#define TASK_SAFETY_SIZE         200
+#define TASK_CONFIG_SIZE         200
+#define TASK_HEARTBEAT_SIZE      200
+#define TASK_CAN_SIZE		     200
+#define TASK_BUTTON_SIZE	     200
+#define TASK_READCURRENT_SIZE    200
+#define TASK_READIMD_SIZE        200
+#define TASK_READVOLTAGE_SIZE    200
+#define TASK_TEMP_SIZE           200
+#define TASK_CAN_RECEIVE_SIZE    200
 /**  @} */
 
 
