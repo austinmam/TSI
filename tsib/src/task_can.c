@@ -52,39 +52,6 @@ void task_can(uint32_t data){
 
 		while(can_get_status(&can_frame) == CAN_STATUS_NOT_COMPLETED);
 
-		// //THIRD PACKET -  TEMPERATURE
-		// can_frame.id.std = CAN_TEMP;
-		// can_frame.dlc = 2;
-		// can_buff[0] =  temperature >> 8;
-		// can_buff[1] = temperature & 0xFF;
-
-		// while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){}
-
-		// while(can_get_status(&can_frame) == CAN_STATUS_NOT_COMPLETED);
-
-		// //FOURTH PACKET - VOLTAGE
-		
-		// can_frame.id.std = CAN_VOLTAGE;
-		// can_frame.dlc = 2;
-		
-		// can_buff[0] = voltReading >> 8;
-		// can_buff[1] = voltReading & 0xFF;
-		
-		// while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){
-		// }
-		// while(can_get_status(&can_frame) == CAN_STATUS_NOT_COMPLETED);
-
-		// //FIFTH PACKET - CURRENT
-		// can_frame.id.std = CAN_CURRENT;
-		// can_frame.dlc = 2;
-		
-		// can_buff[0] = currReading >> 8;
-		// can_buff[1] = currReading & 0xFF;
-
-		// while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){
-		// }
-		// while(can_get_status(&can_frame) == CAN_STATUS_NOT_COMPLETED);
-
 		atomTimerDelay(100);
 	}
 }

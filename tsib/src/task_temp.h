@@ -11,8 +11,4 @@ void temp_init(void);
 
 void task_temp(uint32_t data);
 
-//void temp_read(void);
-
-void temp_calc(void);
-
 #endif /*TASK_READTEMP_H*/

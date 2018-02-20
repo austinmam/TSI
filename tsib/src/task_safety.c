@@ -27,6 +27,7 @@ void safety_init(void) {
 	PORTE |= (1 << PE5);
 
 	state = IDLE;
+	tsi_state = 0x00;
 
 }
 
@@ -50,6 +51,7 @@ void task_safety(uint32_t data) {
 
 		switch(state) {
 			case IDLE:
+				tsi_state = 0x00;
 				if(buttonPushed){
 					if(!(PINB & (1 << PB4))) state = SETUP_DRIVE;
 					buttonPushed = 0;
@@ -57,6 +59,7 @@ void task_safety(uint32_t data) {
 				break;
 
 			case SETUP_DRIVE:
+				tsi_state = 0x01;
 				PORTA |= (1 << PA3);
 				PORTB |= (1 << PB6); // Sets Throttle Select HIGH
 				PORTC |= (1 << PC2);
@@ -64,6 +67,7 @@ void task_safety(uint32_t data) {
 				break;
 
 			case DRIVE:
+				tsi_state = 0x02;;
 				if((PINE & (1 << PE5)) || buttonPushed) { // AIRs, or Button Press send out of drive
 					state = SETUP_IDLE; 
 					buttonPushed = 0;
@@ -71,6 +75,7 @@ void task_safety(uint32_t data) {
 				break;
 
 			case SETUP_IDLE:
+				tsi_state = 0x03;
 				PORTA &= ~(1 << PA3);
 				PORTB &= ~(1 << PB6); // Sets Throttle Select LOW
 				PORTC &= ~(1 << PC2);
