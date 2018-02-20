@@ -19,12 +19,15 @@ void task_can(uint32_t data){
 
 	for(;;) {
 
-		//FIRST PACKET - STATE and IMD
+		//FIRST PACKET - DRIVE STATE, IMD, BRAKE
 		can_frame.id.std = CAN_STATE_IMD;
-		can_frame.dlc = 2;
+		can_frame.dlc = 7;
 		
-		can_buff[0] = imdReading >> 8;
-		can_buff[1] = imdReading & 0xFF;
+		can_buff[0] = tsi_state >> 8;
+		can_buff[1] = tsi_state & 0xFF;
+		can_buff[2] = imdReading >> 8;
+		can_buff[3] = imdReading & 0xFF;
+		can_buff[4] = overtravel;
 		
 		while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){
 		}
@@ -32,10 +35,15 @@ void task_can(uint32_t data){
 		while(can_get_status(&can_frame) == CAN_STATUS_NOT_COMPLETED);
 		
 
-		//SECOND PACKET - BRAKE
+		//SECOND PACKET - VOLTAGE, CURRENT, TEMP
 		can_frame.id.std = CAN_BRAKE;
-		can_frame.dlc = 1;
-		can_buff[0] = overtravel;
+		can_frame.dlc = 6;
+		can_buff[0] = voltReading >> 8;
+		can_buff[1] = voltReading & 0xFF;
+		can_buff[2] = currReading >> 8;
+		can_buff[3] = currReading & 0xFF;
+		can_buff[4] = temperature >> 8;
+		can_buff[5] = temperature & 0xFF;
 
 		
 		while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){
@@ -44,38 +52,38 @@ void task_can(uint32_t data){
 
 		while(can_get_status(&can_frame) == CAN_STATUS_NOT_COMPLETED);
 
-		//THIRD PACKET -  TEMPERATURE
-		can_frame.id.std = CAN_TEMP;
-		can_frame.dlc = 2;
-		can_buff[0] =  temperature >> 8;
-		can_buff[1] = temperature & 0xFF;
+		// //THIRD PACKET -  TEMPERATURE
+		// can_frame.id.std = CAN_TEMP;
+		// can_frame.dlc = 2;
+		// can_buff[0] =  temperature >> 8;
+		// can_buff[1] = temperature & 0xFF;
 
-		while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){}
+		// while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){}
 
-		while(can_get_status(&can_frame) == CAN_STATUS_NOT_COMPLETED);
+		// while(can_get_status(&can_frame) == CAN_STATUS_NOT_COMPLETED);
 
-		//FOURTH PACKET - VOLTAGE
+		// //FOURTH PACKET - VOLTAGE
 		
-		can_frame.id.std = CAN_VOLTAGE;
-		can_frame.dlc = 2;
+		// can_frame.id.std = CAN_VOLTAGE;
+		// can_frame.dlc = 2;
 		
-		can_buff[0] = voltReading >> 8;
-		can_buff[1] = voltReading & 0xFF;
+		// can_buff[0] = voltReading >> 8;
+		// can_buff[1] = voltReading & 0xFF;
 		
-		while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){
-		}
-		while(can_get_status(&can_frame) == CAN_STATUS_NOT_COMPLETED);
+		// while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){
+		// }
+		// while(can_get_status(&can_frame) == CAN_STATUS_NOT_COMPLETED);
 
-		//FIFTH PACKET - CURRENT
-		can_frame.id.std = CAN_CURRENT;
-		can_frame.dlc = 2;
+		// //FIFTH PACKET - CURRENT
+		// can_frame.id.std = CAN_CURRENT;
+		// can_frame.dlc = 2;
 		
-		can_buff[0] = currReading >> 8;
-		can_buff[1] = currReading & 0xFF;
+		// can_buff[0] = currReading >> 8;
+		// can_buff[1] = currReading & 0xFF;
 
-		while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){
-		}
-		while(can_get_status(&can_frame) == CAN_STATUS_NOT_COMPLETED);
+		// while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){
+		// }
+		// while(can_get_status(&can_frame) == CAN_STATUS_NOT_COMPLETED);
 
 		atomTimerDelay(100);
 	}

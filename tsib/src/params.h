@@ -43,6 +43,7 @@ volatile uint16_t currReading;
 volatile uint16_t imdReading;
 volatile uint16_t voltReading;
 volatile uint8_t overtravel;
+volatile uint16_t tsi_state;
 
 //New EEPROM Addresses
 #define CAN_STATE_IMD 0xF2
