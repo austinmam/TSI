@@ -19,6 +19,8 @@ void task_readOvertravel(uint32_t data) {
 	for(;;) {
 		if((PINE & (1 << PE6))) { // Read Brake Overtravel
 			overtravel = 0x01;
+		} else {
+			overtravel = 0x00;
 		}
 		
 		atomTimerDelay(50);
