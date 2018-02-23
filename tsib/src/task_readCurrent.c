@@ -2,8 +2,8 @@
 
 void task_readCurrent(uint32_t data) {
 	for(;;) {
-		if(adc_init(INTERNAL_VREF, NO_LEFT_ADJUST, 0) == TRUE) {
-			currReading = adc_single_conversion(0xF3);
+		if(adc_init(AVCC_AS_VREF, NO_LEFT_ADJUST, 3) == TRUE) {
+			currReading = adc_single_conversion(58);
 		}
 		atomTimerDelay(50);
 	}
