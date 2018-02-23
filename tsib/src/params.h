@@ -42,7 +42,6 @@ volatile struct flt_cond flt_cnd;
 volatile uint16_t currReading;
 volatile uint16_t imdReading;
 volatile uint16_t voltReading;
-volatile uint8_t overtravel;
 volatile uint8_t tsi_state;
 
 //New EEPROM Addresses

@@ -9,3 +9,6 @@ void task_readCurrent(uint32_t data) {
 	}
 }
 
+//Drive I_ENB high
+//Read measurement
+//Drive I_ENB low
