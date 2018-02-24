@@ -27,7 +27,7 @@ void safety_init(void) {
 	PORTE |= (1 << PE5);
 
 	state = IDLE;
-	tsi_state = 0x00;
+	tsi_state = 0x01;
 
 }
 
@@ -51,7 +51,7 @@ void task_safety(uint32_t data) {
 
 		switch(state) {
 			case IDLE:
-				tsi_state = 0x00;
+				tsi_state = 0x01;
 				if(buttonPushed){
 					if(!(PINB & (1 << PB4))) state = SETUP_DRIVE;
 					buttonPushed = 0;

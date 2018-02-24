@@ -15,10 +15,10 @@ void task_heartbeat(uint32_t data) {
 	for(;;){
 		
 		//blink Heartbeat LED twice a second
-		PORTC |=  (1 << PC1);
-		atomTimerDelay(25);
-		PORTC &= ~(1 << PC1);
-		atomTimerDelay(25);
+		//PORTC |=  (1 << PC1);
+		//atomTimerDelay(25);
+		//PORTC &= ~(1 << PC1);
+		//atomTimerDelay(25);
 		
 	}
 	
