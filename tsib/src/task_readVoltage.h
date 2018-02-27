@@ -8,7 +8,6 @@
 #include "atomport.h"
 #include "atomtimer.h"
 
-
 uint8_t v_ch;
 void v_adcinit(void);
 void task_readVoltage(uint32_t data);

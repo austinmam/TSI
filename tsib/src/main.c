@@ -51,6 +51,7 @@ int main ( void ) {
 	int8_t status;
 	volt = 1;
 	imd = 0;
+	curr = 0;
 	/**
 	 * Reuse part of the idle thread's stack for the stack required
 	 * during this startup function.

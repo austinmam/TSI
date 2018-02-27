@@ -20,15 +20,16 @@ void task_readIMD(uint32_t data) {
 	 			PORTC |=  (1 << PC1);
 	 			atomTimerDelay(50);
 	 		}
-	 		ADCSRA |=  (1<<ADIF);
 
+	 		ADCSRA |=  (1<<ADIF);
 	 		PORTC &= ~(1 << PC1);
 
 	 		imdReading = ADC;
 	 		(ADCSRA &= ~(1<<ADEN));
 
-	 		volt = 1;
+	 		volt = 0;
 	 		imd = 0;
+	 		curr = 1;
 	 	}
 		
  		atomTimerDelay(50);

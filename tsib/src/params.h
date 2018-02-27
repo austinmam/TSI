@@ -47,6 +47,7 @@ volatile uint8_t tsi_state;
 
 volatile int volt;
 volatile int imd;
+volatile int curr;
 
 //New EEPROM Addresses
 #define CAN_STATE_IMD 0xF2

@@ -17,11 +17,11 @@ void task_readVoltage(uint32_t data) {
 	 		(ADCSRA &= ~(1<<ADATE), ADCSRA |=  (1<<ADSC));
 
 	 		while(!(ADCSRA  &  (1<<ADIF))) {
-	 			 PORTC |=  (1 << PC2);
+	 			PORTC |=  (1 << PC2);
 	 			atomTimerDelay(50);
 	 		}
-	 		ADCSRA |=  (1<<ADIF);
 
+	 		ADCSRA |=  (1<<ADIF);
 	 		PORTC &= ~(1 << PC2);
 
 	 		voltReading = ADC;
@@ -29,6 +29,7 @@ void task_readVoltage(uint32_t data) {
 
 	 		volt = 0;
 	 		imd = 1;
+	 		curr = 0;
 	 	}
 		
  		atomTimerDelay(50);

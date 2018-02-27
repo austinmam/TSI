@@ -2,13 +2,14 @@
 #define TASK_READCURRENT_H
 
 #include "config.h"
+#include <avr/io.h>
 #include "params.h"
 #include "atom.h"
+#include "atomport.h"
 #include "atomtimer.h"
-#include "atmel/adc_drv.h"
 
-//uint16_t currReading;
-
+uint8_t i_ch;
+void i_adcinit(void);
 void task_readCurrent(uint32_t data);
 
 #endif /*TASK_READCURRENT_H*/
