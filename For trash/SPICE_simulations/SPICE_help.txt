@@ -1,3 +1,0 @@
-http://stffrdhrn.github.io/electronics/2015/04/28/simulating_kicad_schematics_in_spice.html
-
-MCP6004 - SPICE model on Microchip website
