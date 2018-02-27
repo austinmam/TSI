@@ -1,38 +1,35 @@
 #include "task_readIMD.h"
 
-// void task_readIMD(uint32_t data) {
-// 	for(;;) {
-// 		if(adc_init(AVCC_AS_VREF, NO_LEFT_ADJUST, 1) == TRUE) {
-// 			imdReading = adc_single_conversion(60);
-// 		}
-// 		atomTimerDelay(50);
-// 	}
-// }
-
 void imd_adcinit(void) {
 	ADMUX = (1 << REFS0);
 	ADCSRA = (1<<ADPS2)|(1<<ADPS1)|(1<<ADPS0);
 }
 
-void task_readIMD(uint32_t data) {
-	imd_adcinit();
+void task_readIMD(uint32_t data) {	
  	for(;;) {
- 		
- 		ADCSRA = (1<<ADEN);
- 		imd_ch = 0x01 & 0x07;
- 		ADMUX |= (ADMUX & 0xF) | imd_ch;
+ 		if(imd == 1) {
+	 		imd_adcinit();
 
- 		(ADCSRA &= ~(1<<ADATE), ADCSRA |=  (1<<ADSC));
+	 		ADCSRA = (1<<ADEN);
+	 		imd_ch = 0x01 & 0x07;
+	 		ADMUX |= (ADMUX & 0xF) | imd_ch;
 
- 		while(!(ADCSRA  &  (1<<ADIF))) {
- 			//PORTC |=  (1 << PC1);
- 			//atomTimerDelay(50);
- 		}
- 		ADCSRA |=  (1<<ADIF);
+	 		(ADCSRA &= ~(1<<ADATE), ADCSRA |=  (1<<ADSC));
 
- 		//PORTC &= ~(1 << PC1);
- 		imdReading = ADC;
- 		(ADCSRA &= ~(1<<ADEN));
+	 		while(!(ADCSRA  &  (1<<ADIF))) {
+	 			PORTC |=  (1 << PC1);
+	 			atomTimerDelay(50);
+	 		}
+	 		ADCSRA |=  (1<<ADIF);
+
+	 		PORTC &= ~(1 << PC1);
+
+	 		imdReading = ADC;
+	 		(ADCSRA &= ~(1<<ADEN));
+
+	 		volt = 1;
+	 		imd = 0;
+	 	}
 		
  		atomTimerDelay(50);
  	}

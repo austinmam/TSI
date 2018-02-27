@@ -49,7 +49,8 @@ static uint8_t idle_thread_stack[IDLE_STACK_SIZE_BYTES];
 
 int main ( void ) {
 	int8_t status;
-	
+	volt = 1;
+	imd = 0;
 	/**
 	 * Reuse part of the idle thread's stack for the stack required
 	 * during this startup function.

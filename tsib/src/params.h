@@ -12,6 +12,7 @@
 #include "atommutex.h"
 
 
+
 //SOFTWARE VERSION (based on commit number in gitlab)
 #define version 0.15
 
@@ -43,6 +44,9 @@ volatile uint16_t currReading;
 volatile uint16_t imdReading;
 volatile uint16_t voltReading;
 volatile uint8_t tsi_state;
+
+volatile int volt;
+volatile int imd;
 
 //New EEPROM Addresses
 #define CAN_STATE_IMD 0xF2
