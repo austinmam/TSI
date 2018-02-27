@@ -49,6 +49,8 @@ static uint8_t idle_thread_stack[IDLE_STACK_SIZE_BYTES];
 
 int main ( void ) {
 	int8_t status;
+
+	//Used for reading the three ADCs
 	volt = 1;
 	imd = 0;
 	curr = 0;
