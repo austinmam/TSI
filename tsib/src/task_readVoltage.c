@@ -27,12 +27,15 @@ void task_readVoltage(uint32_t data) {
 
 	 		//Waits for conversion to complete
 	 		while(!(ADCSRA  &  (1<<ADIF))) {
+	 			//Turns on LED for testing
 	 			PORTC |=  (1 << PC2);
 	 			atomTimerDelay(50);
 	 		}
 
 	 		//Clears ADC interrupt flag
 	 		ADCSRA |=  (1<<ADIF);
+
+	 		//Turns off LED for testing
 	 		PORTC &= ~(1 << PC2);
 
 	 		//Sets voltReading to output of ADC
