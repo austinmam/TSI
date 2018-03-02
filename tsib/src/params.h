@@ -36,6 +36,7 @@ volatile struct flt_cond flt_cnd;
 //New Variables
 volatile uint16_t currReading;
 volatile uint16_t imdReading;
+volatile uint8_t imdFault;
 volatile uint16_t voltReading;
 volatile uint8_t tsi_state;
 

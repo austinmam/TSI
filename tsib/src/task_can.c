@@ -21,11 +21,12 @@ void task_can(uint32_t data){
 
 		//FIRST PACKET - DRIVE STATE, IMD, BRAKE
 		can_frame.id.std = CAN_PACKET_1;
-		can_frame.dlc = 3;
+		can_frame.dlc = 4;
 		
 		can_buff[0] = tsi_state;
 		can_buff[1] = imdReading >> 8;
 		can_buff[2] = imdReading & 0xFF;
+		can_buff[3] = imdFault;
 		
 		while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){
 		}
