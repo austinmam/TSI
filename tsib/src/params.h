@@ -19,6 +19,12 @@
 // LCD values
 #define EN_LOW	0x08
 
+//4 arrays for the 4 lines on the LCD
+unsigned char display_0[20];
+unsigned char display_1[20];
+unsigned char display_2[20];
+unsigned char display_3[20];
+
 //typedef enum {false,true} bool;  stdbool.h is included in can_lib.h so this is no longer necessary.
 typedef enum {boot,chrg,chrgd,lco,flt,dead,rdy} State; //mirrored values in VSCADA
 volatile uint8_t fault_code;
@@ -36,21 +42,34 @@ volatile struct flt_cond flt_cnd;
 //New Variables
 volatile uint16_t currReading;
 volatile uint16_t imdReading;
-volatile uint8_t imdFault;
 volatile uint16_t voltReading;
 volatile uint8_t tsi_state;
 
-//ADC Rotation
 volatile int volt;
 volatile int imd;
 volatile int curr;
 
-//CAN Addresses
-#define CAN_PACKET_1  0xF2
-#define CAN_PACKET_2  0xF3
+//New EEPROM Addresses
+#define CAN_STATE_IMD 0xF2
+#define CAN_BRAKE     0xF3
+#define CAN_THROTTLE  0xF4
+#define CAN_VOLTAGE   0xF5
+#define CAN_CURRENT   0xF6
+#define CAN_TEMP	  0xF7
+
+#define EEPROM_STATE_IMD 1
+#define EEPROM_BRAKE     2
+#define EEPROM_THROTTLE  3
+#define EEPROM_VOLTAGE   4
+#define EEPROM_CURRENT   5
+
+volatile uint8_t CAN_PACK1;
+volatile uint8_t CAN_PACK2;
+volatile uint8_t CAN_PACK3;
+volatile uint8_t CAN_PACK4;
+volatile uint8_t CAN_PACK5;
 
 //various parameters that will be displayed on the LCD
-//PROBABLY NOT NEEDED
 volatile int16_t shunt_voltage;  //part of pack current calc
 volatile int16_t pack_voltage;
 volatile int32_t pack_current;
@@ -69,6 +88,12 @@ volatile bool button_up;
 volatile bool button_down;
 volatile bool button_enter; // Is always high for some reason
 //volatile bool throttle_pl; // Added by TSI
+
+
+volatile uint16_t CANADD_PACKINFO1;
+volatile uint16_t CANADD_PACKINFO2;
+volatile uint16_t CANADD_CELLINFO;
+volatile uint8_t  PACK_NUM;
 
 
 //Flags for lcd message and bypass selection timing

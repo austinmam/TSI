@@ -41,16 +41,6 @@ void task_readIMD(uint32_t data) {
 	 		//Sets imdReading to output of ADC
 	 		imdReading = ADC;
 
-	 		//IMD fault is true if PWM is above 90%duty cycle
-	 		//IMD signal into microcontroller = Amplitude * Duty Cycle
-	 		//ADC value = (Vin * 1023) / Vref
-	 		//Vin = IMD and Vref = 5
-	 		if(imdReading > 920) {
-	 			imdFault = 1;
-	 		} else {
-	 			imdFault = 0;
-	 		}
-
 	 		//Disables ADC
 	 		(ADCSRA &= ~(1<<ADEN));
 

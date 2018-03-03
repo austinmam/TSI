@@ -20,13 +20,12 @@ void task_can(uint32_t data){
 	for(;;) {
 
 		//FIRST PACKET - DRIVE STATE, IMD, BRAKE
-		can_frame.id.std = CAN_PACKET_1;
-		can_frame.dlc = 4;
+		can_frame.id.std = CAN_STATE_IMD;
+		can_frame.dlc = 3;
 		
 		can_buff[0] = tsi_state;
 		can_buff[1] = imdReading >> 8;
 		can_buff[2] = imdReading & 0xFF;
-		can_buff[3] = imdFault;
 		
 		while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){
 		}
@@ -35,7 +34,7 @@ void task_can(uint32_t data){
 		
 
 		//SECOND PACKET - VOLTAGE, CURRENT, TEMP
-		can_frame.id.std = CAN_PACKET_2;
+		can_frame.id.std = CAN_BRAKE;
 		can_frame.dlc = 6;
 		can_buff[0] = voltReading >> 8;
 		can_buff[1] = voltReading & 0xFF;
