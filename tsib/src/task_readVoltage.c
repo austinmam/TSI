@@ -8,6 +8,26 @@ void v_adcinit(void) {
 	ADCSRA = (1<<ADPS2)|(1<<ADPS1)|(1<<ADPS0);
 }
 
+uint16_t recalculate(uint16_t voltRead) {
+	if(voltRead >= 730) { 						   //95%
+		voltRead = voltRead * 1.05;
+	} else if((voltRead < 730) && (voltRead >= 600)) { //97.5%
+		voltRead = voltRead * 1.025;
+	} else if((voltRead < 600) && (voltRead >= 400)) { //100%
+		voltRead = voltRead;
+	} else if((voltRead < 400) && (voltRead >= 250)) { //103%
+		voltRead = voltRead * 0.97;
+	} else if((voltRead < 250) && (voltRead >= 150)) { //110%
+		voltRead = voltRead * 0.9;
+	} else if((voltRead < 150) && (voltRead > 100)) {  //125%
+		voltRead = voltRead * 0.75;
+	} else {								   //150%
+		voltRead = voltRead * 0.5;
+	}
+
+	return voltRead;
+}
+
 void task_readVoltage(uint32_t data) {
  	for(;;) {
  		if(volt == 1) {
@@ -39,7 +59,7 @@ void task_readVoltage(uint32_t data) {
 	 		PORTC &= ~(1 << PC2);
 
 	 		//Sets voltReading to output of ADC
-	 		voltReading = ADC;
+	 		voltReading = recalculate(ADC);
 
 	 		//Disables ADC
 	 		(ADCSRA &= ~(1<<ADEN));
