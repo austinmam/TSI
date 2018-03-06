@@ -11,7 +11,8 @@ void i_adcinit(void) {
 	DDRA = (1 << DDA7);
 }
 
-/*Before each conversion I_ENB from pin A7 must be driven high
+/*
+  Before each conversion I_ENB from pin A7 must be driven high
   and then driven low after the conversion is complete. Driving 
   this pin high will turn the current sensor on, and driving
   it low will turn it off. This is done to reduce current 
