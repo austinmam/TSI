@@ -68,6 +68,7 @@ void task_readVoltage(uint32_t data) {
 	 		volt = 0;
 	 		imd = 1;
 	 		curr = 0;
+	 		apps = 0;
 	 	}
 		
  		atomTimerDelay(50);

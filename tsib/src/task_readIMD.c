@@ -58,6 +58,7 @@ void task_readIMD(uint32_t data) {
 	 		volt = 0;
 	 		imd = 0;
 	 		curr = 1;
+	 		apps = 0;
 	 	}
 		
  		atomTimerDelay(50);

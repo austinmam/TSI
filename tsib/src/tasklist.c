@@ -40,6 +40,7 @@
 #include "task_readVoltage.h"
 #include "task_can_receive.h"
 #include "task_temp.h"
+#include "task_readApps.h"
 
 // task control block variables
 //static ATOM_TCB task_i2c_tcb;
@@ -55,6 +56,7 @@ static ATOM_TCB task_button_tcb;
 static ATOM_TCB task_readCurrent_tcb;
 static ATOM_TCB task_readIMD_tcb; 
 static ATOM_TCB task_readVoltage_tcb;
+static ATOM_TCB task_readApps_tcb;
 static ATOM_TCB task_can_receive_tcb;
 static ATOM_TCB task_temp_tcb;
 
@@ -72,6 +74,7 @@ static uint8_t task_button_stack[TASK_BUTTON_SIZE];
 static uint8_t task_readCurrent_stack[TASK_BUTTON_SIZE];
 static uint8_t task_readIMD_stack[TASK_BUTTON_SIZE];
 static uint8_t task_readVoltage_stack[TASK_BUTTON_SIZE];
+static uint8_t task_readApps_stack[TASK_READAPPS_SIZE];
 static uint8_t task_can_receive_stack[TASK_BUTTON_SIZE];
 static uint8_t task_temp_stack[TASK_BUTTON_SIZE];
 
@@ -126,6 +129,9 @@ const ATOM_TASK task_list[] = {
 
 	{&task_readVoltage_tcb,	16, task_readVoltage, 0,
 		&task_readVoltage_stack[TASK_READVOLTAGE_SIZE-1], TASK_READVOLTAGE_SIZE},
+
+	{&task_readApps_tcb,	16, task_readApps, 0,
+		&task_readApps_stack[TASK_READAPPS_SIZE-1], TASK_READAPPS_SIZE},	
 	
 	{&task_can_receive_tcb,	16, task_can_receive, 0,
 		&task_can_receive_stack[TASK_CAN_RECEIVE_SIZE-1], TASK_CAN_RECEIVE_SIZE},

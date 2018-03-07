@@ -54,6 +54,8 @@ int main ( void ) {
 	volt = 1;
 	imd = 0;
 	curr = 0;
+	apps = 0;
+	
 	/**
 	 * Reuse part of the idle thread's stack for the stack required
 	 * during this startup function.

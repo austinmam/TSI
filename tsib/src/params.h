@@ -43,6 +43,7 @@ volatile struct flt_cond flt_cnd;
 volatile uint16_t currReading;
 volatile uint16_t imdReading;
 volatile uint16_t voltReading;
+volatile uint16_t appsReading;
 volatile uint8_t tsi_state;
 volatile uint8_t imdFault;
 
@@ -50,6 +51,7 @@ volatile uint8_t imdFault;
 volatile int volt;
 volatile int imd;
 volatile int curr;
+volatile int apps;
 
 //CAN Addresses
 #define CAN_PACKET_1  0xF2

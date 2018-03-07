@@ -22,6 +22,7 @@
 #include "task_readVoltage.h"
 #include "task_temp.h"
 #include "task_can_receive.h"
+#include "task_readApps.h"
 
 /**
 * @name 
@@ -40,6 +41,7 @@
 #define TASK_READVOLTAGE_SIZE    200
 #define TASK_TEMP_SIZE           200
 #define TASK_CAN_RECEIVE_SIZE    200
+#define TASK_READAPPS_SIZE       200
 /**  @} */
 
 

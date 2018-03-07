@@ -62,10 +62,11 @@ void task_readCurrent(uint32_t data) {
 	 		//Drives I_ENB low
 	 		PORTA &= ~(1 << PA7);
 
-	 		//Next conversion will be voltage
-	 		volt = 1;
+	 		//Next conversion will be apps
+	 		volt = 0;
 	 		imd = 0;
 	 		curr = 0;
+	 		apps = 1;
 	 	}
 		
  		atomTimerDelay(50);
