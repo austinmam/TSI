@@ -44,14 +44,16 @@ volatile uint16_t currReading;
 volatile uint16_t imdReading;
 volatile uint16_t voltReading;
 volatile uint8_t tsi_state;
+volatile uint8_t imdFault;
 
+//ADC Rotation
 volatile int volt;
 volatile int imd;
 volatile int curr;
 
-//New EEPROM Addresses
-#define CAN_STATE_IMD 0xF2
-#define CAN_BRAKE     0xF3
+//CAN Addresses
+#define CAN_PACKET_1  0xF2
+#define CAN_PACKET_2  0xF3
 #define CAN_THROTTLE  0xF4
 #define CAN_VOLTAGE   0xF5
 #define CAN_CURRENT   0xF6
@@ -150,7 +152,7 @@ ATOM_MUTEX A_mutex;
 */
 
 //Parameters from the TSI
-volatile int16_t temperature;
+volatile uint16_t temperature;
 volatile uint8_t throttle_control; //thinking of making it 0 for throttle off, and throttle on otherwise
 volatile uint8_t can_buff_receive[8];
 
