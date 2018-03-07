@@ -27,6 +27,8 @@ void safety_init(void) {
 	PORTE |= (1 << PE5);
 
 	state = IDLE;
+
+	//tsi_state changes depending on state and is sent to SCADA for debugging/info
 	tsi_state = 0x00;
 
 }
@@ -42,7 +44,7 @@ void task_safety(uint32_t data) {
 		
 		if((PINB & (1 << PB5))) { // Read Throttle Plausibility
 			PORTA |= (1 << PA2);  // Using CC LED as Throttle Plausibility indicator
-			PORTC |= (1 << PC3); 
+			PORTC |= (1 << PC3);
 		}
 		else {
 			PORTA &= ~(1 << PA2);
@@ -50,35 +52,39 @@ void task_safety(uint32_t data) {
 		}
 
 		switch(state) {
+
+			/* System starts in the IDLE state. */
 			case IDLE:
 				tsi_state = 0x00;
-				if(buttonPushed){
+				if(buttonPushed){ //Want to check button push along with brake input
 					if(!(PINB & (1 << PB4))) state = SETUP_DRIVE;
 					buttonPushed = 0;
 				}
 				break;
 
+			/* Setting up throttle and showing that drive is happening with LED on */
 			case SETUP_DRIVE:
 				tsi_state = 0x01;
-				PORTA |= (1 << PA3);
+				PORTA |= (1 << PA3); // Drive LED on
 				PORTB |= (1 << PB6); // Sets Throttle Select HIGH
-				PORTC |= (1 << PC2);
+				PORTC |= (1 << PC2); // Spare Red LED on (debugging)
 				state = DRIVE;
 				break;
 
 			case DRIVE:
 				tsi_state = 0x02;;
-				if((PINE & (1 << PE5)) || buttonPushed) { // AIRs, or Button Press send out of drive
+				// AIRs, Button Press, Throttle control (signal from SCADA) send out of drive
+				if((PINE & (1 << PE5)) || buttonPushed || (throttle_control != 0)) {
 					state = SETUP_IDLE; 
 					buttonPushed = 0;
-				} 
+				}
 				break;
 
 			case SETUP_IDLE:
 				tsi_state = 0x03;
-				PORTA &= ~(1 << PA3);
+				PORTA &= ~(1 << PA3); // Drive LED off
 				PORTB &= ~(1 << PB6); // Sets Throttle Select LOW
-				PORTC &= ~(1 << PC2);
+				PORTC &= ~(1 << PC2); // Spare Red LED off
 				state = IDLE;
 				break;
 		}
