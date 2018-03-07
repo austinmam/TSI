@@ -41,17 +41,17 @@ void task_readCurrent(uint32_t data) {
 	 		//Waits for conversion to complete
 	 		while(!(ADCSRA  &  (1<<ADIF))) {
 	 			//Turns on both LEDs for testing
-	 			PORTC |=  (1 << PC1);
-	 			PORTC |=  (1 << PC2);
-	 			atomTimerDelay(50);
+	 			//PORTC |=  (1 << PC1);
+	 			//PORTC |=  (1 << PC2);
+	 			//atomTimerDelay(50);
 	 		}
 
 	 		//Clears ADC interrupt flag
 	 		ADCSRA |=  (1<<ADIF);
 
 	 		//Turns off LEDs for testing
-	 		PORTC &= ~(1 << PC1);
-	 		PORTC &= ~(1 << PC2);
+	 		//PORTC &= ~(1 << PC1);
+	 		//PORTC &= ~(1 << PC2);
 
 	 		//Sets currReading to output of ADC
 	 		currReading = ADC;
