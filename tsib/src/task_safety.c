@@ -85,6 +85,7 @@ void task_safety(uint32_t data) {
 				PORTA &= ~(1 << PA3); // Drive LED off
 				PORTB &= ~(1 << PB6); // Sets Throttle Select LOW
 				PORTC &= ~(1 << PC2); // Spare Red LED off
+				throttle_control = 0;
 				state = IDLE;
 				break;
 		}
