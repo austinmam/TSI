@@ -73,7 +73,7 @@ void task_safety(uint32_t data) {
 
 			/* In this case the throttle is enabled and the driver can drive the car */
 			case DRIVE:
-				tsi_state = 0x02;;
+				tsi_state = 0x02;
 				// AIRs, and Throttle control (signal from SCADA) send out of drive
 				// Have to hold down break and press drive button to drop out of drive
 				if(buttonPushed) {
