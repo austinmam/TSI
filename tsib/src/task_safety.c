@@ -71,12 +71,17 @@ void task_safety(uint32_t data) {
 				state = DRIVE;
 				break;
 
+			/* In this case the throttle is enabled and the driver can drive the car */
 			case DRIVE:
 				tsi_state = 0x02;;
-				// AIRs, Button Press, Throttle control (signal from SCADA) send out of drive
-				if((PINE & (1 << PE5)) || buttonPushed || (throttle_control != 0)) {
-					state = SETUP_IDLE; 
+				// AIRs, and Throttle control (signal from SCADA) send out of drive
+				// Have to hold down break and press drive button to drop out of drive
+				if(buttonPushed) {
+					if(!(PINB & (1 << PB4))) state = SETUP_IDLE; 
 					buttonPushed = 0;
+				}else if((throttle_control != 0) || (PINE & (1 << PE5))) {
+					state = SETUP_IDLE;
+					throttle_control = 0; //set throttle control back to 0
 				}
 				break;
 
@@ -85,7 +90,6 @@ void task_safety(uint32_t data) {
 				PORTA &= ~(1 << PA3); // Drive LED off
 				PORTB &= ~(1 << PB6); // Sets Throttle Select LOW
 				PORTC &= ~(1 << PC2); // Spare Red LED off
-				throttle_control = 0;
 				state = IDLE;
 				break;
 		}
