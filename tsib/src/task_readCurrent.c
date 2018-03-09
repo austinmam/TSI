@@ -8,7 +8,7 @@ void i_adcinit(void) {
 	ADCSRA = (1<<ADPS2)|(1<<ADPS1)|(1<<ADPS0);
 
 	//Sets Pin A7 as an output
-	DDRA = (1 << DDA7);
+	DDRA |= (1 << DDA7);
 }
 
 /*

@@ -46,6 +46,7 @@ volatile uint16_t voltReading;
 volatile uint16_t appsReading;
 volatile uint8_t tsi_state;
 volatile uint8_t imdFault;
+volatile uint8_t overcurrent;
 
 //ADC Rotation
 volatile int volt;

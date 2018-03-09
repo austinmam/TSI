@@ -10,7 +10,8 @@ void safety_init(void) {
 
 	// Set CC LED to Track Throttle Plausibility
 	// Set Drive LED as output
-	DDRA |= (1 << DDA2) | (1 << DDA3);
+	// Set Ready-to-Drive Signal as output
+	DDRA |= (1 << DDA2) | (1 << DDA3) | (1 << DDA4);
 
 	// Set Throttle Plausibility as output
 	DDRB |= (1 << DDB6);
@@ -68,6 +69,11 @@ void task_safety(uint32_t data) {
 				PORTA |= (1 << PA3); // Drive LED on
 				PORTB |= (1 << PB6); // Sets Throttle Select HIGH
 				PORTC |= (1 << PC2); // Spare Red LED on (debugging)
+
+				PORTA |= (1 << PA4);  //Sets RTDS_CTRL high
+				atomtimerDelay(2000); //Ready to drive Signal will play for two seconds
+				PORTA &= (0 << PA4);  //Sets RTDS_CTRL high
+
 				state = DRIVE;
 				break;
 
