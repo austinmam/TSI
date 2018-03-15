@@ -74,7 +74,7 @@ void task_safety(uint32_t data) {
 				PORTC |= (1 << PC2); // Spare Red LED on (debugging)
 
 				PORTA |= (1 << PA4);  //Sets RTDS_CTRL high
-				atomtimerDelay(2000); //Ready to drive Signal will play for two seconds
+				//atomTimerDelay(2000); //Ready to drive Signal will play for two seconds
 				PORTA &= (0 << PA4);  //Sets RTDS_CTRL high
 
 				state = DRIVE;
