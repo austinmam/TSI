@@ -23,6 +23,7 @@
 #include "task_temp.h"
 #include "task_can_receive.h"
 #include "task_readApps.h"
+#include "task_overcurrent.h"
 
 /**
 * @name 
@@ -42,6 +43,7 @@
 #define TASK_TEMP_SIZE           200
 #define TASK_CAN_RECEIVE_SIZE    200
 #define TASK_READAPPS_SIZE       200
+#define TASK_OVERCURRENT_SIZE    200
 /**  @} */
 
 
