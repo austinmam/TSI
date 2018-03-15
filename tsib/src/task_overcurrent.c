@@ -12,8 +12,28 @@ void task_readApps(uint32_t data) {
 	overcurrent_int();
 
  	for(;;) {
+ 		//Only need to check current in SETUP_DRIVE and DRIVE states
+ 		if((tsi_state == 0x01) || (tsi_state == 0x02)) {
 
- 		atomTimerDelay(50);
+ 			//Check if currReading is higher than overcurrent
+ 			if(currReading >= overCurr) {
+ 				PORTB &= ~(1 << PB6); //Turn off Throttle Select
+ 				overcurrent = 1; 	  // Overcurrent CAN signal high
+
+ 			  //Check if currReading is below overcurrent threshold
+ 			  //and APPS is < 0.5V	
+ 			} else if((currReading <= overCurr) && (appsReading < 100)) {
+ 				PORTB |= (1 << PB6);  //Turn on Throttle Select
+ 				overcurrent = 0;	  //Overcurrent CAN signal low
+
+ 			  //Keep Throttle Select and overcurrent the same	 
+ 			} else {
+ 				PORTB = PORTB;
+ 				overcurrent = overcurrent;
+ 			}
+ 		}
+		
+		atomTimerDelay(50);
 	}
 }
 

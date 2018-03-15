@@ -60,6 +60,7 @@ void task_safety(uint32_t data) {
 			/* System starts in the IDLE state. */
 			case IDLE:
 				tsi_state = 0x00;
+
 				if(buttonPushed){ //Want to check button push along with brake input
 					if(!(PINB & (1 << PB4))) state = SETUP_DRIVE;
 					buttonPushed = 0;
@@ -69,6 +70,7 @@ void task_safety(uint32_t data) {
 			/* Setting up throttle and showing that drive is happening with LED on */
 			case SETUP_DRIVE:
 				tsi_state = 0x01;
+
 				PORTA |= (1 << PA3); // Drive LED on
 				PORTB |= (1 << PB6); // Sets Throttle Select HIGH
 				PORTC |= (1 << PC2); // Spare Red LED on (debugging)
@@ -83,6 +85,7 @@ void task_safety(uint32_t data) {
 			/* In this case the throttle is enabled and the driver can drive the car */
 			case DRIVE:
 				tsi_state = 0x02;
+
 				// AIRs, and Throttle control (signal from SCADA) send out of drive
 				// Have to hold down break and press drive button to drop out of drive
 				if(buttonPushed) {
@@ -96,6 +99,7 @@ void task_safety(uint32_t data) {
 
 			case SETUP_IDLE:
 				tsi_state = 0x03;
+				
 				PORTA &= ~(1 << PA3); // Drive LED off
 				PORTB &= ~(1 << PB6); // Sets Throttle Select LOW
 				PORTC &= ~(1 << PC2); // Spare Red LED off
