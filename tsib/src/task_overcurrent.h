@@ -8,6 +8,8 @@
 #include "atomport.h"
 #include "atomtimer.h"
 
+#define overCurr 1000
+
 void task_overcurrent(uint32_t data);
 void overcurrent_init(void);
 
