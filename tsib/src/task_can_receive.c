@@ -36,11 +36,11 @@ void task_can_receive(uint32_t data){
 
 		//For testing whether message can be received or not
 		//Turns on and off an LED based on message
-		if(throttle_control != 0x00){
-			PORTC |= (1 << PC2);
-		}else{
-			PORTC &= ~(1 << PC2);
-		}
+		// if(throttle_control != 0x00){
+		// 	PORTC |= (1 << PC2);
+		// }else{
+		// 	PORTC &= ~(1 << PC2);
+		// }
 
 		atomTimerDelay(50);
 

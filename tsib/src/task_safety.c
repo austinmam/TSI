@@ -20,6 +20,8 @@ void safety_init(void) {
 	// PB5 - Throttle_PL - Simple read
 	PORTB |= (1 << PB4);
 
+	PORTA |= (1 << PA5);
+
 	// Sets port for spare LEDs as output
 	DDRC  |= (1 << DDC2) | (1 << DDC3);
 
@@ -48,11 +50,11 @@ void task_safety(uint32_t data) {
 		
 		if((PINB & (1 << PB5))) { // Read Throttle Plausibility
 			PORTA |= (1 << PA2);  // Using CC LED as Throttle Plausibility indicator
-			PORTC |= (1 << PC3);
+			//PORTC |= (1 << PC3);
 		}
 		else {
 			PORTA &= ~(1 << PA2);
-			PORTC &= ~(1 << PC3);
+			//PORTC &= ~(1 << PC3);
 		}
 
 		switch(state) {
@@ -61,8 +63,18 @@ void task_safety(uint32_t data) {
 			case IDLE:
 				tsi_state = 0x00;
 
+				// if((!(PINB & (1 << PB4)) && (PINA & (1 << PA5)))){
+				// 	PORTA |= (1 << PA4);  //Sets RTDS_CTRL high
+				// 	atomTimerDelay(200); //Ready to drive Signal will play for two seconds
+				// 	PORTA &= ~(1 << PA4);  //Sets RTDS_CTRL high
+				// 	state = SETUP_DRIVE;
+				// 		//buttonPushed = 0;
+				// }
 				if(buttonPushed){ //Want to check button push along with brake input
-					if(!(PINB & (1 << PB4))) state = SETUP_DRIVE;
+					if(!(PINB & (1 << PB4))){ 
+						state = SETUP_DRIVE;
+						buttonPushed = 0;
+					}
 					buttonPushed = 0;
 				}
 				break;
@@ -74,10 +86,10 @@ void task_safety(uint32_t data) {
 				PORTA |= (1 << PA3); // Drive LED on
 				PORTB |= (1 << PB6); // Sets Throttle Select HIGH
 				PORTC |= (1 << PC2); // Spare Red LED on (debugging)
-
+				
 				PORTA |= (1 << PA4);  //Sets RTDS_CTRL high
-				atomTimerDelay(2000); //Ready to drive Signal will play for two seconds
-				PORTA &= (0 << PA4);  //Sets RTDS_CTRL high
+				atomTimerDelay(150);
+				PORTA &= ~(1 << PA4);
 
 				state = DRIVE;
 				break;
@@ -86,14 +98,22 @@ void task_safety(uint32_t data) {
 			case DRIVE:
 				tsi_state = 0x02;
 
+				PORTC |= (1 << PC3); //blue LED
+				//atomTimerDelay(200);
 				// AIRs, and Throttle control (signal from SCADA) send out of drive
 				// Have to hold down break and press drive button to drop out of drive
-				if(buttonPushed) {
-					if(!(PINB & (1 << PB4))) state = SETUP_IDLE; 
-					buttonPushed = 0;
-				}else if((throttle_control != 0) || (PINE & (1 << PE5))) {
+				// if(buttonPushed) {
+				// 	if(!(PINB & (1 << PB4))) state = SETUP_IDLE; 
+				// 	buttonPushed = 0;
+				// }else if((throttle_control != 0) || (PINE & (1 << PE5))) {
+				// 	state = SETUP_IDLE;
+				// 	throttle_control = 0; //set throttle control back to 0
+				// }
+				if((buttonPushed) || (throttle_control != 0) || (PINE & (1 << PE5)))
+				{
 					state = SETUP_IDLE;
 					throttle_control = 0; //set throttle control back to 0
+					buttonPushed = 0;
 				}
 				break;
 
@@ -103,6 +123,8 @@ void task_safety(uint32_t data) {
 				PORTA &= ~(1 << PA3); // Drive LED off
 				PORTB &= ~(1 << PB6); // Sets Throttle Select LOW
 				PORTC &= ~(1 << PC2); // Spare Red LED off
+				PORTC &= ~(1 << PC3); // blue LED
+
 				state = IDLE;
 				break;
 		}
