@@ -8,8 +8,8 @@ void overcurrent_init(void) {
 	overcurrent = 0;
 }
 
-void task_readApps(uint32_t data) {
-	overcurrent_int();
+void task_overcurrent(uint32_t data) {
+	overcurrent_init();
 
  	for(;;) {
  		//Only need to check current in SETUP_DRIVE and DRIVE states
