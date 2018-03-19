@@ -39,14 +39,19 @@ struct flt_cond {
 
 volatile struct flt_cond flt_cnd;
 
-//New Variables
+//CAN Variables
 volatile uint16_t currReading;
 volatile uint16_t imdReading;
 volatile uint16_t voltReading;
 volatile uint16_t appsReading;
 volatile uint8_t tsi_state;
 volatile uint8_t imdFault;
-volatile uint8_t overcurrent;
+volatile uint8_t overCurr;
+
+//LOGIC AND CAN
+volatile uint8_t throttlePos;   //NOT IMPLEMENTED
+volatile uint8_t brakePress;    
+volatile uint8_t throttlePlaus; 
 
 //ADC Rotation
 volatile int volt;

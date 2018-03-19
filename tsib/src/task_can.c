@@ -27,7 +27,9 @@ void task_can(uint32_t data){
 		can_buff[1] = imdReading >> 8;
 		can_buff[2] = imdReading & 0xFF;
 		can_buff[3] = imdFault;
-		can_buff[4] = overcurrent;
+		can_buff[4] = overCurr;
+		can_buff[5] = brakePress;
+		can_buff[6] = throttlePlaus;
 		
 		while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){
 		}
@@ -55,3 +57,7 @@ void task_can(uint32_t data){
 		atomTimerDelay(100);
 	}
 }
+
+//THROTTLE POSITION
+//BRAKE PRESSED
+//THROTTLE PLAUSIBLE

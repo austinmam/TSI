@@ -37,6 +37,8 @@ void safety_init(void) {
 	//temporary!!
 	PORTB |= (1 << PB6); // Sets Throttle Select HIGH
 
+	brakePress = 0;
+	throttlePlaus = 0;
 }
 
 void task_safety(uint32_t data) {
@@ -62,6 +64,7 @@ void task_safety(uint32_t data) {
 			/* System starts in the IDLE state. */
 			case IDLE:
 				tsi_state = 0x00;
+				throttlePlaus = 0;
 
 				// if((!(PINB & (1 << PB4)) && (PINA & (1 << PA5)))){
 				// 	PORTA |= (1 << PA4);  //Sets RTDS_CTRL high
@@ -70,10 +73,12 @@ void task_safety(uint32_t data) {
 				// 	state = SETUP_DRIVE;
 				// 		//buttonPushed = 0;
 				// }
-				if(buttonPushed){ //Want to check button push along with brake input
-					if(!(PINB & (1 << PB4))){ 
-						state = SETUP_DRIVE;
-						buttonPushed = 0;
+				if(buttonPushed){ 					//Check button pressed
+					if(!(PINB & (1 << PB4))) { 		//Check brake pressed
+						if(!(PINE & (1 << PE5))) {  //Check Safety Loop is closed
+							state = SETUP_DRIVE;
+							buttonPushed = 0;
+						}
 					}
 					buttonPushed = 0;
 				}
@@ -82,6 +87,7 @@ void task_safety(uint32_t data) {
 			/* Setting up throttle and showing that drive is happening with LED on */
 			case SETUP_DRIVE:
 				tsi_state = 0x01;
+				throttlePlaus = 0;
 
 				PORTA |= (1 << PA3); // Drive LED on
 				PORTB |= (1 << PB6); // Sets Throttle Select HIGH
@@ -109,16 +115,56 @@ void task_safety(uint32_t data) {
 				// 	state = SETUP_IDLE;
 				// 	throttle_control = 0; //set throttle control back to 0
 				// }
+
+				//Throttle Select off if brake pressed
+				if(!(PINB & (1 << PB4))) {
+					PORTB &= ~(1 << PB6); // Sets Throttle Select LOW
+					brakePress = 1;
+				} else {
+					PORTB |= (1 << PB6); // Sets Throttle Select HIGH
+					brakePress = 0;
+				}
+
+				if((PINB & (1 << PB5))) {
+					throttlePlaus = 1;
+				} else {
+					throttlePlaus = 0;
+				}
+
 				if((buttonPushed) || (throttle_control != 0) || (PINE & (1 << PE5)))
 				{
 					state = SETUP_IDLE;
 					throttle_control = 0; //set throttle control back to 0
 					buttonPushed = 0;
 				}
+
+				if(overCurr == 1) {
+					state = OVERCURRENT;
+				}
+				break;
+
+			case OVERCURRENT:
+				tsi_state = 0x04;
+				throttlePlaus = 0;
+
+				PORTB &= ~(1 << PB6); // Sets Throttle Select LOW
+
+				//Blink Drive LED to alert driver
+				PORTA |= (1 << PA3); // Drive LED on
+				atomTimerDelay(50);  
+				PORTA &= ~(1 << PA3); // Drive LED off
+
+				if(overCurr == 0) {
+					PORTA |= (1 << PA3); // Drive LED on
+					PORTB |= (1 << PB6); // Sets Throttle Select HIGH
+					state = DRIVE;
+				}
+
 				break;
 
 			case SETUP_IDLE:
 				tsi_state = 0x03;
+				throttlePlaus = 0;
 				
 				PORTA &= ~(1 << PA3); // Drive LED off
 				PORTB &= ~(1 << PB6); // Sets Throttle Select LOW
@@ -130,3 +176,4 @@ void task_safety(uint32_t data) {
 		}
 	}
 }
+
