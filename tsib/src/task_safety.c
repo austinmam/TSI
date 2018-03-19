@@ -88,8 +88,7 @@ void task_safety(uint32_t data) {
 			case SETUP_DRIVE:
 				tsi_state = 0x01;
 				throttlePlaus = 0;
-
-				PORTA |= (1 << PA3); // Drive LED on
+				
 				PORTB |= (1 << PB6); // Sets Throttle Select HIGH
 				PORTC |= (1 << PC2); // Spare Red LED on (debugging)
 				
@@ -103,6 +102,7 @@ void task_safety(uint32_t data) {
 			/* In this case the throttle is enabled and the driver can drive the car */
 			case DRIVE:
 				tsi_state = 0x02;
+				PORTA |= (1 << PA3); // Drive LED on
 
 				PORTC |= (1 << PC3); //blue LED
 				//atomTimerDelay(200);
@@ -117,6 +117,7 @@ void task_safety(uint32_t data) {
 				// }
 
 				//Throttle Select off if brake pressed
+				//NEED TO BE CHANGED
 				if(!(PINB & (1 << PB4))) {
 					PORTB &= ~(1 << PB6); // Sets Throttle Select LOW
 					brakePress = 1;
@@ -158,6 +159,13 @@ void task_safety(uint32_t data) {
 					PORTA |= (1 << PA3); // Drive LED on
 					PORTB |= (1 << PB6); // Sets Throttle Select HIGH
 					state = DRIVE;
+				}
+
+				if((buttonPushed) || (throttle_control != 0) || (PINE & (1 << PE5)))
+				{
+					state = SETUP_IDLE;
+					throttle_control = 0; //set throttle control back to 0
+					buttonPushed = 0;
 				}
 
 				break;
