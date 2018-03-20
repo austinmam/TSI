@@ -34,9 +34,6 @@ void safety_init(void) {
 	//tsi_state changes depending on state and is sent to SCADA for debugging/info
 	tsi_state = 0x00;
 
-	//temporary!!
-	PORTB |= (1 << PB6); // Sets Throttle Select HIGH
-
 	brakePress = 0;
 	throttlePlaus = 0;
 }
