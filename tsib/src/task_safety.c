@@ -70,11 +70,13 @@ void task_safety(uint32_t data) {
 				// 	state = SETUP_DRIVE;
 				// 		//buttonPushed = 0;
 				// }
-				if(buttonPushed){ 					//Check button pressed
-					if(!(PINB & (1 << PB4))) { 		//Check brake pressed
-						if(!(PINE & (1 << PE5))) {  //Check Safety Loop is closed
-							state = SETUP_DRIVE;
-							buttonPushed = 0;
+				if(buttonPushed){ 					  //Check button pressed
+					if(!(PINB & (1 << PB4))) { 		  //Check brake pressed
+						if(!(PINE & (1 << PE5))) {    //Check Safety Loop is closed
+							if(!(PINB & (1 << PB5))) { //Check Throttle Plausibility
+								state = SETUP_DRIVE;
+								buttonPushed = 0;
+							}	
 						}
 					}
 					buttonPushed = 0;
@@ -87,7 +89,7 @@ void task_safety(uint32_t data) {
 				throttlePlaus = 0;
 				
 				PORTB |= (1 << PB6); // Sets Throttle Select HIGH
-				PORTC |= (1 << PC2); // Spare Red LED on (debugging)
+				//PORTC |= (1 << PC2); // Spare Red LED on (debugging)
 				
 				PORTA |= (1 << PA4);  //Sets RTDS_CTRL high
 				atomTimerDelay(150);
@@ -113,32 +115,45 @@ void task_safety(uint32_t data) {
 				// 	throttle_control = 0; //set throttle control back to 0
 				// }
 
-				//Throttle Select off if brake pressed
-				//NEED TO BE CHANGED
+				//Throttle Select off if brake pressed and Throttle on
 				if(!(PINB & (1 << PB4))) {
 					brakePress = 1;
-					if(appsReading > 100) {
+					if(appsReading > 400) {
 						state = SETUP_IDLE;
 					}
 				} else {
 					brakePress = 0;
 				}
 
+				//drop out of drive if throttle implausibility occurs
 				if((PINB & (1 << PB5))) { //1 is implausible
 					state = SETUP_IDLE;
 					throttlePlaus = 0;
 				} else {
 					throttlePlaus = 1;
+					//state = SETUP_IDLE;
 				}
 
-				if((buttonPushed) || (throttle_control != 0) || (PINE & (1 << PE5)))
+				// if((buttonPushed) || (throttle_control != 0) || (PINE & (1 << PE5)))
+				// {
+				// 	state = SETUP_IDLE;
+				// 	throttle_control = 0; //set throttle control back to 0
+				// 	buttonPushed = 0;
+				// }
+
+				if((throttle_control != 0) || (PINE & (1 << PE5)))
 				{
 					state = SETUP_IDLE;
 					throttle_control = 0; //set throttle control back to 0
 					buttonPushed = 0;
 				}
 
-				if(overCurr == 1) {
+				// if(overCurr == 1) {
+				// 	state = OVERCURRENT;
+				// }
+
+				if(buttonPushed){
+					buttonPushed = 0;
 					state = OVERCURRENT;
 				}
 				break;
@@ -146,25 +161,38 @@ void task_safety(uint32_t data) {
 			case OVERCURRENT:
 				tsi_state = 0x04;
 				throttlePlaus = 0;
-
+				PORTC |= (1 << PC2); 
 				PORTB &= ~(1 << PB6); // Sets Throttle Select LOW
 
 				//Blink Drive LED to alert driver
-				PORTA |= (1 << PA3); // Drive LED on
-				atomTimerDelay(50);  
+				
+				
 				PORTA &= ~(1 << PA3); // Drive LED off
+				atomTimerDelay(75);  
+				PORTA |= (1 << PA3); // Drive LED on
+				atomTimerDelay(75);
 
-				if(overCurr == 0) {
+				if(/*overCurr == 0*/buttonPushed) {
+					buttonPushed = 0;
 					PORTA |= (1 << PA3); // Drive LED on
 					PORTB |= (1 << PB6); // Sets Throttle Select HIGH
 					state = DRIVE;
 				}
 
-				if((buttonPushed) || (throttle_control != 0) || (PINE & (1 << PE5)))
+				if(/*(buttonPushed) ||*/ (throttle_control != 0) || (PINE & (1 << PE5)))
 				{
 					state = SETUP_IDLE;
 					throttle_control = 0; //set throttle control back to 0
 					buttonPushed = 0;
+				}
+
+				//drop out of drive if throttle implausibility occurs
+				if((PINB & (1 << PB5))) { //1 is implausible
+					state = SETUP_IDLE;
+					throttlePlaus = 0;
+				} else {
+					throttlePlaus = 1;
+					//state = SETUP_IDLE;
 				}
 
 				break;

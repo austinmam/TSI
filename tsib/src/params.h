@@ -49,7 +49,6 @@ volatile uint8_t imdFault;
 volatile uint8_t overCurr;
 
 //LOGIC AND CAN
-volatile uint8_t throttlePos;   //NOT IMPLEMENTED
 volatile uint8_t brakePress;    
 volatile uint8_t throttlePlaus; 
 
