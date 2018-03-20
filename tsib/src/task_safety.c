@@ -116,17 +116,19 @@ void task_safety(uint32_t data) {
 				//Throttle Select off if brake pressed
 				//NEED TO BE CHANGED
 				if(!(PINB & (1 << PB4))) {
-					PORTB &= ~(1 << PB6); // Sets Throttle Select LOW
 					brakePress = 1;
+					if(appsReading > 100) {
+						state = SETUP_IDLE;
+					}
 				} else {
-					PORTB |= (1 << PB6); // Sets Throttle Select HIGH
 					brakePress = 0;
 				}
 
-				if((PINB & (1 << PB5))) {
-					throttlePlaus = 1;
-				} else {
+				if((PINB & (1 << PB5))) { //1 is implausible
+					state = SETUP_IDLE;
 					throttlePlaus = 0;
+				} else {
+					throttlePlaus = 1;
 				}
 
 				if((buttonPushed) || (throttle_control != 0) || (PINE & (1 << PE5)))
