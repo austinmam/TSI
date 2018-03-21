@@ -28,15 +28,15 @@ void task_readIMD(uint32_t data) {
 	 		//Waits for conversion to complete
 	 		while(!(ADCSRA  &  (1<<ADIF))) {
 	 			//Turns LED on for testing
-	 			//PORTC |=  (1 << PC1);
-	 			//atomTimerDelay(50);
+	 			// PORTC |=  (1 << PC2);
+	 			// atomTimerDelay(50);
 	 		}
 
 	 		//Clears ADC interrupt flag
 	 		ADCSRA |=  (1<<ADIF);
 
 	 		//Turns off LED for testing
-	 		//PORTC &= ~(1 << PC1);
+	 		// PORTC &= ~(1 << PC2);
 
 	 		//Sets imdReading to output of ADC
 	 		imdReading = ADC;
