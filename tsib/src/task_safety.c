@@ -73,8 +73,8 @@ void task_safety(uint32_t data) {
 				if(buttonPushed){ 					  //Check button pressed
 					if(!(PINB & (1 << PB4))) { 		  //Check brake pressed
 						if(!(PINE & (1 << PE5))) {    //Check Safety Loop is closed
-							if(!(PINB & (1 << PB5))) { //Check Throttle Plausibility
-								if(appsReading > 184) {
+							if(!(PINB & (1 << PB5))) {  //Check Throttle Plausibility
+								if(appsReading < 184) { //Throttle must be below 0.5V
 									state = SETUP_DRIVE;
 									buttonPushed = 0;
 								}
@@ -136,28 +136,28 @@ void task_safety(uint32_t data) {
 					//state = SETUP_IDLE;
 				}
 
-				// if((buttonPushed) || (throttle_control != 0) || (PINE & (1 << PE5)))
-				// {
-				// 	state = SETUP_IDLE;
-				// 	throttle_control = 0; //set throttle control back to 0
-				// 	buttonPushed = 0;
-				// }
-
-				if((throttle_control != 0) || (PINE & (1 << PE5)))
+				if((buttonPushed) || (throttle_control != 0) || (PINE & (1 << PE5)))
 				{
 					state = SETUP_IDLE;
 					throttle_control = 0; //set throttle control back to 0
 					buttonPushed = 0;
 				}
 
-				// if(overCurr == 1) {
-				// 	state = OVERCURRENT;
+				// if((throttle_control != 0) || (PINE & (1 << PE5)))
+				// {
+				// 	state = SETUP_IDLE;
+				// 	throttle_control = 0; //set throttle control back to 0
+				// 	buttonPushed = 0;
 				// }
 
-				if(buttonPushed){
-					buttonPushed = 0;
+				if(overCurr == 1) {
 					state = OVERCURRENT;
 				}
+
+				// if(buttonPushed){
+				// 	buttonPushed = 0;
+				// 	state = OVERCURRENT;
+				// }
 				break;
 
 			case OVERCURRENT:
@@ -174,14 +174,14 @@ void task_safety(uint32_t data) {
 				PORTA |= (1 << PA3); // Drive LED on
 				atomTimerDelay(75);
 
-				if(/*overCurr == 0*/buttonPushed) {
+				if(overCurr == 0) {
 					buttonPushed = 0;
 					PORTA |= (1 << PA3); // Drive LED on
 					PORTB |= (1 << PB6); // Sets Throttle Select HIGH
 					state = DRIVE;
 				}
 
-				if(/*(buttonPushed) ||*/ (throttle_control != 0) || (PINE & (1 << PE5)))
+				if((buttonPushed) || (throttle_control != 0) || (PINE & (1 << PE5)))
 				{
 					state = SETUP_IDLE;
 					throttle_control = 0; //set throttle control back to 0
@@ -194,7 +194,6 @@ void task_safety(uint32_t data) {
 					throttlePlaus = 0;
 				} else {
 					throttlePlaus = 1;
-					//state = SETUP_IDLE;
 				}
 
 				break;
