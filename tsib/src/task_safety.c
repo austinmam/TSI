@@ -104,9 +104,7 @@ void task_safety(uint32_t data) {
 			case DRIVE:
 				tsi_state = 0x02;
 				PORTA |= (1 << PA3); // Drive LED on
-
-				//PUT BACK
-				//PORTC |= (1 << PC3); //blue LED
+				PORTC |= (1 << PC3); //blue LED
 
 				//atomTimerDelay(200);
 				// AIRs, and Throttle control (signal from SCADA) send out of drive
@@ -122,7 +120,6 @@ void task_safety(uint32_t data) {
 				//Throttle Select off if brake pressed and Throttle on
 				if(!(PINB & (1 << PB4))) {
 					brakePress = 1;
-					PORTC |= (1 << PC3); //TAKE OUT
 					if(appsReading > THROTTLE_ON) {
 						state = SETUP_IDLE;
 					}
@@ -135,7 +132,6 @@ void task_safety(uint32_t data) {
 					state = SETUP_IDLE;
 					throttlePlaus = 0;
 				} else {
-					PORTC |= (1 << PC2); //TAKE OUT
 					throttlePlaus = 1;
 					//state = SETUP_IDLE;
 				}
@@ -168,8 +164,7 @@ void task_safety(uint32_t data) {
 				tsi_state = 0x04;
 				throttlePlaus = 0;
 
-				//PUT BACK
-				//PORTC |= (1 << PC2); //Red LED
+				PORTC |= (1 << PC2); //Red LED
 				PORTB &= ~(1 << PB6); // Sets Throttle Select LOW
 
 				//Blink Drive LED to alert driver
