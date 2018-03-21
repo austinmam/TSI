@@ -74,8 +74,10 @@ void task_safety(uint32_t data) {
 					if(!(PINB & (1 << PB4))) { 		  //Check brake pressed
 						if(!(PINE & (1 << PE5))) {    //Check Safety Loop is closed
 							if(!(PINB & (1 << PB5))) { //Check Throttle Plausibility
-								state = SETUP_DRIVE;
-								buttonPushed = 0;
+								if(appsReading > 184) {
+									state = SETUP_DRIVE;
+									buttonPushed = 0;
+								}
 							}	
 						}
 					}
