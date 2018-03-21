@@ -48,6 +48,8 @@ volatile uint8_t tsi_state;
 volatile uint8_t imdFault;
 volatile uint8_t overCurr;
 
+#define THROTTLE_ON 184
+
 //LOGIC AND CAN
 volatile uint8_t brakePress;    
 volatile uint8_t throttlePlaus; 
