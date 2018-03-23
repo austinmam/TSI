@@ -50,6 +50,7 @@ void task_can(uint32_t data){
 		can_buff[3] = currReading & 0xFF;
 		can_buff[4] = temperature >> 8;
 		can_buff[5] = temperature & 0xFF;
+		can_buff[6] = throttlePlaus;
 
 		
 		while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){
