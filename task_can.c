@@ -30,10 +30,6 @@ void task_can(uint32_t data){
 		can_buff[4] = appsReading & 0xFF;
 		
 		//can_buff[3] = imdFault;
-		// can_buff[4] = overCurr;
-		// can_buff[5] = brakePress;
-		// can_buff[6] = throttlePlaus;
-		// can_buff[7] = appsReading;
 		
 		while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){
 		}
