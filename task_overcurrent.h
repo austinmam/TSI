@@ -8,7 +8,7 @@
 #include "atomport.h"
 #include "atomtimer.h"
 
-#define overCurrThresh 190
+#define overCurrThresh 180
 
 void task_overcurrent(uint32_t data);
 void overcurrent_init(void);
