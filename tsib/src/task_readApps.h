@@ -9,6 +9,7 @@
 #include "atomtimer.h"
 
 uint8_t apps_ch;
+uint16_t tempApp;
 void apps_adcinit(void);
 void task_readApps(uint32_t data);
 

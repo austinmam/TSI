@@ -53,9 +53,20 @@ void task_readCurrent(uint32_t data) {
 	 		//Turns off LEDs for testing
 	 		//PORTC &= ~(1 << PC1);
 
+	 		
+
 	 		//Sets currReading to output of ADC
-	 		currVolt = (float)(ADC*5/1023);
-	 		currReading = (float)((currVolt - 1.25) / 0.0216);
+	 		currReading = ((ADC * 55) / 100) + 3;
+/*
+	 		if(currVolt < .055) {
+	 			currReading = (float)(currVolt * 181.8);
+	 		} else if (PINE & (1 << PE5)) {
+	 			currReading = 0;
+	 		} else {
+	 			currReading = (float)(currVolt * 116.5 + 3.53);
+	 		}
+	 		
+*/
 
 	 		//Disables ADC
 	 		(ADCSRA &= ~(1<<ADEN));	 		

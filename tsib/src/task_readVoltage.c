@@ -62,7 +62,7 @@ void task_readVoltage(uint32_t data) {
 
 	 		//Sets voltReading to output of ADC
 	 		// voltReading = recalculate(ADC);
-	 		voltReading = (float)(ADC*5/1023);
+	 		voltReading = (float)(ADC*(float)(5)/1023);
 
 	 		//Disables ADC
 	 		(ADCSRA &= ~(1<<ADEN));
