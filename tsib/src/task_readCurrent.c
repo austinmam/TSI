@@ -54,7 +54,8 @@ void task_readCurrent(uint32_t data) {
 	 		//PORTC &= ~(1 << PC1);
 
 	 		//Sets currReading to output of ADC
-	 		currReading = ADC;
+	 		currVolt = (float)(ADC*5/1023);
+	 		currReading = (float)((currVolt - 1.25) / 0.0216);
 
 	 		//Disables ADC
 	 		(ADCSRA &= ~(1<<ADEN));	 		

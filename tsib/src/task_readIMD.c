@@ -39,7 +39,7 @@ void task_readIMD(uint32_t data) {
 	 		// PORTC &= ~(1 << PC2);
 
 	 		//Sets imdReading to output of ADC
-	 		imdReading = ADC;
+	 		tempVal = ADC;
 
 	 		//Disables ADC
 	 		(ADCSRA &= ~(1<<ADEN));
@@ -48,11 +48,13 @@ void task_readIMD(uint32_t data) {
 	 		//IMD signal into microcontroller = Amplitude * Duty Cycle
 	 		//ADC value = (Vin * 1023) / Vref
 	 		//Vin = IMD and Vref = 5
-	 		if(imdReading > 920) {
+	 		if(tempVal > 920) {
 	 			imdFault = 1;
 	 		} else {
 	 			imdFault = 0;
 	 		}
+
+	 		imdReading = (float)(5*tempVal/1023);
 
 	 		//Next conversion will be current
 	 		volt = 0;

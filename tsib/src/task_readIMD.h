@@ -9,6 +9,7 @@
 #include "atomtimer.h"
 
 uint8_t imd_ch;
+uint16_t tempVal;
 void imd_adcinit(void);
 void task_readIMD(uint32_t data);
 

@@ -9,6 +9,7 @@
 #include "atomtimer.h"
 
 uint8_t i_ch;
+uint16_t currVolt;
 void i_adcinit(void);
 void task_readCurrent(uint32_t data);
 
