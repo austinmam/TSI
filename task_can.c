@@ -39,13 +39,15 @@ void task_can(uint32_t data){
 
 		//SECOND PACKET - VOLTAGE, CURRENT, TEMP
 		can_frame.id.std = CAN_PACKET_2;
-		can_frame.dlc = 6;
+		can_frame.dlc = 7;
+
 		can_buff[0] = voltReading >> 8;
 		can_buff[1] = voltReading & 0xFF;
 		can_buff[2] = currReading >> 8;
 		can_buff[3] = currReading & 0xFF;
 		can_buff[4] = temperature >> 8;
 		can_buff[5] = temperature & 0xFF;
+		can_buff[6] = throttlePlaus;
 
 		
 		while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){
