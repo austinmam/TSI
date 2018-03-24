@@ -158,7 +158,7 @@ void task_safety(uint32_t data) {
 				// 	buttonPushed = 0;
 				// 	state = OVERCURRENT;
 				// }
-				break;
+				// break;
 
 			case OVERCURRENT:
 				tsi_state = 0x04;
@@ -176,10 +176,12 @@ void task_safety(uint32_t data) {
 				atomTimerDelay(75);
 
 				if(overCurr == 0) {
-					buttonPushed = 0;
-					PORTA |= (1 << PA3); // Drive LED on
-					PORTB |= (1 << PB6); // Sets Throttle Select HIGH
-					state = DRIVE;
+					if(appsReading < THROTTLE_ON){
+						buttonPushed = 0;
+						PORTA |= (1 << PA3); // Drive LED on
+						PORTB |= (1 << PB6); // Sets Throttle Select HIGH
+						state = DRIVE;
+					}
 				}
 
 				if((buttonPushed) || (throttle_control != 0) || (PINE & (1 << PE5)))

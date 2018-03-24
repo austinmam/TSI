@@ -18,9 +18,11 @@ void task_overcurrent(uint32_t data) {
 
 		  //Check if currReading is below overcurrent threshold
 		  //and APPS is < 0.5V	
-		} else if((currReading <= overCurrThresh) && (appsReading < THROTTLE_ON)) {
-			//PORTB |= (1 << PB6);  //Turn on Throttle Select
-			overCurr = 0;	  //Overcurrent CAN signal low	 
+		} else if((currReading <= overCurrThresh) /*&& (appsReading < THROTTLE_ON)*/) {
+			//if(appsReading < THROTTLE_ON){
+				//PORTB |= (1 << PB6);  //Turn on Throttle Select
+				overCurr = 0;	  //Overcurrent CAN signal low	 
+			//}
 		} 	
 		
 		atomTimerDelay(50);
