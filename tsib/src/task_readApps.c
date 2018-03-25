@@ -44,6 +44,7 @@ void task_readApps(uint32_t data) {
 	 		//tempApp = (float)(ADC*(float)(5)/1023);
 	 		//appsReading = (float)(tempApp /(float)(5) * 100);
 	 		appsReading = ADC;
+	 		appsVolt = (ADC * 5) / 1023;
 
 	 		//Disables ADC
 	 		(ADCSRA &= ~(1<<ADEN));

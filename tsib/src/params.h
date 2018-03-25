@@ -44,6 +44,7 @@ volatile uint16_t currReading;
 volatile uint16_t imdReading;
 volatile uint16_t voltReading;
 volatile uint16_t appsReading;
+volatile uint16_t appsVolt;
 volatile uint8_t tsi_state;
 volatile uint8_t imdFault;
 volatile uint8_t overCurr;
