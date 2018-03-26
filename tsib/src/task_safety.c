@@ -137,7 +137,7 @@ void task_safety(uint32_t data) {
 					//state = SETUP_IDLE;
 				}
 
-				if((buttonPushed) || (throttle_control != 0) || (PINE & (1 << PE5)))
+				if((buttonPushed) || (throttle_control == 1) || (PINE & (1 << PE5)))
 				{
 					state = SETUP_IDLE;
 					throttle_control = 0; //set throttle control back to 0
