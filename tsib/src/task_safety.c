@@ -158,7 +158,7 @@ void task_safety(uint32_t data) {
 				// 	buttonPushed = 0;
 				// 	state = OVERCURRENT;
 				// }
-				// break;
+				break;
 
 			case OVERCURRENT:
 				tsi_state = 0x04;
