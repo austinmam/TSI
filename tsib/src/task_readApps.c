@@ -47,6 +47,7 @@ void task_readApps(uint32_t data) {
 	 		// tempApp = (ADC * 5) / 1023;
 	 		// appsVolt = (tempApp * 100) / 5;
 
+	 		appsReading = ADC;
 	 		appsVolt = (10 * ADC) / 102;
 
 	 		//Disables ADC
