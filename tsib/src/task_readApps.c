@@ -40,15 +40,9 @@ void task_readApps(uint32_t data) {
 	 		// PORTC &= ~(1 << PC2);
 	 		// PORTC &= ~(1 << PC1);
 
-	 		//Sets appsReading to output of ADC
-	 		//tempApp = (float)(ADC*(float)(5)/1023);
-	 		//appsReading = (float)(tempApp /(float)(5) * 100);
-	 
-	 		// tempApp = (ADC * 5) / 1023;
-	 		// appsVolt = (tempApp * 100) / 5;
-
 	 		appsReading = ADC;
-	 		appsVolt = (10 * ADC) / 102;
+	 		tempApp = (100 * ADC) / 1023;
+	 		appsVolt = (uint16_t)tempApp;
 
 	 		//Disables ADC
 	 		(ADCSRA &= ~(1<<ADEN));
