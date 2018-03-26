@@ -41,8 +41,10 @@ void task_readApps(uint32_t data) {
 	 		// PORTC &= ~(1 << PC1);
 
 	 		appsReading = ADC;
-	 		tempApp = (100 * ADC) / 1023;
-	 		appsVolt = (uint16_t)tempApp;
+	 		// tempApp = (100 * ADC) / 1023;
+	 		// appsVolt = (uint16_t)tempApp;
+
+	 		appsVolt = (10 * ADC) / 102;
 
 	 		//Disables ADC
 	 		(ADCSRA &= ~(1<<ADEN));

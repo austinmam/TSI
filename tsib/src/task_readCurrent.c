@@ -56,15 +56,15 @@ void task_readCurrent(uint32_t data) {
 	 		//Sets currReading to output of ADC
 	 		
 
-	 		if(ADC < 12) {
-	 			currReading = ((ADC * 88) / 100) + 3;
-	 		} else if (PINE & (1 << PE5)) {
-	 			currReading = 0;
-	 		} else {
-	 			currReading = ((ADC * 57) / 100) + 3;
-	 		}
+	 		// if(ADC < 12) {
+	 		// 	currReading = ((ADC * 88) / 100);
+	 		// } else if (PINE & (1 << PE5)) {
+	 		// 	currReading = 0;
+	 		// } else {
+	 		// 	currReading = ((ADC * 57) / 100) + 3;
+	 		// }
 
-	 		//currReading = ((ADC * 57) / 100) + 3;
+	 		currReading = ADC;
 	 		
 
 

@@ -62,9 +62,11 @@ void task_readVoltage(uint32_t data) {
 	 		//Turns off LED for testing
 	 		// PORTC &= ~(1 << PC3);
 
-	 		tempVolt_t = (120 * ADC) / 1023;
-	 		tempVolt_s |= tempVolt_t;
-	 		voltReading = tempVolt_s;
+	 		// tempVolt_t = (120 * ADC) / 1023;
+	 		// tempVolt_s |= tempVolt_t;
+	 		// voltReading = tempVolt_s;
+
+	 		voltReading = (12 * ADC) / 102;
 	 		
 	 		//Disables ADC
 	 		(ADCSRA &= ~(1<<ADEN));
