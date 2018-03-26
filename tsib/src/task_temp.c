@@ -41,7 +41,7 @@ void task_temp(uint32_t data) {
 
 		temperature = ((float)(temperature - 3)/3200)*25; 	//convert from 16 bit format to celsius
 
-		temperature = (float)((9*temperature)/5) + 32; 		//convert to fahrenheit
+		//temperature = (float)((9*temperature)/5) + 32; 		//convert to fahrenheit
 
 		atomTimerDelay(50);
 	};
