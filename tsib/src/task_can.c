@@ -26,8 +26,8 @@ void task_can(uint32_t data){
 		can_buff[0] = tsi_state;
 		can_buff[1] = imdReading >> 8;
 		can_buff[2] = imdReading & 0xFF;
-		can_buff[3] = appsReading >> 8;
-		can_buff[4] = appsReading & 0xFF;
+		can_buff[3] = appsVolt >> 8;
+		can_buff[4] = appsVolt & 0xFF;
 		
 		//can_buff[3] = imdFault;
 		

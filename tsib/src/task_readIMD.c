@@ -54,8 +54,7 @@ void task_readIMD(uint32_t data) {
 	 			imdFault = 0;
 	 		}
 
-	 		//imdReading = (5 * tempVal) / 1023;
-	 		imdReading = ADC;
+	 		imdReading = (5 * tempVal) / 1023;
 
 	 		//Next conversion will be current
 	 		volt = 0;
