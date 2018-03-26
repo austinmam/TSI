@@ -9,7 +9,8 @@
 #include "atomtimer.h"
 
 uint8_t v_ch;
-uint32_t tempVolt;
+uint32_t tempVolt_t;
+uint16_t tempVolt_s;
 
 void v_adcinit(void);
 uint16_t recalculate(uint16_t voltRead);

@@ -6,6 +6,8 @@ void v_adcinit(void) {
 
 	//Sets prescaler to 128
 	ADCSRA = (1<<ADPS2)|(1<<ADPS1)|(1<<ADPS0);
+
+	tempVolt_s = 0x0000;
 }
 
 /*
@@ -60,8 +62,9 @@ void task_readVoltage(uint32_t data) {
 	 		//Turns off LED for testing
 	 		// PORTC &= ~(1 << PC3);
 
-	 		tempVolt = (120 * ADC) / 1023;
-	 		voltReading = (uint16_t)tempVolt;
+	 		tempVolt_t = (120 * ADC) / 1023;
+	 		tempVolt_s |= tempVolt_t;
+	 		voltReading = tempVolt_s;
 	 		
 	 		//Disables ADC
 	 		(ADCSRA &= ~(1<<ADEN));
