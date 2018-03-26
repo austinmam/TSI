@@ -36,6 +36,7 @@ void safety_init(void) {
 
 	brakePress = 0;
 	throttlePlaus = 0;
+	throttle_control = 0;
 }
 
 void task_safety(uint32_t data) {
