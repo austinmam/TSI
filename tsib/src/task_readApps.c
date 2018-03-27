@@ -17,10 +17,10 @@ void task_readApps(uint32_t data) {
 	 		ADCSRA = (1<<ADEN);	
 
 	 		//ADC channel 0 AND with 7 to clear previous channel		
-	 		apps_ch = 0x00 & 0x07; 		
+	 		channel = 0x00 & 0x07; 		
 
 	 		//Sets ADC channel
-	 		ADMUX |= (ADMUX & 0xF) | apps_ch;
+	 		ADMUX |= (ADMUX & 0xF) | channel;
 
 	 		//Starts conversion
 	 		(ADCSRA &= ~(1<<ADATE), ADCSRA |=  (1<<ADSC));
@@ -44,7 +44,7 @@ void task_readApps(uint32_t data) {
 	 		// tempApp = (100 * ADC) / 1023;
 	 		// appsVolt = (uint16_t)tempApp;
 
-	 		appsVolt = (10 * ADC) / 102;
+	 		appsVolt = (5 * ADC) / 102;
 
 	 		//Disables ADC
 	 		(ADCSRA &= ~(1<<ADEN));

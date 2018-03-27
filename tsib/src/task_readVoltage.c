@@ -41,10 +41,10 @@ void task_readVoltage(uint32_t data) {
 	 		ADCSRA = (1<<ADEN);	
 
 	 		//ADC channel 2 AND with 7 to clear previous channel		
-	 		v_ch = 0x02 & 0x07; 		
+	 		channel = 0x02 & 0x07; 		
 
 	 		//Sets ADC channel
-	 		ADMUX |= (ADMUX & 0xF) | v_ch;
+	 		ADMUX |= (ADMUX & 0xF) | channel;
 
 	 		//Starts conversion
 	 		(ADCSRA &= ~(1<<ADATE), ADCSRA |=  (1<<ADSC));

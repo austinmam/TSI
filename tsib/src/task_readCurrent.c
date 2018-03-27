@@ -33,10 +33,10 @@ void task_readCurrent(uint32_t data) {
 	 		ADCSRA = (1<<ADEN);
 
 	 		//ADC channel 1 AND with 7 to clear previous channel	
-	 		i_ch = 0x03 & 0x07;
+	 		channel = 0x03 & 0x07;
 
 	 		//Sets ADC channel
-	 		ADMUX |= (ADMUX & 0xF) | i_ch;
+	 		ADMUX |= (ADMUX & 0xF) | channel;
 
 	 		//Starts conversion
 	 		(ADCSRA &= ~(1<<ADATE), ADCSRA |=  (1<<ADSC));
