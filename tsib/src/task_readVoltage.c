@@ -10,27 +10,19 @@ void v_adcinit(void) {
 	tempVolt_s = 0x0000;
 }
 
-/*
-uint16_t recalculate(uint16_t voltRead) {
-	if(voltRead >= 730) { 						   //95%
-		voltRead = voltRead * 1.05;
-	} else if((voltRead < 730) && (voltRead >= 600)) { //97.5%
-		voltRead = voltRead * 1.025;
-	} else if((voltRead < 600) && (voltRead >= 400)) { //100%
-		voltRead = voltRead;
-	} else if((voltRead < 400) && (voltRead >= 250)) { //103%
-		voltRead = voltRead * 0.97;
-	} else if((voltRead < 250) && (voltRead >= 150)) { //110%
-		voltRead = voltRead * 0.9;
-	} else if((voltRead < 150) && (voltRead > 100)) {  //125%
-		voltRead = voltRead * 0.75;
-	} else {								   //150%
-		voltRead = voltRead * 0.5;
-	}
 
-	return voltRead;
+uint16_t recalculate(uint16_t voltRead) {
+	if((voltRead >= 65) && (voltRead < 70)) {
+		return voltRead * 1.04;
+	} else if((voltRead >= 70) && (voltRead < 85)) {
+		return voltRead * 1.05;
+	} else if(VoltRead >= 85) {
+		return voltRead * 1.066;
+	} else {
+		return voltRead;
+	}
 }
-*/
+
 
 void task_readVoltage(uint32_t data) {
  	for(;;) {
@@ -66,7 +58,8 @@ void task_readVoltage(uint32_t data) {
 	 		// tempVolt_s |= tempVolt_t;
 	 		// voltReading = tempVolt_s;
 
-	 		voltReading = (12 * ADC) / 102;
+	 		tempVolt = (12 * ADC) / 102;
+	 		voltReading = recalculate(tempVolt);
 	 		
 	 		//Disables ADC
 	 		(ADCSRA &= ~(1<<ADEN));

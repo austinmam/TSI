@@ -19,6 +19,31 @@ void i_adcinit(void) {
 	//PORTA |= (1 << PA7);  
 }
 
+uint16_t recalculate(uint16_t currRead) {
+	if(currRead < 20) {
+		return 0;
+	} else if((currRead > 20) && (currRead <= 25)) {
+		return currRead * 0.4;
+	} else if((currRead > 25) && (currRead <= 45)) {
+		return currRead * 0.7;
+	} else if((currRead > 45) && (currRead <= 65)) {
+		return currRead * 0.85;
+	} else if((currRead > 65) && (currRead <= 90)) {
+		return currRead * 0.95;
+	} else if((currRead > 90) && (currRead <= 95)) {
+		return currRead * 0.98;
+	} else if((currRead > 95) && (currRead <= 105)) {
+		return currRead;
+	} else if((currRead > 105) && (currRead <= 135)) {
+		return currRead * 1.03;
+	} else if((currRead > 135) && (currRead <= 145)) {
+		return currRead * 1.06;
+	} else {
+		return currRead * 1.07;
+	}
+
+}
+
 /*
   TO reduce current draw of the current sensor, it is only turned on
   when the AIRs are closed. This is done by checking the Safety_Loop
@@ -64,7 +89,7 @@ void task_readCurrent(uint32_t data) {
 	 		// 	currReading = ((ADC * 57) / 100) + 3;
 	 		// }
 
-	 		currReading = ADC;
+	 		currVolt = (50 * ADC) / 102;
 	 		
 
 
@@ -82,6 +107,3 @@ void task_readCurrent(uint32_t data) {
  	}
  }
 
-//Drive I_ENB high
-//Read measurement
-//Drive I_ENB low
