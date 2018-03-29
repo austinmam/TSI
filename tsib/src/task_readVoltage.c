@@ -6,8 +6,6 @@ void v_adcinit(void) {
 
 	//Sets prescaler to 128
 	ADCSRA = (1<<ADPS2)|(1<<ADPS1)|(1<<ADPS0);
-
-	tempVolt_s = 0x0000;
 }
 
 
