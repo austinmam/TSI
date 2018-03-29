@@ -16,7 +16,7 @@ uint16_t recalculate(uint16_t voltRead) {
 		return voltRead * 1.04;
 	} else if((voltRead >= 70) && (voltRead < 85)) {
 		return voltRead * 1.05;
-	} else if(VoltRead >= 85) {
+	} else if(voltRead >= 85) {
 		return voltRead * 1.066;
 	} else {
 		return voltRead;
