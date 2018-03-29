@@ -19,7 +19,7 @@ void i_adcinit(void) {
 	//PORTA |= (1 << PA7);  
 }
 
-uint16_t recalculate(uint16_t currRead) {
+uint16_t recalculate_curr(uint16_t currRead) {
 	if(currRead < 20) {
 		return 0;
 	} else if((currRead > 20) && (currRead <= 25)) {
@@ -90,7 +90,7 @@ void task_readCurrent(uint32_t data) {
 	 		// }
 
 	 		currVolt = (50 * ADC) / 102;
-	 		
+	 		currReading = recalculate_curr(currVolt);
 
 
 	 		//Disables ADC
