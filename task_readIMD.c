@@ -17,10 +17,10 @@ void task_readIMD(uint32_t data) {
 	 		ADCSRA = (1<<ADEN);
 
 	 		//ADC channel 1 AND with 7 to clear previous channel	
-	 		imd_ch = 0x01 & 0x07;
+	 		channel = 0x01 & 0x07;
 
 	 		//Sets ADC channel
-	 		ADMUX |= (ADMUX & 0xF) | imd_ch;
+	 		ADMUX |= (ADMUX & 0xF) | channel;
 
 	 		//Starts conversion
 	 		(ADCSRA &= ~(1<<ADATE), ADCSRA |=  (1<<ADSC));
@@ -54,7 +54,7 @@ void task_readIMD(uint32_t data) {
 	 			imdFault = 0;
 	 		}
 
-	 		imdReading = (float)(5*tempVal/1023);
+	 		imdReading = (5 * tempVal) / 102;
 
 	 		//Next conversion will be current
 	 		volt = 0;

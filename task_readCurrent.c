@@ -19,6 +19,33 @@ void i_adcinit(void) {
 	//PORTA |= (1 << PA7);  
 }
 
+uint16_t recalculate_curr(uint16_t currRead) {
+	if(currRead < 20) {
+		return 0;
+	} else if((currRead > 20) && (currRead <= 25)) {
+		return currRead * 0.4;
+	} else if((currRead > 25) && (currRead <= 45)) {
+		return currRead * 0.7;
+	} else if((currRead > 45) && (currRead <= 65)) {
+		return currRead * 0.85;
+	} else if((currRead > 65) && (currRead <= 90)) {
+		return currRead * 0.95;
+	} else if((currRead > 90) && (currRead <= 95)) {
+		return currRead * 0.98;
+	} else if((currRead > 95) && (currRead <= 105)) {
+		return currRead;
+	} else if((currRead > 105) && (currRead <= 135)) {
+		return currRead * 1.03;
+	} else if((currRead > 135) && (currRead <= 145)) {
+		return currRead * 1.06;
+	} else if(currRead <= 19) {
+		return currRead = 0;
+	} else {
+		return currRead * 1.07;
+	}
+
+}
+
 /*
   TO reduce current draw of the current sensor, it is only turned on
   when the AIRs are closed. This is done by checking the Safety_Loop
@@ -33,10 +60,10 @@ void task_readCurrent(uint32_t data) {
 	 		ADCSRA = (1<<ADEN);
 
 	 		//ADC channel 1 AND with 7 to clear previous channel	
-	 		i_ch = 0x03 & 0x07;
+	 		channel = 0x03 & 0x07;
 
 	 		//Sets ADC channel
-	 		ADMUX |= (ADMUX & 0xF) | i_ch;
+	 		ADMUX |= (ADMUX & 0xF) | channel;
 
 	 		//Starts conversion
 	 		(ADCSRA &= ~(1<<ADATE), ADCSRA |=  (1<<ADSC));
@@ -51,11 +78,22 @@ void task_readCurrent(uint32_t data) {
 	 		ADCSRA |=  (1<<ADIF);
 
 	 		//Turns off LEDs for testing
-	 		//PORTC &= ~(1 << PC1);
+	 		//PORTC &= ~(1 << PC1);	 		
 
 	 		//Sets currReading to output of ADC
-	 		currVolt = (float)(ADC*5/1023);
-	 		currReading = (float)((currVolt - 1.25) / 0.0216);
+	 		
+
+	 		// if(ADC < 12) {
+	 		// 	currReading = ((ADC * 88) / 100);
+	 		// } else if (PINE & (1 << PE5)) {
+	 		// 	currReading = 0;
+	 		// } else {
+	 		// 	currReading = ((ADC * 57) / 100) + 3;
+	 		// }
+
+	 		currVolt = (50 * ADC) / 102;
+	 		currReading = recalculate_curr(currVolt);
+
 
 	 		//Disables ADC
 	 		(ADCSRA &= ~(1<<ADEN));	 		
@@ -71,6 +109,3 @@ void task_readCurrent(uint32_t data) {
  	}
  }
 
-//Drive I_ENB high
-//Read measurement
-//Drive I_ENB low
