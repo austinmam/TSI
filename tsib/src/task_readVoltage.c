@@ -10,13 +10,13 @@ void v_adcinit(void) {
 
 
 uint16_t recalculate(uint16_t tempVolt) {
-	if((tempVolt >= 65) && (tempVolt < 70)) {
+	if((tempVolt >= 650) && (tempVolt < 700)) {
 		voltCal = tempVolt * 1.04;
-	} else if((tempVolt >= 70) && (tempVolt < 85)) {
+	} else if((tempVolt >= 700) && (tempVolt < 850)) {
 		voltCal = tempVolt * 1.05;
-	} else if(tempVolt >= 85) {
+	} else if(tempVolt >= 850) {
 		voltCal = tempVolt * 1.066;
-	} else if(tempVolt < 5) {
+	} else if(tempVolt < 50) {
 		voltCal = 0;
 	} else {
 		voltCal = tempVolt;
@@ -60,7 +60,7 @@ void task_readVoltage(uint32_t data) {
 	 		// tempVolt_s |= tempVolt_t;
 	 		// voltReading = tempVolt_s;
 
-	 		tempVolt = (12 * ADC) / 102;
+	 		tempVolt = (12 * ADC) / 10.23;
 	 		voltReading = recalculate(tempVolt);
 	 		
 	 		//Disables ADC
