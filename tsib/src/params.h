@@ -56,6 +56,7 @@ volatile uint8_t channel;
 //LOGIC AND CAN
 volatile uint8_t brakePress;    
 volatile uint8_t throttlePlaus; 
+volatile uint8_t safetyLoop;
 
 //ADC Rotation
 volatile int volt;

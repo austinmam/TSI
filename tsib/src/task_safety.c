@@ -57,6 +57,12 @@ void task_safety(uint32_t data) {
 			//PORTC &= ~(1 << PC3);
 		}
 
+		if(!(PINE & (1 << PE5))) {  
+			safetyLoop = 1;
+		} else {
+			safetyLoop = 0;
+		}
+
 		switch(state) {
 
 			/* System starts in the IDLE state. */
@@ -71,6 +77,13 @@ void task_safety(uint32_t data) {
 				// 	state = SETUP_DRIVE;
 				// 		//buttonPushed = 0;
 				// }
+
+				if(!(PINB & (1 << PB4))) {
+					brakePress = 1;
+				} else {
+					brakePress = 0;
+				}
+
 				if(buttonPushed){ 					  //Check button pressed
 					if(!(PINB & (1 << PB4))) { 		  //Check brake pressed
 						if(!(PINE & (1 << PE5))) {    //Check Safety Loop is closed
@@ -176,6 +189,12 @@ void task_safety(uint32_t data) {
 				atomTimerDelay(75);  
 				PORTA |= (1 << PA3); // Drive LED on
 				atomTimerDelay(75);
+
+				if(!(PINB & (1 << PB4))) {
+					brakePress = 1;
+				} else {
+					brakePress = 0;
+				}
 
 				if(overCurr == 0) {
 					if(appsReading < THROTTLE_ON){
