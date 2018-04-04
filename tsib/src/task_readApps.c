@@ -8,6 +8,57 @@ void apps_adcinit(void) {
 	ADCSRA = (1<<ADPS2)|(1<<ADPS1)|(1<<ADPS0);
 }
 
+uint16_t recalculate_app(uint16_t tempApp) {
+	if(tempApp <= 4) {
+		appCal = 0;
+	} else if((tempApp > 4) && (tempApp <= 7)) {
+		appCal = tempApp - 5.9;
+	} else if((tempApp > 7) && (tempApp <= 9)) {
+		appCal = tempApp - 5.7;
+	} else if(tempApp == 10) {
+		appCal = tempApp - 4.2;
+	} else if(tempApp == 11) {
+		appCal = tempApp - 3.3;
+	} else if((tempApp >= 12) && (tempApp < 14)) {
+		appCal = tempApp - 3.7;
+	} else if((tempApp >= 14) && (tempApp < 16)) {
+		appCal = tempApp - 2.9;
+	} else if(tempApp == 16) {
+		appCal = tempApp - 2.2;
+	} else if(tempApp == 17) {
+		appCal = tempApp - 2.4;
+	} else if((tempApp >= 18) && (tempApp < 21)) {
+		appCal = tempApp - 1.1;
+	} else if((tempApp >= 21) && (tempApp < 23)) {
+		appCal = tempApp - 0.9;
+	} else if((tempApp >= 23) && (tempApp < 25)) {
+		appCal = tempApp + 0.1;
+	} else if(tempApp == 25) {
+		appCal = tempApp + 0.3;
+	} else if((tempApp >= 26) && (tempApp < 28)) {
+		appCal = tempApp + 1.1;
+	} else if((tempApp >= 28) && (tempApp < 30)) {
+		appCal = tempApp + 1.9;
+	} else if((tempApp >= 30) && (tempApp < 32)) {
+		appCal = tempApp + 2.6;
+	} else if((tempApp >= 32) && (tempApp < 36)) {
+		appCal = tempApp + 3.5;
+	} else if(tempApp == 36) {
+		appCal = tempApp + 3.7;
+	} else if((tempApp >= 37) && (tempApp < 39)) {
+		appCal = tempApp + 5.3;
+	} else if(tempApp == 39) {
+		appCal = tempApp + 6.2;
+	} else if((tempApp >= 40) && (tempApp < 42)) {
+		appCal = tempApp + 7.5;
+	} else {
+		appCal = tempApp + 8;
+	}
+	
+ 
+	return appCal;
+}
+
 void task_readApps(uint32_t data) {
  	for(;;) {
  		if(apps == 1) {
@@ -41,10 +92,8 @@ void task_readApps(uint32_t data) {
 	 		// PORTC &= ~(1 << PC1);
 
 	 		appsReading = ADC;
-	 		// tempApp = (100 * ADC) / 1023;
-	 		// appsVolt = (uint16_t)tempApp;
-
-	 		appsVolt = (5 * ADC) / 102;
+	 		tempApp = (5 * ADC) / 102;
+	 		appsVolt = recalculate_app(tempApp);
 
 	 		//Disables ADC
 	 		(ADCSRA &= ~(1<<ADEN));

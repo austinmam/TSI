@@ -9,18 +9,20 @@ void v_adcinit(void) {
 }
 
 
-uint16_t recalculate(uint16_t voltRead) {
-	if((voltRead >= 65) && (voltRead < 70)) {
-		return voltRead * 1.04;
-	} else if((voltRead >= 70) && (voltRead < 85)) {
-		return voltRead * 1.05;
-	} else if(voltRead >= 85) {
-		return voltRead * 1.066;
-	} else if(voltRead < 5) {
-		return 0;
+uint16_t recalculate(uint16_t tempVolt) {
+	if((tempVolt >= 65) && (tempVolt < 70)) {
+		voltCal = tempVolt * 1.04;
+	} else if((tempVolt >= 70) && (tempVolt < 85)) {
+		voltCal = tempVolt * 1.05;
+	} else if(tempVolt >= 85) {
+		voltCal = tempVolt * 1.066;
+	} else if(tempVolt < 5) {
+		voltCal = 0;
 	} else {
-		return voltRead;
+		voltCal = tempVolt;
 	}
+
+	return voltCal;
 }
 
 

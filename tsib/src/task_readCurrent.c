@@ -19,28 +19,30 @@ void i_adcinit(void) {
 	//PORTA |= (1 << PA7);  
 }
 
-uint16_t recalculate_curr(uint16_t currRead) {
-	if(currRead < 20) {
-		return 0;
-	} else if((currRead > 20) && (currRead <= 25)) {
-		return currRead * 0.4;
-	} else if((currRead > 25) && (currRead <= 45)) {
-		return currRead * 0.7;
-	} else if((currRead > 45) && (currRead <= 65)) {
-		return currRead * 0.85;
-	} else if((currRead > 65) && (currRead <= 90)) {
-		return currRead * 0.95;
-	} else if((currRead > 90) && (currRead <= 95)) {
-		return currRead * 0.98;
-	} else if((currRead > 95) && (currRead <= 105)) {
-		return currRead;
-	} else if((currRead > 105) && (currRead <= 135)) {
-		return currRead * 1.03;
-	} else if((currRead > 135) && (currRead <= 145)) {
-		return currRead * 1.06;
+uint16_t recalculate_curr(uint16_t currVolt) {
+	if(currVolt < 20) {
+		currCal = 0;
+	} else if((currVolt > 20) && (currVolt <= 25)) {
+		currCal = currVolt * 0.4;
+	} else if((currVolt > 25) && (currVolt <= 45)) {
+		currCal = currVolt * 0.7;
+	} else if((currVolt > 45) && (currVolt <= 65)) {
+		currCal = currVolt * 0.85;
+	} else if((currVolt > 65) && (currVolt <= 90)) {
+		currCal = currVolt * 0.95;
+	} else if((currVolt > 90) && (currVolt <= 95)) {
+		currCal = currVolt * 0.98;
+	} else if((currVolt > 95) && (currVolt <= 105)) {
+		currCal = currVolt;
+	} else if((currVolt > 105) && (currVolt <= 135)) {
+		currCal = currVolt * 1.03;
+	} else if((currVolt > 135) && (currVolt <= 145)) {
+		currCal = currVolt * 1.06;
 	} else {
-		return currRead * 1.07;
+		currCal = currVolt * 1.07;
 	}
+
+	return currCal;
 
 }
 

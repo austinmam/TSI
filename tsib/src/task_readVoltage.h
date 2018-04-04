@@ -10,9 +10,10 @@
 
 uint8_t v_ch;
 uint16_t tempVolt;
+uint16_t voltCal;
 
 void v_adcinit(void);
-uint16_t recalculate(uint16_t voltRead);
+uint16_t recalculate(uint16_t tempVolt);
 void task_readVoltage(uint32_t data);
 
 #endif /*TASK_READVOLTAGE_H*/
