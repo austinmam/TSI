@@ -68,7 +68,12 @@ void task_safety(uint32_t data) {
 			/* System starts in the IDLE state. */
 			case IDLE:
 				tsi_state = 0x00;
-				throttlePlaus = 1;
+				
+				if((PINB & (1 << PB5))) { //1 is implausible
+					throttlePlaus = 0;
+				} else {
+					throttlePlaus = 1;
+				}
 
 				// if((!(PINB & (1 << PB4)) && (PINA & (1 << PA5)))){
 				// 	PORTA |= (1 << PA4);  //Sets RTDS_CTRL high
@@ -84,10 +89,10 @@ void task_safety(uint32_t data) {
 					brakePress = 0;
 				}
 
-				if(buttonPushed){ 					  //Check button pressed
-					if(!(PINB & (1 << PB4))) { 		  //Check brake pressed
-						if(!(PINE & (1 << PE5))) {    //Check Safety Loop is closed
-							if(!(PINB & (1 << PB5))) {  //Check Throttle Plausibility
+				if(buttonPushed){ 					  			//Check button pressed
+					if(!(PINB & (1 << PB4))) { 		  			//Check brake pressed
+						if(!(PINE & (1 << PE5))) {    			//Check Safety Loop is closed
+							if(!(PINB & (1 << PB5))) {  		//Check Throttle Plausibility
 								if(appsReading < THROTTLE_ON) { //Throttle must be below 0.5V
 									state = SETUP_DRIVE;
 									buttonPushed = 0;
@@ -103,7 +108,12 @@ void task_safety(uint32_t data) {
 			/* Setting up throttle and showing that drive is happening with LED on */
 			case SETUP_DRIVE:
 				tsi_state = 0x01;
-				throttlePlaus = 1;
+				
+				if((PINB & (1 << PB5))) { //1 is implausible
+					throttlePlaus = 0;
+				} else {
+					throttlePlaus = 1;
+				}
 				
 				PORTB |= (1 << PB6); // Sets Throttle Select HIGH
 				//PORTC |= (1 << PC2); // Spare Red LED on (debugging)
@@ -224,7 +234,13 @@ void task_safety(uint32_t data) {
 
 			case SETUP_IDLE:
 				tsi_state = 0x03;
-				throttlePlaus = 1;
+				
+				if((PINB & (1 << PB5))) { //1 is implausible
+					state = SETUP_IDLE;
+					throttlePlaus = 0;
+				} else {
+					throttlePlaus = 1;
+				}
 				
 				PORTA &= ~(1 << PA3); // Drive LED off
 				PORTB &= ~(1 << PB6); // Sets Throttle Select LOW
