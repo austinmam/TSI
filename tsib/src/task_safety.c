@@ -35,7 +35,7 @@ void safety_init(void) {
 	tsi_state = 0x00;
 
 	brakePress = 0;
-	throttlePlaus = 0;
+	throttlePlaus = 1;
 	throttle_control = 0;
 }
 
@@ -68,7 +68,7 @@ void task_safety(uint32_t data) {
 			/* System starts in the IDLE state. */
 			case IDLE:
 				tsi_state = 0x00;
-				throttlePlaus = 0;
+				throttlePlaus = 1;
 
 				// if((!(PINB & (1 << PB4)) && (PINA & (1 << PA5)))){
 				// 	PORTA |= (1 << PA4);  //Sets RTDS_CTRL high
@@ -103,7 +103,7 @@ void task_safety(uint32_t data) {
 			/* Setting up throttle and showing that drive is happening with LED on */
 			case SETUP_DRIVE:
 				tsi_state = 0x01;
-				throttlePlaus = 0;
+				throttlePlaus = 1;
 				
 				PORTB |= (1 << PB6); // Sets Throttle Select HIGH
 				//PORTC |= (1 << PC2); // Spare Red LED on (debugging)
@@ -177,7 +177,7 @@ void task_safety(uint32_t data) {
 
 			case OVERCURRENT:
 				tsi_state = 0x04;
-				throttlePlaus = 0;
+				throttlePlaus = 1;
 
 				PORTC |= (1 << PC2); //Red LED
 				PORTB &= ~(1 << PB6); // Sets Throttle Select LOW
@@ -224,7 +224,7 @@ void task_safety(uint32_t data) {
 
 			case SETUP_IDLE:
 				tsi_state = 0x03;
-				throttlePlaus = 0;
+				throttlePlaus = 1;
 				
 				PORTA &= ~(1 << PA3); // Drive LED off
 				PORTB &= ~(1 << PB6); // Sets Throttle Select LOW
