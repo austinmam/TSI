@@ -100,8 +100,6 @@ void task_safety(uint32_t data) {
 							}	
 						}
 					}
-					state = SETUP_DRIVE; //TESTING
-					buttonPushed = 0;
 				}
 				break;
 
