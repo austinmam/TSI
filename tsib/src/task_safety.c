@@ -101,6 +101,7 @@ void task_safety(uint32_t data) {
 							}	
 						}
 					}
+					buttonPushed = 0;
 				}
 				break;
 
@@ -145,6 +146,7 @@ void task_safety(uint32_t data) {
 				if(!(PINB & (1 << PB4))) {
 					brakePress = 1;
 					if(appsReading > THROTTLE_ON) {
+						throttlePlaus = 0;
 						state = SETUP_IDLE;
 					}
 				} else {
