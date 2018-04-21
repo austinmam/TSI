@@ -32,11 +32,10 @@ void task_button(uint32_t data){
 				break;
 			case PUSHED:
 				if (!(PINA & (1 << PA5))) {
-					PORTC |= (1 << PC3);
+					
 					pushState = PUSHED;
 				}
 				else {
-					PORTC &= ~(1 << PC3);
 					pushState = MAYBENOPUSH;
 				}
 				break;
