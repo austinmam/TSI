@@ -13,7 +13,9 @@
 #define MAYBENOPUSH 3
 
 int pushState;
-int buttonPushed;
+//int buttonPushed;
+uint8_t buttonPushed;
+uint8_t buttonCan;
 
 void task_button(uint32_t data);
 

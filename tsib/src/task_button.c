@@ -7,6 +7,7 @@ void task_button_init(void){
 
 	pushState = NOPUSH;
 	buttonPushed = 0;
+	buttonCan = 0;
 }
 
 
@@ -32,9 +33,11 @@ void task_button(uint32_t data){
 				break;
 			case PUSHED:
 				if (!(PINA & (1 << PA5))) {
+					buttonCan = 1;
 					pushState = PUSHED;
 				}
 				else {
+					buttonCan = 0;
 					pushState = MAYBENOPUSH;
 				}
 				break;
