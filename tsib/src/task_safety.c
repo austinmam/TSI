@@ -103,12 +103,7 @@ void task_safety(uint32_t data) {
 							}	
 						}
 					}
-					PORTC |= (1 << PC3);
 					buttonPushed = 0;
-				}
-
-				if(buttonPushed == 0){
-					PORTC &= ~(1 << PC3);
 				}
 				break;
 
