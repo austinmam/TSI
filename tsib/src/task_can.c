@@ -58,6 +58,25 @@ void task_can(uint32_t data){
 
 		while(can_get_status(&can_frame) == CAN_STATUS_NOT_COMPLETED);
 
+		//Condition packet
+		can_frame.id.std = 0xF4;
+		can_frame.dlc = 7
+
+		can_buff[0] = buttonPushed;
+		can_buff[1] = brakePress;
+		can_buff[2] = safetyLoop;
+		can_buff[3] = throttlePlaus;
+		can_buff[4] = appsReading >> 8;
+		can_buff[5] = appsReading & 0xFF;
+		can_buff[6] = throttle_control;
+
+		while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){
+			
+		}
+
+		while(can_get_status(&can_frame) == CAN_STATUS_NOT_COMPLETED);
+
+
 		atomTimerDelay(100);
 	}
 }
