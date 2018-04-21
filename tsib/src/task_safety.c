@@ -90,7 +90,7 @@ void task_safety(uint32_t data) {
 					brakePress = 0;
 				}
 
-				if(appsReading > 0.5){
+				if(appsReading > 184){
 					PORTC |= (1 << PC3);
 				} else {
 					PORTC &= ~(1 << PC3);
