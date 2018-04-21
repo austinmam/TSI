@@ -64,12 +64,6 @@ void task_safety(uint32_t data) {
 			safetyLoop = 0;
 		}
 
-		if(throttle_control == 1) {
-			PORTC |= (1 << PC2);
-		}else{
-			PORTC &= ~(1 << PC2); 
-		}
-
 		switch(state) {
 
 			/* System starts in the IDLE state. */
@@ -94,6 +88,12 @@ void task_safety(uint32_t data) {
 					brakePress = 1;
 				} else {
 					brakePress = 0;
+				}
+
+				if(appsReading > 0.5){
+					PORTC |= (1 << PC3);
+				} else {
+					PORTC &= ~(1 << PC3);
 				}
 
 				if(buttonPushed){ 					  			//Check button pressed
