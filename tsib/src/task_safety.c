@@ -103,6 +103,7 @@ void task_safety(uint32_t data) {
 							}	
 						}
 					}
+					PORTC |= (1 << PC3);
 					buttonPushed = 0;
 				}
 				break;
@@ -120,6 +121,8 @@ void task_safety(uint32_t data) {
 				PORTB |= (1 << PB6); // Sets Throttle Select HIGH
 				//PORTC |= (1 << PC2); // Spare Red LED on (debugging)
 				
+				PORTC &= ~(1 << PC3); //turn off blue led
+
 				PORTA |= (1 << PA4);  //Sets RTDS_CTRL high
 				atomTimerDelay(150);
 				PORTA &= ~(1 << PA4);
@@ -131,7 +134,7 @@ void task_safety(uint32_t data) {
 			case DRIVE:
 				tsi_state = 0x02;
 				PORTA |= (1 << PA3); // Drive LED on
-				PORTC |= (1 << PC3); //blue LED
+				//PORTC |= (1 << PC3); //blue LED
 
 				//atomTimerDelay(200);
 				// AIRs, and Throttle control (signal from SCADA) send out of drive
@@ -166,6 +169,7 @@ void task_safety(uint32_t data) {
 
 				if((buttonPushed) || (throttle_control == 1) || (PINE & (1 << PE5)))
 				{
+					PORTC |= (1 << PC3); //turn on blue led
 					state = SETUP_IDLE;
 					throttle_control = 0; //set throttle control back to 0
 					buttonPushed = 0;
