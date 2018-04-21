@@ -62,7 +62,7 @@ void task_can(uint32_t data){
 		can_frame.id.std = 0xF4;
 		can_frame.dlc = 7;
 
-		can_buff[0] = buttonPushed;
+		can_buff[0] = buttonPushed?1:0;
 		can_buff[1] = brakePress;
 		can_buff[2] = safetyLoop;
 		can_buff[3] = throttlePlaus;
