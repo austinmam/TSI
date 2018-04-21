@@ -64,6 +64,12 @@ void task_safety(uint32_t data) {
 			safetyLoop = 0;
 		}
 
+		if(throttle_control == 1) {
+			PORTC |= (1 << PC2);
+		}else{
+			PORTC &= ~(1 << PC2); 
+		}
+
 		switch(state) {
 
 			/* System starts in the IDLE state. */
