@@ -27,7 +27,6 @@ void task_button(uint32_t data){
 			case MAYBEPUSH:
 				if ((PINA & (1 << PA5))) {
 					 buttonPushed = ~buttonPushed;
-					//buttonPushed = 1;
 					pushState = PUSHED;
 				} else pushState = NOPUSH;
 				break;

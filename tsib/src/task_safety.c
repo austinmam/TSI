@@ -94,19 +94,21 @@ void task_safety(uint32_t data) {
 					if(!(PINB & (1 << PB4))) { 		  			//Check brake pressed
 						if(!(PINE & (1 << PE5))) {    			//Check Safety Loop is closed
 							if(!(PINB & (1 << PB5))) {  		//Check Throttle Plausibility
-								//if(appsReading < THROTTLE_ON) { //Throttle must be below 0.5V
+								if(appsReading < THROTTLE_ON) { //Throttle must be below 0.5V
 									if(throttle_control == 0){	//Drop out of drive signal from SCADA must be low
 										state = SETUP_DRIVE;
 										buttonPushed = 0;
 									}
-								//}
+								}
 							}	
 						}
 					}
-					//PORTC |= (1 << PC3);
-					//atomTimerDelay(100);
-					//PORTC &= ~(1 << PC3);
+					PORTC |= (1 << PC3);
 					buttonPushed = 0;
+				}
+
+				if(buttonPushed == 0){
+					PORTC &= ~(1 << PC3);
 				}
 				break;
 
