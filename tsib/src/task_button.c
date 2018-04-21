@@ -32,7 +32,6 @@ void task_button(uint32_t data){
 				break;
 			case PUSHED:
 				if (!(PINA & (1 << PA5))) {
-					
 					pushState = PUSHED;
 				}
 				else {

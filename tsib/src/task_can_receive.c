@@ -34,8 +34,8 @@ void task_can_receive(uint32_t data){
 			while(can_cmd(&can_frame_receive) != CAN_CMD_ACCEPTED);
 		}
 
-		For testing whether message can be received or not
-		Turns on and off an LED based on message
+		//For testing whether message can be received or not
+		//Turns on and off an LED based on message
 		if(throttle_control != 0x00){
 			PORTC |= (1 << PC2);
 		}else{
