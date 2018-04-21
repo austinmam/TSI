@@ -21,30 +21,27 @@ void task_button(uint32_t data){
 		// // Debounce the button + store the state
 		switch (pushState) {
 			case NOPUSH:
-				if ((PINA & (1 << PA5))) 
-					{
-						pushState = MAYBEPUSH;
-					}
+				if ((PINA & (1 << PA5))) pushState = MAYBEPUSH;
 				else pushState = NOPUSH;
 				break;
 			case MAYBEPUSH:
 				if ((PINA & (1 << PA5))) {
-					PORTC |= (1 << PC3);
-					 buttonPushed = ~buttonPushed;
+					buttonPushed = ~buttonPushed;
 					pushState = PUSHED;
 				} else pushState = NOPUSH;
 				break;
 			case PUSHED:
 				if ((PINA & (1 << PA5))) {
+					PORTC |= (1 << PC3);
 					pushState = PUSHED;
 				}
-				else pushState = MAYBENOPUSH;
+				else {
+					PORTC &= ~(1 << PC3);
+					pushState = MAYBENOPUSH;
+				}
 				break;
 			case MAYBENOPUSH:
-				if ((PINA & (1 << PA5))){
-					PORTC &= ~(1 << PC3);
-					pushState = PUSHED;
-				}
+				if ((PINA & (1 << PA5))) pushState = PUSHED;
 				else pushState = NOPUSH;
 				break;
 		}
