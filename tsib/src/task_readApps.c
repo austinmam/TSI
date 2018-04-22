@@ -65,7 +65,7 @@ void task_readApps(uint32_t data) {
 	 		apps_adcinit();
 
 	 		//Enables ADC
-	 		ADCSRA = (1<<ADEN);	
+	 		ADCSRA = (1<<ADEN);
 
 	 		//ADC channel 0 AND with 7 to clear previous channel		
 	 		channel = 0x00 & 0x07; 		
@@ -93,7 +93,8 @@ void task_readApps(uint32_t data) {
 
 	 		appsReading = ADC;
 	 		tempApp = (5 * ADC) / 102;
-	 		appsVolt = recalculate_app(tempApp);
+	 		//appsVolt = recalculate_app(tempApp);
+	 		appsVolt = tempApp;
 
 	 		//Disables ADC
 	 		(ADCSRA &= ~(1<<ADEN));
