@@ -92,7 +92,7 @@ void task_readApps(uint32_t data) {
 	 		// PORTC &= ~(1 << PC1);
 
 	 		appsReading = ADC;
-	 		tempApp = (5 * ADC) / 102;
+	 		tempApp = (5 * ADC) / 10.23;
 	 		//appsVolt = recalculate_app(tempApp);
 	 		appsVolt = tempApp;
 
