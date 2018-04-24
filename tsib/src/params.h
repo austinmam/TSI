@@ -51,7 +51,7 @@ volatile uint8_t overCurr;
 volatile uint8_t channel;
 
 
-#define THROTTLE_ON 184
+#define THROTTLE_ON 50
 
 //LOGIC AND CAN
 volatile uint8_t brakePress;    

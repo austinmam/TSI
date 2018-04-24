@@ -53,6 +53,7 @@ uint16_t recalculate_curr(uint16_t currVolt) {
 */
 void task_readCurrent(uint32_t data) {
  	for(;;) {
+
  		if(curr == 1) {
 	 		i_adcinit();	 		
 
@@ -65,8 +66,10 @@ void task_readCurrent(uint32_t data) {
 	 		//Sets ADC channel
 	 		ADMUX |= (ADMUX & 0xF) | channel;
 
+/*
 	 		//Starts conversion
 	 		(ADCSRA &= ~(1<<ADATE), ADCSRA |=  (1<<ADSC));
+
 
 	 		//Waits for conversion to complete
 	 		while(!(ADCSRA  &  (1<<ADIF))) {
@@ -94,6 +97,15 @@ void task_readCurrent(uint32_t data) {
 	 		currVolt = (50 * ADC) / 102;
 	 		currReading = recalculate_curr(currVolt);
 
+			*/ 
+
+			ADCSRA |= (1 << ADSC);
+	 		while(ADCSRA & (1 << ADSC));
+	 		currReading = ADC;
+
+	 		ADCSRA |= (1 << ADSC);
+	 		while(ADCSRA & (1 << ADSC));
+	 		currReading = (50 * ADC) / 102.3;
 
 	 		//Disables ADC
 	 		(ADCSRA &= ~(1<<ADEN));	 		

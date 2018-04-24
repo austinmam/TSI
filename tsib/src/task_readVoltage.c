@@ -40,6 +40,7 @@ void task_readVoltage(uint32_t data) {
 	 		//Sets ADC channel
 	 		ADMUX |= (ADMUX & 0xF) | channel;
 
+	 		/*
 	 		//Starts conversion
 	 		(ADCSRA &= ~(1<<ADATE), ADCSRA |=  (1<<ADSC));
 
@@ -50,8 +51,20 @@ void task_readVoltage(uint32_t data) {
 	 			// atomTimerDelay(50);
 	 		}
 
+	 		low = ADCL;
+	 		high = ADCH << 8;
+
 	 		//Clears ADC interrupt flag
 	 		ADCSRA |=  (1<<ADIF);
+	 		*/
+
+	 		ADCSRA |= (1 << ADSC);
+	 		while(ADCSRA & (1 << ADSC));
+	 		voltReading = ADC;
+
+	 		ADCSRA |= (1 << ADSC);
+	 		while(ADCSRA & (1 << ADSC));
+	 		voltReading = (12 * ADC) / 10.23;
 
 	 		//Turns off LED for testing
 	 		// PORTC &= ~(1 << PC3);
@@ -60,8 +73,11 @@ void task_readVoltage(uint32_t data) {
 	 		// tempVolt_s |= tempVolt_t;
 	 		// voltReading = tempVolt_s;
 
-	 		tempVolt = (12 * ADC) / 10.23;
-	 		voltReading = recalculate(tempVolt);
+	 		//tempVolt = (12 * ADC) / 10.23;
+	 		//voltReading = recalculate(tempVolt);
+	 		
+	 		//voltReading = high | low;
+	 		//currReading = ADC;
 	 		
 	 		//Disables ADC
 	 		(ADCSRA &= ~(1<<ADEN));

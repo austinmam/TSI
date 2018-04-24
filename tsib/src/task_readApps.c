@@ -61,6 +61,7 @@ uint16_t recalculate_app(uint16_t tempApp) {
 
 void task_readApps(uint32_t data) {
  	for(;;) {
+
  		if(apps == 1) {
 	 		apps_adcinit();
 
@@ -73,6 +74,7 @@ void task_readApps(uint32_t data) {
 	 		//Sets ADC channel
 	 		ADMUX |= (ADMUX & 0xF) | channel;
 
+/*
 	 		//Starts conversion
 	 		(ADCSRA &= ~(1<<ADATE), ADCSRA |=  (1<<ADSC));
 
@@ -95,6 +97,15 @@ void task_readApps(uint32_t data) {
 	 		tempApp = (5 * ADC) / 10.23;
 	 		//appsVolt = recalculate_app(tempApp);
 	 		appsVolt = tempApp;
+			*/
+
+			ADCSRA |= (1 << ADSC);
+	 		while(ADCSRA & (1 << ADSC));
+	 		appsVolt = ADC;
+
+	 		ADCSRA |= (1 << ADSC);
+	 		while(ADCSRA & (1 << ADSC));
+	 		appsVolt = (5 * ADC) / 10.23;
 
 	 		//Disables ADC
 	 		(ADCSRA &= ~(1<<ADEN));

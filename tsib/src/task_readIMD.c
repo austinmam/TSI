@@ -10,6 +10,7 @@ void imd_adcinit(void) {
 
 void task_readIMD(uint32_t data) {	
  	for(;;) {
+
  		if(imd == 1) {
 	 		imd_adcinit();
 
@@ -22,6 +23,7 @@ void task_readIMD(uint32_t data) {
 	 		//Sets ADC channel
 	 		ADMUX |= (ADMUX & 0xF) | channel;
 
+/*
 	 		//Starts conversion
 	 		(ADCSRA &= ~(1<<ADATE), ADCSRA |=  (1<<ADSC));
 
@@ -41,6 +43,17 @@ void task_readIMD(uint32_t data) {
 	 		//Sets imdReading to output of ADC
 	 		tempVal = ADC;
 
+
+
+*/
+	 		ADCSRA |= (1 << ADSC);
+	 		while(ADCSRA & (1 << ADSC));
+	 		imdReading = ADC;
+
+	 		ADCSRA |= (1 << ADSC);
+	 		while(ADCSRA & (1 << ADSC));
+	 		imdReading = (5 * ADC) / 102.3;
+
 	 		//Disables ADC
 	 		(ADCSRA &= ~(1<<ADEN));
 
@@ -54,7 +67,7 @@ void task_readIMD(uint32_t data) {
 	 			imdFault = 0;
 	 		}
 
-	 		imdReading = (5 * tempVal) / 102;
+	 		
 
 	 		//Next conversion will be current
 	 		volt = 0;
@@ -62,6 +75,7 @@ void task_readIMD(uint32_t data) {
 	 		curr = 1;
 	 		apps = 0;
 	 	}
+		
 		
  		atomTimerDelay(50);
  	}
