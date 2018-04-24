@@ -69,7 +69,7 @@ void task_readApps(uint32_t data) {
 	 		ADCSRA = (1<<ADEN);
 
 	 		//ADC channel 0 AND with 7 to clear previous channel		
-	 		channel = 0x00 & 0x07; 		
+	 		channel = 0x00 & 0x07;	
 
 	 		//Sets ADC channel
 	 		ADMUX |= (ADMUX & 0xF) | channel;

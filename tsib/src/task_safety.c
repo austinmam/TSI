@@ -155,7 +155,7 @@ void task_safety(uint32_t data) {
 				//Throttle Select off if brake pressed and Throttle on
 				if(!(PINB & (1 << PB4))) {
 					brakePress = 1;
-					if(appsVolt > THROTTLE_ON) {
+					if(appsVolt > THROTTLE_OUT) {
 						throttlePlaus = 0;
 						state = SETUP_IDLE;
 					}
