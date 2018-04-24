@@ -101,7 +101,7 @@ void task_readApps(uint32_t data) {
 
 			ADCSRA |= (1 << ADSC);
 	 		while(ADCSRA & (1 << ADSC));
-	 		appsVolt = ADC;
+	 		appsReading = ADC;
 
 	 		ADCSRA |= (1 << ADSC);
 	 		while(ADCSRA & (1 << ADSC));
