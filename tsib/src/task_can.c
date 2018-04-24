@@ -66,8 +66,8 @@ void task_can(uint32_t data){
 		can_buff[1] = brakePress;
 		can_buff[2] = safetyLoop;
 		can_buff[3] = throttlePlaus;
-		can_buff[4] = appsReading >> 8;
-		can_buff[5] = appsReading & 0xFF;
+		can_buff[4] = appsVolt >> 8;
+		can_buff[5] = appsVolt & 0xFF;
 		can_buff[6] = throttle_control;
 
 		while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){
