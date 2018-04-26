@@ -58,6 +58,8 @@ volatile uint8_t channel;
 volatile uint8_t brakePress;    
 volatile uint8_t throttlePlaus; 
 volatile uint8_t safetyLoop;
+volatile uint8_t throttleBrake;
+volatile uint8_t safety;
 
 //ADC Rotation
 volatile int volt;
