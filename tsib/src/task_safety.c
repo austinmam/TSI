@@ -157,10 +157,14 @@ void task_safety(uint32_t data) {
 					brakePress = 1;
 					if(appsVolt > THROTTLE_OUT) {
 						throttlePlaus = 0;
+						throttleBrake = 1;
 						state = SETUP_IDLE;
+					} else {
+						throttleBrake = 0;
 					}
 				} else {
 					brakePress = 0;
+					throttleBrake = 0;
 				}
 
 				//drop out of drive if throttle implausibility occurs
@@ -178,6 +182,12 @@ void task_safety(uint32_t data) {
 					state = SETUP_IDLE;
 					throttle_control = 0; //set throttle control back to 0
 					buttonPushed = 0;
+				}
+				
+				if((PINE & (1 << PE5))) {
+					safety = 1;
+				} else {
+					safety = 0;
 				}
 
 				// if((throttle_control != 0) || (PINE & (1 << PE5)))
