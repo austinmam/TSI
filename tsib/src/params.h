@@ -53,6 +53,7 @@ volatile uint8_t channel;
 
 #define THROTTLE_ON 60
 #define THROTTLE_OUT 100
+#define brakeTime 50
 
 //LOGIC AND CAN
 volatile uint8_t brakePress;    

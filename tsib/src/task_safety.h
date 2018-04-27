@@ -15,4 +15,6 @@
 int state;
 void task_safety(uint32_t data);
 
+uint32_t currTime;
+
 #endif /*TASK_SAFETY_H*/

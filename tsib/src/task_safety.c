@@ -156,9 +156,16 @@ void task_safety(uint32_t data) {
 				if(!(PINB & (1 << PB4))) {
 					brakePress = 1;
 					if(appsVolt > THROTTLE_OUT) {
-						throttlePlaus = 0;
-						throttleBrake = 1;
-						state = SETUP_IDLE;
+						currTime = atomTimeGet() + brakeTime;
+
+						while(atomTimeGet() < currTime);
+
+						if((appsVolt > THROTTLE_OUT) && (!(PINB & (1 << PB4)))) {
+							throttlePlaus = 0;
+							throttleBrake = 1;
+							state = SETUP_IDLE;
+						}
+						
 					} else {
 						throttleBrake = 0;
 					}
