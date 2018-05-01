@@ -2,8 +2,8 @@
 
 
 void task_button_init(void){
-
-	PORTA |= (1 << PA5);
+	DDRA  &= ~(1<<PA5);//set pin as input
+	PORTA |= (1 << PA5);//turn on pull up for pin
 
 	pushState = NOPUSH;
 	buttonPushed = 0;

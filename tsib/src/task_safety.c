@@ -17,9 +17,18 @@ void safety_init(void) {
 	DDRB |= (1 << DDB6);
 
 	// PB4 - BP_uC - Needs pull-up
+
+
 	// PB5 - Throttle_PL - Simple read
+	DDRB &= ~(1<<PB5);//this is a new line 05/01/2018-Waseh
+	PORTB |= (1 << PB5);
+
+
+	//break pressed
+	DDRB &= ~(1<<PB4);//this is a new line 05/01/2018-Waseh
 	PORTB |= (1 << PB4);
 
+	//LED
 	PORTA |= (1 << PA5);
 
 	// Sets port for spare LEDs as output
@@ -27,7 +36,10 @@ void safety_init(void) {
 
 	// PE5 - AIR's - Needs pull-up
 	// PE6 - BOT_uC - Needs pull-up (not currently used)
-	PORTE |= (1 << PE5);
+	//=============================================================================================
+	//safety loop
+	DDRE  &= ~(1<<PE5);//set pin E5 to input pin . this is a new line 05/01/2018-Waseh
+	PORTE |= (1 << PE5);//enable pull up resistor on the pin
 
 	state = IDLE;
 
