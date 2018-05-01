@@ -20,6 +20,7 @@ void task_button(uint32_t data){
 	for(;;) {
 		
 		// // Debounce the button + store the state
+		//==============================================Active High signal
 		switch (pushState) {
 			case NOPUSH:
 				if (!(PINA & (1 << PA5))) pushState = MAYBEPUSH;
@@ -27,14 +28,13 @@ void task_button(uint32_t data){
 				break;
 			case MAYBEPUSH:
 				if (!(PINA & (1 << PA5))) {
-					
+					buttonPushed = ~buttonPushed;
+					buttonCan = 1;
 					pushState = PUSHED;
 				} else pushState = NOPUSH;
 				break;
 			case PUSHED:
 				if (!(PINA & (1 << PA5))) {
-					buttonCan = 1;
-					buttonPushed = 1;
 					pushState = PUSHED;
 				}
 				else {
