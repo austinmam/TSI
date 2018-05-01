@@ -96,20 +96,20 @@ void task_safety(uint32_t data) {
 					PORTC &= ~(1 << PC3);
 				}
 
-				if(buttonPushed){ 					  			//Check button pressed
+				if(!buttonPushed){ 					  			//Check button pressed
 					if(!(PINB & (1 << PB4))) { 		  			//Check brake pressed
 						if(!(PINE & (1 << PE5))) {    			//Check Safety Loop is closed
-						 	if(!(PINB & (1 << PB5))) {  		//Check Throttle Plausibility
-						 		if(appsVolt <= THROTTLE_ON) {   //Throttle must be below 0.5V
+						 	//if(!(PINB & (1 << PB5))) {  		//Check Throttle Plausibility
+						 		//if(appsVolt <= THROTTLE_ON) {   //Throttle must be below 0.5V **MOMENTARILY OUT**
 						 			if(throttle_control == 0){	//Drop out of drive signal from SCADA must be low
 										state = SETUP_DRIVE;
-										buttonPushed = 0;
+										buttonPushed = 1;
 						 			}
-						 		}
-						 	}	
+						 		//}
+						 	//}	
 						}
 					}
-					buttonPushed = 0;
+					buttonPushed = 1;
 				}
 				break;
 
@@ -152,29 +152,29 @@ void task_safety(uint32_t data) {
 				// 	throttle_control = 0; //set throttle control back to 0
 				// }
 
-				//Throttle Select off if brake pressed and Throttle on
-				if(!(PINB & (1 << PB4))) {
-					brakePress = 1;
-					if(appsVolt > THROTTLE_OUT) {
-						currTime = atomTimeGet() + brakeTime;
+				//Throttle Select off if brake pressed and Throttle on. MOMENTARILY OUT
+				// if(!(PINB & (1 << PB4))) {
+				// 	brakePress = 1;
+				// 	if(appsVolt > THROTTLE_OUT) {
+				// 		currTime = atomTimeGet() + brakeTime;
 
-						while(atomTimeGet() < currTime);
+				// 		while(atomTimeGet() < currTime);
 
-						if((appsVolt > THROTTLE_OUT) && (!(PINB & (1 << PB4)))) {
-							throttlePlaus = 0;
-							throttleBrake = 1;
-							state = SETUP_IDLE;
-						}
+				// 		if((appsVolt > THROTTLE_OUT) && (!(PINB & (1 << PB4)))) {
+				// 			throttlePlaus = 0;
+				// 			throttleBrake = 1;
+				// 			state = SETUP_IDLE;
+				// 		}
 						
-					} else {
-						throttleBrake = 0;
-					}
-				} else {
-					brakePress = 0;
-					throttleBrake = 0;
-				}
+				// 	} else {
+				// 		throttleBrake = 0;
+				// 	}
+				// } else {
+				// 	brakePress = 0;
+				// 	throttleBrake = 0;
+				// }
 
-				//drop out of drive if throttle implausibility occurs
+				//drop out of drive if throttle implausibility occurs MOMENTARILY OUT
 				if((PINB & (1 << PB5))) { //1 is implausible
 					state = SETUP_IDLE;
 					throttlePlaus = 0;
@@ -183,19 +183,19 @@ void task_safety(uint32_t data) {
 					//state = SETUP_IDLE;
 				}
 
-				if((buttonPushed) || (throttle_control == 1) || (PINE & (1 << PE5)))
+				if(/*(!buttonPushed) || */(throttle_control == 1) || ((PINE & (1 << PE5))))
 				{
 					//PORTC |= (1 << PC3); //turn on blue led
 					state = SETUP_IDLE;
 					throttle_control = 0; //set throttle control back to 0
-					buttonPushed = 0;
+					buttonPushed = 1;
 				}
 				
-				if((PINE & (1 << PE5))) {
+				/*if((PINE & (1 << PE5))) {
 					safety = 1;
 				} else {
 					safety = 0;
-				}
+				}*/
 
 				// if((throttle_control != 0) || (PINE & (1 << PE5)))
 				// {

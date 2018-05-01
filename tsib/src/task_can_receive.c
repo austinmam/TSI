@@ -28,7 +28,7 @@ void task_can_receive(uint32_t data){
 		atomTimerDelay(500);//wait for 5 seconds to see if message arrived
 
 		if(can_get_status(&can_frame_receive)== CAN_STATUS_COMPLETED){
-			throttle_control = can_buff_receive[0]==1?1:0;
+			if(can_buff_receive[0]==1) throttle_control = 1;
 		}else{//if not received in 5 seconds, abort the frame
 			can_frame_receive.cmd = CMD_ABORT;
 			while(can_cmd(&can_frame_receive) != CAN_CMD_ACCEPTED);

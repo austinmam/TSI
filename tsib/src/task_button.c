@@ -27,13 +27,14 @@ void task_button(uint32_t data){
 				break;
 			case MAYBEPUSH:
 				if (!(PINA & (1 << PA5))) {
-					buttonPushed = ~buttonPushed;
+					
 					pushState = PUSHED;
 				} else pushState = NOPUSH;
 				break;
 			case PUSHED:
 				if (!(PINA & (1 << PA5))) {
 					buttonCan = 1;
+					buttonPushed = 1;
 					pushState = PUSHED;
 				}
 				else {
