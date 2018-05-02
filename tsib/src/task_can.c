@@ -62,7 +62,7 @@ void task_can(uint32_t data){
 		can_frame.id.std = 0xF4;
 		can_frame.dlc = 7;
 
-		can_buff[0] = buttonCan;
+		can_buff[0] = (PINA & (1 << PA5))==0?0:1;
 		can_buff[1] = brakePress;
 		can_buff[2] = safetyLoop;
 		can_buff[3] = throttlePlaus;
@@ -78,13 +78,14 @@ void task_can(uint32_t data){
 		
 		//DRIVE mode packet
 		can_frame.id.std = 0xF5;
-		can_frame.dlc = 5;
+		can_frame.dlc = 6;
 
 		can_buff[0] = buttonCan;
 		can_buff[1] = throttle_control;
 		can_buff[2] = throttlePlaus;
 		can_buff[3] = throttleBrake;
 		can_buff[4] = safety;
+		can_buff[5] = (PINE & (1 << PE3))==0?0:1;
 
 		while(can_cmd(&can_frame) != CAN_CMD_ACCEPTED){
 

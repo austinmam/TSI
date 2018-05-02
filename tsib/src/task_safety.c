@@ -131,7 +131,7 @@ void task_safety(uint32_t data) {
 				
 				if((PINB & (1 << PB5))) { //1 is implausible
 					throttlePlaus = 0;
-				} else {
+				} else {	
 					throttlePlaus = 1;
 				}
 				

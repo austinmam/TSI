@@ -90,7 +90,7 @@ int main ( void ) {
 		}
 	}
 	
-	DDRA = 0xFF;
+	DDRA = ~(1<<PA5);
 
 	// There was an error starting the OS if we reach here
 	for(;;) PORTA = !PORTA; // Loop forever, preserve state for debugger
